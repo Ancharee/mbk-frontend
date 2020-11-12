@@ -18814,7 +18814,12 @@ code {
   align-items: stretch;
   -webkit-justify-content: stretch;
   justify-content: stretch;
-  padding-left: 70px;
+}
+
+@media (min-width: 768px) {
+  .stretch-card {
+    padding-left: 70px;
+  }
 }
 
 .stretch-card > .card {
@@ -21292,7 +21297,7 @@ dl li {
   font-family: "DBHelvethaicaX", sans-serif;
   font-weight: 400;
   padding-top: 10px;
-  width: 210px;
+  min-width: 210px;
   z-index: 11;
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
@@ -22111,6 +22116,116 @@ dl li {
 .rtl ul.chats::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
+}
+
+.sidebar-list {
+  display: none;
+  width: 100%;
+  max-width: 54px;
+  min-height: calc(100vh - 64px);
+  background: #ffffff;
+  overflow: hidden;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+@media (min-width: 768px) {
+  .sidebar-list {
+    display: block;
+  }
+}
+
+.sidebar-list .sidebar-toggle {
+  margin-bottom: 12px;
+  padding: 5px;
+  background: #8DC63F;
+  box-shadow: -1px 1px 8px 0 rgba(141, 198, 63, 0.58);
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sidebar-list .sidebar-toggle span {
+  display: none;
+}
+
+.sidebar-list .sidebar-toggle i {
+  font-size: 12px;
+}
+
+.sidebar-list .user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-list .user-item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.sidebar-list .user-item span {
+  display: none;
+}
+
+.sidebar-list .user-pic {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sidebar-list .user-pic::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #2DE06A;
+  border: 1px solid #d8d8d8;
+  border-radius: 50%;
+  border: 0;
+  background-image: none;
+}
+
+.sidebar-list.active {
+  max-width: 190px;
+}
+
+.sidebar-list.active .sidebar-toggle {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.sidebar-list.active .sidebar-toggle span {
+  display: inline-block;
+}
+
+.sidebar-list.active .user {
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+.sidebar-list.active .user-item span {
+  display: inline-block;
+}
+
+.sidebar-list.active .user-pic {
+  margin-right: 10px;
+}
+
+.main-panel.active {
+  width: calc(100% - 210px - 190px);
+}
+
+.main-panel.active .stretch-card {
+  padding-left: 30px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

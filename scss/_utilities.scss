@@ -43,7 +43,10 @@
   @include display-flex;
   @include align-items(stretch);
   @include justify-content(stretch);
-  padding-left: 70px;
+
+  @include tablet {
+    padding-left: 70px;
+  }
 
   >.card{
     width: 100%;

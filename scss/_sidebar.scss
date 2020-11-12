@@ -12,7 +12,7 @@
   font-family: $font-family-th;
   font-weight: 400;
   padding-top: 10px;
-  width: $sidebar-width-lg;
+  min-width: $sidebar-width-lg;
   z-index: 11;
   transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
   -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
