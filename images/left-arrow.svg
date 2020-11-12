@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="14px" viewBox="0 0 8 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>right arrow</title>
+    <g id="Master-MBK" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="1.0-Employee-Data-(Light)" transform="translate(-1408.000000, -74.000000)" stroke="#FFFFFF" stroke-width="1.5">
+            <g id="Online-User" transform="translate(1386.000000, 64.000000)">
+                <g id="right-arrow" transform="translate(26.000000, 17.000000) scale(-1, 1) rotate(-90.000000) translate(-26.000000, -17.000000) translate(20.000000, 14.000000)">
+                    <polyline id="Path" points="6.82121026e-14 1.36424205e-13 6 6 12 1.36424205e-13"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

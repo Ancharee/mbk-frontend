@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="10px" viewBox="0 0 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>chevrons-right</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="chevrons-right" transform="translate(1.000000, 1.000000)" fill="#000000" fill-rule="nonzero">
+            <polygon id="Path" points="6.64644661 0.353553391 7.35355339 -0.353553391 11.7071068 4 7.35355339 8.35355339 6.64644661 7.64644661 10.293 4"></polygon>
+            <polygon id="Path" points="-0.353553391 0.353553391 0.353553391 -0.353553391 4.70710678 4 0.353553391 8.35355339 -0.353553391 7.64644661 3.293 4"></polygon>
+        </g>
+    </g>
+</svg>

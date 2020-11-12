@@ -1,0 +1,259 @@
+@mixin nav-active {
+  background-image: linear-gradient(225deg, #C1E573 0%, #8DC63F 100%);
+  box-shadow: -1px 1px 8px 0 rgba(141,198,63,0.58);
+  border-radius: 4px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  min-height: calc(100vh - #{$navbar-height});
+  background: $sidebar-light-bg;
+  font-family: $font-family-th;
+  font-weight: 400;
+  padding-top: 10px;
+  width: $sidebar-width-lg;
+  z-index: 11;
+  transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  box-shadow: $sidebar-box-shadow;
+  -webkit-box-shadow: $sidebar-box-shadow;
+  -moz-box-shadow: $sidebar-box-shadow;
+  -ms-box-shadow: $sidebar-box-shadow;
+  // border-right: 1px solid #e3e3e3;
+
+  .nav {
+    overflow: hidden;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-bottom: 60px;
+
+    .nav-item {
+      min-height: 48px;
+      padding: 0 12px;
+      @include transition-duration(0.25s);
+      transition-property: background;
+      -webkit-transition-property: background;
+
+      .collapse {
+        z-index: 999;
+      }
+
+      .nav-link {
+        min-height: 38px;
+        @include display-flex;
+        @include align-items(center);
+        white-space: nowrap;
+        padding: 5px 10px;
+        color: $sidebar-light-menu-color;
+        @include transition-duration(0.45s);
+        transition-property: color;
+        -webkit-transition-property: color;
+
+        i {
+          color: inherit;
+
+          &.menu-icon {
+            font-size: $sidebar-icon-font-size;
+            line-height: 1;
+            margin-right: 8px;
+
+            .rtl & {
+              margin-left: 2rem;
+              margin-right: 0;
+            }
+
+            color: $sidebar-light-menu-icon-color;
+
+            &:before {
+              vertical-align: middle;
+            }
+          }
+
+          &.icon-group {
+            margin-right: 4px;
+          }
+
+          &.menu-arrow {
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin-left: auto;
+            margin-right: 0;
+            color: $dusty-gray;
+
+            .rtl & {
+              margin-left: 0;
+              margin-right: auto;
+            }
+
+            &:before {
+              content: "\F140";
+              font-family: "Material Design Icons";
+              font-style: normal;
+              display: block;
+              font-size: 1rem;
+              line-height: 10px;
+              @include transition(all .2s ease-in);
+              transform: rotate(270deg);
+            }
+          }
+        }
+
+        .menu-title {
+          color: inherit;
+          display: inline-block;
+          font-size: $sidebar-menu-font-size;
+          line-height: 1;
+          vertical-align: middle;
+        }
+
+        .badge {
+          margin-left: auto;
+
+          .rtl & {
+            margin-left: 0;
+            margin-right: auto;
+          }
+        }
+
+        &[aria-expanded="true"] {
+          i {
+            &.menu-arrow {
+              &:before {
+                @include rotate(180);
+              }
+            }
+          }
+        }
+      }
+
+      &.active {
+        >.nav-link {
+          position: relative;
+          @include nav-active;
+
+          i,
+          .menu-title,
+          .menu-arrow {
+            color: $white;
+          }
+
+          i {
+            &.menu-arrow {
+              &:before {
+                transform: rotate(0);
+              }
+            }
+          }
+        }
+      }
+
+      &.active-parent {
+        >.nav-link {
+          background: #ECECEC;
+          border-radius: 4px;
+          background-image: none;
+          box-shadow: none;
+
+          i,
+          .menu-title,
+          .menu-arrow {
+            color: #606060;
+          }
+        }
+      }
+    }
+
+    &:not(.sub-menu) {
+      margin-top: .3rem;
+
+      >.nav-item {
+        margin-top: 0;
+
+        >.nav-link {
+          margin: 0;
+        }
+      }
+    }
+
+    &.sub-menu {
+      margin-bottom: 0;
+      margin-top: 0;
+      list-style: none;
+      padding: $sidebar-submenu-padding;
+
+      .nav-item {
+        padding: 0;
+
+        .nav-link {
+          color: $sidebar-light-submenu-color;
+          padding: $sidebar-submenu-item-padding;
+          position: relative;
+          font-size: $sidebar-submenu-font-size;
+          line-height: 1;
+          height: auto;
+          border-top: 0;
+          letter-spacing: 0.36px;
+
+          &:hover {
+            color: $sidebar-light-submenu-hover-color;
+          }
+
+          &.active {
+            @include nav-active;
+
+            i,
+            .menu-title,
+            .menu-arrow {
+              color: $white;
+            }
+
+            i {
+              &.menu-icon {
+                &:before {
+                  content: "\F764";
+                }
+              }
+            }
+          }
+
+          i {
+            &.menu-icon {
+              font-size: 8px;
+
+              &:before {
+                content: "\F765";
+              }
+            }
+          }
+        }
+
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+/* style for off-canvas menu*/
+@media screen and (max-width: 1024px) {
+  .sidebar-offcanvas {
+    position: fixed;
+    max-height: calc(100vh - #{$navbar-height});
+    top: $navbar-height;
+    bottom: 0;
+    overflow: auto;
+    left: -$sidebar-width-lg;
+    -webkit-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+
+    &.active {
+      left: 0;
+    }
+  }
+}

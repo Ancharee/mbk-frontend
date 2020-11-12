@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="8px" viewBox="0 0 14 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>right arrow</title>
+    <g id="Master-MBK" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="1.0-Employee-Data-(Light)" transform="translate(-177.000000, -217.000000)" stroke="#606060" stroke-width="1.5">
+            <g id="Side-Menu" transform="translate(0.000000, 64.000000)">
+                <g id="Master-Sync-MBK" transform="translate(0.000000, 136.000000)">
+                    <g id="Master-MBK&gt;Sub-Menu-Active" transform="translate(12.000000, 2.000000)">
+                        <g id="right-arrow" transform="translate(166.000000, 16.000000)">
+                            <polyline id="Path" points="6.82121026e-14 1.36424205e-13 6 6 12 1.36424205e-13"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
