@@ -10795,7 +10795,7 @@ textarea.form-control {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.75rem 1.5rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1;
   border-radius: 0.1875rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -18700,6 +18700,16 @@ address p {
   font-weight: 500;
 }
 
+.page-title {
+  margin-bottom: 12px;
+  width: 100%;
+  padding-bottom: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #323232;
+  border-bottom: 1px solid #E0E0E0;
+}
+
 /* Miscellanoeous */
 body,
 html {
@@ -18818,7 +18828,7 @@ code {
 
 @media (min-width: 768px) {
   .stretch-card {
-    padding-left: 70px;
+    padding-left: 106px;
   }
 }
 
@@ -19177,7 +19187,7 @@ code {
 /* === Components === */
 /* Buttons */
 .btn {
-  font-size: 0.875rem;
+  font-size: 15px;
   line-height: 1;
   font-weight: 400;
   /* Buttons with only icons */
@@ -19223,6 +19233,43 @@ code {
   width: 50px;
   height: 50px;
   padding: 0;
+}
+
+.btn-outline-primary {
+  background: #ffffff;
+  border: 1px solid #E6E6E6;
+  border-radius: 2px;
+  color: #4A4A4A;
+}
+
+.btn-outline-primary:hover {
+  background: #ffffff;
+  border: 1px solid #E6E6E6;
+  color: #4A4A4A;
+}
+
+.btn-create {
+  display: flex;
+  align-items: center;
+  padding: 4px 0 4px 15px;
+  font-size: 17px;
+  min-width: 112px;
+  max-width: 112px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn-create i {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  border-radius: 50%;
+  font-size: 12px;
 }
 
 .btn-group .btn + .btn {
@@ -20964,6 +21011,7 @@ dl li {
 /* Tables */
 .table {
   margin-bottom: 0;
+  width: 100%;
 }
 
 .table thead th {
@@ -21009,6 +21057,33 @@ dl li {
 
 .table.table-bordered {
   border-top: 1px solid #f3f3f3;
+}
+
+.table-item {
+  width: 100%;
+}
+
+.table-item__row {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  background: #FFFFFF;
+  box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.58);
+  border-radius: 2px;
+}
+
+.table-item__col {
+  flex: 1;
+}
+
+.table-item .btn {
+  min-width: 62px;
+  padding: 5.5px 0;
+}
+
+.table-item .btn + .btn {
+  margin-left: 7px;
 }
 
 .breadcrumb {
