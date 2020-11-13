@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="48px" viewBox="0 0 54 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>customer</title>
+    <defs>
+        <filter x="-34.8%" y="-40.0%" width="169.6%" height="180.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="4" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.212035369   0 0 0 0 0.0769023163   0 0 0 0 0.523862092  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Template-Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.70047433">
+        <g id="1.0-Template-Home-(Light)" transform="translate(-1179.000000, -225.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Short-Position" transform="translate(1031.000000, 195.000000)">
+                <g id="customer" transform="translate(148.000000, 30.000000)" filter="url(#filter-1)">
+                    <g>
+                        <circle id="Oval" cx="22.8571429" cy="7.82419643" r="7.76785714"></circle>
+                        <circle id="Oval" cx="38.5714286" cy="10.68125" r="4.91071429"></circle>
+                        <circle id="Oval" cx="7.14285714" cy="10.68125" r="4.91071429"></circle>
+                        <path d="M11.98125,20.001875 C10.0482143,18.418125 8.29758929,18.6277679 6.0625,18.6277679 C2.71964286,18.6277679 -1.26882631e-15,21.3313393 -1.26882631e-15,24.6536607 L-1.26882631e-15,34.4045536 C-1.26882631e-15,35.8474107 1.17767857,37.020625 2.62589286,37.020625 C8.87821429,37.020625 8.125,37.13375 8.125,36.7509821 C8.125,29.8415179 7.30660714,24.7744643 11.98125,20.001875 L11.98125,20.001875 Z" id="Path"></path>
+                        <path d="M24.9830357,18.6633929 C21.0791071,18.3377679 17.6858036,18.6671429 14.7589286,21.0830357 C9.86098214,25.00625 10.8035714,30.2886607 10.8035714,36.7508929 C10.8035714,38.460625 12.1946429,39.8776786 13.9303571,39.8776786 C32.7769643,39.8776786 33.5270536,40.485625 34.6446429,38.0107143 C35.0111607,37.17375 34.9107143,37.4397321 34.9107143,29.4330357 C34.9107143,23.0735714 29.4041964,18.6633929 24.9830357,18.6633929 Z" id="Path"></path>
+                        <path d="M39.6517857,18.6276786 C37.4044643,18.6276786 35.6634821,18.4201786 33.7330357,20.0017857 C38.3727679,24.7389286 37.5892857,29.4602679 37.5892857,36.7508929 C37.5892857,37.1360714 36.9640179,37.0205357 42.9946429,37.0205357 C44.4946429,37.0205357 45.7142857,35.8053571 45.7142857,34.3116071 L45.7142857,24.6535714 C45.7142857,21.33125 42.9946429,18.6276786 39.6517857,18.6276786 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

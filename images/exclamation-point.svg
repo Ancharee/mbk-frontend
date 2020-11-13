@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="60px" viewBox="0 0 48 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>exclamation-point</title>
+    <defs>
+        <filter x="-40.0%" y="-30.8%" width="180.0%" height="161.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="4" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.671110734   0 0 0 0 0.410314697  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Template-Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.697939918">
+        <g id="1.0-Template-Home-(Light)" transform="translate(-949.000000, -221.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Remark" transform="translate(801.000000, 195.000000)">
+                <g id="exclamation-point" transform="translate(148.000000, 26.000000)" filter="url(#filter-1)">
+                    <g id="Shape">
+                        <path d="M28.0753002,0 L11.6753493,0 C5.28589006,0 0.0877203838,5.19816967 0.0877203838,11.5876289 L0.0877203838,33.3578359 C0.0877203838,39.7472952 5.28589006,44.9454648 11.6753493,44.9454648 L12.2772961,44.9454648 L28.0531414,51.9480519 L28.0531414,44.9454648 L28.0753002,44.9454648 C34.4646578,44.9454648 39.6629291,39.7472952 39.6629291,33.3578359 L39.6629291,11.5876289 C39.6629291,5.19816967 34.4646578,0 28.0753002,0 Z M19.8752231,28.5072951 C20.9840779,28.5072951 21.8828306,29.4061495 21.8828306,30.5149026 C21.8828306,31.6236558 20.9839762,32.5225102 19.8752231,32.5225102 C18.76647,32.5225102 17.8676156,31.6236558 17.8676156,30.5149026 C17.8676156,29.4061495 18.76647,28.5072951 19.8752231,28.5072951 L19.8752231,28.5072951 Z M18.3638507,26.5555928 L18.3638507,12.3029109 L21.4132267,12.3029109 L21.4132267,26.5555928 L18.3638507,26.5555928 L18.3638507,26.5555928 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
