@@ -16,7 +16,7 @@
     color: $card-title-color;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
-    font-size: .875rem;
+    font-size: 0.875rem;
     font-weight: bold;
   }
   .card-subtitle {
@@ -24,28 +24,27 @@
     font-weight: 400;
     margin-top: 0.625rem;
     margin-bottom: 0.625rem;
-
   }
   .card-description {
-    margin-bottom: .875rem;
+    margin-bottom: 0.875rem;
     font-weight: 400;
     color: $card-description-color;
   }
   &.card-outline-success {
-		border: 1px solid theme-color("success");
-	}
-	&.card-outline-primary {
-		border: 1px solid theme-color("primary");
-	}
-	&.card-outline-warning {
-		border: 1px solid theme-color("warning");
-	}
-	&.card-outline-danger {
-		border: 1px solid theme-color("danger");
-	}
-	&.card-rounded {
-		@include border-radius(5px);
-	}
+    border: 1px solid theme-color("success");
+  }
+  &.card-outline-primary {
+    border: 1px solid theme-color("primary");
+  }
+  &.card-outline-warning {
+    border: 1px solid theme-color("warning");
+  }
+  &.card-outline-danger {
+    border: 1px solid theme-color("danger");
+  }
+  &.card-rounded {
+    @include border-radius(5px);
+  }
 
   &.card-faded {
     background: #b5b0b2;
@@ -59,7 +58,7 @@
     position: relative;
     .card-img-absolute {
       position: absolute;
-      top:0;
+      top: 0;
       right: 0;
       height: 100%;
     }
@@ -67,17 +66,17 @@
   &.card-weather {
     .weather-daily {
       .weather-day {
-        opacity: .5;
+        opacity: 0.5;
         font-weight: 900;
       }
       i {
         font-size: 20px;
       }
       .weather-temp {
-        margin-top: .5rem;
+        margin-top: 0.5rem;
         margin-bottom: 0;
-        opacity: .5;
-        font-size: .75rem;
+        opacity: 0.5;
+        font-size: 0.75rem;
       }
     }
   }
@@ -85,8 +84,20 @@
 
 @each $color, $value in $theme-colors {
   .card-inverse-#{$color} {
-    @include card-inverse-variant(rgba(theme-color($color), .2), theme-color-level($color, 1), theme-color-level($color, 3));
+    @include card-inverse-variant(
+      rgba(theme-color($color), 0.2),
+      theme-color-level($color, 1),
+      theme-color-level($color, 3)
+    );
   }
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.position-relative {
+  position: relative;
 }
 
 .template-card {
@@ -106,6 +117,55 @@
   border-radius: 10px;
 
   &.yellow {
-    background: #F4CD3A;
+    background: #f4cd3a;
   }
+
+  &.turquoise-blue {
+    background: $turquoise-blue;
+  }
+
+  &.turquoise-green {
+    background: $turquoise-green;
+  }
+
+  &.medium-purple {
+    background: $medium-purple;
+  }
+
+  &.dodger-blue {
+    background: $dodger-blue;
+  }
+
+  .icon {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 60px;
+    position: absolute;
+    top: 13px;
+    right: 0;
+  }
+
+  .template-title {
+    //font-size: ;
+    opacity: 0.6;
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+  }
+
+  .template-total {
+    font-family: DBHelvethaicaX-65Med;
+    font-size: 42px;
+    color: #ffffff;
+    letter-spacing: 0.75px;
+    line-height: 42px;
+  }
+
+  .icon-table {
+    font-size: 50px;
+    right: -10px;
+    top: 25px;
+  }
+
 }

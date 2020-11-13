@@ -19940,7 +19940,7 @@ code {
   color: #4a4a4a;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: bold;
 }
 
@@ -19951,7 +19951,7 @@ code {
 }
 
 .card .card-description {
-  margin-bottom: .875rem;
+  margin-bottom: 0.875rem;
   font-weight: 400;
   color: #76838f;
 }
@@ -19998,7 +19998,7 @@ code {
 }
 
 .card.card-weather .weather-daily .weather-day {
-  opacity: .5;
+  opacity: 0.5;
   font-weight: 900;
 }
 
@@ -20007,10 +20007,10 @@ code {
 }
 
 .card.card-weather .weather-daily .weather-temp {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-bottom: 0;
-  opacity: .5;
-  font-size: .75rem;
+  opacity: 0.5;
+  font-size: 0.75rem;
 }
 
 .card-inverse-primary {
@@ -20061,6 +20061,14 @@ code {
   color: #1e242c;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
+.position-relative {
+  position: relative;
+}
+
 .template-card {
   display: flex;
   flex-wrap: wrap;
@@ -20079,7 +20087,54 @@ code {
 }
 
 .template-item.yellow {
-  background: #F4CD3A;
+  background: #f4cd3a;
+}
+
+.template-item.turquoise-blue {
+  background: #2CD5D1;
+}
+
+.template-item.turquoise-green {
+  background: #4BE0B2;
+}
+
+.template-item.medium-purple {
+  background: #854BE0;
+}
+
+.template-item.dodger-blue {
+  background: #4F93FD;
+}
+
+.template-item .icon {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 60px;
+  position: absolute;
+  top: 13px;
+  right: 0;
+}
+
+.template-item .template-title {
+  opacity: 0.6;
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+}
+
+.template-item .template-total {
+  font-family: DBHelvethaicaX-65Med;
+  font-size: 42px;
+  color: #ffffff;
+  letter-spacing: 0.75px;
+  line-height: 42px;
+}
+
+.template-item .icon-table {
+  font-size: 50px;
+  right: -10px;
+  top: 25px;
 }
 
 /* Checkboxes and Radios */
