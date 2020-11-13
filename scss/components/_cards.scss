@@ -145,7 +145,6 @@
   }
 
   .template-title {
-    //font-size: ;
     opacity: 0.6;
     font-size: 28px;
     color: #ffffff;
@@ -162,10 +161,17 @@
     line-height: 42px;
   }
 
-  .icon-table {
-    font-size: 50px;
-    right: -10px;
-    top: 25px;
-  }
+  .icon-svg {
+    position: absolute;
+    top: 13px;
+    right: 0;
 
+    img {
+      width: 55px;
+    }
+
+    &.table-icon {
+      top: 25px;
+    }
+  }
 }

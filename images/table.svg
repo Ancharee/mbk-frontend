@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="46px" viewBox="0 0 53 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>table</title>
+    <defs>
+        <filter x="-35.6%" y="-43.0%" width="171.1%" height="188.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="4" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0553139615   0 0 0 0 0.262274527   0 0 0 0 0.627377717  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Template-Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.701218378">
+        <g id="1.0-Template-Home-(Light)" transform="translate(-489.000000, -368.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Column" transform="translate(341.000000, 325.000000)">
+                <g id="table" transform="translate(148.000000, 43.413223)" filter="url(#filter-1)">
+                    <g transform="translate(0.000000, 0.000000)">
+                        <rect id="Rectangle" x="0" y="21.0416927" width="10.7953863" height="5.4693981"></rect>
+                        <rect id="Rectangle" x="0" y="12.9814439" width="10.7953863" height="5.4693981"></rect>
+                        <rect id="Rectangle" x="13.3862369" y="12.9814439" width="8.20453571" height="5.4693981"></rect>
+                        <rect id="Rectangle" x="13.3862369" y="21.0416927" width="8.20453571" height="5.4693981"></rect>
+                        <rect id="Rectangle" x="34.9770096" y="21.0416927" width="9.93176945" height="5.4693981"></rect>
+                        <path d="M41.0224154,0.0270154374 L3.88636364,0.0270154374 C1.74337284,0.0270154374 0,1.77038827 0,3.91329136 L0,10.3905056 L44.908779,10.3905056 L44.908779,3.91329136 C44.908779,1.77038827 43.1654062,0.0270154374 41.0224154,0.0270154374 Z" id="Path"></path>
+                        <rect id="Rectangle" x="34.9770096" y="12.9814439" width="9.93176945" height="5.4693981"></rect>
+                        <path d="M0,29.1025554 L0,33.2767036 C0,35.4196067 1.74337284,37.1630672 3.88636364,37.1630672 L10.7953863,37.1630672 L10.7953863,29.1025554 L0,29.1025554 Z" id="Path"></path>
+                        <rect id="Rectangle" x="24.1816233" y="12.9814439" width="8.204448" height="5.4693981"></rect>
+                        <rect id="Rectangle" x="13.3862369" y="29.1028185" width="8.20453571" height="8.06024871"></rect>
+                        <path d="M34.9770096,29.1025554 L34.9770096,37.1630672 L41.0224154,37.1630672 C43.1653185,37.1630672 44.908779,35.4196944 44.908779,33.2767036 L44.908779,29.1025554 L34.9770096,29.1025554 Z" id="Path"></path>
+                        <rect id="Rectangle" x="24.1816233" y="21.0416927" width="8.204448" height="5.4693981"></rect>
+                        <rect id="Rectangle" x="24.1816233" y="29.1028185" width="8.204448" height="8.06024871"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
