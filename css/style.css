@@ -21934,8 +21934,7 @@ dl li {
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-lang .dropdown-item {
   width: 100%;
   min-width: 84px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
   background: #ffffff;
   border-radius: 10px;
   margin-bottom: 5px;
