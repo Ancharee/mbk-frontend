@@ -27,7 +27,7 @@ $(document).ready(function () {
   $(".space").sortable({
     connectWith: ".space",
     
-    handle:'.ui-icon',
+    handle:'.toolbar-right__item--sort',
     placeholder: '.......',
     tolerance: "intersect",
     receive: function (event, ui) {

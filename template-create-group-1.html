@@ -295,117 +295,313 @@
                 <h2>ชื่อหมวด</h2>
               </div>
               <div id="container" class="col-md-12 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="container-list">
-                      <ul class="space first-space" id="space0" style="top: 0">
+                <div class="container-list">
+                  <ul class="space first-space" id="space0" style="top: 0">
+                    <li class="route">
+                      <div class="item">
+                        <div class="editor">
+                          <div class="container-select-type">
+                            <div class="select-type">
+                              <label class="form-check-label" for="text01">
+                                <input type="radio" class="form-check-input" name="type-1" checked id="text01" value="text"/>
+                                <span class="span-radio"></span>ข้อความ
+                              </label>
+                              <label class="form-check-label" for="picture01">
+                                <input type="radio" class="form-check-input" name="type-1" id="picture01" value="picture02"/>
+                                <span class="span-radio"></span>รูปภาพ
+                              </label>
+                            </div>
+                            <div class="toolbar show">
+                              <div class="line">
+                                <div class="box">
+                                  <button class="alpha-editor active" data-action="bold" title="Bold">B</button>
+                                  <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
+                                  <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="toolbar-right">
+                              <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
+                              <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
+                               <div class="toolbar-right__item toolbar-right__item--sort"> <i class="mdi mdi-swap-vertical"></i> </div>
+                            </div>
+                          </div>
+
+                          <div class="content-area">
+                            <div class="image-field">
+                              <input type="file" name="picture" />
+                            </div>
+                            <div class="visuell-view" contenteditable>ชื่อหมวด</div>
+                          </div>
+                        </div>
+                      </div>
+                      <ul class="space">
                         <li class="route">
                           <div class="item">
                             <div class="editor">
                               <div class="container-select-type">
                                 <div class="select-type">
-                                  <input
-                                    type="radio"
-                                    id="test"
-                                    checked
-                                    name="type"
-                                    data-id="1"
-                                    value="text"
-                                  />
-                                  <label for="male">ข้อความ</label><br />
-                                </div>
-
-                                <div class="select-type">
-                                  <input
-                                    type="radio"
-                                    id="male"
-                                    name="type"
-                                    data-id="1"
-                                    value="picture"
-                                  />
-                                  <label for="male">รูปภาพ</label><br />
+                                  <label class="form-check-label" for="text02">
+                                    <input type="radio" class="form-check-input" name="type-2" checked id="text02" value="text"/>
+                                    <span class="span-radio"></span>ข้อความ
+                                  </label>
+                                  <label class="form-check-label" for="picture02">
+                                    <input type="radio" class="form-check-input" name="type-2" id="picture02" value="picture"/>
+                                    <span class="span-radio"></span>รูปภาพ
+                                  </label>
                                 </div>
                                 <div class="toolbar show">
                                   <div class="line">
                                     <div class="box">
-                                      <span
-                                        class="icon-editor"
-                                        data-action="bold"
-                                        title="Bold"
-                                      >
-                                        <p>B</p>
-                                      </span>
-                                      <span
-                                        class="icon-editor"
-                                        data-action="italic"
-                                        title="Italic"
-                                      >
-                                        <p>I</p>
-                                      </span>
-                                      <span
-                                        class="icon-editor"
-                                        data-action="underline"
-                                        title="Underline"
-                                      >
-                                        <p>U</p>
-                                      </span>
+                                      <button class="alpha-editor active" data-action="bold" title="Bold">B</button>
+                                      <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
+                                      <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="add-delete">
-                                  <div class="add-selection"> เพิ่ม </div>
-                                  <div class="remove-selection"> ลบ </div>
+                                <div class="toolbar-right">
+                                  <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
+                                  <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
+                                  <div class="toolbar-right__item toolbar-right__item--sort"> <i class="mdi mdi-swap-vertical"></i> </div>
                                 </div>
                               </div>
 
                               <div class="content-area">
-                                <div class="image-field"> <input type="file" name="picture"/>
+                                <div class="image-field">
+                                  <input type="file" name="picture" />
                                 </div>
-                                <div class="visuell-view" contenteditable></div>
+                                <div class="container-content-area">
+                                  <input class="visuell-view width-small" name="text" value="1-01"/>
+                                  <div class="visuell-view width-large" contenteditable>งบประมาณรายจ้่ายลงทุน</div>
+                                  <div class="width-50">
+                                    <label class="form-check-label" for="check-1">
+                                        <input type="checkbox" class="form-check-input checkbox--item" name="type-2" id="check-1" value="picture"/>
+                                        <span class="span-radio"></span>วงเงิน
+                                    </label>
+                                     <input class="visuell-view padding-left--15" name="min-money" disabled="true" placeholder="ต่ำสุด" />
+                                     <input class="visuell-view padding-left--15" name="max-money" disabled="true" placeholder="สูงสุด"/>
+                                  </div>
+                                </div>
+
                               </div>
                             </div>
                           </div>
-                          <ul class="space"></ul>
-                        </li>
-                        <li class="route">
-                          <h3 class="item">B</h3>
-                          <span class="ui-icon ui-icon-arrow-4-diag"></span>
                           <ul class="space">
                             <li class="route">
-                              <h3 class="item">C</h3>
-                              <span class="ui-icon ui-icon-arrow-4-diag"></span>
+                              <div class="item">
+                                <div class="editor">
+                                  <div class="container-select-type">
+                                    <div class="select-type">
+                                      <label class="form-check-label" for="text04">
+                                        <input type="radio" class="form-check-input" name="type-4" checked id="text04" value="text"/>
+                                        <span class="span-radio"></span>ข้อความ
+                                      </label>
+                                      <label class="form-check-label" for="picture04">
+                                        <input type="radio" class="form-check-input" name="type-4" id="picture04" value="picture"/>
+                                        <span class="span-radio"></span>รูปภาพ
+                                      </label>
+                                    </div>
+                                    <div class="toolbar show">
+                                      <div class="line">
+                                        <div class="box">
+                                          <button class="alpha-editor" data-action="bold" title="Bold">B</button>
+                                          <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
+                                          <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="toolbar-right">
+                                      <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
+                                      <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
+                                      <div class="toolbar-right__item toolbar-right__item--sort"> <i class="mdi mdi-swap-vertical"></i> </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="content-area">
+                                    <div class="image-field">
+                                      <input type="file" name="picture" />
+                                    </div>
+                                    <div class="container-content-area">
+                                      <input class="visuell-view width-small" name="text" value="1-01-22"/>
+                                      <div class="visuell-view width-large" contenteditable>เพิ่มเติมระหว่างปี</div>
+                                      <div class="width-50">
+                                        <label class="form-check-label" for="check-5">
+                                            <input type="checkbox" class="form-check-input checkbox--item" name="type-5" id="check-5" value="picture"/>
+                                            <span class="span-radio"></span>วงเงิน
+                                        </label>
+                                         <input class="visuell-view padding-left--15" name="min-money" disabled="true" placeholder="ต่ำสุด" />
+                                         <input class="visuell-view padding-left--15" name="max-money" disabled="true" placeholder="สูงสุด"/>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </div>
+                              <ul class="space">
+                                <li class="route">
+                                  <div class="item">
+                                    <div class="editor">
+                                      <div class="container-select-type">
+                                        <div class="select-type">
+                                          <label class="form-check-label" for="text08">
+                                            <input type="radio" class="form-check-input" name="type-8" checked id="text08" value="text"/>
+                                            <span class="span-radio"></span>ข้อความ
+                                          </label>
+                                          <label class="form-check-label" for="picture08">
+                                            <input type="radio" class="form-check-input" name="type-8" id="picture08" value="picture"/>
+                                            <span class="span-radio"></span>รูปภาพ
+                                          </label>
+                                        </div>
+                                        <div class="toolbar show">
+                                          <div class="line">
+                                            <div class="box">
+                                              <button class="alpha-editor" data-action="bold" title="Bold">B</button>
+                                              <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
+                                              <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="toolbar-right">
+                                          <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
+                                          <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
+                                          <div class="toolbar-right__item toolbar-right__item--sort"> <i class="mdi mdi-swap-vertical"></i> </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="content-area">
+                                        <div class="image-field">
+                                          <input type="file" name="picture" />
+                                        </div>
+                                        <div class="container-content-area">
+                                          <input class="visuell-view width-small" name="text" value="-" />
+                                          <div class="visuell-view width-large" contenteditable>วงเงินไม่เกิน 3,0000,000 บาทต่อรายการ</div>
+                                          <div class="width-50">
+                                            <label class="form-check-label" for="check-8">
+                                                <input type="checkbox" class="form-check-input checkbox--item" name="type-8" id="check-8" value="picture"/>
+                                                <span class="span-radio"></span>วงเงิน
+                                            </label>
+                                             <input class="visuell-view padding-left--15" name="min-money" disabled="true" placeholder="ต่ำสุด" />
+                                             <input class="visuell-view padding-left--15" name="max-money" disabled="true" placeholder="สูงสุด"/>
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <ul class="space"></ul>
+                                </li>
+                                 <li class="route">
+                                    <div class="item">
+                                      <div class="editor">
+                                        <div class="container-select-type">
+                                          <div class="select-type">
+                                            <label class="form-check-label" for="text09">
+                                              <input type="radio" class="form-check-input" name="type-" checked id="text09" value="text"/>
+                                              <span class="span-radio"></span>ข้อความ
+                                            </label>
+                                            <label class="form-check-label" for="picture09">
+                                              <input type="radio" class="form-check-input" name="type-9" id="picture09" value="picture"/>
+                                              <span class="span-radio"></span>รูปภาพ
+                                            </label>
+                                          </div>
+                                          <div class="toolbar show">
+                                            <div class="line">
+                                              <div class="box">
+                                                <button class="alpha-editor " data-action="bold" title="Bold">B</button>
+                                                <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
+                                                <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="toolbar-right">
+                                            <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
+                                            <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
+                                            <div class="toolbar-right__item toolbar-right__item--sort"> <i class="mdi mdi-swap-vertical"></i> </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="content-area">
+                                          <div class="image-field">
+                                            <input type="file" name="picture" />
+                                          </div>
+                                          <div class="container-content-area">
+                                            <input class="visuell-view width-small" name="text" value="-" />
+                                            <div class="visuell-view width-large" contenteditable>วงเงินไม่เกิน 5,0000,000 บาทต่อรอบการประชุม</div>
+                                            <div class="width-50">
+                                              <label class="form-check-label" for="check-9">
+                                                  <input type="checkbox" class="form-check-input checkbox--item" name="type-9" id="check-9" value="picture"/>
+                                                  <span class="span-radio"></span>วงเงิน
+                                              </label>
+                                               <input class="visuell-view padding-left--15" name="min-money" disabled="true" placeholder="ต่ำสุด" />
+                                               <input class="visuell-view padding-left--15" name="max-money" disabled="true" placeholder="สูงสุด"/>
+                                            </div>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <ul class="space"></ul>
+                                  </li>
+                              </ul>
+                            </li>
+                            <li class="route">
+                              <div class="item">
+                                <div class="editor">
+                                  <div class="container-select-type">
+                                    <div class="select-type">
+                                      <label class="form-check-label" for="text07">
+                                        <input type="radio" class="form-check-input" name="type-3" checked id="text07" value="text"/>
+                                        <span class="span-radio"></span>ข้อความ
+                                      </label>
+                                      <label class="form-check-label" for="picture05">
+                                        <input type="radio" class="form-check-input" name="type-7" id="picture05" value="picture"/>
+                                        <span class="span-radio"></span>รูปภาพ
+                                      </label>
+                                    </div>
+                                    <div class="toolbar show">
+                                      <div class="line">
+                                        <div class="box">
+                                          <button class="alpha-editor active" data-action="bold" title="Bold">B</button>
+                                          <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
+                                          <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="toolbar-right">
+                                      <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
+                                      <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
+                                      <div class="toolbar-right__item toolbar-right__item--sort"> <i class="mdi mdi-swap-vertical"></i> </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="content-area">
+                                    <div class="image-field">
+                                      <input type="file" name="picture" />
+                                    </div>
+                                    <div class="container-content-area">
+                                      <input class="visuell-view width-small" name="text" value="1-01-03" />
+                                      <div class="visuell-view width-large" contenteditable>การลงทุนเพื่อการบริหารสภาพคล่อง</div>
+                                      <div class="width-50">
+                                        <label class="form-check-label" for="check-2">
+                                            <input type="checkbox" class="form-check-input checkbox--item" name="type-2" id="check-2" value="picture"/>
+                                            <span class="span-radio"></span>วงเงิน
+                                        </label>
+                                         <input class="visuell-view padding-left--15" name="min-money" disabled="true" placeholder="ต่ำสุด" />
+                                         <input class="visuell-view padding-left--15" name="max-money" disabled="true" placeholder="สูงสุด"/>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </div>
                               <ul class="space"></ul>
                             </li>
+
                           </ul>
                         </li>
-                        <li class="route">
-                          <h3 class="item">D</h3>
-                          <span class="ui-icon ui-icon-arrow-4-diag"></span>
-                          <ul class="space"></ul>
-                        </li>
-                        <li class="route">
-                          <h3 class="item">E</h3>
-                          <span class="ui-icon ui-icon-arrow-4-diag"></span>
-                          <ul class="space"></ul>
-                        </li>
-                        <li class="route">
-                          <h3 class="item">F</h3>
-                          <span class="ui-icon ui-icon-arrow-4-diag"></span>
-                          <ul class="space"></ul>
-                        </li>
-                        <li class="route">
-                          <h3 class="item">G</h3>
-                          <span class="ui-icon ui-icon-arrow-4-diag"></span>
-                          <ul class="space"></ul>
-                        </li>
-                        <li class="route">
-                          <h3 class="item">H</h3>
-                          <span class="ui-icon ui-icon-arrow-4-diag"></span>
-                          <ul class="space"></ul>
-                        </li>
                       </ul>
-                    </div>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

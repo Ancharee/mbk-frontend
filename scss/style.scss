@@ -105,14 +105,13 @@
 @import "components/cards";
 @import "components/checkbox-radio";
 @import "components/dropdown";
-@import "components/forms";
 @import "components/icons";
 @import "components/lists";
 @import "components/tables";
 @import "components/breadcrumb";
 @import "components/dragable";
 @import "components/editor";
-
+@import "components/forms";
 /*-------------------------------------------------------------------*/
 
 
@@ -131,3 +130,8 @@
 @import "navbar";
 @import "layouts";
 @import "sidebar-list";
+
+/* === Pages === */
+
+@import "pages/base";
+@import "pages/template";
