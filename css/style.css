@@ -20627,6 +20627,39 @@ select.form-control.border-dark:focus, .dataTables_wrapper select.border-dark:fo
   outline: 1px solid #282f3a;
 }
 
+.form-check-label {
+  padding-left: 24px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 22px;
+  font-family: "DBHelvethaicaX-Reg", sans-serif;
+  color: #323232;
+}
+
+.form-check-input {
+  opacity: 0;
+}
+
+.form-check-input + span {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../../images/Icons/uncheck.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 0.25s ease;
+}
+
+.form-check-input:checked + span {
+  background-image: url(../../images/Icons/checked.svg);
+}
+
 .form-group label {
   font-size: 18px;
   line-height: 1.4rem;
@@ -22428,6 +22461,13 @@ dl li {
   margin-left: 20px;
 }
 
+.helper-wrapper {
+  padding: 30px;
+  background: rgba(241, 241, 241, 0.4);
+  border: 1px solid #979797;
+  border-radius: 2px;
+}
+
 .table-template {
   width: 100%;
 }
@@ -22518,6 +22558,39 @@ dl li {
 
 .template-create-action .btn + .btn {
   margin-left: 30px;
+}
+
+.template-copy-radio {
+  margin-bottom: 12px;
+}
+
+.template-copy-radio .form-check-label + .form-check-label {
+  margin-left: 62px;
+}
+
+.template-copy-list {
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  border: 1px solid #DDDDDD;
+  overflow: hidden;
+}
+
+.template-copy-list__item {
+  padding: 11px;
+  background-color: #ffffff;
+}
+
+.template-copy-list__item:not(:last-child) {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.template-copy-list__item--title {
+  background-color: #F5F5F5;
+  font-size: 22px;
+}
+
+.template-copy-list__item--title .form-check-label {
+  font-family: "DBHelvethaicaX-65Med", sans-serif;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

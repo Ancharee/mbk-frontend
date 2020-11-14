@@ -6,8 +6,15 @@
 		align-items: center;
 		padding: 6px 12px;
 
-		+ .btn {
+		+.btn {
 			margin-left: 20px;
 		}
 	}
+}
+
+.helper-wrapper {
+	padding: 30px;
+	background: rgba(241, 241, 241, 0.40);
+	border: 1px solid #979797;
+	border-radius: 2px;
 }

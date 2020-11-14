@@ -67,3 +67,38 @@
     }
   }
 }
+
+.template-copy-radio {
+  margin-bottom: 12px;
+
+  .form-check-label {
+    + .form-check-label {
+      margin-left: 62px;
+    }
+  }
+}
+
+.template-copy-list {
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  border: 1px solid #DDDDDD;
+  overflow: hidden;
+
+  &__item {
+    padding: 11px;
+    background-color: $white;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #DDDDDD;
+    }
+
+    &--title {
+      background-color: #F5F5F5;
+      font-size: 22px;
+
+      .form-check-label {
+        font-family: $font-family-DBHelvethaicaX-65Med;
+      }
+    }
+  }
+}

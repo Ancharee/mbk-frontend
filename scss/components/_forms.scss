@@ -57,6 +57,42 @@ select {
   }
 }
 
+// radio
+.form-check-label {
+  padding-left: 24px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 22px;
+  font-family: $font-family-DBHelvethaicaX-Reg;
+  color: #323232;
+}
+
+.form-check-input {
+  opacity: 0;
+
+  + span {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../../images/Icons/uncheck.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: all $action-transition-duration $action-transition-timing-function;
+  }
+
+  &:checked {
+    + span {
+      background-image: url(../../images/Icons/checked.svg);
+    }
+  }
+}
+
 .form-group {
   label {
     font-size: $default-font-size;
