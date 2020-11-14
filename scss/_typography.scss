@@ -147,6 +147,10 @@ $value in $social-colors {
     margin-bottom: 0;
     line-height: .85;
   }
+
+  &.template-create {
+    padding-left: 50px;
+  }
 }
 
 .font-weight-medium {

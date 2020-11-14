@@ -67,14 +67,15 @@ select {
   font-size: 22px;
   font-family: $font-family-DBHelvethaicaX-Reg;
   color: #323232;
+  line-height: 1;
 }
 
 .form-check-input {
   opacity: 0;
 
-  + span {
+  + span.span-radio {
     position: absolute;
-    top: 4px;
+    top: 2px;
     left: 0;
     display: inline-block;
     width: 18px;
@@ -87,7 +88,7 @@ select {
   }
 
   &:checked {
-    + span {
+    + span.span-radio {
       background-image: url(../../images/Icons/checked.svg);
     }
   }

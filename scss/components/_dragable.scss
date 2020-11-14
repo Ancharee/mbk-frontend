@@ -1,0 +1,99 @@
+.container-list {
+  position: relative;
+  margin-left: -40px;
+
+  & h3 {
+    position: absolute;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-top: 14px;
+    height: 44px;
+    width: 400px;
+    text-indent: 80px;
+    background: #4af;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px 2px #29f;
+    pointer-events: none;
+    margin-left: 0px;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 2px 0px 1px #9bf;
+  }
+
+  .first-space {
+    top: 0;
+  }
+
+  .route {
+    //position: relative;
+    list-style-type: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    margin-top: 0px;
+    max-height: 100% !important;
+    width: 100%;
+    border-radius: 2px;
+    z-index: -1;
+
+
+
+    .item {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      min-width: 100%;
+      max-width: 100%;
+      width: 100%;
+      border-radius: 2px;
+      + .item {
+        margin-top: 14px;
+      }
+
+    }
+  }
+
+  .first-title {
+    margin-left: 10px;
+  }
+
+  .space {
+    position: relative;
+    list-style-type: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    width: 100%;
+    //width: 60px;
+    //top: 145px;
+    //padding-bottom: 145px;
+    height: 100%;
+    z-index: 1;
+    top: 10px;
+    padding-bottom: 10px;
+    //margin-left: -70px;
+  }
+
+  .container-list h3 {
+  }
+}
+
+.container-select-type {
+  display: flex;
+
+  .select-type {
+    display: flex;
+    margin-top: 8px;
+    &:after {
+      content: "";
+      display: inline-block;
+      margin: -8px 12px;
+      height: 36px;
+      width: 1px;
+      background-color: #141414;
+    }
+  }
+}
