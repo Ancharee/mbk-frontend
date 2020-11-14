@@ -18472,7 +18472,7 @@ input:focus {
 /* Typography */
 body {
   font-size: 18px;
-  font-family: "DBHelvethaicaX", sans-serif;
+  font-family: "DBHelvethaicaX-65Med", sans-serif;
   font-weight: initial;
   line-height: normal;
   -webkit-font-smoothing: antialiased;
@@ -18705,7 +18705,6 @@ address p {
   width: 100%;
   padding-bottom: 6px;
   font-size: 17px;
-  font-weight: bold;
   color: #323232;
   border-bottom: 1px solid #E0E0E0;
 }
@@ -19256,7 +19255,6 @@ code {
   min-width: 112px;
   max-width: 112px;
   width: 100%;
-  font-weight: bold;
 }
 
 .btn-create i {
@@ -20122,6 +20120,7 @@ code {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-family: "DBHelvethaicaX", sans-serif;
 }
 
 .template-item {
@@ -20500,8 +20499,8 @@ code {
   font-size: 18px;
   padding: 0 26px;
   color: black;
-  font-weight: bold;
   line-height: 18px;
+  font-family: "DBHelvethaicaX-65Med", sans-serif;
 }
 
 .dropdown .dropdown-menu .dropdown-item:active {
@@ -21077,6 +21076,7 @@ dl li {
 
 .table-item {
   width: 100%;
+  font-family: "DBHelvethaicaX-Reg", sans-serif;
 }
 
 .table-item__row {
@@ -21128,7 +21128,6 @@ dl li {
 
 .breadcrumb__title a {
   color: #323232;
-  font-weight: bold;
 }
 
 .breadcrumb__list {
@@ -21157,6 +21156,14 @@ dl li {
   color: #323232;
 }
 
+.breadcrumb__icon {
+  font-size: 8px;
+}
+
+.breadcrumb__link {
+  font-family: "DBHelvethaicaX-Reg", sans-serif;
+}
+
 .search {
   position: relative;
 }
@@ -21171,7 +21178,6 @@ dl li {
   font-size: 17px;
   color: #4A4A4A;
   letter-spacing: 0;
-  font-weight: bold;
 }
 
 .search i {
@@ -21440,7 +21446,7 @@ dl li {
 .sidebar {
   min-height: calc(100vh - 64px);
   background: #ffffff;
-  font-family: "DBHelvethaicaX", sans-serif;
+  font-family: "DBHelvethaicaX-Reg", sans-serif;
   font-weight: 400;
   padding-top: 10px;
   min-width: 210px;
@@ -21922,7 +21928,7 @@ dl li {
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-lang .nav-lang-name {
   margin-left: .5rem;
   margin-right: .5rem;
-  font-weight: bold;
+  font-family: "DBHelvethaicaX-65Med", sans-serif;
 }
 
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-lang .dropdown-menu {
@@ -21938,7 +21944,6 @@ dl li {
   background: #ffffff;
   border-radius: 10px;
   margin-bottom: 5px;
-  font-weight: bold;
   color: #4A4A4A;
   border: 1px solid #d8d8d8;
 }
