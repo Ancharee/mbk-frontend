@@ -20117,6 +20117,10 @@ code {
   justify-content: space-between;
 }
 
+.space-between:hover {
+  text-decoration: none;
+}
+
 .position-relative {
   position: relative;
 }
@@ -21206,7 +21210,7 @@ dl li {
 }
 
 .breadcrumb__icon {
-  font-size: 8px;
+  font-size: 16px;
 }
 
 .breadcrumb__link {
@@ -22544,10 +22548,6 @@ dl li {
   text-align: left;
 }
 
-.template-create-action {
-  padding-top: 20px;
-}
-
 .template-create-action .btn {
   min-width: 120px;
   max-width: 120px;
@@ -22558,6 +22558,18 @@ dl li {
 
 .template-create-action .btn + .btn {
   margin-left: 30px;
+}
+
+.template-create-action .btn-outline-success {
+  background-color: #ffffff;
+}
+
+.template-copy-title .main {
+  color: #699B24;
+}
+
+.template-copy-choose {
+  font-family: "DBHelvethaicaX-Reg", sans-serif;
 }
 
 .template-copy-radio {
@@ -22575,22 +22587,41 @@ dl li {
   overflow: hidden;
 }
 
-.template-copy-list__item {
-  padding: 11px;
-  background-color: #ffffff;
-}
-
 .template-copy-list__item:not(:last-child) {
   border-bottom: 1px solid #DDDDDD;
 }
 
-.template-copy-list__item--title {
-  background-color: #F5F5F5;
-  font-size: 22px;
+.template-copy-list .form-check-label {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  line-height: 1;
 }
 
-.template-copy-list__item--title .form-check-label {
+.template-copy-list .form-check-label .form-check-input + .span-radio {
+  top: auto;
+  left: 30px;
+}
+
+.template-copy-list .form-check-label:not(.title) .form-check-input:checked + .span-radio + .checkbox-text {
+  background-color: #F3FFF4;
+}
+
+.template-copy-list .form-check-label .checkbox-text {
+  padding: 11px 11px 11px 63px;
+  background: #ffffff;
+  width: 100%;
+}
+
+.template-copy-list .form-check-label.title {
+  font-size: 22px;
   font-family: "DBHelvethaicaX-65Med", sans-serif;
+}
+
+.template-copy-list .form-check-label.title .checkbox-text {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: #F5F5F5;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

@@ -246,7 +246,7 @@
                       <i class="breadcrumb__icon icon-chevrons-right"></i>
                     </li>
                     <li class="breadcrumb__item active">
-                      <a class="breadcrumb__link" href="#">ดู</a>
+                      <a class="breadcrumb__link" href="#">คัดลอก</a>
                     </li>
                   </ul>
                 </div>
@@ -258,10 +258,10 @@
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card ">
                 <div class="card-body">
-                  <h4>
-                    <span>ต้นฉบับ</span>
+                  <h3 class="template-copy-title">
+                    <span class="main">ต้นฉบับ</span>
                     : หมวด งบประมาณรายจ่าย
-                  </h4>
+                  </h3>
                   <div class="helper-wrapper">
                     <div class="template-copy-radio">
                       <label class="form-check-label" for="copy1">
@@ -270,32 +270,56 @@
                         คัดลอกทั้งหมด
                       </label>
                       <label class="form-check-label" for="copy2">
-                        <input type="radio" class="form-check-input" name="copy" id="copy2" value="copy2" />
+                        <input type="radio" class="form-check-input" name="copy" id="copy2" value="copy2" checked />
                         <span></span>
                         กำหนดเอง
                       </label>
                     </div>
-                    <h4>เลือกหัวข้อ</h4>
+                    <h4 class="template-copy-choose">เลือกหัวข้อ</h4>
                     <div class="template-copy-list">
-                      <div class="template-copy-list__item template-copy-list__item--title">
-                        <label class="form-check-label" for="1">
-                          <input type="radio" class="form-check-input" name="point-0" id="0" value="0" />
-                          <span></span>
-                          หมวด
+                      <div class="template-copy-list__item">
+                        <label class="form-check-label title" for="0">
+                          <input type="checkbox" class="form-check-input" name="point-0" id="0" value="0" />
+                          <span class="span-radio"></span>
+                          <span class="checkbox-text">
+                            หมวด
+                          </span>
                         </label>
                       </div>
-                      <div class="template-copy-list__item">
+                      <div class="template-copy-list__item active">
                         <label class="form-check-label" for="1">
-                          <input type="radio" class="form-check-input" name="point-1" id="1" value="1" />
-                          <span></span>
-                          1-01 งบประมาณรายจ่ายลงทุน
+                          <input type="checkbox" class="form-check-input" name="point-1" id="1" value="1" checked />
+                          <span class="span-radio"></span>
+                          <span class="checkbox-text">
+                            1-01 งบประมาณรายจ่ายลงทุน
+                          </span>
                         </label>
                       </div>
                       <div class="template-copy-list__item">
                         <label class="form-check-label" for="2">
-                          <input type="radio" class="form-check-input" name="point-2" id="2" value="2" />
-                          <span></span>
-                          1-02 งบประมาณค่าใช้จ่ายบริหารและค่าใช้จ่ายในการขาย
+                          <input type="checkbox" class="form-check-input" name="point-2" id="2" value="2" checked />
+                          <span class="span-radio"></span>
+                          <span class="checkbox-text">
+                            1-02 งบประมาณค่าใช้จ่ายบริหารและค่าใช้จ่ายในการขาย
+                          </span>
+                        </label>
+                      </div>
+                      <div class="template-copy-list__item">
+                        <label class="form-check-label" for="3">
+                          <input type="checkbox" class="form-check-input" name="point-3" id="3" value="3" />
+                          <span class="span-radio"></span>
+                          <span class="checkbox-text">
+                            1-03 การโอนงบประมาณรายจ่าย
+                          </span>
+                        </label>
+                      </div>
+                      <div class="template-copy-list__item">
+                        <label class="form-check-label" for="4">
+                          <input type="checkbox" class="form-check-input" name="point-4" id="4" value="4" />
+                          <span class="span-radio"></span>
+                          <span class="checkbox-text">
+                            1-04 การอนุมัติโครงการงานของสาย บพส.และสาย กต.ตามงบประมาณที่ได้รับอนุมัติแล้ว
+                          </span>
                         </label>
                       </div>
                     </div>
@@ -304,6 +328,20 @@
               </div>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="template-create-action d-flex justify-content-center">
+                <a class="btn btn-outline-success" href="template-group.html">
+                  ยกเลิก
+                </a>
+                <a class="btn btn-success" href="template-group.html">
+                  คัดลอก
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
         <!-- content-wrapper ends -->
       </div>

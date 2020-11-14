@@ -94,6 +94,10 @@
 
 .space-between {
   justify-content: space-between;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .position-relative {
