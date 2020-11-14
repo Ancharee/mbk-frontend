@@ -22301,6 +22301,7 @@ dl li {
   background: #ffffff;
   overflow: hidden;
   transition: width 0.25s ease, background 0.25s ease;
+  font-family: "DBHelvethaicaX-Reg", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -22311,6 +22312,9 @@ dl li {
 
 .sidebar-list .sidebar-toggle {
   margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5px;
   background: #8DC63F;
   box-shadow: -1px 1px 8px 0 rgba(141, 198, 63, 0.58);
@@ -22321,6 +22325,8 @@ dl li {
 
 .sidebar-list .sidebar-toggle span {
   display: none;
+  padding-left: 5px;
+  text-align: left;
 }
 
 .sidebar-list .sidebar-toggle i {
@@ -22343,6 +22349,7 @@ dl li {
 
 .sidebar-list .user-item span {
   display: none;
+  width: 100%;
 }
 
 .sidebar-list .user-pic {
@@ -22375,11 +22382,12 @@ dl li {
 
 .sidebar-list.active .sidebar-toggle {
   padding-left: 10px;
-  text-align: left;
+  justify-content: flex-start;
 }
 
 .sidebar-list.active .sidebar-toggle span {
   display: inline-block;
+  width: 100%;
 }
 
 .sidebar-list.active .user {
