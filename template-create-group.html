@@ -791,6 +791,51 @@
     <script src="js/jquery.dataTables.js"></script>
     <script src="js/dataTables.bootstrap4.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      $(document).ready(function () {
+        calcWidth($("#title0"));
+
+        function calcWidth(obj) {
+
+          var titles = $(obj).siblings(".space").children(".route").children(".item");
+
+          $(titles).each(function (index, element) {
+            var pTitleWidth = parseInt($(obj).css("width"));
+            var leftOffset = parseInt($(obj).siblings(".space").css("padding-left"));
+
+            var newWidth = pTitleWidth - leftOffset;
+
+            if ($(obj).attr("id") == "title0") {
+
+              newWidth = newWidth - 10;
+            }
+
+            $(element).css({
+              width: newWidth,
+            });
+
+            calcWidth(element);
+          });
+        }
+
+        $(".space").sortable({
+          connectWith: ".space",
+
+          handle:'.toolbar-right__item--sort',
+          placeholder: '.......',
+          tolerance: "intersect",
+          receive: function (event, ui) {
+            calcWidth($(this).siblings(".item"));
+          },
+        });
+        // $(".space").disableSelection();
+
+       $('.pell-content').click( function () {
+          console.log('click editor')
+       })
+
+      });
+    </script>
     <!-- End custom js for this page-->
   </body>
 </html>
