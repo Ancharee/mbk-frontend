@@ -11,15 +11,14 @@
     <!-- plugins:css -->
     <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css" />
     <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css" />
-    <link rel="stylesheet" href="vendors/jquery-ui/jquery-ui.css" />
     <link rel="stylesheet" href="vendors/icomoon/style.css" />
-
     <!-- endinject -->
     <!-- plugin css for this page -->
     <link
       rel="stylesheet"
       href="vendors/datatables.net-bs4/dataTables.bootstrap4.css"
     />
+    <link rel="stylesheet" href="vendors/pell/pell.min.css" />
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="css/style.css" />
@@ -207,18 +206,6 @@
                 <span class="menu-title">รายงาน</span>
                 <i class="menu-arrow"></i>
               </a>
-              <div class="collapse" id="ui-report">
-                <!-- <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Buttons</a></li>
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Typography</a></li>
-        </ul> -->
-              </div>
             </li>
             <li class="nav-item">
               <a
@@ -232,18 +219,6 @@
                 <span class="menu-title">การแจ้งเตือน</span>
                 <i class="menu-arrow"></i>
               </a>
-              <div class="collapse" id="ui-notification">
-                <!-- <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Buttons</a></li>
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Typography</a></li>
-        </ul> -->
-              </div>
             </li>
             <li class="nav-item">
               <a
@@ -257,18 +232,6 @@
                 <span class="menu-title">การตั้งค่า</span>
                 <i class="menu-arrow"></i>
               </a>
-              <div class="collapse" id="ui-setting">
-                <!-- <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Buttons</a></li>
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Typography</a></li>
-        </ul> -->
-              </div>
             </li>
           </ul>
         </nav>
@@ -283,7 +246,7 @@
                 >
                   <div class="breadcrumb d-flex align-items-center">
                     <h3 class="breadcrumb__title">
-                      <a href="/template.html">เทมเพลต</a>
+                      <a>สร้างหมวด</a>
                     </h3>
                     <ul class="breadcrumb__list">
                       <li class="breadcrumb__item">
@@ -309,7 +272,7 @@
                         <i class="breadcrumb__icon icon-chevrons-right"></i>
                       </li>
                       <li class="breadcrumb__item active">
-                        <a class="breadcrumb__link" href="#">เทมเพลต</a>
+                        <a class="breadcrumb__link">สร้างหมวด</a>
                       </li>
                     </ul>
                   </div>
@@ -327,51 +290,116 @@
               </div>
             </div>
 
-            <div class="row">
-              <div class="col-md-12 grid-margin stretch-card">
+            <div class="row page-header template-create">
+              <div class="col-md-12">
+                <h2>ชื่อหมวด</h2>
+              </div>
+              <div id="container" class="col-md-12 grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    <div class="container">
-                      <!-- <h3 class='title' id='title0'>jQuery Nested Sortable</h3> -->
-                      <ul class="space first-space" id="space0">
+                    <div class="container-list">
+                      <ul class="space first-space" id="space0" style="top: 0">
                         <li class="route">
-                          <h3 class="title" id="title1">A</h3>
-                          <span class="ui-icon ui-icon-arrow-4-diag"></span>
-                          <ul class="space" id="space1"></ul>
+                          <div class="item">
+                            <div class="editor">
+                              <div class="container-select-type">
+                                <div class="select-type">
+                                  <input
+                                    type="radio"
+                                    id="test"
+                                    checked
+                                    name="type"
+                                    data-id="1"
+                                    value="text"
+                                  />
+                                  <label for="male">ข้อความ</label><br />
+                                </div>
+
+                                <div class="select-type">
+                                  <input
+                                    type="radio"
+                                    id="male"
+                                    name="type"
+                                    data-id="1"
+                                    value="picture"
+                                  />
+                                  <label for="male">รูปภาพ</label><br />
+                                </div>
+                                <div class="toolbar show">
+                                  <div class="line">
+                                    <div class="box">
+                                      <span
+                                        class="icon-editor"
+                                        data-action="bold"
+                                        title="Bold"
+                                      >
+                                        <p>B</p>
+                                      </span>
+                                      <span
+                                        class="icon-editor"
+                                        data-action="italic"
+                                        title="Italic"
+                                      >
+                                        <p>I</p>
+                                      </span>
+                                      <span
+                                        class="icon-editor"
+                                        data-action="underline"
+                                        title="Underline"
+                                      >
+                                        <p>U</p>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="add-delete">
+                                  <div class="add-selection"> เพิ่ม </div>
+                                  <div class="remove-selection"> ลบ </div>
+                                </div>
+                              </div>
+
+                              <div class="content-area">
+                                <div class="image-field"> <input type="file" name="picture"/>
+                                </div>
+                                <div class="visuell-view" contenteditable></div>
+                              </div>
+                            </div>
+                          </div>
+                          <ul class="space"></ul>
                         </li>
                         <li class="route">
-                          <h3 class="title" id="title2">B</h3>
+                          <h3 class="item">B</h3>
                           <span class="ui-icon ui-icon-arrow-4-diag"></span>
-                          <ul class="space" id="space2">
+                          <ul class="space">
                             <li class="route">
-                              <h3 class="title" id="title3">C</h3>
+                              <h3 class="item">C</h3>
                               <span class="ui-icon ui-icon-arrow-4-diag"></span>
-                              <ul class="space" id="space3"></ul>
+                              <ul class="space"></ul>
                             </li>
                           </ul>
                         </li>
                         <li class="route">
-                          <h3 class="title" id="title4">D</h3>
-                          <span class="ui-icon ui-icon-arrow-4-diag"></span>
-                          <ul class="space" id="space4"></ul>
-                        </li>
-                        <li class="route">
-                          <h3 class="title">E</h3>
+                          <h3 class="item">D</h3>
                           <span class="ui-icon ui-icon-arrow-4-diag"></span>
                           <ul class="space"></ul>
                         </li>
                         <li class="route">
-                          <h3 class="title">F</h3>
+                          <h3 class="item">E</h3>
                           <span class="ui-icon ui-icon-arrow-4-diag"></span>
                           <ul class="space"></ul>
                         </li>
                         <li class="route">
-                          <h3 class="title">G</h3>
+                          <h3 class="item">F</h3>
                           <span class="ui-icon ui-icon-arrow-4-diag"></span>
                           <ul class="space"></ul>
                         </li>
                         <li class="route">
-                          <h3 class="title">H</h3>
+                          <h3 class="item">G</h3>
+                          <span class="ui-icon ui-icon-arrow-4-diag"></span>
+                          <ul class="space"></ul>
+                        </li>
+                        <li class="route">
+                          <h3 class="item">H</h3>
                           <span class="ui-icon ui-icon-arrow-4-diag"></span>
                           <ul class="space"></ul>
                         </li>
@@ -459,17 +487,20 @@
     <script src="vendors/datatables.net/jquery.dataTables.js"></script>
     <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
     <script src="vendors/jquery-ui/jquery-ui.min.js"></script>
+    <script src="vendors/pell/pell.min.js"></script>
     <!-- End plugin js for this page-->
     <!-- inject:js -->
     <script src="js/off-canvas.js"></script>
     <script src="js/hoverable-collapse.js"></script>
     <script src="js/template.js"></script>
+    <script src="js/dragable.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="js/dashboard.js"></script>
     <script src="js/data-table.js"></script>
     <script src="js/jquery.dataTables.js"></script>
     <script src="js/dataTables.bootstrap4.js"></script>
+    <script src="js/script.js"></script>
     <!-- End custom js for this page-->
   </body>
 </html>

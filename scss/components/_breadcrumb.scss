@@ -24,7 +24,6 @@
 
     a {
       color: #323232;
-      font-weight: bold;
     }
   }
 
@@ -55,6 +54,14 @@
       }
     }
   }
+
+  &__icon {
+    font-size: 8px;
+  }
+
+  &__link {
+    font-family: $font-family-DBHelvethaicaX-Reg;
+  }
 }
 
 
@@ -72,7 +79,6 @@
     font-size: 17px;
     color: #4A4A4A;
     letter-spacing: 0;
-    font-weight: bold;
   }
 
   i {

@@ -90,6 +90,7 @@ gulp.task('injectCommonAssets', function () {
         './js/off-canvas.js',
         './js/hoverable-collapse.js',
         './js/template.js',
+        './js/dragable.js',
     ], {read: false}), {relative: true}))
     .pipe(gulp.dest('.'));
 });
