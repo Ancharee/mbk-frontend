@@ -102,7 +102,10 @@
 
 .main-panel {
   &.active {
-    width: calc(100% - #{$sidebar-width-lg} - 190px);
+
+    @include tablet-landscape {
+      width: calc(100% - #{$sidebar-width-lg} - 190px);
+    }
 
     .stretch-card {
       padding-left: 30px;

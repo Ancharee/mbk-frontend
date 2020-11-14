@@ -1,0 +1,55 @@
+.table-template {
+  width: 100%;
+
+  thead {
+    th {
+      background: #F5F5F5;
+      font-weight: normal;
+      color: #323232;
+
+      &:last-child {
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+    tr:nth-child(even) {
+      background: #F5F5F5;
+    }
+
+    td {
+      font-family: $font-family-DBHelvethaicaX-Reg;
+    }
+  }
+
+  th,
+  td {
+    padding: 12px;
+    border: 1px solid #DDDDDD;
+  }
+
+  @for $i from 1 through 10 {
+    .child-#{$i} {
+      td:first-child {
+        padding-left: calc(46px * #{$i});
+      }
+    }
+  }
+}
+
+.template-create-action {
+  padding-top: 20px;
+
+  .btn {
+    min-width: 120px;
+    max-width: 120px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 24px;
+
+    + .btn {
+      margin-left: 30px;
+    }
+  }
+}

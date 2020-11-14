@@ -240,7 +240,7 @@
 }
 
 /* style for off-canvas menu*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .sidebar-offcanvas {
     position: fixed;
     max-height: calc(100vh - #{$navbar-height});

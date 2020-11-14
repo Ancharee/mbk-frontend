@@ -1,0 +1,13 @@
+.page-header {
+	margin-bottom: 12px;
+
+	.btn {
+		display: flex;
+		align-items: center;
+		padding: 6px 12px;
+
+		+ .btn {
+			margin-left: 20px;
+		}
+	}
+}
