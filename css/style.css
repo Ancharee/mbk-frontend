@@ -22500,6 +22500,10 @@ dl li {
   color: #323232;
 }
 
+.table-template--view thead th:last-child {
+  text-align: left;
+}
+
 .template-create-action {
   padding-top: 20px;
 }

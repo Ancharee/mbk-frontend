@@ -40,6 +40,16 @@
   select.form-control {
     color: #323232;
   }
+
+  &--view {
+    thead {
+      th {
+        &:last-child {
+          text-align: left;
+        }
+      }
+    }
+  }
 }
 
 .template-create-action {
