@@ -51,7 +51,6 @@
 }
 .icon-left-arrow:before {
   content: "\e906";
-  color: #fff;
 }
 .icon-plus:before {
   content: "\e90b";
@@ -61,29 +60,24 @@
 }
 .icon-right-arrow:before {
   content: "\e908";
-
 }
 .icon-chevrons-right:before {
   content: "\e909";
 }
 .icon-group:before {
   content: "\e90d";
-
 }
 .icon-book:before {
   content: "\e90a";
-
 }
 .icon-dark-mode:before {
   content: "\e90c";
 }
 .icon-dashboard:before {
   content: "\e90e";
-
 }
 .icon-files:before {
   content: "\e90f";
-
 }
 .icon-folders:before {
   content: "\e910";
@@ -93,13 +87,10 @@
 }
 .icon-megaphone:before {
   content: "\e912";
-
 }
 .icon-pie-chart:before {
   content: "\e913";
-
 }
 .icon-setting-tool:before {
   content: "\e914";
-
 }

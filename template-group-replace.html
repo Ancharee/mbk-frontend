@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Majestic Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
+  <link rel="stylesheet" href="vendors/icomoon/style.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="navbar-toggler-wrapper">
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+      <div class="navbar-brand-wrapper d-flex justify-content-center justify-content-lg-start">
+        <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center">
+          <a class="navbar-brand brand-logo" href="index.html"><img src="images/MBK-logo.svg" alt="logo" /></a>
+        </div>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-mode">
+            <img src="images/dark-mode.svg" alt="mode">
+          </li>
+          <li class="nav-item nav-lang dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="langDropdown">
+              <img src="images/th-flag.svg" alt="flag" />
+              <span class="nav-lang-name">
+                ไทย
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="langDropdown">
+              <a class="dropdown-item">
+                <img src="images/th-flag.svg" alt="flag" />
+                ไทย
+              </a>
+              <a class="dropdown-item">
+                <img src="images/th-flag.svg" alt="flag" />
+                EN
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"
+              style="background-image: url(images/faces/face5.jpg);"></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                ลงชื่อออก
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <!-- <i class="mdi mdi-home menu-icon"></i> -->
+              <i class="icon-dashboard menu-icon"></i>
+              <span class="menu-title">แดชบอร์ด</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="icon-book menu-icon"></i>
+              <span class="menu-title">คู่มืออำนาจ</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="icon-group menu-icon"></i>
+              <span class="menu-title">ผู้ใช้งาน</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-master" aria-expanded="false"
+              aria-controls="ui-master">
+              <i class="icon-folders menu-icon"></i>
+              <span class="menu-title">มาสเตอร์ MBK</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-master">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">ข้อมูลบุคคล</span>
+                  </a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">ข้อมูลบริษัท</span>
+                  </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item active active-parent">
+            <a class="nav-link" href="template.html">
+              <i class="icon-files menu-icon"></i>
+              <span class="menu-title">เทมเพลต</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse show" id="ui-template">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link active" href="template-group.html">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">หมวด</span>
+                  </a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">หลักเกณฑ์</span>
+                  </a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">หมายเหตุ</span>
+                  </a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">คณะกรรมการ</span>
+                  </a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">โครงสร้างหัวตาราง</span>
+                  </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-report" aria-expanded="false"
+              aria-controls="ui-report">
+              <i class="icon-pie-chart menu-icon"></i>
+              <span class="menu-title">รายงาน</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-report">
+              <!-- <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a
+              class="nav-link"
+              href="#"
+            >Buttons</a></li>
+          <li class="nav-item"> <a
+              class="nav-link"
+              href="#"
+            >Typography</a></li>
+        </ul> -->
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-notification" aria-expanded="false"
+              aria-controls="ui-notification">
+              <i class="icon-megaphone menu-icon"></i>
+              <span class="menu-title">การแจ้งเตือน</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-notification">
+              <!-- <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a
+              class="nav-link"
+              href="#"
+            >Buttons</a></li>
+          <li class="nav-item"> <a
+              class="nav-link"
+              href="#"
+            >Typography</a></li>
+        </ul> -->
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-setting" aria-expanded="false"
+              aria-controls="ui-setting">
+              <i class="icon-setting-tool menu-icon"></i>
+              <span class="menu-title">การตั้งค่า</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-setting">
+              <!-- <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a
+              class="nav-link"
+              href="#"
+            >Buttons</a></li>
+          <li class="nav-item"> <a
+              class="nav-link"
+              href="#"
+            >Typography</a></li>
+        </ul> -->
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper content-wrapper--large">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="d-flex justify-content-between flex-wrap align-items-center">
+                <div class="breadcrumb d-flex align-items-center">
+                  <h3 class="breadcrumb__title">
+                    <a href="#">สร้างหมวด</a>
+                  </h3>
+                  <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                      <i class="breadcrumb__icon icon-dashboard"></i>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <i class="breadcrumb__icon icon-chevrons-right"></i>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <a class="breadcrumb__link" href="#">เทมเพลต</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <i class="breadcrumb__icon icon-chevrons-right"></i>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <a class="breadcrumb__link" href="#">หมวด</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <i class="breadcrumb__icon icon-chevrons-right"></i>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <a class="breadcrumb__link" href="#">ดู</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <i class="breadcrumb__icon icon-chevrons-right"></i>
+                    </li>
+                    <li class="breadcrumb__item active">
+                      <a class="breadcrumb__link" href="#">แก้ไข</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row page-header">
+            <div class="col-md-12">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h2>หมวด งบประมาณรายจ่าย</h2>
+                </div>
+                <div class="d-flex">
+                  <a class="btn btn-primary btn-icon-text" href="#">
+                    <i class="icon-edit-button btn-icon-prepend"></i>
+                    แก้ไข
+                  </a>
+                  <button type="button" class="btn btn-danger btn-icon-text">
+                    <i class="icon-trash btn-icon-prepend"></i>
+                    ลบ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <div class="template-search-result">
+                    <span class="result-words">ผลลัพธ์ “ประจำปี”</span>
+                    <span class="result-in">1  ใน  2  ที่เกี่ยวข้อง</span>
+                    <button class="btn btn-icon btn-success"><i class="icon-left-arrow"></i></button>
+                    <button class="btn btn-icon btn-success"><i class="icon-right-arrow"></i></button>
+                  </div>
+                  <div class="template-search-result-edit">แก้ไข</div>
+                  <div class="template-search-result-form-group">
+                    <input class="form-control" type="text" value="ระหว่างปี">
+                    <div class="group">
+                      <label class="form-check-label" for="radio-1">
+                        <input type="radio" class="form-check-input" name="radio" id="radio-1" value="1" />
+                        <span class="span-radio"></span>
+                        แทนที่ผลลัพธ์นี้
+                      </label>
+                      <label class="form-check-label" for="radio-2">
+                        <input type="radio" class="form-check-input" name="radio" id="radio-2" value="2" />
+                        <span class="span-radio"></span>
+                        แทนที่ทั้งหมด
+                      </label>
+                      <button class="btn btn-success">
+                        แทนที่
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <!--
+                                    วิธีสร้างตาราง
+                                    1.หัวข้อใช้ tr td ธรรมดาไม่มี class
+                                      2.หัวข้อย่อย ใส่ child-{ลำดับเลเวล} ตามลำดับเลเวล
+                                  -->
+                  <table class="table-template table-template--view">
+                    <thead>
+                      <tr>
+                        <th>หมวด งบประมาณรายจ่าย</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1-01 งบประมาณรายจ่ายลงทุน</td>
+                      </tr>
+                      <tr class="child-1">
+                        <td>1-011 <mark>ประจำปี</mark></td>
+                      </tr>
+                      <tr class="child-1">
+                        <td>1-012 เพิ่มเติมระหว่างปี</td>
+                      </tr>
+                      <tr class="child-2">
+                        <td>- วงเงินไม่เกิน 3,000,000 บาทต่อรายการ</td>
+                      </tr>
+                      <tr class="child-2">
+                        <td>- วงเงินไม่เกิน 50,000,000 บาทต่อการประชุม</td>
+                      </tr>
+                      <tr class="child-2">
+                        <td>- วงเงินเกิน 50,000,000 บาทต่อการประชุม</td>
+                      </tr>
+                      <tr class="child-1">
+                        <td>1-013 การลงทุนเพื่อการบริหารสภาพคล่อง</td>
+                      </tr>
+                      <tr class="child-2">
+                        <td>- วงเงินไม่เกิน 200,000,000 บาทต่อรายการ</td>
+                      </tr>
+                      <tr class="child-2">
+                        <td>- วงเงินเกิน 200,000,000 บาทต่อรายการ</td>
+                      </tr>
+                      <tr class="child-1">
+                        <td>1-014 การลงทุนระยะยาวในตราสารทุน (ที่จดทะเบียนในตลาดหลักทรัพย์)</td>
+                      </tr>
+                      <tr class="child-2">
+                        <td>- วงเงินเกิน 200,000,000 บาทต่อรายการ</td>
+                      </tr>
+                      <tr class="child-2">
+                        <td>- วงเงินเกิน 200,000,000 บาทต่อรายการ</td>
+                      </tr>
+                      <tr>
+                        <td>1-02 งบประมาณค่าใช้จ่ายบริหารและค่าใช้จ่ายในการขาย</td>
+                      </tr>
+                      <tr class="child-1">
+                        <td>1-021 <mark>ประจำปี</mark></td>
+                      </tr>
+                      <tr class="child-1">
+                        <td>1-022 เพิ่มเติมระหว่างปี</td>
+                      </tr>
+                      <tr class="child-2">
+                        <td>- วงเงินไม่เกิน    1,000,000    บาทต่อรายการ</td>
+                      </tr>
+                      <tr class="child-2">
+                        <td>- วงเงินไม่เกิน    20,000,000   บาทต่อการประชุม</td>
+                      </tr>
+                      <tr class="child-2">
+                        <td>- วงเงินเกิน    20,000,000    บาทต่อการประชุม</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="template-create-action d-flex justify-content-center">
+                <a class="btn btn-outline-success" href="template-group.html">
+                  ยกเลิก
+                </a>
+                <a class="btn btn-success" href="template-group.html">
+                  ต่อไป
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- main-panel ends -->
+
+      <!-- partial:partials/_sidebar-list.html -->
+      <div class="sidebar-list sidebar-list-offcanvas">
+        <div class="sidebar-toggle" data-toggle="offcanvas-list">
+          <i class="icon-right-arrow"></i>
+          <span>ผู้ใช้งานออนไลน์</span>
+        </div>
+        <ul class="user">
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face1.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face2.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face3.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face4.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face5.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face6.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face7.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- partial -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/base/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <!-- endinject -->
+</body>
+
+</html>
