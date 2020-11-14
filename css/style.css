@@ -21257,6 +21257,76 @@ dl li {
   font-size: 12px;
 }
 
+.modal {
+  border-radius: 6px;
+  text-align: center;
+  font-family: "DBHelvethaicaX-65Med", sans-serif;
+}
+
+.modal .modal-header,
+.modal .modal-footer {
+  justify-content: center;
+  border: 0;
+}
+
+.modal .modal-header {
+  padding-top: 53px;
+  padding-bottom: 17px;
+}
+
+.modal .modal-title {
+  font-size: 24px;
+  font-family: "DBHelvethaicaX-65Med", sans-serif;
+  color: #FF5660;
+}
+
+.modal .modal-dialog {
+  max-width: 370px;
+}
+
+.modal .modal-content {
+  min-height: 330px;
+  max-height: 330px;
+}
+
+.modal .modal-body {
+  padding-top: 0;
+  padding-bottom: 27px;
+  font-size: 20px;
+  flex: none;
+}
+
+.modal .modal-footer {
+  padding-top: 0;
+}
+
+.modal i {
+  margin-bottom: 26px;
+  display: block;
+}
+
+.modal .btn {
+  font-size: 24px;
+  font-family: "DBHelvethaicaX-65Med", sans-serif;
+  min-width: 120px;
+}
+
+.modal .btn:first-child {
+  margin-right: 30px;
+}
+
+.modal--confirm-delete i {
+  font-size: 62px;
+}
+
+.modal--confirm-replace .modal-header {
+  padding-top: 32px;
+}
+
+.modal--confirm-replace i {
+  font-size: 72px;
+}
+
 /*-------------------------------------------------------------------*/
 /* === Plugin overrides === */
 /* Data Tables */
