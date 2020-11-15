@@ -113,6 +113,10 @@ address {
   }
 }
 
+.med65 {
+  font-family: $font-family-DBHelvethaicaX-65Med;
+}
+
 //blockqoute color variations
 @each $color,
 $value in $theme-colors {

@@ -18574,6 +18574,10 @@ address p {
   margin-bottom: 0;
 }
 
+.med65 {
+  font-family: "DBHelvethaicaX-65Med", sans-serif;
+}
+
 .blockquote-primary {
   border-color: #4d83ff;
 }
@@ -19276,11 +19280,11 @@ code {
   padding: 4px 0 4px 15px;
   font-size: 17px;
   min-width: 112px;
-  max-width: 112px;
   width: 100%;
 }
 
 .btn-create i {
+  margin-right: 5px;
   margin-left: 10px;
   width: 30px;
   height: 30px;
@@ -20928,6 +20932,54 @@ dl li {
 .rtl .bullet-line-list:after {
   left: unset;
   right: 7px;
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 6px;
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
+}
+
+.list-order {
+  counter-reset: item;
+}
+
+.list-order > li {
+  margin-bottom: 12px;
+}
+
+.list-order > li > p {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.list-order p {
+  margin-bottom: 0;
+}
+
+.list-order ol p {
+  font-size: 22px;
+  font-family: "DBHelvethaicaX-Reg", sans-serif;
 }
 
 /* Tables */

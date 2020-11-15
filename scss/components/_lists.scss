@@ -5,6 +5,7 @@ ol,
 dl {
   padding-left: 1rem;
   font-size: $default-font-size;
+
   li {
     line-height: 1.8;
   }
@@ -15,8 +16,10 @@ dl {
 .list-star {
   list-style: none;
   padding: 0;
+
   li {
     padding-left: 1.5rem;
+
     &:before {
       font-family: "Material Design Icons";
       margin-left: -1.5rem;
@@ -56,23 +59,28 @@ dl {
 .solid-bullet-list {
   position: relative;
   padding-left: 0;
+
   .rtl & {
     padding-right: 0;
   }
+
   li {
     position: relative;
     list-style-type: none;
     padding-left: 25px;
     line-height: 1;
     padding-bottom: 2.125rem;
+
     * {
       line-height: .8;
     }
+
     &:before,
     &:after {
-      content:"";
+      content: "";
       position: absolute;
     }
+
     &:before {
       top: 0;
       left: 0;
@@ -83,6 +91,7 @@ dl {
       z-index: 1;
     }
   }
+
   &:after {
     content: "";
     border: 1px solid $border-color;
@@ -98,6 +107,7 @@ dl {
   padding-left: 30px;
   position: relative;
   list-style-type: none;
+
   .rtl & {
     padding-left: unset;
     padding-right: 30px;
@@ -136,9 +146,60 @@ dl {
     top: 0;
     bottom: 0;
     left: 7px;
+
     .rtl & {
       left: unset;
       right: 7px;
+    }
+  }
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol>li {
+  display: table;
+  counter-increment: item;
+}
+
+ol>li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 6px;
+}
+
+li ol>li {
+  margin: 0;
+}
+
+li ol>li:before {
+  content: counters(item, ".") " ";
+}
+
+.list-order {
+  counter-reset: item;
+
+  >li {
+    margin-bottom: 12px;
+
+    >p {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  ol {
+    p {
+      font-size: 22px;
+      font-family: $font-family-DBHelvethaicaX-Reg;
     }
   }
 }

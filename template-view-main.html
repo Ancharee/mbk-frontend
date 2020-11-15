@@ -2,478 +2,424 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Majestic Admin</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
-    <link rel="stylesheet" href="vendors/icomoon/style.css">
-    <!-- endinject -->
-    <!-- plugin css for this page -->
-    <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="images/favicon.png" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Majestic Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
+  <link rel="stylesheet" href="vendors/icomoon/style.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 
 <body>
-    <div class="container-scroller">
-        <!-- partial:partials/_navbar.html -->
-        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-  <div class="navbar-toggler-wrapper">
-    <button
-      class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
-      type="button"
-      data-toggle="offcanvas"
-    >
-      <span class="mdi mdi-menu"></span>
-    </button>
-  </div>
-  <div class="navbar-brand-wrapper d-flex justify-content-center justify-content-lg-start">
-    <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center">
-      <a
-        class="navbar-brand brand-logo"
-        href="index.html"
-      ><img
-          src="images/MBK-logo.svg"
-          alt="logo"
-        /></a>
-    </div>
-  </div>
-  <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-    <ul class="navbar-nav navbar-nav-right">
-      <li class="nav-item nav-mode">
-        <img src="images/dark-mode.svg" alt="mode">
-      </li>
-      <li class="nav-item nav-lang dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          data-toggle="dropdown"
-          id="langDropdown"
-        >
-          <img
-            src="images/th-flag.svg"
-            alt="flag"
-          />
-          <span class="nav-lang-name">
-            ไทย
-          </span>
-        </a>
-        <div
-          class="dropdown-menu dropdown-menu-right navbar-dropdown"
-          aria-labelledby="langDropdown"
-        >
-          <a class="dropdown-item">
-            <img
-              src="images/th-flag.svg"
-              alt="flag"
-            />
-            ไทย
-          </a>
-          <a class="dropdown-item">
-            <img
-              src="images/th-flag.svg"
-              alt="flag"
-            />
-            EN
-          </a>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="navbar-toggler-wrapper">
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+      <div class="navbar-brand-wrapper d-flex justify-content-center justify-content-lg-start">
+        <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center">
+          <a class="navbar-brand brand-logo" href="index.html"><img src="images/MBK-logo.svg" alt="logo" /></a>
         </div>
-      </li>
-      <li class="nav-item nav-profile dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          data-toggle="dropdown"
-          id="profileDropdown"
-          style="background-image: url(images/faces/face5.jpg);"
-        ></a>
-        <div
-          class="dropdown-menu dropdown-menu-right navbar-dropdown"
-          aria-labelledby="profileDropdown"
-        >
-          <a class="dropdown-item">
-            ลงชื่อออก
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-        <!-- partial -->
-        <div class="container-fluid page-body-wrapper">
-            <!-- partial:partials/_sidebar.html -->
-            <nav
-  class="sidebar sidebar-offcanvas"
-  id="sidebar"
->
-  <ul class="nav">
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        href="index.html"
-      >
-        <!-- <i class="mdi mdi-home menu-icon"></i> -->
-        <i class="icon-dashboard menu-icon"></i>
-        <span class="menu-title">แดชบอร์ด</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        href="#"
-      >
-        <i class="icon-book menu-icon"></i>
-        <span class="menu-title">คู่มืออำนาจ</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        href="#"
-      >
-        <i class="icon-group menu-icon"></i>
-        <span class="menu-title">ผู้ใช้งาน</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        data-toggle="collapse"
-        href="#ui-master"
-        aria-expanded="false"
-        aria-controls="ui-master"
-      >
-        <i class="icon-folders menu-icon"></i>
-        <span class="menu-title">มาสเตอร์ MBK</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div
-        class="collapse"
-        id="ui-master"
-      >
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-            >
-              <i class="mdi mdi-circle menu-icon"></i>
-              <span class="menu-title">ข้อมูลบุคคล</span>
-            </a></li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-            >
-              <i class="mdi mdi-circle menu-icon"></i>
-              <span class="menu-title">ข้อมูลบริษัท</span>
-          </a></li>
-        </ul>
       </div>
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        href="template.html"
-      >
-        <i class="icon-files menu-icon"></i>
-        <span class="menu-title">เทมเพลต</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div
-        class="collapse"
-        id="ui-template"
-      >
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="template-group.html"
-            >
-              <i class="mdi mdi-circle menu-icon"></i>
-              <span class="menu-title">หมวด</span>
-            </a></li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-            >
-              <i class="mdi mdi-circle menu-icon"></i>
-              <span class="menu-title">หลักเกณฑ์</span>
-          </a></li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-            >
-              <i class="mdi mdi-circle menu-icon"></i>
-              <span class="menu-title">หมายเหตุ</span>
-          </a></li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-            >
-              <i class="mdi mdi-circle menu-icon"></i>
-              <span class="menu-title">คณะกรรมการ</span>
-          </a></li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-            >
-              <i class="mdi mdi-circle menu-icon"></i>
-              <span class="menu-title">โครงสร้างหัวตาราง</span>
-          </a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        data-toggle="collapse"
-        href="#ui-report"
-        aria-expanded="false"
-        aria-controls="ui-report"
-      >
-        <i class="icon-pie-chart menu-icon"></i>
-        <span class="menu-title">รายงาน</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div
-        class="collapse"
-        id="ui-report"
-      >
-        <!-- <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Buttons</a></li>
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Typography</a></li>
-        </ul> -->
-      </div>
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        data-toggle="collapse"
-        href="#ui-notification"
-        aria-expanded="false"
-        aria-controls="ui-notification"
-      >
-        <i class="icon-megaphone menu-icon"></i>
-        <span class="menu-title">การแจ้งเตือน</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div
-        class="collapse"
-        id="ui-notification"
-      >
-        <!-- <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Buttons</a></li>
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Typography</a></li>
-        </ul> -->
-      </div>
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        data-toggle="collapse"
-        href="#ui-setting"
-        aria-expanded="false"
-        aria-controls="ui-setting"
-      >
-        <i class="icon-setting-tool menu-icon"></i>
-        <span class="menu-title">การตั้งค่า</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div
-        class="collapse"
-        id="ui-setting"
-      >
-        <!-- <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Buttons</a></li>
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Typography</a></li>
-        </ul> -->
-      </div>
-    </li>
-  </ul>
-</nav>
-
-            <!-- partial -->
-            <div class="main-panel">
-                <div class="content-wrapper">
-                    <div class="row">
-                        <div class="col-md-12 grid-margin">
-                            <div class="d-flex justify-content-between flex-wrap align-items-center">
-                                <div class="breadcrumb d-flex align-items-center">
-                                    <h3 class="breadcrumb__title">
-                                        <a href="#">เทมเพลต</a>
-                                    </h3>
-                                    <ul class="breadcrumb__list">
-                                        <li class="breadcrumb__item">
-                                            <i class="breadcrumb__icon icon-dashboard"></i>
-                                        </li>
-                                        <li class="breadcrumb__item">
-                                            <i class="breadcrumb__icon icon-chevrons-right"></i>
-                                        </li>
-                                        <li class="breadcrumb__item">
-                                            <a class="breadcrumb__link" href="#">เทมเพลต</a>
-                                        </li>
-                                        <li class="breadcrumb__item">
-                                            <i class="breadcrumb__icon icon-chevrons-right"></i>
-                                        </li>
-                                        <li class="breadcrumb__item">
-                                            <a class="breadcrumb__link" href="#">หลักเกณฑ์</a>
-                                        </li>
-                                        <li class="breadcrumb__item">
-                                            <i class="breadcrumb__icon icon-chevrons-right"></i>
-                                        </li>
-                                        <li class="breadcrumb__item active">
-                                            <a class="breadcrumb__link" href="#">ดูเทมเพลต</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="search">
-                                        <input class="search-field" type="text" placeholder="ค้นหาเทมเพลต" />
-                                        <i class="icon-search"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row page-header">
-                      <div class="col-md-12">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div><h2>เทมเพลตหลักเกณฑ์ แบบที่ 1</h2></div>
-                          <div class="d-flex">
-                            <a class="btn btn-primary btn-icon-text" href="#">
-                              <i class="icon-edit-button btn-icon-prepend"></i>
-                              แก้ไข
-                            </a>
-                            <button type="button" class="btn btn-danger btn-icon-text">
-                              <i class="icon-trash btn-icon-prepend"></i>
-                              ลบ
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- content-wrapper ends -->
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-mode">
+            <img src="images/dark-mode.svg" alt="mode">
+          </li>
+          <li class="nav-item nav-lang dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="langDropdown">
+              <img src="images/th-flag.svg" alt="flag" />
+              <span class="nav-lang-name">
+                ไทย
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="langDropdown">
+              <a class="dropdown-item">
+                <img src="images/th-flag.svg" alt="flag" />
+                ไทย
+              </a>
+              <a class="dropdown-item">
+                <img src="images/th-flag.svg" alt="flag" />
+                EN
+              </a>
             </div>
-            <!-- main-panel ends -->
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"
+              style="background-image: url(images/faces/face5.jpg);"></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                ลงชื่อออก
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-            <!-- partial:partials/_sidebar-list.html -->
-            <div class="sidebar-list sidebar-list-offcanvas">
-  <div class="sidebar-toggle" data-toggle="offcanvas-list">
-    <i class="icon-right-arrow"></i>
-    <span>ผู้ใช้งานออนไลน์</span>
-  </div>
-  <ul class="user">
-    <li class="user-item">
-      <div
-        class="user-pic"
-        style="background-image: url(images/faces/face1.jpg);"
-      ></div>
-      <span>ชื่อผู้ใช้งานออนไลน์</span>
-    </li>
-    <li class="user-item">
-      <div
-        class="user-pic"
-        style="background-image: url(images/faces/face2.jpg);"
-      ></div>
-      <span>ชื่อผู้ใช้งานออนไลน์</span>
-    </li>
-    <li class="user-item">
-      <div
-        class="user-pic"
-        style="background-image: url(images/faces/face3.jpg);"
-      ></div>
-      <span>ชื่อผู้ใช้งานออนไลน์</span>
-    </li>
-    <li class="user-item">
-      <div
-        class="user-pic"
-        style="background-image: url(images/faces/face4.jpg);"
-      ></div>
-      <span>ชื่อผู้ใช้งานออนไลน์</span>
-    </li>
-    <li class="user-item">
-      <div
-        class="user-pic"
-        style="background-image: url(images/faces/face5.jpg);"
-      ></div>
-      <span>ชื่อผู้ใช้งานออนไลน์</span>
-    </li>
-    <li class="user-item">
-      <div
-        class="user-pic"
-        style="background-image: url(images/faces/face6.jpg);"
-      ></div>
-      <span>ชื่อผู้ใช้งานออนไลน์</span>
-    </li>
-    <li class="user-item">
-      <div
-        class="user-pic"
-        style="background-image: url(images/faces/face7.jpg);"
-      ></div>
-      <span>ชื่อผู้ใช้งานออนไลน์</span>
-    </li>
-  </ul>
-</div>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <!-- <i class="mdi mdi-home menu-icon"></i> -->
+              <i class="icon-dashboard menu-icon"></i>
+              <span class="menu-title">แดชบอร์ด</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="icon-book menu-icon"></i>
+              <span class="menu-title">คู่มืออำนาจ</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="icon-group menu-icon"></i>
+              <span class="menu-title">ผู้ใช้งาน</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-master" aria-expanded="false"
+              aria-controls="ui-master">
+              <i class="icon-folders menu-icon"></i>
+              <span class="menu-title">มาสเตอร์ MBK</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-master">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">ข้อมูลบุคคล</span>
+                  </a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">ข้อมูลบริษัท</span>
+                  </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item active active-parent">
+            <a class="nav-link" href="template.html">
+              <i class="icon-files menu-icon"></i>
+              <span class="menu-title">เทมเพลต</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse show" id="ui-template">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="template-group.html">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">หมวด</span>
+                  </a></li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="template-main-menu.html">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">หลักเกณฑ์</span>
+                  </a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">หมายเหตุ</span>
+                  </a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">คณะกรรมการ</span>
+                  </a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="mdi mdi-circle menu-icon"></i>
+                    <span class="menu-title">โครงสร้างหัวตาราง</span>
+                  </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-report" aria-expanded="false"
+              aria-controls="ui-report">
+              <i class="icon-pie-chart menu-icon"></i>
+              <span class="menu-title">รายงาน</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-report">
+              <!-- <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a
+              class="nav-link"
+              href="#"
+            >Buttons</a></li>
+          <li class="nav-item"> <a
+              class="nav-link"
+              href="#"
+            >Typography</a></li>
+        </ul> -->
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-notification" aria-expanded="false"
+              aria-controls="ui-notification">
+              <i class="icon-megaphone menu-icon"></i>
+              <span class="menu-title">การแจ้งเตือน</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-notification">
+              <!-- <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a
+              class="nav-link"
+              href="#"
+            >Buttons</a></li>
+          <li class="nav-item"> <a
+              class="nav-link"
+              href="#"
+            >Typography</a></li>
+        </ul> -->
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-setting" aria-expanded="false"
+              aria-controls="ui-setting">
+              <i class="icon-setting-tool menu-icon"></i>
+              <span class="menu-title">การตั้งค่า</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-setting">
+              <!-- <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a
+              class="nav-link"
+              href="#"
+            >Buttons</a></li>
+          <li class="nav-item"> <a
+              class="nav-link"
+              href="#"
+            >Typography</a></li>
+        </ul> -->
+            </div>
+          </li>
+        </ul>
+      </nav>
 
-            <!-- partial -->
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper content-wrapper--large">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="d-flex justify-content-between flex-wrap align-items-center">
+                <div class="breadcrumb d-flex align-items-center">
+                  <h3 class="breadcrumb__title">
+                    <a href="#">ดูเทมเพลต</a>
+                  </h3>
+                  <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                      <i class="breadcrumb__icon icon-dashboard"></i>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <i class="breadcrumb__icon icon-chevrons-right"></i>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <a class="breadcrumb__link" href="#">เทมเพลต</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <i class="breadcrumb__icon icon-chevrons-right"></i>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <a class="breadcrumb__link" href="#">หลักเกณฑ์</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <i class="breadcrumb__icon icon-chevrons-right"></i>
+                    </li>
+                    <li class="breadcrumb__item active">
+                      <a class="breadcrumb__link" href="#">ดูเทมเพลต</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row page-header">
+            <div class="col-md-12">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h2>เทมเพลตหลักเกณฑ์ แบบที่ 1</h2>
+                </div>
+                <div class="d-flex">
+                  <a class="btn btn-primary btn-icon-text" href="#">
+                    <i class="icon-edit-button btn-icon-prepend"></i>
+                    แก้ไข
+                  </a>
+                  <button type="button" class="btn btn-danger btn-icon-text">
+                    <i class="icon-trash btn-icon-prepend"></i>
+                    ลบ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <div class="text-center">
+                    <h4 class="med65">หลักเกณฑ์การใช้คู่มืออำนาจดำเนินการ</h4>
+                  </div>
+                  <ol class="list-order">
+                    <li>
+                      <p>วัตถุประสงค์</p>
+                      <ol>
+                        <li>
+                          <p>
+                            เพื่อกระจายความรับผิดชอบ อำนาจในการตัดสินใจ และการสั่งการตามหน้าที่ที่ได้รับมอบหมาย
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            เพื่อให้ผู้ปฏิบัติงานได้ทราบถึงขอบเขตความรับผิดชอบและอำนาจ
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            เพื่อใช้เป็นข้อมูลอ้างอิงในการปฏิบัติงานและเพื่อให้การปฏิบัติงานเป็นไปตามขั้นตอนและมีระบบ
+                          </p>
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      <p>การใช้อำนาจดำเนินการ</p>
+                      <ol>
+                        <li>
+                          <p>การอนุมัติให้ตนเอง</p>
+                          <ol>
+                            <li>
+                              <p>
+                                พนักงานทุกระดับไม่มีอำนาจลงนามอนุมัติตนเอง
+                                ต้องนำเสนอผู้บังคับบัญชาให้เป็นผู้ลงนามอนุมัติทุกกรณี ยกเว้น กรรมการผู้อำนวยการ
+                                ให้อนุมัติตนเองได้ในเรื่องการลางาน การปฏิบัติงานนอกสถานที่ การเข้าอบรมสัมมนา
+                                และการเบิกค่าใช้จ่ายตามงบประมาณ
+                              </p>
+                            </li>
+                          </ol>
+                        </li>
+                        <li>
+                          <p>ขอบเขตการใช้อำนาจดำเนินการ</p>
+                          <ol>
+                            <li>
+                              <p>
+                                “ผู้รักษาการแทน” หรือ “ผู้รักษาการในตำแหน่ง”
+                                มีอำนาจตามตำแหน่งงานที่รักษาการแทนหรือรักษาการในตำแหน่งในช่วงเวลาที่ได้รับมอบหมาย
+                                หน้าที่เป็นลายลักษณ์อักษรเท่านั้น
+                              </p>
+                            </li>
+                            <li>
+                              <p>
+                                การใช้อำนาจดำเนินการให้ใช้เฉพาะงานในหน้าที่ที่ได้รับมอบหมาย
+                                ซึ่งได้ผ่านการพิจารณาตามขั้นตอนการปฏิบัติงานและตามลำดับชั้นแล้วเท่านั้น
+                              </p>
+                            </li>
+                            <li>
+                              <p>
+                                งานใดที่มิได้ระบุไว้ในคู่มืออำนาจดำเนินการให้นำเสนอต่อกรรมการผู้อำนวยการเพื่อพิจารณาอนุมัติเป็นกรณีๆไป
+                              </p>
+                            </li>
+                          </ol>
+                        </li>
+                        <li>
+                          <p>
+                            การพิจารณาจัดทำใหม่/ เปลี่ยนแปลงแก้ไขใดๆ ของคู่มืออำนาจดำเนินการให้อยู่ในการพิจารณาของกรรมการผู้อำนวยการ ยกเว้น อำนาจอนุมัติ
+        ระดับกรรมการผู้อำนวยการขึ้นไปต้องผ่านการพิจารณาจาก คกบ. บริษัท เอ็ม บี เค จำกัด (มหาชน)
+                          </p>
+                        </li>
+                        <li>
+                          <p>ระเบียบปฏิบัติ ประกาศ คำสั่ง
+                            ข้อกำหนดใดๆของบริษัทที่ไม่เป็นไปตามคู่มืออำนาจดำเนินการให้ถือตามอำนาจต่างๆตามที่ระบุไว้ในคู่มืออำนาจดำเนินการ
+                          </p>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- page-body-wrapper ends -->
-    </div>
-    <!-- container-scroller -->
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- main-panel ends -->
 
-    <!-- plugins:js -->
-    <script src="vendors/base/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page-->
-    <!-- End plugin js for this page-->
-    <!-- inject:js -->
-    <script src="js/off-canvas.js"></script>
-    <script src="js/hoverable-collapse.js"></script>
-    <script src="js/template.js"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page-->
-    <!-- End custom js for this page-->
+      <!-- partial:partials/_sidebar-list.html -->
+      <div class="sidebar-list sidebar-list-offcanvas">
+        <div class="sidebar-toggle" data-toggle="offcanvas-list">
+          <i class="icon-right-arrow"></i>
+          <span>ผู้ใช้งานออนไลน์</span>
+        </div>
+        <ul class="user">
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face1.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face2.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face3.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face4.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face5.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face6.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+          <li class="user-item">
+            <div class="user-pic" style="background-image: url(images/faces/face7.jpg);"></div>
+            <span>ชื่อผู้ใช้งานออนไลน์</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- partial -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/base/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <!-- End custom js for this page-->
 </body>
 
 </html>
