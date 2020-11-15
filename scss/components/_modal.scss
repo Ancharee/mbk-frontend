@@ -54,8 +54,8 @@
     padding-top: 7px;
     padding-bottom: 7px;
 
-    &:first-child {
-      margin-right: 30px;
+    + .btn {
+      margin-left: 30px;
     }
   }
 }
@@ -73,5 +73,37 @@
 
   i {
     font-size: 72px;
+  }
+}
+
+.modal--form {
+  .modal-header {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: rgba(#8DC63F, 0.35);
+  }
+
+  .modal-title {
+    font-size: 24px;
+    color: #323232;
+  }
+
+  .modal-dialog {
+    max-width: 560px;
+  }
+
+  .modal-content {
+    min-height: 360px;
+    max-height: 360px;
+  }
+
+  .modal-body {
+    min-width: 100%;
+    padding: 26px 30px;
+  }
+
+  textarea {
+    min-height: 200px;
+    font-size: 24px;
   }
 }

@@ -21219,8 +21219,8 @@ li ol > li:before {
   padding-bottom: 7px;
 }
 
-.modal .btn:first-child {
-  margin-right: 30px;
+.modal .btn + .btn {
+  margin-left: 30px;
 }
 
 .modal--confirm-delete i {
@@ -21233,6 +21233,36 @@ li ol > li:before {
 
 .modal--confirm-replace i {
   font-size: 72px;
+}
+
+.modal--form .modal-header {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: rgba(141, 198, 63, 0.35);
+}
+
+.modal--form .modal-title {
+  font-size: 24px;
+  color: #323232;
+}
+
+.modal--form .modal-dialog {
+  max-width: 560px;
+}
+
+.modal--form .modal-content {
+  min-height: 360px;
+  max-height: 360px;
+}
+
+.modal--form .modal-body {
+  min-width: 100%;
+  padding: 26px 30px;
+}
+
+.modal--form textarea {
+  min-height: 200px;
+  font-size: 24px;
 }
 
 .container-list {
@@ -21636,6 +21666,10 @@ select.form-control.border-dark, .dataTables_wrapper select.border-dark {
 
 select.form-control.border-dark:focus, .dataTables_wrapper select.border-dark:focus {
   outline: 1px solid #282f3a;
+}
+
+textarea {
+  font-family: "DBHelvethaicaX-Reg", sans-serif;
 }
 
 .form-check-label {
