@@ -261,11 +261,15 @@
                   <h2>เทมเพลตหลักเกณฑ์ แบบที่ 1</h2>
                 </div>
                 <div class="d-flex">
-                  <a class="btn btn-primary btn-icon-text" href="#">
+                  <a class="btn btn-primary btn-icon-text" href="template-main-replace.html">
                     <i class="icon-edit-button btn-icon-prepend"></i>
                     แก้ไข
                   </a>
-                  <button type="button" class="btn btn-danger btn-icon-text">
+                  <button
+                    type="button"
+                    class="btn btn-danger btn-icon-text"
+                    data-toggle="modal"
+                    data-target="#confirmModal">
                     <i class="icon-trash btn-icon-prepend"></i>
                     ลบ
                   </button>
@@ -359,6 +363,26 @@
               </div>
             </div>
           </div>
+
+          <div class="modal fade modal--confirm-delete" id="confirmModal" tabindex="-1" role="dialog"
+            aria-labelledby="confirmModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="confirmModalLabel">ลบเทมเพลต!</h5>
+                </div>
+                <div class="modal-body">
+                  <i class="icon-remove"></i>
+                  <p>ต้องการลบ “เทมเพลตหลักเกณฑ์ แบบที่ 1” หรือไม่ ?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-success" data-dismiss="modal">ไม่</button>
+                  <button type="button" class="btn btn-success" data-dismiss="modal">ใช่</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <!-- content-wrapper ends -->
       </div>

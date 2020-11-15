@@ -21194,6 +21194,8 @@ li ol > li:before {
   padding-bottom: 27px;
   font-size: 20px;
   flex: none;
+  max-width: 212px;
+  margin: 0 auto;
 }
 
 .modal .modal-footer {
@@ -21209,6 +21211,8 @@ li ol > li:before {
   font-size: 24px;
   font-family: "DBHelvethaicaX-65Med", sans-serif;
   min-width: 120px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .modal .btn:first-child {
@@ -23074,12 +23078,12 @@ select.form-control.border-dark:focus, .dataTables_wrapper select.border-dark:fo
 .template-search-result .result-words {
   display: inline-block;
   padding-right: 10px;
-  color: #699B24;
 }
 
 .template-search-result .result-in {
   display: inline-block;
   padding-right: 25px;
+  color: #699B24;
 }
 
 .template-search-result .btn-success {
