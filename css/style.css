@@ -18719,6 +18719,7 @@ address p {
 }
 
 mark {
+  padding: 0;
   background-color: #FFE135;
 }
 
@@ -20941,10 +20942,6 @@ ol {
   padding: 0;
 }
 
-ol mark {
-  padding: 0;
-}
-
 ol > li {
   display: table;
   counter-increment: item;
@@ -21198,7 +21195,6 @@ li ol > li:before {
   padding-bottom: 27px;
   font-size: 20px;
   flex: none;
-  max-width: 212px;
   margin: 0 auto;
 }
 
