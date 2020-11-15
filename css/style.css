@@ -20504,7 +20504,7 @@ code {
   vertical-align: middle;
   line-height: .625rem;
   margin-left: 0;
-  background-image: url(../../images/arrow-drop-down.svg);
+  background-image: url(../images/arrow-drop-down.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -21278,7 +21278,8 @@ dl li {
 }
 
 .editor .toolbar {
-  height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .editor .toolbar .line {
@@ -21293,6 +21294,7 @@ dl li {
   padding-right: 10px;
   font-family: "Helvetica";
   font-weight: bold;
+  height: 32px;
 }
 
 .editor .toolbar button.alpha-editor.active {
@@ -21354,6 +21356,10 @@ dl li {
   height: 35px;
 }
 
+.editor .content-area .visuell-view:focus {
+  border-color: #8DC63F;
+}
+
 .editor .content-area .visuell-view.width-large {
   width: 50%;
 }
@@ -21389,6 +21395,7 @@ dl li {
   flex: 1;
   justify-content: flex-end;
   align-items: center;
+  cursor: pointer;
 }
 
 .toolbar-right__item {
@@ -21416,6 +21423,7 @@ dl li {
 
 .toolbar-right__item--sort {
   padding-left: 20px;
+  cursor: all-scroll;
 }
 
 .container-content-area {
@@ -21485,12 +21493,16 @@ dl li {
   appearance: none;
 }
 
+.form-control:focus, .dataTables_wrapper select:focus {
+  border-color: #8DC63F;
+}
+
 select.form-control, .dataTables_wrapper select {
   padding: 4px .75rem;
   border: 0;
   color: #c9c8c8;
   box-shadow: 0 0 3px 0 rgba(156, 156, 156, 0.5);
-  background-image: url(../../images/Icons/arrow-down.svg);
+  background-image: url(../images/Icons/arrow-down.svg);
   background-repeat: no-repeat;
   background-position: 96%;
 }
@@ -21587,7 +21599,7 @@ select.form-control.border-dark:focus, .dataTables_wrapper select.border-dark:fo
   display: inline-block;
   width: 18px;
   height: 18px;
-  background-image: url(../../images/Icons/uncheck.svg);
+  background-image: url(../images/Icons/uncheck.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -21595,7 +21607,7 @@ select.form-control.border-dark:focus, .dataTables_wrapper select.border-dark:fo
 }
 
 .form-check-input:checked + span.span-radio {
-  background-image: url(../../images/Icons/checked.svg);
+  background-image: url(../images/Icons/checked.svg);
 }
 
 .form-group label {
@@ -22918,6 +22930,10 @@ select.form-control.border-dark:focus, .dataTables_wrapper select.border-dark:fo
   text-align: left;
 }
 
+.template-create-action {
+  padding-bottom: 20px;
+}
+
 .template-create-action .btn {
   min-width: 120px;
   max-width: 120px;
@@ -23025,6 +23041,7 @@ select.form-control.border-dark:focus, .dataTables_wrapper select.border-dark:fo
 .template-search-result-form-group {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   font-family: "DBHelvethaicaX-Reg", sans-serif;
 }
 
@@ -23037,6 +23054,9 @@ select.form-control.border-dark:focus, .dataTables_wrapper select.border-dark:fo
 .template-search-result-form-group input {
   color: #323232;
   font-size: 20px;
+  height: 36px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 @media (min-width: 1440px) {
@@ -23068,6 +23088,7 @@ select.form-control.border-dark:focus, .dataTables_wrapper select.border-dark:fo
 .template-search-result-form-group .btn {
   min-width: 120px;
   font-size: 24px;
+  padding: 7px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

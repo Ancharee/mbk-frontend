@@ -26,6 +26,10 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
+  &:focus {
+    border-color: #8DC63F;
+  }
 }
 
 select {
@@ -35,7 +39,7 @@ select {
     // outline: 1px solid $border-color;
     color: $input-placeholder-color;
     box-shadow: 0 0 3px 0 rgba(156, 156, 156, 0.50);
-    background-image: url(../../images/Icons/arrow-down.svg);
+    background-image: url(../images/Icons/arrow-down.svg);
     background-repeat: no-repeat;
     background-position: 96%;
 
@@ -80,7 +84,7 @@ select {
     display: inline-block;
     width: 18px;
     height: 18px;
-    background-image: url(../../images/Icons/uncheck.svg);
+    background-image: url(../images/Icons/uncheck.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -89,7 +93,7 @@ select {
 
   &:checked {
     + span.span-radio {
-      background-image: url(../../images/Icons/checked.svg);
+      background-image: url(../images/Icons/checked.svg);
     }
   }
 }

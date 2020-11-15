@@ -2,7 +2,7 @@ $(document).ready(function () {
   calcWidth($("#title0"));
 
   function calcWidth(obj) {
-    
+
     var titles = $(obj).siblings(".space").children(".route").children(".item");
 
     $(titles).each(function (index, element) {
@@ -24,20 +24,23 @@ $(document).ready(function () {
     });
   }
 
-  $(".space").sortable({
-    connectWith: ".space",
-    
-    handle:'.toolbar-right__item--sort',
-    placeholder: '.......',
-    tolerance: "intersect",
-    receive: function (event, ui) {
-      calcWidth($(this).siblings(".item"));
-    },
-  });
-  // $(".space").disableSelection();
-  
- $('.pell-content').click( function () {
-    console.log('click editor')
- })
- 
+  const space$ = $(".space");
+  if (space$.length) {
+    $(".space").sortable({
+      connectWith: ".space",
+      handle: '.toolbar-right__item--sort',
+      placeholder: '.......',
+      tolerance: "intersect",
+      receive: function (event, ui) {
+        calcWidth($(this).siblings(".item"));
+      },
+    });
+
+    // $(".space").disableSelection();
+
+    $('.pell-content').click(function () {
+      console.log('click editor')
+    })
+  }
+
 });

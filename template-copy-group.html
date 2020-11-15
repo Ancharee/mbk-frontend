@@ -384,16 +384,16 @@
                     <div class="template-copy-list">
                       <div class="template-copy-list__item">
                         <label class="form-check-label title" for="0">
-                          <input type="checkbox" class="form-check-input" name="point-0" id="0" value="0" />
+                          <input type="checkbox" class="form-check-input" name="point-0" id="0" />
                           <span class="span-radio"></span>
                           <span class="checkbox-text">
                             หมวด
                           </span>
                         </label>
                       </div>
-                      <div class="template-copy-list__item active">
+                      <div class="template-copy-list__item">
                         <label class="form-check-label" for="1">
-                          <input type="checkbox" class="form-check-input" name="point-1" id="1" value="1" checked />
+                          <input type="checkbox" class="form-check-input" name="point-1" id="1" checked />
                           <span class="span-radio"></span>
                           <span class="checkbox-text">
                             1-01 งบประมาณรายจ่ายลงทุน
@@ -402,7 +402,7 @@
                       </div>
                       <div class="template-copy-list__item">
                         <label class="form-check-label" for="2">
-                          <input type="checkbox" class="form-check-input" name="point-2" id="2" value="2" checked />
+                          <input type="checkbox" class="form-check-input" name="point-2" id="2" checked />
                           <span class="span-radio"></span>
                           <span class="checkbox-text">
                             1-02 งบประมาณค่าใช้จ่ายบริหารและค่าใช้จ่ายในการขาย
@@ -411,7 +411,7 @@
                       </div>
                       <div class="template-copy-list__item">
                         <label class="form-check-label" for="3">
-                          <input type="checkbox" class="form-check-input" name="point-3" id="3" value="3" />
+                          <input type="checkbox" class="form-check-input" name="point-3" id="3" />
                           <span class="span-radio"></span>
                           <span class="checkbox-text">
                             1-03 การโอนงบประมาณรายจ่าย
@@ -420,7 +420,7 @@
                       </div>
                       <div class="template-copy-list__item">
                         <label class="form-check-label" for="4">
-                          <input type="checkbox" class="form-check-input" name="point-4" id="4" value="4" />
+                          <input type="checkbox" class="form-check-input" name="point-4" id="4"/>
                           <span class="span-radio"></span>
                           <span class="checkbox-text">
                             1-04 การอนุมัติโครงการงานของสาย บพส.และสาย กต.ตามงบประมาณที่ได้รับอนุมัติแล้ว
@@ -526,6 +526,41 @@
   <script src="js/template.js"></script>
   <script src="js/dragable.js"></script>
   <!-- endinject -->
+  <script>
+    $(document).ready(function () {
+      const checkboxes = $('.template-copy-list__item input');
+      // check all by copy1
+      $('[name="copy"]').change(function() {
+        if ($(this).val() === 'copy1') {
+          checkboxes.prop('checked', true);
+        } else {
+          checkboxes.prop('checked', false);
+        }
+      });
+
+      checkboxes.change(function() {
+        if (!$(this).is(':checked')) {
+          $('#copy1').prop('checked', false);
+          $('#copy2').prop('checked', true);
+        }
+
+        let checked = 0;
+        checkboxes.each(element => {
+          if ($(checkboxes[element]).is(':checked')) {
+            checked++;
+          }
+        });
+
+        if (checked === checkboxes.length) {
+          $('#copy1').prop('checked', true);
+          $('#copy2').prop('checked', false);
+        } else {
+          $('#copy1').prop('checked', false);
+          $('#copy2').prop('checked', true);
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

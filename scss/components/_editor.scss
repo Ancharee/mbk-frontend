@@ -15,7 +15,8 @@
   background-color: $white;
 
   .toolbar {
-    height: 50px;
+    display: flex;
+    align-items: center;
 
     .line {
       display: flex;
@@ -29,6 +30,7 @@
       padding-right: 10px;
       font-family: "Helvetica";
       font-weight: bold;
+      height: 32px;
 
       &.active {
         background: rgba(141, 198, 63, 0.1);
@@ -50,7 +52,7 @@
         text-decoration: underline;
       }
 
-      + button.alpha-editor {
+      +button.alpha-editor {
         margin-left: 16px;
       }
     }
@@ -58,7 +60,7 @@
 
   .select-type {
     .form-check-label {
-      + .form-check-label {
+      +.form-check-label {
         margin-left: 12px;
       }
     }
@@ -68,8 +70,10 @@
     padding: 15px 12px;
     line-height: 1.5;
     z-index: 99;
+
     .image-field {
       display: none;
+
       &.show {
         display: block;
       }
@@ -90,6 +94,11 @@
       color: #47505a;
       padding-left: 15px;
       height: 35px;
+
+      &:focus {
+        border-color: #8DC63F;
+      }
+
       &.width-large {
         width: 50%;
       }
@@ -128,6 +137,7 @@
   flex: 1;
   justify-content: flex-end;
   align-items: center;
+  cursor: pointer;
 
   &__item {
     text-decoration: underline;
@@ -150,8 +160,10 @@
     &--delete {
       color: #df0000;
     }
+
     &--sort {
       padding-left: 20px;
+      cursor: all-scroll;
     }
   }
 }
@@ -177,9 +189,11 @@
   .padding-left--15 {
     margin-left: 15px;
     width: 30%;
+
     &:disabled {
       opacity: 0.6;
     }
+
     &::placeholder {
       font-size: 20px;
       padding-left: 8px;
@@ -187,6 +201,6 @@
   }
 
   .form-check-label {
-margin-top: 5px;
+    margin-top: 5px;
   }
 }
