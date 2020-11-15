@@ -153,19 +153,20 @@ gulp.task('buildBaseVendorStyles', function() {
 });
 
 gulp.task('copyRecursiveVendorFiles', function() {
-    var vFile1 = gulp.src(['./node_modules/chart.js/dist/Chart.min.js'])
-        .pipe(gulp.dest('./vendors/chart.js'));
-    var vFile2 = gulp.src(['./node_modules/datatables.net/js/jquery.dataTables.js'])
-        .pipe(gulp.dest('./vendors/datatables.net'));
-    var vFile3 = gulp.src(['./node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js'])
-        .pipe(gulp.dest('./vendors/datatables.net-bs4'));
-    var vFile4 = gulp.src(['./node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css'])
-        .pipe(gulp.dest('./vendors/datatables.net-bs4'));
+    // var vFile1 = gulp.src(['./node_modules/chart.js/dist/Chart.min.js'])
+    //     .pipe(gulp.dest('./vendors/chart.js'));
+    // var vFile2 = gulp.src(['./node_modules/datatables.net/js/jquery.dataTables.js'])
+    //     .pipe(gulp.dest('./vendors/datatables.net'));
+    // var vFile3 = gulp.src(['./node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js'])
+    //     .pipe(gulp.dest('./vendors/datatables.net-bs4'));
+    // var vFile4 = gulp.src(['./node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css'])
+    //     .pipe(gulp.dest('./vendors/datatables.net-bs4'));
     var vFile5 = gulp.src(['./node_modules/@mdi/font/css/materialdesignicons.min.css'])
         .pipe(gulp.dest('./vendors/mdi/css'));
     var vFile6 = gulp.src(['./node_modules/@mdi/font/fonts/*'])
         .pipe(gulp.dest('./vendors/mdi/fonts'));
-    return merge(vFile1, vFile2, vFile3, vFile4, vFile5, vFile6);
+    // return merge(vFile1, vFile2, vFile3, vFile4, vFile5, vFile6);
+    return merge(vFile5, vFile6);
 });
 
 //Copy essential map files
