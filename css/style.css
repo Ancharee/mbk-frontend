@@ -21035,6 +21035,8 @@ dl li {
 
 .breadcrumb__title a {
   color: #323232;
+  font-size: 24px;
+  font-family: "DBHelvethaicaX-65Med", sans-serif;
 }
 
 .breadcrumb__list {
