@@ -20941,6 +20941,10 @@ ol {
   padding: 0;
 }
 
+ol mark {
+  padding: 0;
+}
+
 ol > li {
   display: table;
   counter-increment: item;
