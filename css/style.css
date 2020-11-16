@@ -19269,6 +19269,15 @@ code {
   color: #4A4A4A;
 }
 
+.btn-danger {
+  background: #CB0A08;
+  border-color: #CB0A08;
+}
+
+.btn-outline-success {
+  border-width: 2px;
+}
+
 .btn-outline-success:hover {
   background: #ffffff;
   border-color: #71c016;
@@ -19910,6 +19919,14 @@ code {
 
 .btn-dark, .btn-dark:hover {
   box-shadow: 0 2px 2px 0 rgba(40, 47, 58, 0.14), 0 3px 1px -2px rgba(40, 47, 58, 0.2), 0 1px 5px 0 rgba(40, 47, 58, 0.12);
+}
+
+.input-group-append {
+  margin-right: 15px;
+}
+
+.input-group-append button {
+  border-radius: 3px !important;
 }
 
 /* Badges */
@@ -20787,6 +20804,14 @@ code {
   font-size: 2.5rem;
 }
 
+img.delete-icons-file {
+  position: absolute;
+  right: 20px;
+  z-index: 1;
+  top: 17px;
+  cursor: pointer;
+}
+
 /* Lists */
 ul,
 ol,
@@ -21441,7 +21466,7 @@ li ol > li:before {
   font-size: 22px;
   color: #47505a;
   padding-left: 15px;
-  height: 35px;
+  min-height: 35px;
 }
 
 .editor .content-area .visuell-view:focus {
@@ -21511,7 +21536,22 @@ li ol > li:before {
 
 .toolbar-right__item--sort {
   padding-left: 20px;
-  cursor: all-scroll;
+  cursor: pointer;
+  position: relative;
+}
+
+.toolbar-right__item--sort img.icon-arrow-sort {
+  position: absolute;
+  width: 8px;
+}
+
+.toolbar-right__item--sort img.icon-arrow-sort--left {
+  left: 7px;
+  top: -8px;
+}
+
+.toolbar-right__item--sort img.icon-arrow-sort--right {
+  right: 0;
 }
 
 .container-content-area {
@@ -21720,6 +21760,15 @@ textarea {
 
 .form-group .file-upload-info {
   background: transparent;
+}
+
+input.form-control.file-upload-info:disabled {
+  background-color: #E4E4E4;
+  color: #000;
+}
+
+input.form-control.file-upload-info:disabled::placeholder {
+  color: #000;
 }
 
 /*-------------------------------------------------------------------*/
@@ -22942,8 +22991,11 @@ textarea {
 .helper-wrapper {
   padding: 30px;
   background: rgba(241, 241, 241, 0.4);
-  border: 1px solid #979797;
   border-radius: 2px;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .table-template {

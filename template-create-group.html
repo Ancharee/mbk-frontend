@@ -256,16 +256,6 @@
         class="collapse"
         id="ui-report"
       >
-        <!-- <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Buttons</a></li>
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Typography</a></li>
-        </ul> -->
       </div>
     </li>
     <li class="nav-item">
@@ -280,21 +270,7 @@
         <span class="menu-title">การแจ้งเตือน</span>
         <i class="menu-arrow"></i>
       </a>
-      <div
-        class="collapse"
-        id="ui-notification"
-      >
-        <!-- <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Buttons</a></li>
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Typography</a></li>
-        </ul> -->
-      </div>
+      <div class="collapse" id="ui-notification"></div>
     </li>
     <li class="nav-item">
       <a
@@ -312,16 +288,6 @@
         class="collapse"
         id="ui-setting"
       >
-        <!-- <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Buttons</a></li>
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Typography</a></li>
-        </ul> -->
       </div>
     </li>
   </ul>
@@ -384,18 +350,18 @@
                           <div class="container-select-type">
                             <div class="select-type">
                               <label class="form-check-label" for="text01">
-                                <input type="radio" class="form-check-input" name="type-1" checked id="text01" value="text"/>
+                                <input type="radio" class="form-check-input" name="type" checked id="text01" value="text"/>
                                 <span class="span-radio"></span>ข้อความ
                               </label>
                               <label class="form-check-label" for="picture01">
-                                <input type="radio" class="form-check-input" name="type-1" id="picture01" value="picture02"/>
+                                <input type="radio" class="form-check-input" name="type" id="picture01" value="picture"/>
                                 <span class="span-radio"></span>รูปภาพ
                               </label>
                             </div>
                             <div class="toolbar show">
                               <div class="line">
                                 <div class="box">
-                                  <button class="alpha-editor active" data-action="bold" title="Bold">B</button>
+                                  <button class="alpha-editor " data-action="bold" title="Bold">B</button>
                                   <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
                                   <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
                                 </div>
@@ -404,13 +370,21 @@
                             <div class="toolbar-right">
                               <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
                               <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
-                               <div class="toolbar-right__item toolbar-right__item--sort"> <i class="mdi mdi-swap-vertical"></i> </div>
                             </div>
                           </div>
 
                           <div class="content-area">
                             <div class="image-field">
-                              <input type="file" name="picture" />
+                              <div class="form-group">
+                                <input type="file" name="img[]" class="file-upload-default">
+                                <div class="input-group col-6">
+                                  <span class="input-group-append">
+                                    <button class="file-upload-browse btn btn-primary" type="button">+ เพิ่ม</button>
+                                  </span>
+                                  <img class="delete-icons-file" src="images/icon-delete-file.svg">
+                                  <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                </div>
+                              </div>
                             </div>
                             <div class="visuell-view" contenteditable>ชื่อหมวด</div>
                           </div>
@@ -434,7 +408,7 @@
                                 <div class="toolbar show">
                                   <div class="line">
                                     <div class="box">
-                                      <button class="alpha-editor active" data-action="bold" title="Bold">B</button>
+                                      <button class="alpha-editor " data-action="bold" title="Bold">B</button>
                                       <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
                                       <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
                                     </div>
@@ -443,13 +417,25 @@
                                 <div class="toolbar-right">
                                   <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
                                   <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
-                                  <div class="toolbar-right__item toolbar-right__item--sort"> <i class="mdi mdi-swap-vertical"></i> </div>
+                                  <div class="toolbar-right__item toolbar-right__item--sort">
+                                    <img class="icon-arrow-sort icon-arrow-sort--left up" src="/images/arrow-up.svg"/>
+                                    <img class="icon-arrow-sort icon-arrow-sort--right down" src="/images/arrow-down.svg"/>
+                                  </div>
                                 </div>
                               </div>
 
                               <div class="content-area">
                                 <div class="image-field">
-                                  <input type="file" name="picture" />
+                                  <div class="form-group">
+                                    <input type="file" name="img[]" class="file-upload-default">
+                                    <div class="input-group col-6">
+                                      <span class="input-group-append">
+                                        <button class="file-upload-browse btn btn-primary" type="button">+ เพิ่ม</button>
+                                      </span>
+                                      <img class="delete-icons-file" src="images/icon-delete-file.svg">
+                                      <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                    </div>
+                                  </div>
                                 </div>
                                 <div class="container-content-area">
                                   <input class="visuell-view width-small" name="text" value="1-01"/>
@@ -494,13 +480,25 @@
                                     <div class="toolbar-right">
                                       <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
                                       <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
-                                      <div class="toolbar-right__item toolbar-right__item--sort"> <i class="mdi mdi-swap-vertical"></i> </div>
+                                      <div class="toolbar-right__item toolbar-right__item--sort">
+                                        <img class="icon-arrow-sort icon-arrow-sort--left up" src="/images/arrow-up.svg"/>
+                                        <img class="icon-arrow-sort icon-arrow-sort--right down" src="/images/arrow-down.svg"/>
+                                      </div>
                                     </div>
                                   </div>
 
                                   <div class="content-area">
                                     <div class="image-field">
-                                      <input type="file" name="picture" />
+                                      <div class="form-group">
+                                        <input type="file" name="img[]" class="file-upload-default">
+                                        <div class="input-group col-6">
+                                          <span class="input-group-append">
+                                            <button class="file-upload-browse btn btn-primary" type="button">+ เพิ่ม</button>
+                                          </span>
+                                          <img class="delete-icons-file" src="images/icon-delete-file.svg">
+                                          <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                        </div>
+                                      </div>
                                     </div>
                                     <div class="container-content-area">
                                       <input class="visuell-view width-small" name="text" value="1-01-22"/>
@@ -545,13 +543,25 @@
                                         <div class="toolbar-right">
                                           <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
                                           <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
-                                          <div class="toolbar-right__item toolbar-right__item--sort"> <i class="mdi mdi-swap-vertical"></i> </div>
+                                          <div class="toolbar-right__item toolbar-right__item--sort">
+                                              <img class="icon-arrow-sort icon-arrow-sort--left up" src="/images/arrow-up.svg"/>
+                                              <img class="icon-arrow-sort icon-arrow-sort--right down" src="/images/arrow-down.svg"/>
+                                          </div>
                                         </div>
                                       </div>
 
                                       <div class="content-area">
                                         <div class="image-field">
-                                          <input type="file" name="picture" />
+                                          <div class="form-group">
+                                            <input type="file" name="img[]" class="file-upload-default">
+                                            <div class="input-group col-6">
+                                              <span class="input-group-append">
+                                                <button class="file-upload-browse btn btn-primary" type="button">+ เพิ่ม</button>
+                                              </span>
+                                              <img class="delete-icons-file" src="images/icon-delete-file.svg">
+                                              <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                            </div>
+                                          </div>
                                         </div>
                                         <div class="container-content-area">
                                           <input class="visuell-view width-small" name="text" value="-" />
@@ -571,7 +581,7 @@
                                   </div>
                                   <ul class="space"></ul>
                                 </li>
-                                 <li class="route">
+                                <li class="route">
                                     <div class="item">
                                       <div class="editor">
                                         <div class="container-select-type">
@@ -597,13 +607,25 @@
                                           <div class="toolbar-right">
                                             <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
                                             <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
-                                            <div class="toolbar-right__item toolbar-right__item--sort"> <i class="mdi mdi-swap-vertical"></i> </div>
+                                            <div class="toolbar-right__item toolbar-right__item--sort">
+                                              <img class="icon-arrow-sort icon-arrow-sort--left up" src="/images/arrow-up.svg"/>
+                                              <img class="icon-arrow-sort icon-arrow-sort--right down" src="/images/arrow-down.svg"/>
+                                            </div>
                                           </div>
                                         </div>
 
                                         <div class="content-area">
                                           <div class="image-field">
-                                            <input type="file" name="picture" />
+                                            <div class="form-group">
+                                              <input type="file" name="img[]" class="file-upload-default">
+                                              <div class="input-group col-6">
+                                                <span class="input-group-append">
+                                                  <button class="file-upload-browse btn btn-primary" type="button">+ เพิ่ม</button>
+                                                </span>
+                                                <img class="delete-icons-file" src="images/icon-delete-file.svg">
+                                                <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                              </div>
+                                            </div>
                                           </div>
                                           <div class="container-content-area">
                                             <input class="visuell-view width-small" name="text" value="-" />
@@ -642,7 +664,7 @@
                                     <div class="toolbar show">
                                       <div class="line">
                                         <div class="box">
-                                          <button class="alpha-editor active" data-action="bold" title="Bold">B</button>
+                                          <button class="alpha-editor " data-action="bold" title="Bold">B</button>
                                           <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
                                           <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
                                         </div>
@@ -651,13 +673,25 @@
                                     <div class="toolbar-right">
                                       <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
                                       <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
-                                      <div class="toolbar-right__item toolbar-right__item--sort"> <i class="mdi mdi-swap-vertical"></i> </div>
+                                      <div class="toolbar-right__item toolbar-right__item--sort">
+                                        <img class="icon-arrow-sort icon-arrow-sort--left up" src="/images/arrow-up.svg"/>
+                                        <img class="icon-arrow-sort icon-arrow-sort--right down" src="/images/arrow-down.svg"/>
+                                      </div>
                                     </div>
                                   </div>
 
                                   <div class="content-area">
                                     <div class="image-field">
-                                      <input type="file" name="picture" />
+                                      <div class="form-group">
+                                        <input type="file" name="img[]" class="file-upload-default">
+                                        <div class="input-group col-6">
+                                          <span class="input-group-append">
+                                            <button class="file-upload-browse btn btn-primary" type="button">+ เพิ่ม</button>
+                                          </span>
+                                          <img class="delete-icons-file" src="images/icon-delete-file.svg">
+                                          <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                        </div>
+                                      </div>
                                     </div>
                                     <div class="container-content-area">
                                       <input class="visuell-view width-small" name="text" value="1-01-03" />
@@ -677,7 +711,6 @@
                               </div>
                               <ul class="space"></ul>
                             </li>
-
                           </ul>
                         </li>
                       </ul>
@@ -783,51 +816,6 @@
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="js/script.js"></script>
-    <script>
-      $(document).ready(function () {
-        calcWidth($("#title0"));
-
-        function calcWidth(obj) {
-
-          var titles = $(obj).siblings(".space").children(".route").children(".item");
-
-          $(titles).each(function (index, element) {
-            var pTitleWidth = parseInt($(obj).css("width"));
-            var leftOffset = parseInt($(obj).siblings(".space").css("padding-left"));
-
-            var newWidth = pTitleWidth - leftOffset;
-
-            if ($(obj).attr("id") == "title0") {
-
-              newWidth = newWidth - 10;
-            }
-
-            $(element).css({
-              width: newWidth,
-            });
-
-            calcWidth(element);
-          });
-        }
-
-        $(".space").sortable({
-          connectWith: ".space",
-
-          handle:'.toolbar-right__item--sort',
-          placeholder: '.......',
-          tolerance: "intersect",
-          receive: function (event, ui) {
-            calcWidth($(this).siblings(".item"));
-          },
-        });
-        // $(".space").disableSelection();
-
-       $('.pell-content').click( function () {
-          console.log('click editor')
-       })
-
-      });
-    </script>
     <!-- End custom js for this page-->
   </body>
 </html>

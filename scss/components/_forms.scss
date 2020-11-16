@@ -125,3 +125,16 @@ textarea {
     background: transparent;
   }
 }
+
+input.form-control.file-upload-info {
+  &:disabled {
+    background-color: #E4E4E4;
+
+     color: $black;
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+}

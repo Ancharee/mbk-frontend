@@ -256,13 +256,348 @@
           </div>
 
           <div class="row page-header template-create">
-            <div class="col-md-12">
-              <h2>ชื่อเทมเพลต</h2>
-            </div>
-            <div id="container" class="col-md-12 grid-margin">
+              <div class="col-md-12">
+                <h2>ชื่อเทมเพลต</h2>
+              </div>
+               <div id="container" class="col-md-12 grid-margin">
+                <div class="container-list">
+                  <ul class="space first-space" id="space0" style="top: 0">
+                    <li class="route">
+                      <div class="item">
+                        <div class="editor">
+                          <div class="container-select-type">
+                            <div class="select-type">
+                              <label class="form-check-label" for="text01">
+                                <input type="radio" class="form-check-input" name="type" checked id="text01" value="text"/>
+                                <span class="span-radio"></span>ข้อความ
+                              </label>
+                              <label class="form-check-label" for="picture01">
+                                <input type="radio" class="form-check-input" name="type" id="picture01" value="picture"/>
+                                <span class="span-radio"></span>รูปภาพ
+                              </label>
+                            </div>
+                            <div class="toolbar show">
+                              <div class="line">
+                                <div class="box">
+                                  <button class="alpha-editor " data-action="bold" title="Bold">B</button>
+                                  <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
+                                  <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="toolbar-right">
+                              <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
+                              <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
+                            </div>
+                          </div>
 
+                          <div class="content-area">
+                            <div class="image-field">
+                              <div class="form-group">
+                                <input type="file" name="img[]" class="file-upload-default">
+                                <div class="input-group col-6">
+                                  <span class="input-group-append">
+                                    <button class="file-upload-browse btn btn-primary" type="button">+ เพิ่ม</button>
+                                  </span>
+                                  <img class="delete-icons-file" src="images/icon-delete-file.svg">
+                                  <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="visuell-view" contenteditable>ชื่อหมวด</div>
+                          </div>
+                        </div>
+                      </div>
+                      <ul class="space">
+                        <li class="route">
+                          <div class="item">
+                            <div class="editor">
+                              <div class="container-select-type">
+                                <div class="select-type">
+                                  <label class="form-check-label" for="text02">
+                                    <input type="radio" class="form-check-input" name="type-2" checked id="text02" value="text"/>
+                                    <span class="span-radio"></span>ข้อความ
+                                  </label>
+                                  <label class="form-check-label" for="picture02">
+                                    <input type="radio" class="form-check-input" name="type-2" id="picture02" value="picture"/>
+                                    <span class="span-radio"></span>รูปภาพ
+                                  </label>
+                                </div>
+                                <div class="toolbar show">
+                                  <div class="line">
+                                    <div class="box">
+                                      <button class="alpha-editor " data-action="bold" title="Bold">B</button>
+                                      <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
+                                      <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="toolbar-right">
+                                  <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
+                                  <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
+                                  <div class="toolbar-right__item toolbar-right__item--sort">
+                                    <img class="icon-arrow-sort icon-arrow-sort--left up" src="/images/arrow-up.svg"/>
+                                    <img class="icon-arrow-sort icon-arrow-sort--right down" src="/images/arrow-down.svg"/>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="content-area">
+                                <div class="image-field">
+                                  <div class="form-group">
+                                    <input type="file" name="img[]" class="file-upload-default">
+                                    <div class="input-group col-6">
+                                      <span class="input-group-append">
+                                        <button class="file-upload-browse btn btn-primary" type="button">+ เพิ่ม</button>
+                                      </span>
+                                      <img class="delete-icons-file" src="images/icon-delete-file.svg">
+                                      <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="container-content-area">
+                                  <input class="visuell-view width-small" name="text" value="1-01"/>
+                                  <div class="visuell-view full-width" contenteditable>งบประมาณรายจ้่ายลงทุน</div>
+
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          <ul class="space">
+                            <li class="route">
+                              <div class="item">
+                                <div class="editor">
+                                  <div class="container-select-type">
+                                    <div class="select-type">
+                                      <label class="form-check-label" for="text04">
+                                        <input type="radio" class="form-check-input" name="type-4" checked id="text04" value="text"/>
+                                        <span class="span-radio"></span>ข้อความ
+                                      </label>
+                                      <label class="form-check-label" for="picture04">
+                                        <input type="radio" class="form-check-input" name="type-4" id="picture04" value="picture"/>
+                                        <span class="span-radio"></span>รูปภาพ
+                                      </label>
+                                    </div>
+                                    <div class="toolbar show">
+                                      <div class="line">
+                                        <div class="box">
+                                          <button class="alpha-editor" data-action="bold" title="Bold">B</button>
+                                          <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
+                                          <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="toolbar-right">
+                                      <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
+                                      <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
+                                      <div class="toolbar-right__item toolbar-right__item--sort">
+                                        <img class="icon-arrow-sort icon-arrow-sort--left up" src="/images/arrow-up.svg"/>
+                                        <img class="icon-arrow-sort icon-arrow-sort--right down" src="/images/arrow-down.svg"/>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="content-area">
+                                    <div class="image-field">
+                                      <div class="form-group">
+                                        <input type="file" name="img[]" class="file-upload-default">
+                                        <div class="input-group col-6">
+                                          <span class="input-group-append">
+                                            <button class="file-upload-browse btn btn-primary" type="button">+ เพิ่ม</button>
+                                          </span>
+                                          <img class="delete-icons-file" src="images/icon-delete-file.svg">
+                                          <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="container-content-area">
+                                      <input class="visuell-view width-small" name="text" value="1-01-22"/>
+                                      <div class="visuell-view full-width" contenteditable>เพิ่มเติมระหว่างปี</div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </div>
+                              <ul class="space">
+                                <li class="route">
+                                  <div class="item">
+                                    <div class="editor">
+                                      <div class="container-select-type">
+                                        <div class="select-type">
+                                          <label class="form-check-label" for="text08">
+                                            <input type="radio" class="form-check-input" name="type-8" checked id="text08" value="text"/>
+                                            <span class="span-radio"></span>ข้อความ
+                                          </label>
+                                          <label class="form-check-label" for="picture08">
+                                            <input type="radio" class="form-check-input" name="type-8" id="picture08" value="picture"/>
+                                            <span class="span-radio"></span>รูปภาพ
+                                          </label>
+                                        </div>
+                                        <div class="toolbar show">
+                                          <div class="line">
+                                            <div class="box">
+                                              <button class="alpha-editor" data-action="bold" title="Bold">B</button>
+                                              <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
+                                              <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="toolbar-right">
+                                          <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
+                                          <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
+                                          <div class="toolbar-right__item toolbar-right__item--sort">
+                                              <img class="icon-arrow-sort icon-arrow-sort--left up" src="/images/arrow-up.svg"/>
+                                              <img class="icon-arrow-sort icon-arrow-sort--right down" src="/images/arrow-down.svg"/>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="content-area">
+                                        <div class="image-field">
+                                          <div class="form-group">
+                                            <input type="file" name="img[]" class="file-upload-default">
+                                            <div class="input-group col-6">
+                                              <span class="input-group-append">
+                                                <button class="file-upload-browse btn btn-primary" type="button">+ เพิ่ม</button>
+                                              </span>
+                                              <img class="delete-icons-file" src="images/icon-delete-file.svg">
+                                              <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="container-content-area">
+                                          <input class="visuell-view width-small" name="text" value="-" />
+                                          <div class="visuell-view full-width" contenteditable>วงเงินไม่เกิน 3,0000,000 บาทต่อรายการ</div>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <ul class="space"></ul>
+                                </li>
+                                <li class="route">
+                                    <div class="item">
+                                      <div class="editor">
+                                        <div class="container-select-type">
+                                          <div class="select-type">
+                                            <label class="form-check-label" for="text09">
+                                              <input type="radio" class="form-check-input" name="type-" checked id="text09" value="text"/>
+                                              <span class="span-radio"></span>ข้อความ
+                                            </label>
+                                            <label class="form-check-label" for="picture09">
+                                              <input type="radio" class="form-check-input" name="type-9" id="picture09" value="picture"/>
+                                              <span class="span-radio"></span>รูปภาพ
+                                            </label>
+                                          </div>
+                                          <div class="toolbar show">
+                                            <div class="line">
+                                              <div class="box">
+                                                <button class="alpha-editor " data-action="bold" title="Bold">B</button>
+                                                <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
+                                                <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="toolbar-right">
+                                            <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
+                                            <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
+                                            <div class="toolbar-right__item toolbar-right__item--sort">
+                                              <img class="icon-arrow-sort icon-arrow-sort--left up" src="/images/arrow-up.svg"/>
+                                              <img class="icon-arrow-sort icon-arrow-sort--right down" src="/images/arrow-down.svg"/>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="content-area">
+                                          <div class="image-field">
+                                            <div class="form-group">
+                                              <input type="file" name="img[]" class="file-upload-default">
+                                              <div class="input-group col-6">
+                                                <span class="input-group-append">
+                                                  <button class="file-upload-browse btn btn-primary" type="button">+ เพิ่ม</button>
+                                                </span>
+                                                <img class="delete-icons-file" src="images/icon-delete-file.svg">
+                                                <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="container-content-area">
+                                            <input class="visuell-view width-small" name="text" value="-" />
+                                            <div class="visuell-view full-width" contenteditable>วงเงินไม่เกิน 5,0000,000 บาทต่อรอบการประชุม</div>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <ul class="space"></ul>
+                                  </li>
+                              </ul>
+                            </li>
+                            <li class="route">
+                              <div class="item">
+                                <div class="editor">
+                                  <div class="container-select-type">
+                                    <div class="select-type">
+                                      <label class="form-check-label" for="text07">
+                                        <input type="radio" class="form-check-input" name="type-3" checked id="text07" value="text"/>
+                                        <span class="span-radio"></span>ข้อความ
+                                      </label>
+                                      <label class="form-check-label" for="picture05">
+                                        <input type="radio" class="form-check-input" name="type-7" id="picture05" value="picture"/>
+                                        <span class="span-radio"></span>รูปภาพ
+                                      </label>
+                                    </div>
+                                    <div class="toolbar show">
+                                      <div class="line">
+                                        <div class="box">
+                                          <button class="alpha-editor " data-action="bold" title="Bold">B</button>
+                                          <button class="alpha-editor italic" data-action="italic" title="Italic">I</button>
+                                          <button class="alpha-editor underline" data-action="underline" title="Underline">U</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="toolbar-right">
+                                      <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
+                                      <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
+                                      <div class="toolbar-right__item toolbar-right__item--sort">
+                                        <img class="icon-arrow-sort icon-arrow-sort--left up" src="/images/arrow-up.svg"/>
+                                        <img class="icon-arrow-sort icon-arrow-sort--right down" src="/images/arrow-down.svg"/>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="content-area">
+                                    <div class="image-field">
+                                      <div class="form-group">
+                                        <input type="file" name="img[]" class="file-upload-default">
+                                        <div class="input-group col-6">
+                                          <span class="input-group-append">
+                                            <button class="file-upload-browse btn btn-primary" type="button">+ เพิ่ม</button>
+                                          </span>
+                                          <img class="delete-icons-file" src="images/icon-delete-file.svg">
+                                          <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="container-content-area">
+                                      <input class="visuell-view width-small" name="text" value="1-01-03" />
+                                      <div class="visuell-view full-width" contenteditable>การลงทุนเพื่อการบริหารสภาพคล่อง</div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </div>
+                              <ul class="space"></ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
 
           <div class="row">
             <div class="col-md-12">

@@ -93,7 +93,7 @@
       font-size: 22px;
       color: #47505a;
       padding-left: 15px;
-      height: 35px;
+      min-height: 35px;
 
       &:focus {
         border-color: #8DC63F;
@@ -163,7 +163,22 @@
 
     &--sort {
       padding-left: 20px;
-      cursor: all-scroll;
+      cursor: pointer;
+      position:relative;
+
+      img.icon-arrow-sort {
+        position: absolute;
+        width: 8px;
+
+        &--left {
+            left: 7px;
+          top: -8px;
+        }
+
+        &--right {
+          right: 0;
+        }
+      }
     }
   }
 }
