@@ -18,10 +18,10 @@
 }
 
 .form-control {
+  height: 36px;
   font-weight: 400;
   font-size: $input-font-size;
   color: #9C9C9C;
-  height: auto;
   border-radius: 4px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -34,7 +34,6 @@
 
 input {
   &.form-control {
-    height: 36px;
     background: #FFFFFF;
     box-shadow: inset 0 0 2px 0 rgba(118,118,118,0.50);
     border-radius: 3px;
@@ -46,14 +45,13 @@ input {
 
 select {
   &.form-control {
-    padding: 4px .75rem;
+    padding: 9px 10px;
     border: 0;
-    // outline: 1px solid $border-color;
     color: $input-placeholder-color;
     box-shadow: 0 0 3px 0 rgba(156, 156, 156, 0.50);
     background-image: url(../images/Icons/arrow-down.svg);
     background-repeat: no-repeat;
-    background-position: 96%;
+    background-position: calc(100% - 10px) center;
 
     &:focus {
       box-shadow: 0 0 3px 0 rgba(156, 156, 156, 0.50);

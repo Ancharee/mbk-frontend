@@ -259,59 +259,374 @@
               <div class="card">
                 <div class="card-body card-body--search-form">
                   <div class="template-search-result-text">ตัวย่อ</div>
-                    <div class="mb-1">
-                      <input class="form-control" type="text" placeholder="คกก.">
-                    </div>
-                    <button class="btn btn-primary btn-add-short-position">
-                      <i class="icon-plus"></i>
-                      เพิ่ม
-                    </button>
-
-                    <table class="table" style="margin-top: 12px;">
-                      <thead>
-                        <tr>
-                          <th>ตัวย่อ</th>
-                          <th>ตำแหน่ง</th>
-                          <th>ชื่อ นามสกุล</th>
-                          <th>เลเวล</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>รองฯ-ปก.</td>
-                          <td>รองกรรมการผู้อำนวยการสายปฏิบัติการ</td>
-                          <td>ชื่อ นามสกุล</td>
-                          <td>เลเวล 18</td>
-                          <td>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>รองฯ งบ.</td>
-                          <td>รองกรรมการผู้อำนวยการสายปฏิบัติการ</td>
-                          <td>ชื่อ นามสกุล</td>
-                          <td>เลเวล 18</td>
-                          <td>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>รองฯ กก.ผอ</td>
-                          <td>รองกรรมการผู้อำนวยการสายปฏิบัติการ</td>
-                          <td>ชื่อ นามสกุล</td>
-                          <td>เลเวล 18</td>
-                          <td>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-
+                  <div class="mb-1">
+                    <input class="form-control" type="text" placeholder="คกก.">
+                  </div>
+                  <button class="btn btn-primary btn-add-short-position" data-toggle="modal" data-target="#addModal">
+                    <i class="icon-plus"></i>
+                    เพิ่ม
+                  </button>
+                  <table class="table" style="margin-top: 12px;">
+                    <thead>
+                      <tr>
+                        <th>ตัวย่อ</th>
+                        <th>ตำแหน่ง</th>
+                        <th>ชื่อ นามสกุล</th>
+                        <th>เลเวล</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>รองฯ-ปก.</td>
+                        <td>รองกรรมการผู้อำนวยการสายปฏิบัติการ</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>รองฯ งบ.</td>
+                        <td>รองกรรมการผู้อำนวยการสายปฏิบัติการ</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>รองฯ กก.ผอ</td>
+                        <td>รองกรรมการผู้อำนวยการสายปฏิบัติการ</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- dialog -->
+          <div class="modal fade modal--large" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div>
+                    <label class="form-check-label" for="byPosition">
+                      <input type="radio" class="form-check-input" name="addBy" id="byPosition" value="1" checked />
+                      <span class="span-radio"></span>
+                      ตามตำแหน่ง
+                    </label>
+                    <label class="form-check-label" for="byName">
+                      <input type="radio" class="form-check-input" name="addBy" id="byName" value="2" />
+                      <span class="span-radio"></span>
+                      ตามชื่อ
+                    </label>
+                  </div>
+                  <div class="modal-form">
+                    <div class="js-by-position">
+                      <div class="mb-1">เลือกบริษัท</div>
+                      <select class="form-control" name="" id="" value="">
+                        <option value="">บริษัท เอ็ม บี เค จำกัด (มหาชน)</option>
+                        <option value="">บริษัท เอ็ม บี เค จำกัด (มหาชน)</option>
+                      </select>
+                    </div>
+                    <div class="js-by-name">
+                      <div class="mb-1">ชื่อ</div>
+                      <input class="form-control" type="text" placeholder="พิมพ์ชื่อ">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-body">
+                  <table class="table js-by-position active" style="margin-top: 12px;">
+                    <thead>
+                      <tr>
+                        <th>
+                          <label class="form-check-label" for="allByPosition">
+                            <input type="checkbox" class="form-check-input" name="allByPosition" id="allByPosition" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </th>
+                        <th>ตัวย่อ</th>
+                        <th>ตำแหน่ง</th>
+                        <th>ชื่อ นามสกุล</th>
+                        <th>เลเวล</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="1">
+                            <input type="checkbox" class="form-check-input" name="position" id="1" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>รองฯ-ปก.</td>
+                        <td>รองกรรมการผู้อำนวยการสายปฏิบัติการ</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="2">
+                            <input type="checkbox" class="form-check-input" name="position" id="2" checked />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>รองฯ งบ.</td>
+                        <td>รองกรรมการผู้อำนวยการสายการเงินและบริหาร</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="3">
+                            <input type="checkbox" class="form-check-input" name="position" id="3" checked />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ผช.รองฯงบ.</td>
+                        <td>ผู้ช่วยรองกรรมการผู้อำนวยการสายการเงินและบริหาร  1</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="4">
+                            <input type="checkbox" class="form-check-input" name="position" id="4" checked />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ผช.รองฯงบ2</td>
+                        <td>ผู้ช่วยรองกรรมการผู้อำนวยการสายการเงินและบริหาร 2</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="5">
+                            <input type="checkbox" class="form-check-input" name="position" id="5" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>รองฯ กก.ผอ</td>
+                        <td>รองกรรมการผู้อำนวยการสำนักกรรมการผู้อำนวยการ</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="6">
+                            <input type="checkbox" class="form-check-input" name="position" id="6" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ผช.รองฯกผอ</td>
+                        <td>ผู้ช่วยรองกรรมการผู้อำนวยการ 1 สำนักกรรมการผู้อำนวยการ</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="7">
+                            <input type="checkbox" class="form-check-input" name="position" id="7" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ผชฯ สำนักก</td>
+                        <td>ผู้ช่วยกรรมการผู้อำนวยการสำนักกรรมการผู้อำนวยการ</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="8">
+                            <input type="checkbox" class="form-check-input" name="position" id="8" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ผอ.1กผอ.</td>
+                        <td>ผู้อำนวยการ 1 สำนักกรรมการผู้อำนวยการ</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="9">
+                            <input type="checkbox" class="form-check-input" name="position" id="9" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ผอ.-พัฒนาท</td>
+                        <td>ผู้อำนวยการฝ่ายพัฒนาทรัพยากรบุคคล</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="10">
+                            <input type="checkbox" class="form-check-input" name="position" id="10" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ผอ.2กผอ.</td>
+                        <td>ผู้อำนวยการ 2 สำนักกรรมการผู้อำนวยการ</td>
+                        <td>ชื่อ นามสกุล</td>
+                        <td>เลเวล 18</td>
+                        <td>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table js-by-name" style="margin-top: 12px;">
+                    <thead>
+                      <tr>
+                        <th>
+                          <label class="form-check-label" for="allByName">
+                            <input type="checkbox" class="form-check-input" name="allByName" id="allByName" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </th>
+                        <th>ชื่อ นามสกุล</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="byName-1">
+                            <input type="checkbox" class="form-check-input" name="byName" id="byName-1" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ชื่อ นามสกุล</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="byName-2">
+                            <input type="checkbox" class="form-check-input" name="byName" id="byName-2" checked />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ชื่อ นามสกุล</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="byName-3">
+                            <input type="checkbox" class="form-check-input" name="byName" id="byName-3" checked />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ชื่อ นามสกุล</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="byName-4">
+                            <input type="checkbox" class="form-check-input" name="byName" id="byName-4" checked />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ชื่อ นามสกุล</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="byName-5">
+                            <input type="checkbox" class="form-check-input" name="byName" id="byName-5" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ชื่อ นามสกุล</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="byName-6">
+                            <input type="checkbox" class="form-check-input" name="byName" id="byName-6" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ชื่อ นามสกุล</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="byName-7">
+                            <input type="checkbox" class="form-check-input" name="byName" id="byName-7" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ชื่อ นามสกุล</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="byName-8">
+                            <input type="checkbox" class="form-check-input" name="byName" id="byName-8" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ชื่อ นามสกุล</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="byName-9">
+                            <input type="checkbox" class="form-check-input" name="byName" id="byName-9" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ชื่อ นามสกุล</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label class="form-check-label" for="byName-10">
+                            <input type="checkbox" class="form-check-input" name="byName" id="byName-10" />
+                            <span class="span-radio"></span>
+                          </label>
+                        </td>
+                        <td>ชื่อ นามสกุล</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-success" data-dismiss="modal">ยกเลิก</button>
+                  <button type="button" class="btn btn-success" data-dismiss="modal">ตกลง</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <!-- content-wrapper ends -->
       </div>
@@ -372,6 +687,53 @@
   <!-- endinject -->
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->
+  <script>
+    $(document).ready(function() {
+      let checkboxes = $(".active td input");
+
+      $('[name="addBy"]').change(function() {
+        if ($(this).val() === "1") {
+          $(".js-by-position").addClass("active").show();
+          $(".js-by-name").removeClass("active").hide();
+        } else {
+          $(".js-by-position").removeClass("active").hide();
+          $(".js-by-name").addClass("active").show();
+        }
+        checkboxes = $(".active td input");
+      });
+
+      $("#allByPosition").change(function() {
+        if ($(this).is(":checked")) {
+          checkboxes.prop("checked", true);
+        } else {
+          checkboxes.prop("checked", false);
+        }
+      });
+
+      $("#allByName").change(function() {
+        if ($(this).is(":checked")) {
+          checkboxes.prop("checked", true);
+        } else {
+          checkboxes.prop("checked", false);
+        }
+      });
+
+      checkboxes.change(function() {
+        let checked = 0;
+        checkboxes.each(element => {
+          if ($(checkboxes[element]).is(":checked")) {
+            checked++;
+          }
+        });
+
+        if (checked === checkboxes.length) {
+          $(".active #all").prop("checked", true);
+        } else {
+          $(".active #all").prop("checked", false);
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

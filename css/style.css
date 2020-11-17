@@ -21042,10 +21042,15 @@ li ol > li:before {
   padding: 10px 12px;
   font-family: DBHelvethaicaX-Reg;
   color: #323232;
+  text-align: left;
 }
 
-.table tbody td:last-child {
+.table tbody td:first-child, .table tbody td:last-child {
   text-align: center;
+}
+
+.table .form-check-label {
+  margin-top: -20px;
 }
 
 .table-item {
@@ -21216,12 +21221,7 @@ li ol > li:before {
   padding-top: 0;
 }
 
-.modal i {
-  margin-bottom: 26px;
-  display: block;
-}
-
-.modal .btn {
+.modal .modal-footer .btn {
   font-size: 24px;
   font-family: "DBHelvethaicaX-65Med", sans-serif;
   min-width: 120px;
@@ -21229,8 +21229,13 @@ li ol > li:before {
   padding-bottom: 7px;
 }
 
-.modal .btn + .btn {
+.modal .modal-footer .btn + .btn {
   margin-left: 30px;
+}
+
+.modal i {
+  margin-bottom: 26px;
+  display: block;
 }
 
 .modal--confirm-delete i {
@@ -21273,6 +21278,38 @@ li ol > li:before {
 .modal--form textarea {
   min-height: 200px;
   font-size: 24px;
+}
+
+.modal--large .modal-dialog {
+  max-width: 1024px;
+}
+
+.modal--large .modal-content {
+  max-height: 100%;
+  padding: 20px;
+}
+
+.modal--large .modal-header {
+  flex-direction: column;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.modal--large .modal-header .form-check-label + .form-check-label {
+  margin-left: 30px;
+}
+
+.modal--large .modal-form {
+  padding-top: 12px;
+  padding-bottom: 18px;
+  width: 100%;
+  text-align: left;
+}
+
+.modal--large .modal-body {
+  padding: 0;
+  padding-bottom: 24px;
+  width: 100%;
 }
 
 .container-list {
@@ -21600,10 +21637,10 @@ li ol > li:before {
 }
 
 .form-control, .dataTables_wrapper select {
+  height: 36px;
   font-weight: 400;
   font-size: 18px;
   color: #9C9C9C;
-  height: auto;
   border-radius: 4px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -21615,7 +21652,6 @@ li ol > li:before {
 }
 
 input.form-control {
-  height: 36px;
   background: #FFFFFF;
   box-shadow: inset 0 0 2px 0 rgba(118, 118, 118, 0.5);
   border-radius: 3px;
@@ -21625,13 +21661,13 @@ input.form-control {
 }
 
 select.form-control, .dataTables_wrapper select {
-  padding: 4px .75rem;
+  padding: 9px 10px;
   border: 0;
   color: #c9c8c8;
   box-shadow: 0 0 3px 0 rgba(156, 156, 156, 0.5);
   background-image: url(../images/Icons/arrow-down.svg);
   background-repeat: no-repeat;
-  background-position: 96%;
+  background-position: calc(100% - 10px) center;
 }
 
 select.form-control:focus, .dataTables_wrapper select:focus {
@@ -23291,6 +23327,24 @@ input.form-control.file-upload-info:disabled::placeholder {
 .page-title--with-btn .btn-danger i {
   margin-right: 4px;
   font-size: 15px;
+}
+
+.js-by-name {
+  display: none;
+}
+
+.js-by-name th:first-child,
+.js-by-name td:first-child {
+  width: 64px;
+}
+
+.js-by-name th:last-child,
+.js-by-name td:last-child {
+  text-align: left !important;
+}
+
+.js-by-name th:last-child {
+  padding-left: 67px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

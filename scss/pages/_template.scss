@@ -281,3 +281,24 @@
     }
   }
 }
+
+.js-by-name {
+  display: none;
+
+  th,
+  td {
+    &:first-child {
+      width: 64px;
+    }
+
+    &:last-child {
+      text-align: left !important;
+    }
+  }
+
+  th {
+    &:last-child {
+      padding-left: 67px;
+    }
+  }
+}

@@ -35,11 +35,17 @@
       padding: 10px 12px;
       font-family: DBHelvethaicaX-Reg;
       color: #323232;
+      text-align: left;
 
+      &:first-child,
       &:last-child {
         text-align: center;
       }
     }
+  }
+
+  .form-check-label {
+    margin-top: -20px;
   }
 }
 
