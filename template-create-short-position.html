@@ -117,13 +117,13 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="template.html">
               <i class="icon-files menu-icon"></i>
               <span class="menu-title">เทมเพลต</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ui-template">
+            <div class="collapse show" id="ui-template">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
                   <a class="nav-link" href="template-group.html">
@@ -140,8 +140,8 @@
                     <i class="mdi mdi-circle menu-icon"></i>
                     <span class="menu-title">หมายเหตุ</span>
                   </a></li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
+                <li class="nav-item active">
+                  <a class="nav-link" href="template-short-position-menu.html">
                     <i class="mdi mdi-circle menu-icon"></i>
                     <span class="menu-title">คณะกรรมการ</span>
                   </a></li>
@@ -224,7 +224,7 @@
               <div class="d-flex justify-content-between flex-wrap align-items-center">
                 <div class="breadcrumb d-flex align-items-center">
                   <h3 class="breadcrumb__title">
-                    <a href="#">หมายเหตุ</a>
+                    <a href="#">เพิ่มกรรมการ</a>
                   </h3>
                   <ul class="breadcrumb__list">
                     <li class="breadcrumb__item">
@@ -239,32 +239,16 @@
                     <li class="breadcrumb__item">
                       <i class="breadcrumb__icon icon-chevrons-right"></i>
                     </li>
+                    <li class="breadcrumb__item">
+                      <a class="breadcrumb__link" href="#">กรรมการ</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                      <i class="breadcrumb__icon icon-chevrons-right"></i>
+                    </li>
                     <li class="breadcrumb__item active">
-                      <a class="breadcrumb__link" href="#">หมายเหตุ</a>
+                      <a class="breadcrumb__link" href="#">เพิ่มกรรมการ</a>
                     </li>
                   </ul>
-                </div>
-                <div class="d-flex">
-                  <button class="btn btn-outline-secondary btn-rounded btn-create" data-toggle="modal" data-target="#addModal">
-                    เพิ่มหมายเหตุ
-                    <i class="icon-plus"></i>
-                  </button>
-                  <div class="modal fade modal--form" id="addModal" tabindex="-1" role="dialog"
-                    aria-labelledby="addModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="addModalLabel">เพิ่มหมายเหตุ</h5>
-                        </div>
-                        <div class="modal-body">
-                          <textarea class="form-control" rows="5" placeholder="พิมพ์หมายเหตุ...."></textarea>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-success" data-dismiss="modal">เพิ่ม</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -273,115 +257,61 @@
           <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
-                <div class="card-body">
-                  <div class="page-title">
-                    <label class="form-check-label" for="1">
-                      <input type="checkbox" class="form-check-input" name="remark-title" id="1" />
-                      <span class="span-radio"></span>
-                      หมายเหตุ
-                    </label>
-                  </div>
-                  <div class="table-item">
-                    <div class="table-item__row">
-                      <div class="table-item__col">
-                        <label class="form-check-label" for="2">
-                          <input type="checkbox" class="form-check-input" id="2" />
-                          <span class="span-radio"></span>
-                          รายงาน คกก. เพื่อทราบ
-                        </label>
-                      </div>
-                      <div>
-                        <div class="modal fade modal--form" id="editModal1" tabindex="-1" role="dialog"
-                          aria-labelledby="editModal1Label" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="editModal1Label">แก้ไขหมายเหตุ</h5>
-                              </div>
-                              <div class="modal-body">
-                                <textarea class="form-control" rows="5" placeholder="พิมพ์หมายเหตุ...."></textarea>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-dismiss="modal">บันทึก</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-                          data-target="#editModal1">แก้ไข</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-                          data-target="#confirmModal1">ลบ</button>
-                        <div class="modal fade modal--confirm-delete" id="confirmModal1" tabindex="-1" role="dialog"
-                          aria-labelledby="confirmModal1Label" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="confirmModal1Label">ลบหมายเหตุ!</h5>
-                              </div>
-                              <div class="modal-body">
-                                <i class="icon-remove"></i>
-                                <p>ต้องการลบหมายเหตุ “รายงาน คกก. เพื่อทราบ” หรือไม่ ?</p>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-success" data-dismiss="modal">ไม่</button>
-                                <button type="button" class="btn btn-success" data-dismiss="modal">ใช่</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                <div class="card-body card-body--search-form">
+                  <div class="template-search-result-text">ตัวย่อ</div>
+                    <div class="mb-1">
+                      <input class="form-control" type="text" placeholder="คกก.">
                     </div>
-                    <div class="table-item__row">
-                      <div class="table-item__col">
-                        <label class="form-check-label" for="3">
-                          <input type="checkbox" class="form-check-input" id="3" />
-                          <span class="span-radio"></span>
-                          ผส./ผอ.ฝ่ายที่เกี่ยวข้อง
-                        </label>
-                      </div>
-                      <div>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-                          data-target="#editModal1">แก้ไข</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-                          data-target="#confirmModal1">ลบ</button>
-                      </div>
-                    </div>
-                    <div class="table-item__row">
-                      <div class="table-item__col">
-                        <label class="form-check-label" for="4">
-                          <input type="checkbox" class="form-check-input" id="4" />
-                          <span class="span-radio"></span>
-                          ผช.รองฯ สายที่เกี่ยวข้อง และ ผช.รองฯ งบ.1 อนุมัติร่วมกัน
-                        </label>
-                      </div>
-                      <div>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-                          data-target="#editModal1">แก้ไข</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-                          data-target="#confirmModal1">ลบ</button>
-                      </div>
-                    </div>
-                    <div class="table-item__row">
-                      <div class="table-item__col">
-                        <label class="form-check-label" for="5">
-                          <input type="checkbox" class="form-check-input" id="5" />
-                          <span class="span-radio"></span>
-                          รองฯ/ผชฯ สายที่เกี่ยวข้อง และ ผช.รองฯ งบ.1 อนุมัติร่วมกัน
-                        </label>
-                      </div>
-                      <div>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-                          data-target="#editModal1">แก้ไข</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-                          data-target="#confirmModal1">ลบ</button>
-                      </div>
-                    </div>
-                  </div>
+                    <button class="btn btn-primary btn-add-short-position">
+                      <i class="icon-plus"></i>
+                      เพิ่ม
+                    </button>
+
+                    <table class="table" style="margin-top: 12px;">
+                      <thead>
+                        <tr>
+                          <th>ตัวย่อ</th>
+                          <th>ตำแหน่ง</th>
+                          <th>ชื่อ นามสกุล</th>
+                          <th>เลเวล</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>รองฯ-ปก.</td>
+                          <td>รองกรรมการผู้อำนวยการสายปฏิบัติการ</td>
+                          <td>ชื่อ นามสกุล</td>
+                          <td>เลเวล 18</td>
+                          <td>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>รองฯ งบ.</td>
+                          <td>รองกรรมการผู้อำนวยการสายปฏิบัติการ</td>
+                          <td>ชื่อ นามสกุล</td>
+                          <td>เลเวล 18</td>
+                          <td>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>รองฯ กก.ผอ</td>
+                          <td>รองกรรมการผู้อำนวยการสายปฏิบัติการ</td>
+                          <td>ชื่อ นามสกุล</td>
+                          <td>เลเวล 18</td>
+                          <td>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">นำออก</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
                 </div>
               </div>
             </div>
           </div>
-
         </div>
         <!-- content-wrapper ends -->
       </div>

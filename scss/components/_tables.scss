@@ -3,52 +3,43 @@
 .table {
   margin-bottom: 0;
   width: 100%;
-
-  thead {
-    th {
-      border-top: 0;
-      border-bottom-width: 1px;
-      font-weight: 500;
-      font-size: 1rem;
-
-      i {
-        margin-left: 0.325rem;
-      }
-    }
-  }
+  background: $white;
+  border: 1px solid #DDDDDD;
 
   th,
   td {
-    vertical-align: middle;
-    line-height: 1;
+    border: 1px solid #DDDDDD;
   }
 
-  td {
-    font-size: $default-font-size;
-
-    img {
-      width: 36px;
-      height: 36px;
-      border-radius: 100%;
-    }
-
-    .badge {
-      margin-bottom: 0;
-    }
-  }
-
-  &.table-borderless {
-    border: none;
-
-    tr,
-    td,
+  thead {
     th {
-      border: none;
+      padding: 12px;
+      text-align: center;
+      font-weight: normal;
+      font-size: 18px;
+      border-bottom: 1px solid #DDDDDD;
+      background-color: #F5F5F5;
     }
   }
 
-  &.table-bordered {
-    border-top: 1px solid $border-color;
+  tbody {
+    tr{
+      &:nth-child(even) {
+        td {
+          background-color: #F5F5F5;
+        }
+      }
+    }
+
+    td {
+      padding: 10px 12px;
+      font-family: DBHelvethaicaX-Reg;
+      color: #323232;
+
+      &:last-child {
+        text-align: center;
+      }
+    }
   }
 }
 

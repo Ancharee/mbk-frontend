@@ -220,3 +220,64 @@
     padding: 7px;
   }
 }
+
+.card-body--search-form {
+  .card & {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+
+.template-search-form {
+  flex-wrap: nowrap;
+  margin-bottom: 6px;
+}
+
+.template-search-input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-right: 15px;
+
+  i {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    font-size: 12px;
+  }
+
+  input {
+    padding-left: 30px;
+    width: 100%;
+  }
+}
+
+.template-search-result-text {
+  font-family: DBHelvethaicaX-65Med;
+  font-size: 24px;
+  color: #323232;
+  letter-spacing: 0;
+}
+
+.page-title--with-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .btn-danger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #CB0A08;
+    border-radius: 3px;
+    font-family: DBHelvethaicaX-65Med;
+    font-size: 15px;
+    height: 28px;
+    width: 78px;
+    padding: 0;
+
+    i {
+      margin-right: 4px;
+      font-size: 15px;
+    }
+  }
+}
