@@ -23328,8 +23328,20 @@ input.form-control.file-upload-info:disabled::placeholder {
   font-size: 15px;
 }
 
+.js-by-position {
+  display: none;
+}
+
+.js-by-position.active {
+  display: block;
+}
+
 .js-by-name {
   display: none;
+}
+
+.js-by-name.active {
+  display: block;
 }
 
 .js-by-name th:first-child,
@@ -23344,6 +23356,24 @@ input.form-control.file-upload-info:disabled::placeholder {
 
 .js-by-name th:last-child {
   padding-left: 67px;
+}
+
+.card--template-column .card-body {
+  padding: 13px 22px;
+}
+
+.template-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.template-column-header .btn {
+  padding: 0;
+}
+
+.template-column-header .btn i {
+  font-size: 32px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

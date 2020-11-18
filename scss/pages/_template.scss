@@ -282,8 +282,20 @@
   }
 }
 
+.js-by-position {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
 .js-by-name {
   display: none;
+
+  &.active {
+    display: block;
+  }
 
   th,
   td {
@@ -299,6 +311,26 @@
   th {
     &:last-child {
       padding-left: 67px;
+    }
+  }
+}
+
+.card--template-column {
+  .card-body {
+    padding: 13px 22px;
+  }
+}
+
+.template-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .btn {
+    padding: 0;
+
+    i {
+      font-size: 32px;
     }
   }
 }
