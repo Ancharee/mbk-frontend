@@ -23382,4 +23382,12 @@ input.form-control.file-upload-info:disabled::placeholder {
   font-size: 32px;
 }
 
+.js-by-radio {
+  margin-bottom: 8px;
+}
+
+.js-by-radio .form-check-label + .form-check-label {
+  margin-left: 65px;
+}
+
 /*# sourceMappingURL=maps/style.css.map */

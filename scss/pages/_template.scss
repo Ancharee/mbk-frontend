@@ -334,3 +334,13 @@
     }
   }
 }
+
+.js-by-radio {
+  margin-bottom: 8px;
+
+  .form-check-label {
+    + .form-check-label {
+      margin-left: 65px;
+    }
+  }
+}
