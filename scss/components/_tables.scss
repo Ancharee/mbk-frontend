@@ -47,6 +47,16 @@
   .form-check-label {
     margin-top: -20px;
   }
+
+  &--view-column {
+    tbody {
+      td,
+      td:first-child,
+      td:last-child {
+        text-align: left;
+      }
+    }
+  }
 }
 
 .table-item {

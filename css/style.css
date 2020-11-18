@@ -21053,6 +21053,12 @@ li ol > li:before {
   margin-top: -20px;
 }
 
+.table--view-column tbody td,
+.table--view-column tbody td:first-child,
+.table--view-column tbody td:last-child {
+  text-align: left;
+}
+
 .table-item {
   width: 100%;
   font-family: "DBHelvethaicaX-Reg", sans-serif;
