@@ -21086,6 +21086,10 @@ li ol > li:before {
   margin-left: 7px;
 }
 
+.table-item .form-check-label {
+  font-size: 18px;
+}
+
 .breadcrumb {
   padding: 0;
   margin: 0;
@@ -23171,6 +23175,10 @@ input.form-control.file-upload-info:disabled::placeholder {
 .template-copy-list .form-check-label .form-check-input + .span-radio {
   top: auto;
   left: 30px;
+}
+
+.template-copy-list .form-check-label:not(.title) {
+  font-size: 20px;
 }
 
 .template-copy-list .form-check-label:not(.title) .form-check-input:checked + .span-radio + .checkbox-text {

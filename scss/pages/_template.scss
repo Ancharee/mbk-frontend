@@ -118,6 +118,8 @@
     }
 
     &:not(.title) {
+      font-size: 20px;
+
       .form-check-input {
         &:checked {
           + .span-radio + .checkbox-text {
