@@ -344,3 +344,35 @@
     }
   }
 }
+
+
+.template-copy-list--column {
+  .checkbox-text {
+    display: flex;
+
+    &__col {
+      margin-right: 10px;
+      position: relative;
+      width: 40%;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -11px;
+        right: 0;
+        width: 1px;
+        height: 44px;
+        background-color: #ddd;
+      }
+    }
+  }
+
+  .title {
+    .checkbox-text__col {
+      &::after {
+        top: -14px;
+        height: 50px;
+      }
+    }
+  }
+}
