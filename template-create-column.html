@@ -219,229 +219,217 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
-          <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="d-flex justify-content-between flex-wrap align-items-center">
-                <div class="breadcrumb d-flex align-items-center">
-                  <h3 class="breadcrumb__title">
-                    <a href="#">สร้างหัวตาราง</a>
-                  </h3>
-                  <ul class="breadcrumb__list">
-                    <li class="breadcrumb__item">
-                      <i class="breadcrumb__icon icon-dashboard"></i>
-                    </li>
-                    <li class="breadcrumb__item">
-                      <i class="breadcrumb__icon icon-chevrons-right"></i>
-                    </li>
-                    <li class="breadcrumb__item">
-                      <a class="breadcrumb__link" href="#">เทมเพลต</a>
-                    </li>
-                    <li class="breadcrumb__item">
-                      <i class="breadcrumb__icon icon-chevrons-right"></i>
-                    </li>
-                    <li class="breadcrumb__item">
-                      <a class="breadcrumb__link" href="#">โครงสร้างหัวตาราง</a>
-                    </li>
-                    <li class="breadcrumb__item">
-                      <i class="breadcrumb__icon icon-chevrons-right"></i>
-                    </li>
-                    <li class="breadcrumb__item active">
-                      <a class="breadcrumb__link" href="#">สร้างหัวตาราง</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          <div class="breadcrumb-wrapper">
+            <div class="breadcrumb d-flex align-items-center">
+              <h3 class="breadcrumb__title">
+                <a href="#">สร้างหัวตาราง</a>
+              </h3>
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                  <i class="breadcrumb__icon icon-dashboard"></i>
+                </li>
+                <li class="breadcrumb__item">
+                  <i class="breadcrumb__icon icon-chevrons-right"></i>
+                </li>
+                <li class="breadcrumb__item">
+                  <a class="breadcrumb__link" href="#">เทมเพลต</a>
+                </li>
+                <li class="breadcrumb__item">
+                  <i class="breadcrumb__icon icon-chevrons-right"></i>
+                </li>
+                <li class="breadcrumb__item">
+                  <a class="breadcrumb__link" href="#">โครงสร้างหัวตาราง</a>
+                </li>
+                <li class="breadcrumb__item">
+                  <i class="breadcrumb__icon icon-chevrons-right"></i>
+                </li>
+                <li class="breadcrumb__item active">
+                  <a class="breadcrumb__link" href="#">สร้างหัวตาราง</a>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-12 grid-margin stretch-card flex-wrap">
-              <div class="w-100">
-                <h3>ชื่อโครงสร้าง</h3>
-              </div>
-              <div class="w-100 grid-margin">
-                <input class="form-control" type="text" placeholder="โครงสร้างหัวตาราง แบบที่ XX">
-              </div>
-
-              <div class="js-template-columns w-100">
-                <div class="card card--template-column grid-margin js-card">
-                  <div class="card-body">
-                    <div class="template-column-header">
-                      <h3>หัวตารางที่ 1</h3>
-                      <button class="btn js-delete-column"><i class="icon-delete"></i></button>
-                    </div>
-                    <div class="js-by-radio">
-                      <label class="form-check-label" for="byPosition1">
-                        <input type="radio" class="form-check-input" name="addBy1" id="byPosition1" value="1" checked />
+          <div class="container-content container-content--narrow">
+            <div class="w-100">
+              <h3>ชื่อโครงสร้าง</h3>
+            </div>
+            <div class="w-100 mb-14">
+              <input class="form-control" type="text" placeholder="โครงสร้างหัวตาราง แบบที่ XX">
+            </div>
+            <div class="js-template-columns w-100">
+              <div class="card card--template-column js-card mb-14">
+                <div class="card-body">
+                  <div class="template-column-header">
+                    <h3>หัวตารางที่ 1</h3>
+                    <button class="btn js-delete-column"><i class="icon-delete"></i></button>
+                  </div>
+                  <div class="js-by-radio">
+                    <label class="form-check-label" for="byPosition1">
+                      <input type="radio" class="form-check-input" name="addBy1" id="byPosition1" value="1" checked />
+                      <span class="span-radio"></span>
+                      ตามตำแหน่ง
+                    </label>
+                    <label class="form-check-label" for="byName1">
+                      <input type="radio" class="form-check-input" name="addBy1" id="byName1" value="2" />
+                      <span class="span-radio"></span>
+                      ตามชื่อ
+                    </label>
+                  </div>
+                  <div class="template-copy-list js-by-position active">
+                    <div class="template-copy-list__item">
+                      <label class="form-check-label title" for="0">
+                        <input type="checkbox" class="form-check-input" name="point-0" id="0" />
                         <span class="span-radio"></span>
-                        ตามตำแหน่ง
+                        <span class="checkbox-text">
+                          ตัวย่อ
+                        </span>
                       </label>
-                      <label class="form-check-label" for="byName1">
-                        <input type="radio" class="form-check-input" name="addBy1" id="byName1" value="2" />
+                    </div>
+                    <div class="template-copy-list__item">
+                      <label class="form-check-label" for="1">
+                        <input type="checkbox" class="form-check-input" name="point-1" id="1" checked />
                         <span class="span-radio"></span>
-                        ตามชื่อ
+                        <span class="checkbox-text">
+                          รก.ผจก.ปบ
+                        </span>
                       </label>
                     </div>
-                    <div class="template-copy-list js-by-position active">
-                      <div class="template-copy-list__item">
-                        <label class="form-check-label title" for="0">
-                          <input type="checkbox" class="form-check-input" name="point-0" id="0" />
-                          <span class="span-radio"></span>
-                          <span class="checkbox-text">
-                            ตัวย่อ
-                          </span>
-                        </label>
-                      </div>
-                      <div class="template-copy-list__item">
-                        <label class="form-check-label" for="1">
-                          <input type="checkbox" class="form-check-input" name="point-1" id="1" checked />
-                          <span class="span-radio"></span>
-                          <span class="checkbox-text">
-                            รก.ผจก.ปบ
-                          </span>
-                        </label>
-                      </div>
-                      <div class="template-copy-list__item">
-                        <label class="form-check-label" for="2">
-                          <input type="checkbox" class="form-check-input" name="point-2" id="2" checked />
-                          <span class="span-radio"></span>
-                          <span class="checkbox-text">
-                            จนส.สนับสนุน
-                          </span>
-                        </label>
-                      </div>
-                      <div class="template-copy-list__item">
-                        <label class="form-check-label" for="3">
-                          <input type="checkbox" class="form-check-input" name="point-3" id="3" />
-                          <span class="span-radio"></span>
-                          <span class="checkbox-text">
-                            ผช.ผจก.
-                          </span>
-                        </label>
-                      </div>
-                      <div class="template-copy-list__item">
-                        <label class="form-check-label" for="4">
-                          <input type="checkbox" class="form-check-input" name="point-4" id="4" />
-                          <span class="span-radio"></span>
-                          <span class="checkbox-text">
-                            จนท.จซ.2
-                          </span>
-                        </label>
-                      </div>
-                      <div class="template-copy-list__item">
-                        <label class="form-check-label" for="5">
-                          <input type="checkbox" class="form-check-input" name="point-5" id="5" />
-                          <span class="span-radio"></span>
-                          <span class="checkbox-text">
-                            ผช.บรส.
-                          </span>
-                        </label>
-                      </div>
+                    <div class="template-copy-list__item">
+                      <label class="form-check-label" for="2">
+                        <input type="checkbox" class="form-check-input" name="point-2" id="2" checked />
+                        <span class="span-radio"></span>
+                        <span class="checkbox-text">
+                          จนส.สนับสนุน
+                        </span>
+                      </label>
                     </div>
-                    <div class="js-by-name">
-                      <input class="form-control" type="text" placeholder="โครงสร้างหัวตาราง แบบที่ XX">
+                    <div class="template-copy-list__item">
+                      <label class="form-check-label" for="3">
+                        <input type="checkbox" class="form-check-input" name="point-3" id="3" />
+                        <span class="span-radio"></span>
+                        <span class="checkbox-text">
+                          ผช.ผจก.
+                        </span>
+                      </label>
+                    </div>
+                    <div class="template-copy-list__item">
+                      <label class="form-check-label" for="4">
+                        <input type="checkbox" class="form-check-input" name="point-4" id="4" />
+                        <span class="span-radio"></span>
+                        <span class="checkbox-text">
+                          จนท.จซ.2
+                        </span>
+                      </label>
+                    </div>
+                    <div class="template-copy-list__item">
+                      <label class="form-check-label" for="5">
+                        <input type="checkbox" class="form-check-input" name="point-5" id="5" />
+                        <span class="span-radio"></span>
+                        <span class="checkbox-text">
+                          ผช.บรส.
+                        </span>
+                      </label>
                     </div>
                   </div>
-                </div>
-                <div class="card card--template-column grid-margin js-card">
-                  <div class="card-body">
-                    <div class="template-column-header">
-                      <h3>หัวตารางที่ 2</h3>
-                      <button class="btn js-delete-column"><i class="icon-delete"></i></button>
-                    </div>
-                    <div class="js-by-radio">
-                      <label class="form-check-label" for="byPosition2">
-                        <input type="radio" class="form-check-input" name="addBy2" id="byPosition2" value="1" />
-                        <span class="span-radio"></span>
-                        ตามตำแหน่ง
-                      </label>
-                      <label class="form-check-label" for="byName2">
-                        <input type="radio" class="form-check-input" name="addBy2" id="byName2" value="2" checked />
-                        <span class="span-radio"></span>
-                        ตามชื่อ
-                      </label>
-                    </div>
-                    <div class="template-copy-list js-by-position">
-                      <div class="template-copy-list__item">
-                        <label class="form-check-label title" for="0">
-                          <input type="checkbox" class="form-check-input" name="point-0" id="0" />
-                          <span class="span-radio"></span>
-                          <span class="checkbox-text">
-                            ตัวย่อ
-                          </span>
-                        </label>
-                      </div>
-                      <div class="template-copy-list__item">
-                        <label class="form-check-label" for="1">
-                          <input type="checkbox" class="form-check-input" name="point-1" id="1" checked />
-                          <span class="span-radio"></span>
-                          <span class="checkbox-text">
-                            รก.ผจก.ปบ
-                          </span>
-                        </label>
-                      </div>
-                      <div class="template-copy-list__item">
-                        <label class="form-check-label" for="2">
-                          <input type="checkbox" class="form-check-input" name="point-2" id="2" checked />
-                          <span class="span-radio"></span>
-                          <span class="checkbox-text">
-                            จนส.สนับสนุน
-                          </span>
-                        </label>
-                      </div>
-                      <div class="template-copy-list__item">
-                        <label class="form-check-label" for="3">
-                          <input type="checkbox" class="form-check-input" name="point-3" id="3" />
-                          <span class="span-radio"></span>
-                          <span class="checkbox-text">
-                            ผช.ผจก.
-                          </span>
-                        </label>
-                      </div>
-                      <div class="template-copy-list__item">
-                        <label class="form-check-label" for="4">
-                          <input type="checkbox" class="form-check-input" name="point-4" id="4" />
-                          <span class="span-radio"></span>
-                          <span class="checkbox-text">
-                            จนท.จซ.2
-                          </span>
-                        </label>
-                      </div>
-                      <div class="template-copy-list__item">
-                        <label class="form-check-label" for="5">
-                          <input type="checkbox" class="form-check-input" name="point-5" id="5" />
-                          <span class="span-radio"></span>
-                          <span class="checkbox-text">
-                            ผช.บรส.
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="js-by-name active">
-                      <input class="form-control" type="text" placeholder="โครงสร้างหัวตาราง แบบที่ XX">
-                    </div>
+                  <div class="js-by-name">
+                    <input class="form-control" type="text" placeholder="โครงสร้างหัวตาราง แบบที่ XX">
                   </div>
                 </div>
               </div>
-              <div>
-                <button class="btn btn-success js-add-column">
-                  <i class="icon-plus"></i>
-                  เพิ่มหัวตาราง
-                </button>
+              <div class="card card--template-column js-card mb-14">
+                <div class="card-body">
+                  <div class="template-column-header">
+                    <h3>หัวตารางที่ 2</h3>
+                    <button class="btn js-delete-column"><i class="icon-delete"></i></button>
+                  </div>
+                  <div class="js-by-radio">
+                    <label class="form-check-label" for="byPosition2">
+                      <input type="radio" class="form-check-input" name="addBy2" id="byPosition2" value="1" />
+                      <span class="span-radio"></span>
+                      ตามตำแหน่ง
+                    </label>
+                    <label class="form-check-label" for="byName2">
+                      <input type="radio" class="form-check-input" name="addBy2" id="byName2" value="2" checked />
+                      <span class="span-radio"></span>
+                      ตามชื่อ
+                    </label>
+                  </div>
+                  <div class="template-copy-list js-by-position">
+                    <div class="template-copy-list__item">
+                      <label class="form-check-label title" for="0">
+                        <input type="checkbox" class="form-check-input" name="point-0" id="0" />
+                        <span class="span-radio"></span>
+                        <span class="checkbox-text">
+                          ตัวย่อ
+                        </span>
+                      </label>
+                    </div>
+                    <div class="template-copy-list__item">
+                      <label class="form-check-label" for="1">
+                        <input type="checkbox" class="form-check-input" name="point-1" id="1" checked />
+                        <span class="span-radio"></span>
+                        <span class="checkbox-text">
+                          รก.ผจก.ปบ
+                        </span>
+                      </label>
+                    </div>
+                    <div class="template-copy-list__item">
+                      <label class="form-check-label" for="2">
+                        <input type="checkbox" class="form-check-input" name="point-2" id="2" checked />
+                        <span class="span-radio"></span>
+                        <span class="checkbox-text">
+                          จนส.สนับสนุน
+                        </span>
+                      </label>
+                    </div>
+                    <div class="template-copy-list__item">
+                      <label class="form-check-label" for="3">
+                        <input type="checkbox" class="form-check-input" name="point-3" id="3" />
+                        <span class="span-radio"></span>
+                        <span class="checkbox-text">
+                          ผช.ผจก.
+                        </span>
+                      </label>
+                    </div>
+                    <div class="template-copy-list__item">
+                      <label class="form-check-label" for="4">
+                        <input type="checkbox" class="form-check-input" name="point-4" id="4" />
+                        <span class="span-radio"></span>
+                        <span class="checkbox-text">
+                          จนท.จซ.2
+                        </span>
+                      </label>
+                    </div>
+                    <div class="template-copy-list__item">
+                      <label class="form-check-label" for="5">
+                        <input type="checkbox" class="form-check-input" name="point-5" id="5" />
+                        <span class="span-radio"></span>
+                        <span class="checkbox-text">
+                          ผช.บรส.
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="js-by-name active">
+                    <input class="form-control" type="text" placeholder="โครงสร้างหัวตาราง แบบที่ XX">
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <div class="template-create-action d-flex justify-content-center">
-                <a class="btn btn-outline-success" href="template-column-menu.html">
-                  ยกเลิก
-                </a>
-                <a class="btn btn-success" href="template-column-menu.html">
-                  สร้าง
-                </a>
-              </div>
+            <div>
+              <button class="btn btn-success js-add-column">
+                <i class="icon-plus"></i>
+                เพิ่มหัวตาราง
+              </button>
+            </div>
+            <div class="container-action">
+              <a class="btn btn-outline-success" href="template-column-menu.html">
+                ยกเลิก
+              </a>
+              <a class="btn btn-success" href="template-column-menu.html">
+                สร้าง
+              </a>
             </div>
           </div>
 
@@ -506,10 +494,10 @@
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       const clone = $('.js-card').first();
 
-      $('.js-add-column').on('click', function() {
+      $('.js-add-column').on('click', function () {
         clone.clone().appendTo('.js-template-columns');
       });
 
