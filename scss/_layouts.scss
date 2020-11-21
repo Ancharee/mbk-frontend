@@ -15,7 +15,7 @@
           .brand-logo-mini {
             display: none;
           }
-        }  
+        }
       }
       .navbar-menu-wrapper {
         width: calc(100% - #{$sidebar-width-icon});
@@ -30,7 +30,7 @@
           .nav-link {
             display: block;
             padding-left: .5rem;
-            padding-right: .5rem;            
+            padding-right: .5rem;
             text-align: center;
             position: static;
             .menu-title,
@@ -80,12 +80,12 @@
                 width: $icon-only-collapse-width;
                 z-index: 1;
                 line-height: 1.8;
-                box-shadow: 4px 0px 7px 0px rgba(182, 185, 189, 0.25);              
+                box-shadow: 4px 0px 7px 0px rgba(182, 185, 189, 0.25);
                 @at-root #{selector-append(".rtl", &)} {
                   left: auto;
                   right: $sidebar-width-icon;
                   text-align: left;
-                  box-shadow: -4px 0px 7px 0px rgba(182, 185, 189, 0.25);                                
+                  box-shadow: -4px 0px 7px 0px rgba(182, 185, 189, 0.25);
                 }
                 &:after {
                   display: none;
@@ -176,6 +176,31 @@
     &::-webkit-scrollbar-thumb {
       background-color: darkgrey;
       outline: 1px solid slategrey;
+    }
+  }
+}
+
+.breadcrumb-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .breadcrumb {
+    margin-bottom: 10px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.container-content {
+  width: 100%;
+
+  &--narrow {
+    @include tablet {
+      padding-left: 66px;
     }
   }
 }

@@ -19093,6 +19093,10 @@ code {
   padding-right: 30px;
 }
 
+.mt-39 {
+  margin-top: 39px;
+}
+
 /* Demo Styles */
 .template-demo .progress {
   margin-top: 1.5rem;
@@ -20105,6 +20109,10 @@ code {
   margin-bottom: 0;
   opacity: 0.5;
   font-size: 0.75rem;
+}
+
+.card--template .card-body {
+  padding: 45px 35px 17px;
 }
 
 .card-inverse-primary {
@@ -22895,6 +22903,33 @@ input.form-control.file-upload-info:disabled::placeholder {
 .rtl ul.chats::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
+}
+
+.breadcrumb-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-wrapper .breadcrumb {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .breadcrumb-wrapper .breadcrumb {
+    margin-bottom: 0;
+  }
+}
+
+.container-content {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container-content--narrow {
+    padding-left: 66px;
+  }
 }
 
 .sidebar-list {

@@ -82,6 +82,12 @@
   }
 }
 
+.card--template {
+  .card-body {
+    padding: 45px 35px 17px;
+  }
+}
+
 @each $color, $value in $theme-colors {
   .card-inverse-#{$color} {
     @include card-inverse-variant(
