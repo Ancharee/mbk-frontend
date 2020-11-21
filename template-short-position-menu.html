@@ -219,121 +219,111 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
-          <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="d-flex justify-content-between flex-wrap align-items-center">
-                <div class="breadcrumb d-flex align-items-center">
-                  <h3 class="breadcrumb__title">
-                    <a href="#">คณะกรรมการ</a>
-                  </h3>
-                  <ul class="breadcrumb__list">
-                    <li class="breadcrumb__item">
-                      <i class="breadcrumb__icon icon-dashboard"></i>
-                    </li>
-                    <li class="breadcrumb__item">
-                      <i class="breadcrumb__icon icon-chevrons-right"></i>
-                    </li>
-                    <li class="breadcrumb__item">
-                      <a class="breadcrumb__link" href="#">เทมเพลต</a>
-                    </li>
-                    <li class="breadcrumb__item">
-                      <i class="breadcrumb__icon icon-chevrons-right"></i>
-                    </li>
-                    <li class="breadcrumb__item active">
-                      <a class="breadcrumb__link" href="#">คณะกรรมการ</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="d-flex">
-                  <a class="btn btn-outline-secondary btn-rounded btn-create" href="template-create-short-position.html">
-                    เพิ่มกรรมการ
-                    <i class="icon-plus"></i>
-                  </a>
-                </div>
-              </div>
+          <div class="breadcrumb-wrapper">
+            <div class="breadcrumb d-flex align-items-center">
+              <h3 class="breadcrumb__title">
+                <a href="#">คณะกรรมการ</a>
+              </h3>
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                  <i class="breadcrumb__icon icon-dashboard"></i>
+                </li>
+                <li class="breadcrumb__item">
+                  <i class="breadcrumb__icon icon-chevrons-right"></i>
+                </li>
+                <li class="breadcrumb__item">
+                  <a class="breadcrumb__link" href="#">เทมเพลต</a>
+                </li>
+                <li class="breadcrumb__item">
+                  <i class="breadcrumb__icon icon-chevrons-right"></i>
+                </li>
+                <li class="breadcrumb__item active">
+                  <a class="breadcrumb__link" href="#">คณะกรรมการ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="d-flex">
+              <a class="btn btn-outline-secondary btn-rounded btn-create"
+                href="template-create-short-position.html">
+                เพิ่มกรรมการ
+                <i class="icon-plus"></i>
+              </a>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body card-body--search-form">
-                  <div class="template-search-result-form-group template-search-form">
-                    <div class="template-search-input-wrapper">
-                      <i class="icon-search"></i>
-                      <input class="form-control" type="text" placeholder="ค้นหา">
+          <div class="container-content container-content--narrow">
+            <div class="card mb-14">
+              <div class="card-body card-body--search-form">
+                <div class="template-search-result-form-group template-search-form">
+                  <div class="template-search-input-wrapper">
+                    <i class="icon-search"></i>
+                    <input class="form-control" type="text" placeholder="ค้นหา">
+                  </div>
+                  <button class="btn btn-success">
+                    ค้นหา
+                  </button>
+                </div>
+                <div class="template-search-result-text">ผลลัพธ์ “ผจก.”</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="page-title page-title--with-btn">
+                  <label class="form-check-label" for="1">
+                    <input type="checkbox" class="form-check-input" name="remark-title" id="1" />
+                    <span class="span-radio"></span>
+                    หมายเหตุ
+                  </label>
+                  <button class="btn btn-danger btn-icon">
+                    <i class="icon-trash"></i>
+                    ลบทั้งหมด
+                  </button>
+                </div>
+                <div class="table-item">
+                  <div class="table-item__row">
+                    <div class="table-item__col">
+                      <label class="form-check-label" for="2">
+                        <input type="checkbox" class="form-check-input" id="2" />
+                        <span class="span-radio"></span>
+                        คกก.
+                      </label>
                     </div>
-                    <button class="btn btn-success">
-                      ค้นหา
-                    </button>
-                  </div>
-                  <div class="template-search-result-text">ผลลัพธ์ “ผจก.”</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="page-title page-title--with-btn">
-                    <label class="form-check-label" for="1">
-                      <input type="checkbox" class="form-check-input" name="remark-title" id="1" />
-                      <span class="span-radio"></span>
-                      หมายเหตุ
-                    </label>
-                    <button class="btn btn-danger btn-icon">
-                      <i class="icon-trash"></i>
-                      ลบทั้งหมด
-                    </button>
-                  </div>
-                  <div class="table-item">
-                    <div class="table-item__row">
-                      <div class="table-item__col">
-                        <label class="form-check-label" for="2">
-                          <input type="checkbox" class="form-check-input" id="2" />
-                          <span class="span-radio"></span>
-                          คกก.
-                        </label>
-                      </div>
-                      <div>
-                        <a class="btn btn-sm btn-outline-secondary" href="#">แก้ไข</a>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-                          data-target="#confirmModal1">ลบ</button>
-                        <div class="modal fade modal--confirm-delete" id="confirmModal1" tabindex="-1" role="dialog"
-                          aria-labelledby="confirmModal1Label" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="confirmModal1Label">ลบกรรมการ!</h5>
-                              </div>
-                              <div class="modal-body">
-                                <i class="icon-remove"></i>
-                                <p>ต้องการลบหมายเหตุ “รายงาน คกก. เพื่อทราบ” หรือไม่ ?</p>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-success" data-dismiss="modal">ไม่</button>
-                                <button type="button" class="btn btn-success" data-dismiss="modal">ใช่</button>
-                              </div>
+                    <div>
+                      <a class="btn btn-sm btn-outline-secondary" href="#">แก้ไข</a>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
+                        data-target="#confirmModal1">ลบ</button>
+                      <div class="modal fade modal--confirm-delete" id="confirmModal1" tabindex="-1" role="dialog"
+                        aria-labelledby="confirmModal1Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="confirmModal1Label">ลบกรรมการ!</h5>
+                            </div>
+                            <div class="modal-body">
+                              <i class="icon-remove"></i>
+                              <p>ต้องการลบหมายเหตุ “รายงาน คกก. เพื่อทราบ” หรือไม่ ?</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-outline-success" data-dismiss="modal">ไม่</button>
+                              <button type="button" class="btn btn-success" data-dismiss="modal">ใช่</button>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="table-item__row">
-                      <div class="table-item__col">
-                        <label class="form-check-label" for="3">
-                          <input type="checkbox" class="form-check-input" id="3" />
-                          <span class="span-radio"></span>
-                          คกบ.
-                        </label>
-                      </div>
-                      <div>
-                        <a type="button" class="btn btn-sm btn-outline-secondary" href="#">แก้ไข</a>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-                          data-target="#confirmModal1">ลบ</button>
-                      </div>
+                  </div>
+                  <div class="table-item__row">
+                    <div class="table-item__col">
+                      <label class="form-check-label" for="3">
+                        <input type="checkbox" class="form-check-input" id="3" />
+                        <span class="span-radio"></span>
+                        คกบ.
+                      </label>
+                    </div>
+                    <div>
+                      <a type="button" class="btn btn-sm btn-outline-secondary" href="#">แก้ไข</a>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
+                        data-target="#confirmModal1">ลบ</button>
                     </div>
                   </div>
                 </div>
