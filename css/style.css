@@ -19093,8 +19093,8 @@ code {
   padding-right: 30px;
 }
 
-.mt-39 {
-  margin-top: 39px;
+.mb-14 {
+  margin-bottom: 14px;
 }
 
 /* Demo Styles */
@@ -20027,7 +20027,7 @@ code {
 }
 
 .card .card-body {
-  padding: 32px 26px;
+  padding: 22px 15px;
 }
 
 .card .card-body + .card-body {
@@ -22924,12 +22924,42 @@ input.form-control.file-upload-info:disabled::placeholder {
 
 .container-content {
   width: 100%;
+  padding-top: 30px;
 }
 
 @media (min-width: 768px) {
   .container-content--narrow {
-    padding-left: 66px;
+    padding-left: 73px;
   }
+}
+
+@media (min-width: 768px) {
+  .container-content--mid {
+    padding-left: 50px;
+  }
+}
+
+.container-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.container-action .btn {
+  min-width: 120px;
+  max-width: 120px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 24px;
+}
+
+.container-action .btn + .btn {
+  margin-left: 30px;
+}
+
+.container-action .btn-outline-success {
+  background-color: #ffffff;
 }
 
 .sidebar-list {
@@ -23151,26 +23181,6 @@ input.form-control.file-upload-info:disabled::placeholder {
 
 .table-template--view thead th:last-child {
   text-align: left;
-}
-
-.template-create-action {
-  padding-bottom: 20px;
-}
-
-.template-create-action .btn {
-  min-width: 120px;
-  max-width: 120px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  font-size: 24px;
-}
-
-.template-create-action .btn + .btn {
-  margin-left: 30px;
-}
-
-.template-create-action .btn-outline-success {
-  background-color: #ffffff;
 }
 
 .template-copy-title .main {

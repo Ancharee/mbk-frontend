@@ -197,10 +197,40 @@
 
 .container-content {
   width: 100%;
+  padding-top: 30px;
 
   &--narrow {
     @include tablet {
-      padding-left: 66px;
+      padding-left: 73px;
     }
+  }
+
+  &--mid {
+    @include tablet {
+      padding-left: 50px;
+    }
+  }
+}
+
+.container-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+
+  .btn {
+    min-width: 120px;
+    max-width: 120px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 24px;
+
+    +.btn {
+      margin-left: 30px;
+    }
+  }
+
+  .btn-outline-success {
+    background-color: $white;
   }
 }
