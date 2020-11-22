@@ -1,0 +1,97 @@
+.dashboard {
+  .card {
+    position: relative;
+  }
+
+  .link-more {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  .icon-book {
+    color: #2771FF;
+  }
+
+  .icon-copy {
+    color: #FF75BA;
+  }
+
+  .icon-list {
+    color: #FF9600;
+  }
+
+  &__headline {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  &__list {
+    margin-top: 26px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    flex-basis: 100%;
+
+    @include tablet {
+      flex-basis: calc(33.33% - 20px);
+    }
+  }
+
+  &__linear {
+    margin-bottom: 26px;
+
+    .progress {
+      margin-top: 4px;
+      background-color: #F2F2F2;
+      border-radius: 71.5px;
+    }
+
+    .progress-bar {
+      border-radius: 71.5px;
+    }
+
+    &.blue {
+      .total {
+        color: #2771FF;
+      }
+
+      .progress-bar {
+        background-color: #2771FF;
+      }
+    }
+
+    &.pink {
+      .total {
+        color: #FF75BA;
+      }
+
+      .progress-bar {
+        background-color: #FF75BA;
+      }
+    }
+
+    &.orange {
+      .total {
+        color: #FF9600;
+      }
+
+      .progress-bar {
+        background-color: #FF9600;
+      }
+    }
+  }
+}

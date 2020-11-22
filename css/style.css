@@ -18509,7 +18509,7 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  font-size: 1rem;
+  font-size: 20px;
 }
 
 h6, .h6 {
@@ -21133,6 +21133,7 @@ li ol > li:before {
   background-color: #979797;
 }
 
+.breadcrumb .title,
 .breadcrumb__title a {
   color: #323232;
   font-size: 24px;
@@ -23119,6 +23120,21 @@ input.form-control.file-upload-info:disabled::placeholder {
   width: 100%;
 }
 
+.link-more {
+  display: inline-block;
+  width: 30px;
+  height: 12px;
+}
+
+.link-more::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 12px;
+  background-image: url(../images/Icons/more.svg);
+  background-size: contain;
+}
+
 .table-template {
   width: 100%;
 }
@@ -23478,6 +23494,100 @@ input.form-control.file-upload-info:disabled::placeholder {
 .template-copy-list--column .title .checkbox-text__col::after {
   top: -14px;
   height: 50px;
+}
+
+.dashboard .card {
+  position: relative;
+}
+
+.dashboard .link-more {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.dashboard .icon-book {
+  color: #2771FF;
+}
+
+.dashboard .icon-copy {
+  color: #FF75BA;
+}
+
+.dashboard .icon-list {
+  color: #FF9600;
+}
+
+.dashboard__headline {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.dashboard__headline i {
+  margin-right: 10px;
+}
+
+.dashboard__list {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .dashboard__list {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.dashboard__item {
+  flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  .dashboard__item {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
+.dashboard__linear {
+  margin-bottom: 26px;
+}
+
+.dashboard__linear .progress {
+  margin-top: 4px;
+  background-color: #F2F2F2;
+  border-radius: 71.5px;
+}
+
+.dashboard__linear .progress-bar {
+  border-radius: 71.5px;
+}
+
+.dashboard__linear.blue .total {
+  color: #2771FF;
+}
+
+.dashboard__linear.blue .progress-bar {
+  background-color: #2771FF;
+}
+
+.dashboard__linear.pink .total {
+  color: #FF75BA;
+}
+
+.dashboard__linear.pink .progress-bar {
+  background-color: #FF75BA;
+}
+
+.dashboard__linear.orange .total {
+  color: #FF9600;
+}
+
+.dashboard__linear.orange .progress-bar {
+  background-color: #FF9600;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

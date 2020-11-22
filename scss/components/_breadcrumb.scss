@@ -21,12 +21,13 @@
       height: 32px;
       background-color: #979797;
     }
+  }
 
-    a {
-      color: #323232;
-      font-size: 24px;
-      font-family: $font-family-DBHelvethaicaX-65Med;
-    }
+  .title,
+  &__title a {
+    color: #323232;
+    font-size: 24px;
+    font-family: $font-family-DBHelvethaicaX-65Med;
   }
 
   &__list {
