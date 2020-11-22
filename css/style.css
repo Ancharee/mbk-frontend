@@ -20544,6 +20544,7 @@ code {
   background-size: contain;
   width: 5px;
   height: 10px;
+  transition: transform 0.25s ease;
 }
 
 .dropdown .dropdown-menu {
@@ -20564,12 +20565,21 @@ code {
   font-family: "DBHelvethaicaX-65Med", sans-serif;
 }
 
-.dropdown .dropdown-menu .dropdown-item:active {
+.dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover {
   background: initial;
 }
 
 .dropdown .dropdown-menu .dropdown-item a {
   color: black;
+}
+
+.dropdown .dropdown-menu .dropdown-item .exit {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.dropdown.show .dropdown-toggle:after {
+  transform: rotate(180deg);
 }
 
 /* Icons */
@@ -22574,8 +22584,8 @@ input.form-control.file-upload-info:disabled::placeholder {
   min-width: 84px;
   padding: 10px;
   background: #ffffff;
-  border-radius: 10px;
-  margin-bottom: 5px;
+  border-radius: 8px;
+  margin-bottom: 7px;
   color: #4A4A4A;
   border: 1px solid #d8d8d8;
 }
@@ -22591,7 +22601,7 @@ input.form-control.file-upload-info:disabled::placeholder {
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .navbar-dropdown {
   position: absolute;
   font-size: 0.9rem;
-  margin-top: 5px;
+  margin-top: -3px;
   right: 0;
   left: auto;
 }
