@@ -1,7 +1,8 @@
+@charset "UTF-8";
 /*------------------------------------------------------------------
  [Master Stylesheet]
 
-  Project:	Majestic Admin
+  Project:	MBK - คู่มืออำนาจ
   Version:	1.1.0
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
@@ -20830,7 +20831,7 @@ img.delete-icons-file {
   position: absolute;
   right: 20px;
   z-index: 1;
-  top: 17px;
+  top: 11px;
   cursor: pointer;
 }
 
@@ -21609,6 +21610,7 @@ li ol > li:before {
 
 .container-content-area {
   display: flex;
+  align-items: baseline;
 }
 
 .width-50 {
