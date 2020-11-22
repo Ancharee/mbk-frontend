@@ -113,7 +113,7 @@ $(document).ready(function () {
               <div class="container-select-type">
                 <div class="select-type">
                   <label class="form-check-label" for="text-add-0${count + 1}">
-                     <input type="radio" class="form-check-input" name="type-8" checked id="text-add-0${count + 1}" value="text"/>
+                     <input type="radio" class="form-check-input" name="type-${count + 1}" checked id="text-add-0${count + 1}" value="text"/>
                      <span class="span-radio"></span>ข้อความ
                     </label>
                     <label class="form-check-label" for="picture-add-0${count + 1}">
