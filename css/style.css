@@ -23523,6 +23523,10 @@ input.form-control.file-upload-info:disabled::placeholder {
   color: #FFC400;
 }
 
+.dashboard .icon-user {
+  color: #96C951;
+}
+
 .dashboard__headline {
   margin-bottom: 16px;
   display: flex;
@@ -23551,9 +23555,20 @@ input.form-control.file-upload-info:disabled::placeholder {
   flex-basis: 100%;
 }
 
+.dashboard__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 @media (min-width: 768px) {
   .dashboard__item {
+    margin-bottom: 0;
     flex-basis: calc(33.33% - 20px);
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard__list--two .dashboard__item {
+    flex-basis: calc(50% - 25px);
   }
 }
 
@@ -23600,6 +23615,10 @@ input.form-control.file-upload-info:disabled::placeholder {
   justify-content: space-between;
 }
 
+.dashboard__group .card .card-body {
+  padding-top: 20px;
+}
+
 .dashboard__group-col:first-child {
   flex-basis: calc(60% - 10px);
 }
@@ -23613,12 +23632,69 @@ input.form-control.file-upload-info:disabled::placeholder {
   font-size: 15px;
 }
 
+@media (min-width: 768px) {
+  .dashboard__circle {
+    margin-bottom: 0;
+  }
+}
+
 .dashboard__circle .title {
   color: #CCCCCC;
 }
 
 .dashboard__circle .circle {
   transform: rotate(45deg);
+}
+
+.dashboard .checking {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard .checking__item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 9px;
+  background: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  box-shadow: 0 5px 14px 0 rgba(227, 227, 227, 0.5);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.dashboard .checking__user {
+  display: flex;
+  align-items: center;
+  font-family: "DBHelvethaicaX-Reg", sans-serif;
+}
+
+.dashboard .checking__user-image {
+  margin-right: 11px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #D8D8D8;
+  border: 1px solid #F2F2F2;
+}
+
+.dashboard .checking__user-image img {
+  width: 100%;
+}
+
+.dashboard .checking__total {
+  color: #24CCB8;
+}
+
+.dashboard .checking__total span {
+  font-size: 24px;
+}
+
+.dashboard .inprogress .checking__total {
+  color: #FF9600;
 }
 
 /*# sourceMappingURL=maps/style.css.map */
