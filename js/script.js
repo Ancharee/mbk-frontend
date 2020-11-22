@@ -117,7 +117,7 @@ $(document).ready(function () {
                      <span class="span-radio"></span>ข้อความ
                     </label>
                     <label class="form-check-label" for="picture-add-0${count + 1}">
-                      <input type="radio" class="form-check-input" name="type-8" id="picture-add-0${count + 1}" value="picture"/>
+                      <input type="radio" class="form-check-input" name="type-${count + 1}" id="picture-add-0${count + 1}" value="picture"/>
                       <span class="span-radio"></span>รูปภาพ
                     </label>
                   </div>
