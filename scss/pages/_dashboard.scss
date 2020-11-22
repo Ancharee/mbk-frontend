@@ -1,0 +1,263 @@
+.dashboard {
+  .card {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .link-more {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  .icon-book {
+    color: #2771FF;
+  }
+
+  .icon-copy {
+    color: #FF75BA;
+  }
+
+  .icon-list {
+    color: #FF9600;
+  }
+
+  .icon-process {
+    color: #FFC400;
+  }
+
+  .icon-user {
+    color: #96C951;
+  }
+
+  &__headline {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  &__list {
+    margin-top: 26px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    flex-basis: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @include tablet {
+      margin-bottom: 0;
+      flex-basis: calc(33.33% - 20px);
+    }
+  }
+
+  &__list--two {
+    .dashboard__item {
+      @include tablet {
+        flex-basis: calc(50% - 25px);
+      }
+    }
+  }
+
+  &__linear {
+    margin-bottom: 26px;
+
+    .progress {
+      margin-top: 4px;
+      background-color: #F2F2F2;
+      border-radius: 71.5px;
+    }
+
+    .progress-bar {
+      border-radius: 71.5px;
+    }
+
+    &.blue {
+      .total {
+        color: #2771FF;
+      }
+
+      .progress-bar {
+        background-color: #2771FF;
+      }
+    }
+
+    &.pink {
+      .total {
+        color: #FF75BA;
+      }
+
+      .progress-bar {
+        background-color: #FF75BA;
+      }
+    }
+
+    &.orange {
+      .total {
+        color: #FF9600;
+      }
+
+      .progress-bar {
+        background-color: #FF9600;
+      }
+    }
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include desktop {
+      flex-wrap: nowrap;
+    }
+
+    .card .card-body {
+      padding-top: 20px;
+    }
+  }
+
+  &__group-col {
+    flex-basis: 100%;
+
+    @include desktop {
+      &:first-child {
+        flex-basis: calc(60% - 10px);
+      }
+
+      &:last-child {
+        flex-basis: calc(40% - 10px);
+      }
+    }
+  }
+
+  &__circle {
+    text-align: center;
+    font-size: 15px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    .title {
+      color: #CCCCCC;
+    }
+
+    .circle {
+      transform: rotate(45deg);
+    }
+  }
+
+  .checking {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 9px;
+      background: #FFFFFF;
+      border: 1px solid #F2F2F2;
+      box-shadow: 0 5px 14px 0 rgba(227,227,227,0.50);
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    &__user {
+      display: flex;
+      align-items: center;
+      font-family: $font-family-DBHelvethaicaX-Reg;
+    }
+
+    &__user-image {
+      margin-right: 11px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #D8D8D8;
+      border: 1px solid #F2F2F2;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__total {
+      span {
+        font-size: 24px;
+      }
+
+      color: #24CCB8;
+    }
+  }
+
+  .inprogress {
+    .checking__total {
+      color: #FF9600;
+    }
+  }
+
+  .chart-legend {
+    margin-top: 34px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    font-family: $font-family-DBHelvethaicaX-Reg;
+
+    &__item {
+      margin-bottom: 13px;
+      flex-basis: calc(50% - 36px);
+      color: #4A4A4A;
+
+      .total {
+        color: #9B9B9B;
+      }
+    }
+
+    &__color {
+      width: 20px;
+      height: 4px;
+      border-radius: 2px;
+
+      &.blue {
+        background-color: #2771FF;
+      }
+
+      &.red {
+        background-color: #FF5660;
+      }
+
+      &.yellow {
+        background-color: #FFC400;
+      }
+
+      &.purple {
+        background-color: #B3C3FF;
+      }
+
+      &.green {
+        background-color: #24CCB8;
+      }
+    }
+  }
+}

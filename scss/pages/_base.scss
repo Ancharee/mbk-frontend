@@ -23,3 +23,17 @@
   width: 100%;
 }
 
+.link-more {
+	display: inline-block;
+	width: 30px;
+	height: 12px;
+
+	&::after{
+		content: "";
+		display: inline-block;
+		width: 30px;
+		height: 12px;
+		background-image: url(../images/Icons/more.svg);
+		background-size: contain;
+	}
+}
