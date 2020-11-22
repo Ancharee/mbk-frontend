@@ -3,20 +3,36 @@
 .navbar {
   justify-content: flex-start;
   font-weight: 400;
-  transition: background $action-transition-duration $action-transition-timing-function;
-  -webkit-transition: background $action-transition-duration $action-transition-timing-function;
-  -moz-transition: background $action-transition-duration $action-transition-timing-function;
-  -ms-transition: background $action-transition-duration $action-transition-timing-function;
+  transition: background $action-transition-duration
+    $action-transition-timing-function;
+  -webkit-transition: background $action-transition-duration
+    $action-transition-timing-function;
+  -moz-transition: background $action-transition-duration
+    $action-transition-timing-function;
+  -ms-transition: background $action-transition-duration
+    $action-transition-timing-function;
   background-color: $white;
+
+  &.background-color-gray {
+    background-color: $content-bg;
+  }
 
   .navbar-brand-wrapper {
     flex: 1;
     background: $white;
     // border-bottom: 1px solid #e3e3e3;
-    transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-    -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-    -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-    -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+    transition: width $action-transition-duration
+        $action-transition-timing-function,
+      background $action-transition-duration $action-transition-timing-function;
+    -webkit-transition: width $action-transition-duration
+        $action-transition-timing-function,
+      background $action-transition-duration $action-transition-timing-function;
+    -moz-transition: width $action-transition-duration
+        $action-transition-timing-function,
+      background $action-transition-duration $action-transition-timing-function;
+    -ms-transition: width $action-transition-duration
+        $action-transition-timing-function,
+      background $action-transition-duration $action-transition-timing-function;
     width: $sidebar-width-lg;
     height: $navbar-height;
     // border-right: 1px solid #e3e3e3;
@@ -32,12 +48,12 @@
         color: lighten(color(gray-dark), 20%);
         font-size: 1.5rem;
         margin-right: 0;
-        padding: .25rem 0;
+        padding: 0.25rem 0;
 
         &.brand-logo-mini {
           display: none;
 
-          @media(max-width:1024px) {
+          @media (max-width: 1024px) {
             display: inline-block;
             width: 1.875rem;
           }
@@ -65,7 +81,7 @@
         padding: 0;
 
         &:not(.navbar-toggler-right) {
-          @media(max-width: 1024px) {
+          @media (max-width: 1024px) {
             display: none;
           }
         }
@@ -86,10 +102,14 @@
 
   .navbar-menu-wrapper {
     background: $navbar-default-bg;
-    transition: width $action-transition-duration $action-transition-timing-function;
-    -webkit-transition: width $action-transition-duration $action-transition-timing-function;
-    -moz-transition: width $action-transition-duration $action-transition-timing-function;
-    -ms-transition: width $action-transition-duration $action-transition-timing-function;
+    transition: width $action-transition-duration
+      $action-transition-timing-function;
+    -webkit-transition: width $action-transition-duration
+      $action-transition-timing-function;
+    -moz-transition: width $action-transition-duration
+      $action-transition-timing-function;
+    -ms-transition: width $action-transition-duration
+      $action-transition-timing-function;
     color: $navbar-menu-color;
     // width: calc(100% - #{$sidebar-width-lg});
     height: $navbar-height;
@@ -113,7 +133,7 @@
       }
 
       &.navbar-toggler-right {
-        @media (max-width:1024px) {
+        @media (max-width: 1024px) {
           padding-left: 15px;
           padding-right: 11px;
         }
@@ -143,7 +163,7 @@
           .input-group {
             background: #ececec;
             border-radius: 4px;
-            padding: 0 .75rem;
+            padding: 0 0.75rem;
 
             .form-control,
             .input-group-text {
@@ -160,7 +180,7 @@
             }
 
             .form-control {
-              margin-left: .5rem;
+              margin-left: 0.5rem;
               height: 2.5rem;
 
               @include placeholder {
@@ -202,7 +222,7 @@
             background-repeat: no-repeat;
 
             &::after {
-              content: '';
+              content: "";
               position: absolute;
               top: 0;
               right: 0;
@@ -230,8 +250,8 @@
           }
 
           .nav-lang-name {
-            margin-left: .5rem;
-            margin-right: .5rem;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
             font-family: $font-family-DBHelvethaicaX-65Med;
           }
 
@@ -248,12 +268,11 @@
             background: $white;
             border-radius: 8px;
             margin-bottom: 7px;
-            color: #4A4A4A;
+            color: #4a4a4a;
             border: 1px solid #d8d8d8;
 
             img {
-              margin-right: .5rem;
-
+              margin-right: 0.5rem;
             }
           }
         }
@@ -337,7 +356,7 @@
           }
 
           i {
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             vertical-align: middle;
           }
 
@@ -416,10 +435,9 @@
       display: none;
     }
   }
-
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .navbar {
     flex-direction: row;
   }
@@ -430,10 +448,101 @@
   }
 }
 
-@media (max-width:480px) {
+@media (max-width: 480px) {
   .navbar {
     .navbar-brand-wrapper {
       width: auto;
     }
+  }
+}
+
+// with out login
+.template-page {
+  &--with-out-login {
+    .navbar-nav {
+      flex-direction: row;
+      width: 100%;
+      justify-content: flex-end;
+      padding-right: 15px;
+
+      .dropdown-menu-right {
+        position: absolute;
+      }
+    }
+
+    .nav-item {
+      &.nav-mode {
+        min-width: 25px;
+        img {
+          background-color: #ffffff;
+          border: 6px solid #ffffff;
+          border-radius: 26px;
+          margin-top: 11px;
+          cursor: pointer;
+          width: 32px;
+        }
+      }
+
+      + .nav-item {
+        margin-left: 10px;
+      }
+
+      &.nav-lang {
+        &.dropdown a {
+          background-color: white;
+          padding: 0;
+          margin-top: 10px;
+          border-radius: 25px;
+          padding: 5px 9px;
+          line-height: 24px;
+
+          img {
+            //width: 16px;
+            //margin-left: -10px;
+            //margin-top: -3px;
+            //margin-right: 3px;
+          }
+        }
+      }
+    }
+
+    .nav-lang a span.nav-lang-name {
+      color: $tundora;
+      letter-spacing: 0;
+    }
+
+    .nav-lang {
+      .dropdown-menu {
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+      margin-top: -9px;
+      min-width: 75px;
+
+      a.dropdown-item {
+        background-color: white;
+        box-shadow: 0px 1px 15px 1px rgba(230, 234, 236, 0.35);
+        margin: 10px 0;
+        line-height: 0;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+         border-radius: 6px;
+          padding: 5px 9px;
+          line-height: 28px;
+
+        a {
+
+        }
+
+        &:hover {
+          background-color: white;
+        }
+      }
+    }
+    }
+
+
   }
 }

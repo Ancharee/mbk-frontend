@@ -1,28 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <title>MBK - คู่มืออำนาจ</title>
+    <!-- plugins:css -->
+    <link href="vendors/mdi/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="vendors/base/vendor.bundle.base.css" rel="stylesheet" />
+    <link href="vendors/icomoon/style.css" rel="stylesheet" />
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- endinject -->
+    <link href="images/favicon.png" rel="shortcut icon" />
+  </head>
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>MBK - คู่มืออำนาจ</title>
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
-  <link rel="stylesheet" href="vendors/icomoon/style.css">
-  <!-- endinject -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
-</head>
-
-<body>
-  <div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper">
-      <div class="content-wrapper content-wrapper--large"></div>
+  <body>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper content-wrapper--large">
+          <div class="template-page--with-out-login">
+            <nav
+              class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row background-color-gray"
+            >
+              <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item nav-mode">
+                  <img alt="mode" src="images/dark-mode.svg" />
+                </li>
+                <li class="nav-item nav-lang dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                    id="langDropdown"
+                  >
+                    <img alt="flag" src="images/th-flag.svg" />
+                    <span class="nav-lang-name">ไทย</span>
+                  </a>
+                  <div
+                    aria-labelledby="langDropdown"
+                    class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                  >
+                    <a class="dropdown-item">
+                      <img alt="flag" src="images/uk-flag.svg" />
+                      EN
+                    </a>
+                    <a class="dropdown-item">
+                      <img alt="flag" src="images/th-flag.svg" />
+                      ไทย
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="container--login">
+            <div class="logo-login">
+              <img src="images/MBK-logo.svg" />
+            </div>
+            <div class="container--form">
+              <span class="title"> ยินดีต้อนรับ! </span>
+              <div class="container full-width p-4">
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    id="username"
+                    placeholder="johnnythedesigner@gmail.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control form-control-lg"
+                    id="password"
+                    placeholder="*******"
+                  />
+                </div>
+                <div class="form-group full-width">
+                  <label class="form-check-label custom-checkbox" for="check-1">
+                    <input
+                      type="checkbox"
+                      class="form-check-input checkbox--item"
+                      name="type-2"
+                      id="check-1"
+                      value="checked"
+                    />
+                    <span class="span-checkbox"></span>ให้ฉันอยู่ในระบบต่อไป
+                  </label>
+                </div>
+                <div class="form-group full-width">
+                  <button class="btn btn-block btn-success auth-form-btn" type="button" name="ลงชื่อเข้าใช่"> ลงชื่อเข้าใช้</button>
+                </div>
+                <div class="full-width">
+                  <a> ลืมรหัสผ่าน</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</body>
-
+    <script src="vendors/base/vendor.bundle.base.js"></script>
+    <script src="js/template.js"></script>
+  </body>
 </html>
