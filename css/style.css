@@ -23498,6 +23498,7 @@ input.form-control.file-upload-info:disabled::placeholder {
 
 .dashboard .card {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .dashboard .link-more {
@@ -23516,6 +23517,10 @@ input.form-control.file-upload-info:disabled::placeholder {
 
 .dashboard .icon-list {
   color: #FF9600;
+}
+
+.dashboard .icon-process {
+  color: #FFC400;
 }
 
 .dashboard__headline {
@@ -23588,6 +23593,32 @@ input.form-control.file-upload-info:disabled::placeholder {
 
 .dashboard__linear.orange .progress-bar {
   background-color: #FF9600;
+}
+
+.dashboard__group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard__group-col:first-child {
+  flex-basis: calc(60% - 10px);
+}
+
+.dashboard__group-col:last-child {
+  flex-basis: calc(40% - 10px);
+}
+
+.dashboard__circle {
+  text-align: center;
+  font-size: 15px;
+}
+
+.dashboard__circle .title {
+  color: #CCCCCC;
+}
+
+.dashboard__circle .circle {
+  transform: rotate(45deg);
 }
 
 /*# sourceMappingURL=maps/style.css.map */

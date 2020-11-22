@@ -196,8 +196,8 @@
           <div class="container-content">
             <div class="dashboard">
               <div class="card card--template">
+                <a class="link-more" href="#"></a>
                 <div class="card-body">
-                  <a class="link-more" href="#"></a>
                   <div>
                     <h5>จำนวนการค้นหา</h5>
                     <select class="form-control" name="search" id="search">
@@ -309,6 +309,70 @@
                   </div>
                 </div>
               </div>
+              <div class="dashboard__group">
+                <div class="dashboard__group-col">
+                  <div class="card card--template">
+                    <a class="link-more" href="#"></a>
+                    <div class="card-body">
+                      <div class="dashboard__headline">
+                        <i class="icon-process"></i>
+                        สถานะคู่มืออำนาจ
+                      </div>
+                      <div class="dashboard__list">
+                        <div class="dashboard__item">
+                          <div class="dashboard__circle">
+                            <div
+                              class="circle"
+                              data-value="0.7"
+                              data-fill="{
+                                &quot;color&quot;: &quot;rgba(36,204,184,1)&quot;
+                              }"
+                            ></div>
+                            <div class="title">คู่มืออำนาจที่ขึ้นระบบ</div>
+                            <div>7 เล่ม</div>
+                          </div>
+                        </div>
+                        <div class="dashboard__item">
+                          <div class="dashboard__circle">
+                            <div
+                              class="circle"
+                              data-value="0.3"
+                              data-fill="{
+                                &quot;color&quot;: &quot;rgb(255, 196, 0)&quot;
+                              }"
+                            ></div>
+                            <div class="title">คู่มืออำนาจที่อยู่ระหว่างดำเนินการ</div>
+                            <div>3 เล่ม</div>
+                          </div>
+                        </div>
+                        <div class="dashboard__item">
+                          <div class="dashboard__circle">
+                            <div
+                              class="circle"
+                              data-value="0.5"
+                              data-fill="{
+                                &quot;color&quot;: &quot;#FF5660&quot;
+                              }"
+                            ></div>
+                            <div class="title">คู่มืออำนาจที่ยกเลิก</div>
+                            <div>5 เล่ม</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card card--template">
+                    <a class="link-more" href="#"></a>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+                <div class="dashboard__group-col">
+                  <div class="card card--template">
+                    <a class="link-more" href="#"></a>
+                    <div class="card-body"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -365,6 +429,7 @@
   <!-- endinject -->
   <!-- Plugin js for this page-->
   <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/circle-progress.min.js"></script>
   <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="js/off-canvas.js"></script>
@@ -372,6 +437,7 @@
   <script src="js/template.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
   <!-- End custom js for this page-->
 </body>
 

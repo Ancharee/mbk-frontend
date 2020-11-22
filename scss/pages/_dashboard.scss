@@ -1,6 +1,7 @@
 .dashboard {
   .card {
     position: relative;
+    margin-bottom: 20px;
   }
 
   .link-more {
@@ -19,6 +20,10 @@
 
   .icon-list {
     color: #FF9600;
+  }
+
+  .icon-process {
+    color: #FFC400;
   }
 
   &__headline {
@@ -92,6 +97,34 @@
       .progress-bar {
         background-color: #FF9600;
       }
+    }
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__group-col {
+    &:first-child {
+      flex-basis: calc(60% - 10px);
+    }
+
+    &:last-child {
+      flex-basis: calc(40% - 10px);
+    }
+  }
+
+  &__circle {
+    text-align: center;
+    font-size: 15px;
+
+    .title {
+      color: #CCCCCC;
+    }
+
+    .circle {
+      transform: rotate(45deg);
     }
   }
 }
