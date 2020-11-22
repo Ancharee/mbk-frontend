@@ -23697,4 +23697,50 @@ input.form-control.file-upload-info:disabled::placeholder {
   color: #FF9600;
 }
 
+.dashboard .chart-legend {
+  margin-top: 34px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  font-family: "DBHelvethaicaX-Reg", sans-serif;
+}
+
+.dashboard .chart-legend__item {
+  margin-bottom: 13px;
+  flex-basis: calc(50% - 36px);
+  color: #4A4A4A;
+}
+
+.dashboard .chart-legend__item .total {
+  color: #9B9B9B;
+}
+
+.dashboard .chart-legend__color {
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.dashboard .chart-legend__color.blue {
+  background-color: #2771FF;
+}
+
+.dashboard .chart-legend__color.red {
+  background-color: #FF5660;
+}
+
+.dashboard .chart-legend__color.yellow {
+  background-color: #FFC400;
+}
+
+.dashboard .chart-legend__color.purple {
+  background-color: #B3C3FF;
+}
+
+.dashboard .chart-legend__color.green {
+  background-color: #24CCB8;
+}
+
 /*# sourceMappingURL=maps/style.css.map */

@@ -205,4 +205,50 @@
       color: #FF9600;
     }
   }
+
+  .chart-legend {
+    margin-top: 34px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    font-family: $font-family-DBHelvethaicaX-Reg;
+
+    &__item {
+      margin-bottom: 13px;
+      flex-basis: calc(50% - 36px);
+      color: #4A4A4A;
+
+      .total {
+        color: #9B9B9B;
+      }
+    }
+
+    &__color {
+      width: 20px;
+      height: 4px;
+      border-radius: 2px;
+
+      &.blue {
+        background-color: #2771FF;
+      }
+
+      &.red {
+        background-color: #FF5660;
+      }
+
+      &.yellow {
+        background-color: #FFC400;
+      }
+
+      &.purple {
+        background-color: #B3C3FF;
+      }
+
+      &.green {
+        background-color: #24CCB8;
+      }
+    }
+  }
 }
