@@ -23613,18 +23613,30 @@ input.form-control.file-upload-info:disabled::placeholder {
 .dashboard__group {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1440px) {
+  .dashboard__group {
+    flex-wrap: nowrap;
+  }
 }
 
 .dashboard__group .card .card-body {
   padding-top: 20px;
 }
 
-.dashboard__group-col:first-child {
-  flex-basis: calc(60% - 10px);
+.dashboard__group-col {
+  flex-basis: 100%;
 }
 
-.dashboard__group-col:last-child {
-  flex-basis: calc(40% - 10px);
+@media (min-width: 1440px) {
+  .dashboard__group-col:first-child {
+    flex-basis: calc(60% - 10px);
+  }
+  .dashboard__group-col:last-child {
+    flex-basis: calc(40% - 10px);
+  }
 }
 
 .dashboard__circle {

@@ -120,6 +120,11 @@
   &__group {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include desktop {
+      flex-wrap: nowrap;
+    }
 
     .card .card-body {
       padding-top: 20px;
@@ -127,12 +132,16 @@
   }
 
   &__group-col {
-    &:first-child {
-      flex-basis: calc(60% - 10px);
-    }
+    flex-basis: 100%;
 
-    &:last-child {
-      flex-basis: calc(40% - 10px);
+    @include desktop {
+      &:first-child {
+        flex-basis: calc(60% - 10px);
+      }
+
+      &:last-child {
+        flex-basis: calc(40% - 10px);
+      }
     }
   }
 

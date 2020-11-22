@@ -29,7 +29,7 @@
       };
 
       var doughnutPieOptions = {
-        responsive: true,
+        responsive: false,
         animation: {
           animateScale: true,
           animateRotate: true
