@@ -168,5 +168,20 @@ input.form-control.file-upload-info {
       color: $black;
     }
   }
+}
 
+.search-wrapper {
+  position: relative;
+
+  i {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 12px;
+    color: #787E8C;
+  }
+
+  input {
+    padding-left: 34px;
+  }
 }

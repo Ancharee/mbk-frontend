@@ -21855,6 +21855,22 @@ input.form-control.file-upload-info:disabled::placeholder {
   color: #000;
 }
 
+.search-wrapper {
+  position: relative;
+}
+
+.search-wrapper i {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 12px;
+  color: #787E8C;
+}
+
+.search-wrapper input {
+  padding-left: 34px;
+}
+
 /*-------------------------------------------------------------------*/
 /* === Plugin overrides === */
 /* Data Tables */
