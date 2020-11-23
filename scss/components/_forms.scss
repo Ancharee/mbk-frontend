@@ -105,9 +105,31 @@ textarea {
     transition: all $action-transition-duration $action-transition-timing-function;
   }
 
+  + span.span-checkbox {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    //background-image: url(../images/Icons/uncheck.svg);
+    border: 1px solid #ECECEC;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: all $action-transition-duration $action-transition-timing-function;
+  }
+
+
+
   &:checked {
     + span.span-radio {
       background-image: url(../images/Icons/checked.svg);
+    }
+
+     + span.span-checkbox {
+       border: none;
+      background-image: url(../images/Icons/checked-checkbox.svg);
     }
   }
 }
