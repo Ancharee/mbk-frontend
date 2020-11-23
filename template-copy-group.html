@@ -389,14 +389,41 @@
   <!-- endinject -->
   <script>
     $(document).ready(function () {
-      const checkboxes = $('.template-copy-list__item input');
-      // check all by copy1
-      $('[name="copy"]').change(function () {
-        if ($(this).val() === 'copy1') {
+      const checkbox = $('.template-copy-list__item:first-child input');
+      const checkboxes = $('.template-copy-list__item:not(:first-child) input');
+
+      function updateRadioState(val) {
+        if (val) {
+          $('#copy1').prop('checked', true);
+          $('#copy2').prop('checked', false);
+        } else {
+          $('#copy1').prop('checked', false);
+          $('#copy2').prop('checked', true);
+        }
+      }
+
+      function updateCheckboxTitleState(val) {
+        if (val) {
+          checkbox.prop('checked', true);
+        } else {
+          checkbox.prop('checked', false);
+        }
+      }
+
+      function updateCheckboxState(val) {
+        if (val) {
+          checkbox.prop('checked', true);
           checkboxes.prop('checked', true);
         } else {
+          checkbox.prop('checked', false);
           checkboxes.prop('checked', false);
         }
+      }
+
+      // check all by copy1
+      $('[name="copy"]').change(function () {
+        const checked = $(this).val() === 'copy1';
+        updateCheckboxState(checked);
       });
 
       checkboxes.change(function () {
@@ -405,21 +432,23 @@
           $('#copy2').prop('checked', true);
         }
 
-        let checked = 0;
+        let checkedCount = 0;
         checkboxes.each(element => {
           if ($(checkboxes[element]).is(':checked')) {
-            checked++;
+            checkedCount++;
           }
         });
-
-        if (checked === checkboxes.length) {
-          $('#copy1').prop('checked', true);
-          $('#copy2').prop('checked', false);
-        } else {
-          $('#copy1').prop('checked', false);
-          $('#copy2').prop('checked', true);
-        }
+        const checked = checkedCount === checkboxes.length;
+        updateRadioState(checked);
+        updateCheckboxTitleState(checked);
       });
+
+      checkbox.change(function () {
+        const checked = $(this).is(':checked');
+        updateRadioState(checked);
+        updateCheckboxState(checked);
+      });
+
     });
   </script>
 </body>

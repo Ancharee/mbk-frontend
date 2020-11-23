@@ -3,17 +3,15 @@
 
 <head>
   <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>MBK - คู่มืออำนาจ</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
   <link rel="stylesheet" href="vendors/icomoon/style.css">
   <!-- endinject -->
-  <!-- plugin css for this page -->
-  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
-  <!-- End plugin css for this page -->
+
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
@@ -78,7 +76,6 @@
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" href="index.html">
-              <!-- <i class="mdi mdi-home menu-icon"></i> -->
               <i class="icon-dashboard menu-icon"></i>
               <span class="menu-title">แดชบอร์ด</span>
             </a>
@@ -117,13 +114,13 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="template.html">
               <i class="icon-files menu-icon"></i>
               <span class="menu-title">เทมเพลต</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ui-template">
+            <div class="collapse show" id="ui-template">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
                   <a class="nav-link" href="template-group.html">
@@ -141,12 +138,12 @@
                     <span class="menu-title">หมายเหตุ</span>
                   </a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="template-short-position-menu.html">
+                  <a class="nav-link" href="#">
                     <i class="mdi mdi-circle menu-icon"></i>
                     <span class="menu-title">คณะกรรมการ</span>
                   </a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="template-column-menu.html">
+                  <a class="nav-link" href="#">
                     <i class="mdi mdi-circle menu-icon"></i>
                     <span class="menu-title">โครงสร้างหัวตาราง</span>
                   </a></li>
@@ -161,16 +158,6 @@
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-report">
-              <!-- <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Buttons</a></li>
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Typography</a></li>
-        </ul> -->
             </div>
           </li>
           <li class="nav-item">
@@ -181,16 +168,6 @@
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-notification">
-              <!-- <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Buttons</a></li>
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Typography</a></li>
-        </ul> -->
             </div>
           </li>
           <li class="nav-item">
@@ -201,16 +178,6 @@
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-setting">
-              <!-- <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Buttons</a></li>
-          <li class="nav-item"> <a
-              class="nav-link"
-              href="#"
-            >Typography</a></li>
-        </ul> -->
             </div>
           </li>
         </ul>
@@ -218,11 +185,11 @@
 
       <!-- partial -->
       <div class="main-panel">
-        <div class="content-wrapper">
+        <div class="content-wrapper content-wrapper--large">
           <div class="breadcrumb-wrapper">
             <div class="breadcrumb d-flex align-items-center">
-              <h3 class="breadcrumb__title">
-                <a href="#">เทมเพลต</a>
+              <h3>
+                <a class="title" href="#">ค้นหาเทมเพลต</a>
               </h3>
               <ul class="breadcrumb__list">
                 <li class="breadcrumb__item">
@@ -231,82 +198,20 @@
                 <li class="breadcrumb__item">
                   <i class="breadcrumb__icon icon-chevrons-right"></i>
                 </li>
-                <li class="breadcrumb__item active">
+                <li class="breadcrumb__item">
                   <a class="breadcrumb__link" href="#">เทมเพลต</a>
+                </li>
+                <li class="breadcrumb__item">
+                  <i class="breadcrumb__icon icon-chevrons-right"></i>
+                </li>
+                <li class="breadcrumb__item active">
+                  <a class="breadcrumb__link" href="#">ค้นหาเทมเพลต</a>
                 </li>
               </ul>
             </div>
-            <div class="d-flex">
-              <a href="template-search.html" class="btn btn-outline-secondary btn-rounded btn-create">
-                ค้นหาเทมเพลต
-                <i class="icon-search"></i>
-              </a>
-            </div>
           </div>
-
-          <div class="container-content container-content--narrow">
-            <div class="card card--template">
-              <div class="card-body">
-                <ul class="template-card">
-                  <li class="template-item yellow">
-                    <a class="d-flex space-between position-relative" href="template-group.html">
-                      <div>
-                        <div class="template-title">หมวด</div>
-                        <div class="template-total">04</div>
-                      </div>
-                      <div class="icon-svg">
-                        <img src="images/list.svg" />
-                      </div>
-                      <!--                           <i class="icon icon-list "></i>-->
-                    </a>
-                  </li>
-                  <li class="template-item turquoise-blue">
-                    <a class="d-flex space-between position-relative" href="template-main-menu.html">
-                      <div>
-                        <div class="template-title">หลักเกณฑ์</div>
-                        <div class="template-total">03</div>
-                      </div>
-                      <div class="icon-svg">
-                        <img src="images/file-2.svg" />
-                      </div>
-                    </a>
-                  </li>
-                  <li class="template-item turquoise-green">
-                    <a class="d-flex space-between position-relative" href="template-remark-menu.html">
-                      <div>
-                        <div class="template-title">หมายเหตุ</div>
-                        <div class="template-total">07</div>
-                      </div>
-                      <div class="icon-svg">
-                        <img src="images/exclamation-point.svg" />
-                      </div>
-                    </a>
-                  </li>
-                  <li class="template-item medium-purple">
-                    <a class="d-flex space-between position-relative" href="template-short-position-menu.html">
-                      <div>
-                        <div class="template-title">คณะกรรมการ</div>
-                        <div class="template-total">10</div>
-                      </div>
-                      <div class="icon-svg">
-                        <img src="images/customer.svg" />
-                      </div>
-                    </a>
-                  </li>
-                  <li class="template-item dodger-blue">
-                    <a class="d-flex space-between position-relative" href="template-column-menu.html">
-                      <div>
-                        <div class="template-title">โครงสร้างหัวตาราง</div>
-                        <div class="template-total">04</div>
-                      </div>
-                      <div class="icon-svg table-icon">
-                        <img src="images/table.svg" />
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div class="container-content">
+            This is template search page.
           </div>
         </div>
         <!-- content-wrapper ends -->
