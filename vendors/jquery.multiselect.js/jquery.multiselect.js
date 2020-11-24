@@ -56,7 +56,7 @@
         // general options
         selectAll: false, // add select all option
         selectGroup: false, // select entire optgroup
-        minHeight: 200,   // minimum height of option overlay
+        minHeight: 0,   // minimum height of option overlay
         maxHeight: null,  // maximum height of option overlay
         maxWidth: null,  // maximum width of option overlay (or selector)
         maxPlaceholderWidth: null,  // maximum width of placeholder button
@@ -831,7 +831,7 @@
             selOpts.forEach(text => {
                 selOptList.push('<span class="ms-options-item">' + text + '</span>');
             });
-            placeholder.html(selOptList.join(''));
+            placeholder.addClass('form-control').html(selOptList.join(''));
 
             if (selOpts.length) {
                 optionsWrap.closest('.ms-options-wrap').addClass('ms-has-selections');
@@ -862,13 +862,17 @@
 
             var thisOption = $('<label/>', {
                 for: 'ms-opt-' + msOptCounter
-            }).html(option.name);
+            }).html(
+                '<span class="span-radio"></span>' +
+                option.name
+            );
 
             var thisCheckbox = $('<input>', {
                 type: 'checkbox',
                 title: optionNameText,
                 id: 'ms-opt-' + msOptCounter,
-                value: option.value
+                value: option.value,
+                class: 'form-check-input'
             });
 
             // add user defined attributes
@@ -881,7 +885,7 @@
                 thisCheckbox.prop('checked', true);
             }
 
-            thisOption.prepend(thisCheckbox);
+            thisOption.addClass('form-check-label').prepend(thisCheckbox);
 
             var searchTerm = '';
             if (instance.options.searchOptions.searchText) {
