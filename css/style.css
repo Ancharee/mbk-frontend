@@ -21652,20 +21652,6 @@ li ol > li:before {
   margin-bottom: 1.5rem;
 }
 
-.input-group-append,
-.input-group-prepend {
-  color: #c9c8c8;
-  width: auto;
-  border: none;
-}
-
-.input-group-append .input-group-text,
-.input-group-prepend .input-group-text {
-  border-color: #f3f3f3;
-  padding: 0.875rem 0.75rem;
-  color: #c9c8c8;
-}
-
 .form-control, .dataTables_wrapper select {
   height: 36px;
   font-weight: 400;
@@ -21682,7 +21668,10 @@ li ol > li:before {
 }
 
 input.form-control,
-button.form-control {
+.input-with-item.form-control,
+.dataTables_wrapper select.input-with-item,
+.multiple-select.form-control,
+.dataTables_wrapper select.multiple-select {
   background: #FFFFFF;
   box-shadow: inset 0 0 2px 0 rgba(118, 118, 118, 0.5);
   border-radius: 3px;
@@ -21691,45 +21680,13 @@ button.form-control {
   color: #787E8C;
 }
 
-
-button.form-control {
-  padding: 6px 12px 0 6px;
-  height: auto;
-  min-height: 36px;
-  line-height: 0;
+input.form-control.file-upload-info:disabled {
+  background-color: #E4E4E4;
+  color: #000;
 }
 
-button.form-control:after {
-  content: '';
-  position: absolute;
-  right: 12px;
-  top: 14px;
-  width: 18px;
-  height: 10px;
-  background-image: url(../images/Icons/arrow-down.svg);
-  background-repeat: no-repeat;
-}
-
-button .ms-options-item {
-  margin-right: 6px;
-  margin-bottom: 6px;
-  display: inline-block;
-  height: 24px;
-  padding: 0 5px;
-  border: 1px solid #4880FF;
-  border-radius: 3px;
-  font-family: DBHelvethaicaX-Reg;
-  font-size: 18px;
-  color: #4880FF;
-  line-height: 24px;
-}
-
-.ms-options .form-check-label {
-  width: 100%;
-}
-
-.ms-options .form-check-label {
-  margin-left: 10px;
+input.form-control.file-upload-info:disabled::placeholder {
+  color: #000;
 }
 
 select.form-control, .dataTables_wrapper select {
@@ -21815,6 +21772,63 @@ textarea {
   font-family: "DBHelvethaicaX-Reg", sans-serif;
 }
 
+
+.input-with-item.form-control,
+.dataTables_wrapper select.input-with-item,
+.multiple-select.form-control,
+.dataTables_wrapper select.multiple-select {
+  padding: 3px 12px 0 3px;
+  height: auto;
+  min-height: 36px;
+  line-height: 0;
+}
+
+
+.input-with-item.form-control,
+.dataTables_wrapper select.input-with-item {
+  padding-top: 5px;
+}
+
+.multiple-select:after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  width: 18px;
+  height: 10px;
+  background-image: url(../images/Icons/arrow-down.svg);
+  background-repeat: no-repeat;
+  transition: transform .1s ease;
+}
+
+.ms-active .multiple-select:after {
+  top: 10px;
+  transform: rotate(180deg);
+}
+
+.ms-options-item {
+  display: inline-block;
+  margin-right: 6px;
+  margin-bottom: 3px;
+  display: inline-block;
+  height: 24px;
+  padding: 0 5px;
+  border: 1px solid #4880FF;
+  border-radius: 3px;
+  font-family: DBHelvethaicaX-Reg;
+  font-size: 18px;
+  color: #4880FF;
+  line-height: 24px;
+}
+
+.ms-options .form-check-label {
+  width: 100%;
+}
+
+.ms-options .form-check-label {
+  margin-left: 10px;
+}
+
 .form-check-label {
   padding-left: 24px;
   position: relative;
@@ -21845,6 +21859,12 @@ textarea {
   transition: all 0.25s ease;
 }
 
+.form-check-label--checkbox .form-check-input + span.span-radio {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/Icons/checkbox-enable.svg);
+}
+
 .form-check-input + span.span-checkbox {
   position: absolute;
   top: 2px;
@@ -21868,6 +21888,10 @@ textarea {
   background-image: url(../images/Icons/checked-checkbox.svg);
 }
 
+.form-check-label--checkbox .form-check-input:checked + span.span-radio {
+  background-image: url(../images/Icons/checkbox-enable-checked.svg);
+}
+
 .form-group label {
   font-size: 18px;
   line-height: 1.4rem;
@@ -21888,13 +21912,8 @@ textarea {
   background: transparent;
 }
 
-input.form-control.file-upload-info:disabled {
-  background-color: #E4E4E4;
-  color: #000;
-}
-
-input.form-control.file-upload-info:disabled::placeholder {
-  color: #000;
+.form-label {
+  margin-bottom: 5px;
 }
 
 .search-wrapper {
@@ -21911,6 +21930,23 @@ input.form-control.file-upload-info:disabled::placeholder {
 
 .search-wrapper input {
   padding-left: 34px;
+}
+
+.search-form .row,
+.search-result .row {
+  margin-bottom: 12px;
+}
+
+.search-form .search-filter-wrapper {
+  margin-top: 20px;
+}
+
+.search-form .search-filter-wrapper span {
+  color: #8DC63F;
+}
+
+.search-result {
+  margin-top: 28px;
 }
 
 /*-------------------------------------------------------------------*/

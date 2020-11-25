@@ -4,19 +4,6 @@
   margin-bottom: 1.5rem;
 }
 
-.input-group-append,
-.input-group-prepend {
-  color: $input-placeholder-color;
-  width: auto;
-  border: none;
-
-  .input-group-text {
-    border-color: $border-color;
-    padding: $input-padding-y .75rem;
-    color: $input-placeholder-color;
-  }
-}
-
 .form-control {
   height: 36px;
   font-weight: 400;
@@ -33,7 +20,8 @@
 }
 
 input,
-button {
+.input-with-item,
+.multiple-select {
   &.form-control {
     background: #FFFFFF;
     box-shadow: inset 0 0 2px 0 rgba(118,118,118,0.50);
@@ -44,47 +32,17 @@ button {
   }
 }
 
-button {
-  &.form-control {
-    padding: 6px 12px 0 6px;
-    height: auto;
-    min-height: 36px;
-    line-height: 0;
+input {
+  &.form-control.file-upload-info {
+    &:disabled {
+      background-color: #E4E4E4;
 
-    &:after {
-      content: '';
-      position: absolute;
-      right: 12px;
-      top: 14px;
-      width: 18px;
-      height: 10px;
-      background-image: url(../images/Icons/arrow-down.svg);
-      background-repeat: no-repeat;
+       color: $black;
+
+      &::placeholder {
+        color: $black;
+      }
     }
-  }
-
-  .ms-options-item {
-    margin-right: 6px;
-    margin-bottom: 6px;
-    display: inline-block;
-    height: 24px;
-    padding: 0 5px;
-    border: 1px solid #4880FF;
-    border-radius: 3px;
-    font-family: DBHelvethaicaX-Reg;
-    font-size: 18px;
-    color: #4880FF;
-    line-height: 24px;
-  }
-}
-
-.ms-options {
-  .form-check-label {
-    width: 100%;
-  }
-
-  .form-check-label {
-    margin-left: 10px;
   }
 }
 
@@ -120,7 +78,69 @@ textarea {
   font-family: $font-family-DBHelvethaicaX-Reg;
 }
 
-// radio
+.input-with-item,
+.multiple-select {
+  &.form-control {
+    padding: 3px 12px 0 3px;
+    height: auto;
+    min-height: 36px;
+    line-height: 0;
+  }
+}
+
+.input-with-item {
+  &.form-control {
+    padding-top: 5px;
+  }
+}
+
+.multiple-select {
+  &:after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 14px;
+    width: 18px;
+    height: 10px;
+    background-image: url(../images/Icons/arrow-down.svg);
+    background-repeat: no-repeat;
+    transition: transform .1s ease;
+  }
+
+  .ms-active & {
+    &:after {
+      top: 10px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.ms-options-item {
+  display: inline-block;
+  margin-right: 6px;
+  margin-bottom: 3px;
+  display: inline-block;
+  height: 24px;
+  padding: 0 5px;
+  border: 1px solid #4880FF;
+  border-radius: 3px;
+  font-family: DBHelvethaicaX-Reg;
+  font-size: 18px;
+  color: #4880FF;
+  line-height: 24px;
+}
+
+.ms-options {
+  .form-check-label {
+    width: 100%;
+  }
+
+  .form-check-label {
+    margin-left: 10px;
+  }
+}
+
+// radio or checkbox
 .form-check-label {
   padding-left: 24px;
   position: relative;
@@ -148,6 +168,12 @@ textarea {
     background-size: contain;
     background-position: center;
     transition: all $action-transition-duration $action-transition-timing-function;
+
+    .form-check-label--checkbox & {
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/Icons/checkbox-enable.svg);
+    }
   }
 
   + span.span-checkbox {
@@ -165,8 +191,6 @@ textarea {
     transition: all $action-transition-duration $action-transition-timing-function;
   }
 
-
-
   &:checked {
     + span.span-radio {
       background-image: url(../images/Icons/checked.svg);
@@ -175,6 +199,14 @@ textarea {
      + span.span-checkbox {
        border: none;
       background-image: url(../images/Icons/checked-checkbox.svg);
+    }
+  }
+
+  .form-check-label--checkbox & {
+    &:checked {
+      + span.span-radio {
+        background-image: url(../images/Icons/checkbox-enable-checked.svg);
+      }
     }
   }
 }
@@ -203,16 +235,8 @@ textarea {
   }
 }
 
-input.form-control.file-upload-info {
-  &:disabled {
-    background-color: #E4E4E4;
-
-     color: $black;
-
-    &::placeholder {
-      color: $black;
-    }
-  }
+.form-label {
+  margin-bottom: 5px;
 }
 
 .search-wrapper {
@@ -229,4 +253,25 @@ input.form-control.file-upload-info {
   input {
     padding-left: 34px;
   }
+}
+
+.search-form,
+.search-result {
+  .row {
+    margin-bottom: 12px;
+  }
+}
+
+.search-form {
+  .search-filter-wrapper {
+    margin-top: 20px;
+
+    span {
+      color: #8DC63F;
+    }
+  }
+}
+
+.search-result {
+  margin-top: 28px;
 }

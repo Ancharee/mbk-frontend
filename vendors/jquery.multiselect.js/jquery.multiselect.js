@@ -831,7 +831,7 @@
             selOpts.forEach(text => {
                 selOptList.push('<span class="ms-options-item">' + text + '</span>');
             });
-            placeholder.addClass('form-control').html(selOptList.join(''));
+            placeholder.addClass('form-control').addClass('multiple-select').html(selOptList.join(''));
 
             if (selOpts.length) {
                 optionsWrap.closest('.ms-options-wrap').addClass('ms-has-selections');

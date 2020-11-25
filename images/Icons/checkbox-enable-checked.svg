@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Checkbox enable</title>
+    <defs>
+        <path d="M14.4637364,4.57520601 C14.9394235,4.05987834 15.7427996,4.02774329 16.2581273,4.50343038 C16.773455,4.97911746 16.80559,5.78249365 16.329903,6.29782133 L8.71085896,14.5517857 C8.22166823,15.0817423 7.38984389,15.0983721 6.87986272,14.5883909 L3.70526105,11.4137893 C3.20935743,10.9178857 3.20935743,10.113867 3.70526105,9.61796339 C4.20116468,9.12205976 5.00518332,9.12205976 5.50108695,9.61796339 L7.7411411,11.8580175 L14.4637364,4.57520601 Z" id="path-1"></path>
+    </defs>
+    <g id="Book-Menu-&gt;Search-Book" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.0-Search-Results-(Light)" transform="translate(-301.000000, -327.000000)">
+            <g id="Search" transform="translate(285.000000, 133.000000)">
+                <g id="Inputs/List/Default" transform="translate(16.000000, 188.000000)">
+                    <g id="Icon/Checkbox-enable" transform="translate(0.000000, 6.000000)">
+                        <rect id="Rectangle" stroke="#4A4A4A" fill="#FFFFFF" x="0.5" y="0.5" width="19" height="19" rx="4"></rect>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Icon" fill="#8DC63F" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
