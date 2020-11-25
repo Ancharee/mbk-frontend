@@ -21957,6 +21957,11 @@ textarea {
   margin-bottom: 5px;
 }
 
+.form-label a {
+  color: initial;
+  text-decoration: none;
+}
+
 .search-wrapper {
   position: relative;
 }
