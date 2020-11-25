@@ -20583,6 +20583,26 @@ code {
   transform: rotate(180deg);
 }
 
+.dropdown-more {
+  position: relative;
+}
+
+.dropdown-more .dropdown-item {
+  padding: 10px 17px;
+  font-size: 20px;
+}
+
+.dropdown-more .dropdown-item:hover {
+  background-color: transparent;
+}
+
+.dropdown-more .dropdown-item i {
+  margin-right: 12px;
+  display: inline-block;
+  min-width: 16px;
+  font-size: 10px;
+}
+
 /* Icons */
 .icons-list {
   border-left: 1px solid #f3f3f3;
@@ -21072,10 +21092,31 @@ li ol > li:before {
   margin-top: -20px;
 }
 
-.table--view-column tbody td,
+.table--view-column thead th {
+  text-align: left;
+}
+
 .table--view-column tbody td:first-child,
 .table--view-column tbody td:last-child {
   text-align: left;
+}
+
+.table--search {
+  font-size: 20px;
+}
+
+.table--search .status {
+  display: flex;
+  align-items: center;
+}
+
+.table--search .status::before {
+  content: '';
+  margin-right: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: #0EDD4D;
+  border-radius: 50%;
 }
 
 .table-item {
@@ -21653,6 +21694,7 @@ li ol > li:before {
 }
 
 .form-control, .dataTables_wrapper select {
+  padding: 9px 10px;
   height: 36px;
   font-weight: 400;
   font-size: 18px;
@@ -21690,7 +21732,6 @@ input.form-control.file-upload-info:disabled::placeholder {
 }
 
 select.form-control, .dataTables_wrapper select {
-  padding: 9px 10px;
   border: 0;
   color: #c9c8c8;
   box-shadow: 0 0 3px 0 rgba(156, 156, 156, 0.5);
@@ -21947,6 +21988,22 @@ textarea {
 
 .search-result {
   margin-top: 28px;
+}
+
+[data-provide="datepicker"].form-control, .dataTables_wrapper select[data-provide="datepicker"] {
+  background-image: url(../images/Icons/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+}
+
+.datepicker table {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.datepicker .prev i,
+.datepicker .next i {
+  font-size: 12px;
 }
 
 /*-------------------------------------------------------------------*/
