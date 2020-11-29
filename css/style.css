@@ -22127,12 +22127,81 @@ textarea {
   background-position: center;
 }
 
-.wizard .content h3 {
+.wizard .content .wizard-header {
   display: none;
 }
 
 .wizard .actions {
   display: none;
+}
+
+.accordion .card {
+  margin-bottom: 10px;
+  border: 0;
+  font-family: DBHelvethaicaX-Reg;
+  font-size: 22px;
+}
+
+.accordion .card .card-header {
+  padding: 0;
+}
+
+.accordion .card .btn-link {
+  position: relative;
+  margin-bottom: 0;
+  padding: 7px 10px;
+  width: 100%;
+  border: 0;
+  background: #F5F5F5;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  opacity: 0.9;
+  color: #323232;
+  text-align: left;
+}
+
+.accordion .card .btn-link::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 16px;
+  height: 15px;
+  background-image: url(../../images/Icons/less.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.accordion .card .btn-link.active {
+  border-color: #8BC34A;
+  background-color: #ffffff;
+}
+
+.accordion .card .btn-link.active::after {
+  transform: rotate(180deg);
+}
+
+.accordion .card .btn-link:hover {
+  text-decoration: none;
+}
+
+.accordion .card-body {
+  padding: 14px;
+  padding-bottom: 0;
+}
+
+.accordion .card-body p {
+  font-size: 20px;
+  color: #64666D;
+}
+
+.accordion .form-check-label {
+  width: 100%;
+}
+
+.accordion .list,
+.accordion .list ul {
+  list-style: none;
 }
 
 /*-------------------------------------------------------------------*/
@@ -24368,6 +24437,25 @@ textarea {
   top: 6px;
   left: 6px;
   font-size: 16px;
+}
+
+.template-copy-list__item {
+  position: relative;
+}
+
+.template-copy-list__action {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.template-copy-list__action .btn {
+  padding: 2px;
+}
+
+.template-copy-list__action img {
+  width: 10px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

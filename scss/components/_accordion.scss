@@ -1,0 +1,70 @@
+.accordion {
+  .card {
+    margin-bottom: 10px;
+    border: 0;
+    font-family: DBHelvethaicaX-Reg;
+    font-size: 22px;
+  }
+
+  .card .card-header {
+    padding: 0;
+  }
+
+  .card .btn-link {
+    position: relative;
+    margin-bottom: 0;
+    padding: 7px 10px;
+    width: 100%;
+    border: 0;
+    background: #F5F5F5;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    opacity: 0.9;
+    color: #323232;
+    text-align: left;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      width: 16px;
+      height: 15px;
+      background-image: url(../../images/Icons/less.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &.active {
+      border-color: #8BC34A;
+      background-color: $white;
+
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .card-body {
+    padding: 14px;
+    padding-bottom: 0;
+  }
+
+  .card-body p {
+    font-size: 20px;
+    color: #64666D;
+  }
+
+  .form-check-label {
+    width: 100%;
+  }
+
+  .list,
+  .list ul {
+    list-style: none;
+  }
+}
