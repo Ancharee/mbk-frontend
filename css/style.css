@@ -21152,7 +21152,7 @@ li ol > li:before {
   font-family: "DBHelvethaicaX-Reg", sans-serif;
 }
 
-.table-item__row {
+.table-item__row:not(.table-item__row--header) {
   margin-bottom: 6px;
   display: flex;
   align-items: center;
@@ -21176,6 +21176,36 @@ li ol > li:before {
 
 .table-item .form-check-label {
   font-size: 18px;
+}
+
+.table-item--table {
+  display: table;
+  width: 100%;
+  border-spacing: 8px;
+}
+
+.table-item--table .table-item__row {
+  display: table-row;
+}
+
+.table-item--table .table-item__row--header {
+  position: relative;
+  font-family: DBHelvethaicaX-65Med;
+  color: #323232;
+  box-shadow: 0px 1px 0px #E0E0E0;
+}
+
+.table-item--table .table-item__row--header .table-item__cell {
+  padding-bottom: 5px;
+}
+
+.table-item--table .table-item__cell {
+  display: table-cell;
+  padding: 10px;
+}
+
+.table-item--table .table-item__cell:first-child {
+  padding-left: 13px;
 }
 
 .breadcrumb {
@@ -23415,6 +23445,14 @@ textarea {
   align-items: center;
 }
 
+.status-wrapper.red {
+  color: #FF5757;
+}
+
+.status-wrapper.red::before {
+  background-color: #FF5757;
+}
+
 .status-wrapper.green {
   color: #0EDD4D;
 }
@@ -24207,12 +24245,15 @@ textarea {
   margin-right: 5px;
 }
 
-.book-short-view-button {
+.book-button-list {
   margin: 0 -5px;
 }
 
-.book-short-view-button .btn {
+.book-button-list .btn {
   margin: 5px;
+  font-family: DBHelvethaicaX-Reg;
+  font-size: 20px;
+  border-width: 1px;
 }
 
 .book-short-view {

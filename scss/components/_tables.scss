@@ -87,13 +87,15 @@
   font-family: $font-family-DBHelvethaicaX-Reg;
 
   &__row {
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-    padding: 6px 10px;
-    background: #FFFFFF;
-    box-shadow: 0 0 5px 0 rgba(200,200,200,0.58);
-    border-radius: 2px;
+    &:not(.table-item__row--header) {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      padding: 6px 10px;
+      background: #FFFFFF;
+      box-shadow: 0 0 5px 0 rgba(200,200,200,0.58);
+      border-radius: 2px;
+    }
   }
 
   &__col {
@@ -110,5 +112,35 @@
 
   .form-check-label {
     font-size: 18px;
+  }
+}
+
+.table-item--table {
+  display: table;
+  width: 100%;
+  border-spacing: 8px;
+
+  .table-item__row {
+    display: table-row;
+
+    &--header {
+      position: relative;
+      font-family: DBHelvethaicaX-65Med;
+      color: #323232;
+      box-shadow: 0px 1px 0px #E0E0E0;
+
+      .table-item__cell {
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  .table-item__cell {
+    display: table-cell;
+    padding: 10px;
+
+    &:first-child {
+      padding-left: 13px;
+    }
   }
 }

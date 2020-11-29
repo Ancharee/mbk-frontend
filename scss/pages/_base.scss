@@ -42,6 +42,14 @@
   display: flex;
   align-items: center;
 
+  &.red {
+    color: #FF5757;
+
+    &::before {
+      background-color: #FF5757;
+    }
+  }
+
   &.green {
     color: #0EDD4D;
 

@@ -245,9 +245,9 @@
                 แบบย่อ
               </button>
             </div>
-            <div class="card mt-2" id="book-short-view" data-view>
+            <div class="card mt-2">
               <div class="card-body" style="padding: 27px 50px;">
-                <div class="book-short-view-button">
+                <div class="book-button-list">
                   <button class="btn btn-success">ทั้งหมด (8)</button>
                   <button class="btn btn-outline-success">รอประกาศ (1)</button>
                   <button class="btn btn-outline-success">รอกรรมการลงนาม (1)</button>
@@ -256,7 +256,7 @@
                   <button class="btn btn-outline-success">ประกาศใช้ (2)</button>
                   <button class="btn btn-outline-success">ยกเลิกใช้ (2)</button>
                 </div>
-                <div class="book-short-view">
+                <div class="book-short-view" id="book-short-view" data-view>
                   <div class="book-short-view__item">
                     <div class="book-short-view__more-wrapper">
                       <div class="dropdown-more dropdown-more--book dropleft">
@@ -536,11 +536,118 @@
                     <div>ชื่อเล่ม xxx (ชื่อบริษัท)</div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="card" id="book-program-view" style="display: none;" data-view>
-              <div class="card-body">
-
+                <div class="book-program-view" id="book-program-view" data-view style="display: none;">
+                  <div class="table-item table-item--table">
+                    <div class="table-item__row table-item__row--header">
+                      <div class="table-item__cell">ชื่อเล่ม</div>
+                      <div class="table-item__cell">วันที่สร้าง</div>
+                      <div class="table-item__cell">วันที่ประกาศใช้</div>
+                      <div class="table-item__cell">สถานะ</div>
+                      <div class="table-item__cell"></div>
+                      <div class="table-item__cell"></div>
+                      <div class="table-item__cell"></div>
+                      <div class="table-item__cell"></div>
+                      <div class="table-item__cell"></div>
+                      <div class="table-item__cell"></div>
+                    </div>
+                    <div class="table-item__row">
+                      <div class="table-item__cell">ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                      <div class="table-item__cell">5 สิงหาคม 2563</div>
+                      <div class="table-item__cell">1 กันยายน 2563</div>
+                      <div class="table-item__cell"><div class="status-wrapper sky">รอประกาศ</div></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#view">ดูเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#copy">คัดลอกเล่ม</a></div>
+                      <div class="table-item__cell"></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#dowload">ดาวน์โหลด</a></div>
+                      <div class="table-item__cell"></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#upload">อัพโหลด</a></div>
+                    </div>
+                    <div class="table-item__row">
+                      <div class="table-item__cell">ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                      <div class="table-item__cell">5 สิงหาคม 2563</div>
+                      <div class="table-item__cell">1 กันยายน 2563</div>
+                      <div class="table-item__cell"><div class="status-wrapper blue">รอกรรมการลงนาม</div></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#view">ดูเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#copy">คัดลอกเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#edit">แก้ไขเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#dowload">ดาวน์โหลด</a></div>
+                      <div class="table-item__cell"></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#upload">อัพโหลด</a></div>
+                    </div>
+                    <div class="table-item__row">
+                      <div class="table-item__cell">ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                      <div class="table-item__cell">5 สิงหาคม 2563</div>
+                      <div class="table-item__cell">1 กันยายน 2563</div>
+                      <div class="table-item__cell"><div class="status-wrapper orange">อยู่ระหว่างตรวจสอบ</div></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#view">ดูเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#copy">คัดลอกเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#edit">แก้ไขเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#dowload">ดาวน์โหลด</a></div>
+                      <div class="table-item__cell"></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#upload">อัพโหลด</a></div>
+                    </div>
+                    <div class="table-item__row">
+                      <div class="table-item__cell">ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                      <div class="table-item__cell">5 สิงหาคม 2563</div>
+                      <div class="table-item__cell">1 กันยายน 2563</div>
+                      <div class="table-item__cell"><div class="status-wrapper yellow">อยู่ระหว่างจัดทำร่าง</div></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#view">ดูเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#copy">คัดลอกเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#edit">แก้ไขเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#dowload">ดาวน์โหลด</a></div>
+                      <div class="table-item__cell"></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#upload">อัพโหลด</a></div>
+                    </div>
+                    <div class="table-item__row">
+                      <div class="table-item__cell">ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                      <div class="table-item__cell">5 สิงหาคม 2563</div>
+                      <div class="table-item__cell">1 กันยายน 2563</div>
+                      <div class="table-item__cell">ประกาศใช้</div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#view">ดูเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#copy">คัดลอกเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#edit">แก้ไขเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#dowload">ดาวน์โหลด</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#export">Export</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#upload">อัพโหลด</a></div>
+                    </div>
+                    <div class="table-item__row">
+                      <div class="table-item__cell">ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                      <div class="table-item__cell">5 สิงหาคม 2563</div>
+                      <div class="table-item__cell">1 กันยายน 2563</div>
+                      <div class="table-item__cell">ประกาศใช้</div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#view">ดูเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#copy">คัดลอกเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#edit">แก้ไขเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#dowload">ดาวน์โหลด</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#export">Export</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#upload">อัพโหลด</a></div>
+                    </div>
+                    <div class="table-item__row">
+                      <div class="table-item__cell">ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                      <div class="table-item__cell">5 สิงหาคม 2563</div>
+                      <div class="table-item__cell">1 กันยายน 2563</div>
+                      <div class="table-item__cell"><div class="status-wrapper red">ยกเลิกใช้</div></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#view">ดูเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#copy">คัดลอกเล่ม</a></div>
+                      <div class="table-item__cell"></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#dowload">ดาวน์โหลด</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#export">Export</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#upload">อัพโหลด</a></div>
+                    </div>
+                    <div class="table-item__row">
+                      <div class="table-item__cell">ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                      <div class="table-item__cell">5 สิงหาคม 2563</div>
+                      <div class="table-item__cell">1 กันยายน 2563</div>
+                      <div class="table-item__cell"><div class="status-wrapper red">ยกเลิกใช้</div></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#view">ดูเล่ม</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#copy">คัดลอกเล่ม</a></div>
+                      <div class="table-item__cell"></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#dowload">ดาวน์โหลด</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#export">Export</a></div>
+                      <div class="table-item__cell"><a class="btn btn-sm btn-outline-secondary" href="#upload">อัพโหลด</a></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
