@@ -1,0 +1,90 @@
+.book-menu-switch {
+  display: flex;
+  justify-content: flex-end;
+
+  .btn {
+    font-size: 15px;
+    border-radius: 2px 0 0 2px;
+
+    &:first-child {
+      border-right-width: 0;
+    }
+
+    &:last-child {
+      border-left-width: 0;
+    }
+
+    &.active:not(.disabled) {
+      background-color: $white;
+      border-color: #E8E8E8;
+      font-family: DBHelvethaicaX-Reg;
+      color: #4A4A4A;
+    }
+
+    &:not(.active) {
+      background-color: transparent;
+      background: #E6E6E6;
+      border: 1px solid #E8E8E8;
+    }
+
+    i {
+      margin-right: 5px;
+    }
+  }
+}
+
+.book-short-view-button {
+  margin: 0 -5px;
+
+  .btn {
+    margin: 5px;
+  }
+}
+
+.book-short-view {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -30px;
+
+  &__item {
+    margin: 20px 30px;
+    position: relative;
+    padding-right: 24px;
+  }
+
+  &__more-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__more {
+    width: 12px;
+    height: 30px;
+    background-image: url(../../images/Icons/more-action.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .show & {
+      background-image: url(../../images/Icons/more-action-active.svg);
+    }
+  }
+
+  &__book {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 20px 17px;
+    background: #FFFFFF;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0 10px 20px 0 rgba(227,227,227,0.50);
+    border-radius: 3px;
+    opacity: 0.8;
+
+    .icon-forbidden {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      font-size: 16px;
+    }
+  }
+}

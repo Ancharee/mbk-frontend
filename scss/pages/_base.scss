@@ -37,3 +37,56 @@
 		background-size: contain;
 	}
 }
+
+.status-wrapper {
+  display: flex;
+  align-items: center;
+
+  &.green {
+    color: #0EDD4D;
+
+    &::before {
+      background-color: #0EDD4D;
+    }
+  }
+
+  &.sky {
+    color: #24CCB8;
+
+    &::before {
+      background-color: #24CCB8;
+    }
+  }
+
+  &.orange {
+    color: #FF6434;
+
+    &::before {
+      background-color: #FF6434;
+    }
+  }
+
+  &.blue {
+    color: #4880FF;
+
+    &::before {
+      background-color: #4880FF;
+    }
+  }
+
+  &.yellow {
+    color: #FFC400;
+
+    &::before {
+      background-color: #FFC400;
+    }
+  }
+
+  &::before {
+    content: '';
+    margin-right: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+}

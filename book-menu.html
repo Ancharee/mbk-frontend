@@ -234,16 +234,314 @@
               </a>
             </div>
           </div>
-          <div class="container-content">
-            <div class="book-menu-switch">
-              <button class="btn btn-sm btn-outline-secondary">
+          <div class="container-content container-content--narrow">
+            <div class="book-menu-switch js-switch-view">
+              <button class="btn btn-sm btn-outline-secondary" data-toggle="#book-program-view">
                 <i class="icon-program"></i>
                 รายการ
               </button>
-              <button class="btn btn-sm btn-outline-secondary">
+              <button class="btn btn-sm btn-outline-secondary active" data-toggle="#book-short-view">
                 <i class="icon-short"></i>
                 แบบย่อ
               </button>
+            </div>
+            <div class="card mt-2" id="book-short-view" data-view>
+              <div class="card-body" style="padding: 27px 50px;">
+                <div class="book-short-view-button">
+                  <button class="btn btn-success">ทั้งหมด (8)</button>
+                  <button class="btn btn-outline-success">รอประกาศ (1)</button>
+                  <button class="btn btn-outline-success">รอกรรมการลงนาม (1)</button>
+                  <button class="btn btn-outline-success">อยู่ระหว่างตรวจสอบ (1)</button>
+                  <button class="btn btn-outline-success">อยู่ระหว่างจัดทำร่าง (1)</button>
+                  <button class="btn btn-outline-success">ประกาศใช้ (2)</button>
+                  <button class="btn btn-outline-success">ยกเลิกใช้ (2)</button>
+                </div>
+                <div class="book-short-view">
+                  <div class="book-short-view__item">
+                    <div class="book-short-view__more-wrapper">
+                      <div class="dropdown-more dropdown-more--book dropleft">
+                        <button
+                          class="btn book-short-view__more"
+                          data-toggle="dropdown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        ></button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">
+                            ดูเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            คัดลอกเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            ดาวน์โหลด
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            อัพโหลด
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="book-short-view__book">
+                      <img src="images/book-menu.svg" alt="book">
+                    </div>
+                    <div>ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                    <div class="status-wrapper sky">รอประกาศ</div>
+                  </div>
+                  <div class="book-short-view__item">
+                    <div class="book-short-view__more-wrapper">
+                      <div class="dropdown-more dropdown-more--book dropleft">
+                        <button
+                          class="btn book-short-view__more"
+                          data-toggle="dropdown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        ></button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">
+                            ดูเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            คัดลอกเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            ดาวน์โหลด
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            อัพโหลด
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="book-short-view__book">
+                      <img src="images/book-menu.svg" alt="book">
+                    </div>
+                    <div>ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                    <div class="status-wrapper blue">รอกรรมการลงนาม</div>
+                  </div>
+                  <div class="book-short-view__item">
+                    <div class="book-short-view__more-wrapper">
+                      <div class="dropdown-more dropdown-more--book dropleft">
+                        <button
+                          class="btn book-short-view__more"
+                          data-toggle="dropdown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        ></button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">
+                            ดูเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            คัดลอกเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            ดาวน์โหลด
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            อัพโหลด
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="book-short-view__book">
+                      <img src="images/book-menu.svg" alt="book">
+                    </div>
+                    <div>ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                    <div class="status-wrapper orange">อยู่ระหว่างตรวจสอบ</div>
+                  </div>
+                  <div class="book-short-view__item">
+                    <div class="book-short-view__more-wrapper">
+                      <div class="dropdown-more dropdown-more--book dropleft">
+                        <button
+                          class="btn book-short-view__more"
+                          data-toggle="dropdown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        ></button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">
+                            ดูเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            คัดลอกเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            ดาวน์โหลด
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            อัพโหลด
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="book-short-view__book">
+                      <img src="images/book-menu.svg" alt="book">
+                    </div>
+                    <div>ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                    <div class="status-wrapper yellow">อยู่ระหว่างจัดทำร่าง</div>
+                  </div>
+                  <div class="book-short-view__item">
+                    <div class="book-short-view__more-wrapper">
+                      <div class="dropdown-more dropdown-more--book dropleft">
+                        <button
+                          class="btn book-short-view__more"
+                          data-toggle="dropdown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        ></button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">
+                            ดูเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            คัดลอกเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            ดาวน์โหลด
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            อัพโหลด
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            Export
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            เล่มจริง
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="book-short-view__book">
+                      <img src="images/book-menu.svg" alt="book">
+                    </div>
+                    <div>ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                  </div>
+                  <div class="book-short-view__item">
+                    <div class="book-short-view__more-wrapper">
+                      <div class="dropdown-more dropdown-more--book dropleft">
+                        <button
+                          class="btn book-short-view__more"
+                          data-toggle="dropdown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        ></button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">
+                            ดูเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            คัดลอกเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            ดาวน์โหลด
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            อัพโหลด
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            Export
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            เล่มจริง
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="book-short-view__book">
+                      <img src="images/book-menu.svg" alt="book">
+                    </div>
+                    <div>ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                  </div>
+                  <div class="book-short-view__item">
+                    <div class="book-short-view__more-wrapper">
+                      <div class="dropdown-more dropdown-more--book dropleft">
+                        <button
+                          class="btn book-short-view__more"
+                          data-toggle="dropdown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        ></button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">
+                            ดูเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            คัดลอกเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            ดาวน์โหลด
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            อัพโหลด
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            Export
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            เล่มจริง
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="book-short-view__book">
+                      <i class="icon-forbidden"></i>
+                      <img src="images/book-menu.svg" alt="book">
+                    </div>
+                    <div>ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                  </div>
+                  <div class="book-short-view__item">
+                    <div class="book-short-view__more-wrapper">
+                      <div class="dropdown-more dropdown-more--book dropleft">
+                        <button
+                          class="btn book-short-view__more"
+                          data-toggle="dropdown"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        ></button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">
+                            ดูเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            คัดลอกเล่ม
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            ดาวน์โหลด
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            อัพโหลด
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            Export
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            เล่มจริง
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="book-short-view__book">
+                      <i class="icon-forbidden"></i>
+                      <img src="images/book-menu.svg" alt="book">
+                    </div>
+                    <div>ชื่อเล่ม xxx (ชื่อบริษัท)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="book-program-view" style="display: none;" data-view>
+              <div class="card-body">
+
+              </div>
             </div>
           </div>
         </div>
@@ -306,6 +604,21 @@
   <script src="js/template.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
+  <script>
+    $(document).ready(function () {
+      function onSwitchView() {
+        const buttons$ = $('.js-switch-view').find('button');
+        buttons$.on('click', function() {
+          buttons$.removeClass('active');
+          $(this).toggleClass('active');
+          const toggle = $(this).data('toggle');
+          $('[data-view]').hide();
+          $(toggle).show();
+        });
+      }
+      onSwitchView();
+    });
+  </script>
   <!-- End custom js for this page-->
 </body>
 
