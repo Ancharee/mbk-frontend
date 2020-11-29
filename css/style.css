@@ -19261,6 +19261,10 @@ code {
   padding: 0;
 }
 
+.btn#search {
+  min-width: 120px;
+}
+
 .btn-success {
   color: #ffffff;
 }

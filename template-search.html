@@ -256,13 +256,17 @@
                     <div class="row">
                       <div class="col-6">
                         <div class="form-label d-flex">
-                          <label class="form-check-label form-check-label--checkbox" for="byPosition" style="pointer-events: none;">
-                            <input type="checkbox" class="form-check-input" id="byPosition" name="byPosition" value=""/>
+                          <label class="form-check-label form-check-label--checkbox" for="byPosition"
+                            style="pointer-events: none;">
+                            <input type="checkbox" class="form-check-input" id="byPosition" name="byPosition"
+                              value="" />
                             <span class="span-radio"></span>
                           </label>
-                          <a href="#byPositionModal" data-toggle="modal" data-target="#byPositionModal" style="margin-right: 32px;">ตามตำแหน่ง</a>
+                          <a href="#byPositionModal" data-toggle="modal" data-target="#byPositionModal"
+                            style="margin-right: 32px;">ตามตำแหน่ง</a>
 
-                          <label class="form-check-label form-check-label--checkbox" for="byName" style="pointer-events: none;">
+                          <label class="form-check-label form-check-label--checkbox" for="byName"
+                            style="pointer-events: none;">
                             <input type="checkbox" class="form-check-input" id="byName" name="byName" value="" />
                             <span class="span-radio"></span>
                           </label>
@@ -280,7 +284,7 @@
                                   </select>
                                 </div>
                                 <div class="modal-body">
-                                  <table class="table" style="margin-top: 12px;">
+                                  <table id="tableByPosition" class="table" style="margin-top: 12px;">
                                     <thead>
                                       <tr>
                                         <th>
@@ -312,7 +316,7 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="2">
-                                            <input type="checkbox" class="form-check-input" name="position" id="2"/>
+                                            <input type="checkbox" class="form-check-input" name="position" id="2" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -324,7 +328,7 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="3">
-                                            <input type="checkbox" class="form-check-input" name="position" id="3"/>
+                                            <input type="checkbox" class="form-check-input" name="position" id="3" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -336,7 +340,7 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="4">
-                                            <input type="checkbox" class="form-check-input" name="position" id="4"/>
+                                            <input type="checkbox" class="form-check-input" name="position" id="4" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -421,8 +425,10 @@
                                   </table>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-outline-success" data-close="false" data-dismiss="modal">ยกเลิก</button>
-                                  <button type="button" class="btn btn-success" data-close="true" data-dismiss="modal">ตกลง</button>
+                                  <button type="button" class="btn btn-outline-success" data-close="false"
+                                    data-dismiss="modal">ยกเลิก</button>
+                                  <button type="button" class="btn btn-success" data-close="true"
+                                    data-dismiss="modal">ตกลง</button>
                                 </div>
                               </div>
                             </div>
@@ -436,12 +442,13 @@
                                   <input class="form-control" type="text" placeholder="พิมพ์ชื่อ">
                                 </div>
                                 <div class="modal-body">
-                                  <table class="table table--view-column" style="margin-top: 12px;">
+                                  <table id="tableByName" class="table table--view-column" style="margin-top: 12px;">
                                     <thead>
                                       <tr>
                                         <th style="width: 47px;">
                                           <label class="form-check-label" for="allByName">
-                                            <input type="checkbox" class="form-check-input" name="allByName" id="allByName" />
+                                            <input type="checkbox" class="form-check-input" name="allByName"
+                                              id="allByName" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </th>
@@ -452,7 +459,8 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="byName-1">
-                                            <input type="checkbox" class="form-check-input" name="byName" id="byName-1" />
+                                            <input type="checkbox" class="form-check-input" name="byName"
+                                              id="byName-1" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -461,7 +469,8 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="byName-2">
-                                            <input type="checkbox" class="form-check-input" name="byName" id="byName-2"  />
+                                            <input type="checkbox" class="form-check-input" name="byName"
+                                              id="byName-2" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -470,7 +479,8 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="byName-3">
-                                            <input type="checkbox" class="form-check-input" name="byName" id="byName-3"  />
+                                            <input type="checkbox" class="form-check-input" name="byName"
+                                              id="byName-3" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -479,7 +489,8 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="byName-4">
-                                            <input type="checkbox" class="form-check-input" name="byName" id="byName-4"  />
+                                            <input type="checkbox" class="form-check-input" name="byName"
+                                              id="byName-4" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -488,7 +499,8 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="byName-5">
-                                            <input type="checkbox" class="form-check-input" name="byName" id="byName-5" />
+                                            <input type="checkbox" class="form-check-input" name="byName"
+                                              id="byName-5" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -497,7 +509,8 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="byName-6">
-                                            <input type="checkbox" class="form-check-input" name="byName" id="byName-6" />
+                                            <input type="checkbox" class="form-check-input" name="byName"
+                                              id="byName-6" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -506,7 +519,8 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="byName-7">
-                                            <input type="checkbox" class="form-check-input" name="byName" id="byName-7" />
+                                            <input type="checkbox" class="form-check-input" name="byName"
+                                              id="byName-7" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -515,7 +529,8 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="byName-8">
-                                            <input type="checkbox" class="form-check-input" name="byName" id="byName-8" />
+                                            <input type="checkbox" class="form-check-input" name="byName"
+                                              id="byName-8" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -524,7 +539,8 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="byName-9">
-                                            <input type="checkbox" class="form-check-input" name="byName" id="byName-9" />
+                                            <input type="checkbox" class="form-check-input" name="byName"
+                                              id="byName-9" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -533,7 +549,8 @@
                                       <tr>
                                         <td>
                                           <label class="form-check-label" for="byName-10">
-                                            <input type="checkbox" class="form-check-input" name="byName" id="byName-10" />
+                                            <input type="checkbox" class="form-check-input" name="byName"
+                                              id="byName-10" />
                                             <span class="span-radio"></span>
                                           </label>
                                         </td>
@@ -543,8 +560,10 @@
                                   </table>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-outline-success" data-close="false" data-dismiss="modal">ยกเลิก</button>
-                                  <button type="button" class="btn btn-success" data-close="true" data-dismiss="modal">ตกลง</button>
+                                  <button type="button" class="btn btn-outline-success" data-close="false"
+                                    data-dismiss="modal">ยกเลิก</button>
+                                  <button type="button" class="btn btn-success" data-close="true"
+                                    data-dismiss="modal">ตกลง</button>
                                 </div>
                               </div>
                             </div>
@@ -574,7 +593,7 @@
                       <div class="col-6">
                         <div class="form-label">
                           <label class="form-check-label" for="money">
-                            <input type="checkbox" class="form-check-input" id="money"  />
+                            <input type="checkbox" class="form-check-input" id="money" />
                             <span class="span-radio"></span>
                             วงเงิน
                           </label>
@@ -584,7 +603,7 @@
                     </div>
                     <div class="row">
                       <div class="col-12">
-                        <button class="btn btn-success">ค้นหา</button>
+                        <button id="search" type="button" class="btn btn-success">ค้นหา</button>
                       </div>
                     </div>
                   </div>
@@ -592,10 +611,10 @@
               </div>
             </div>
 
-            <div class="search-result">
+            <div class="search-result" style="display: none;">
               <div class="d-flex justify-content-between">
                 <h3>ผลลัพธ์ “งบประมาณ” ทั้งหมด (8)</h3>
-                <button class="btn btn-primary">เปรียบเทียบ</button>
+                <!-- <a class="btn btn-primary" href="">เปรียบเทียบ</a> -->
               </div>
               <div class="row">
                 <div class="col-6">
@@ -641,26 +660,22 @@
                       <tr>
                         <td>
                           <label class="form-check-label" for="checkbox1">
-                            <input type="checkbox" class="form-check-input" id="checkbox1" name="checkbox" value=""/>
+                            <input type="checkbox" class="form-check-input" id="checkbox1" name="checkbox" value="" />
                             <span class="span-radio"></span>
                           </label>
                         </td>
                         <td>หลักเกณฑ์</td>
-                        <td>ให้อนุมัติตนเองได้ในเรื่องการลางาน  การปฏิบัติงานนอกสถานที่
-                          การเข้าอบรมสัมมนา  และการเบิกค่าใช้จ่ายตาม<mark>งบประมาณ</mark></td>
+                        <td>ให้อนุมัติตนเองได้ในเรื่องการลางาน การปฏิบัติงานนอกสถานที่
+                          การเข้าอบรมสัมมนา และการเบิกค่าใช้จ่ายตาม<mark>งบประมาณ</mark></td>
                         <td>บริษัท xxx จำกัด</td>
                         <td>9/12/2019</td>
-                        <td><div class="status">ประกาศใช้</div></td>
+                        <td>
+                          <div class="status">ประกาศใช้</div>
+                        </td>
                         <td>
                           <div class="dropdown-more">
-                            <button
-                              class="btn"
-                              type="button"
-                              data-toggle="dropdown"
-                              data-display="static"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
+                            <button class="btn" type="button" data-toggle="dropdown" data-display="static"
+                              aria-haspopup="true" aria-expanded="false">
                               <i class="icon-more-ver"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
@@ -679,7 +694,7 @@
                       <tr>
                         <td>
                           <label class="form-check-label" for="checkbox2">
-                            <input type="checkbox" class="form-check-input" id="checkbox2" name="checkbox" value=""/>
+                            <input type="checkbox" class="form-check-input" id="checkbox2" name="checkbox" value="" />
                             <span class="span-radio"></span>
                           </label>
                         </td>
@@ -687,17 +702,13 @@
                         <td>หมวด 1) <mark>งบประมาณรายจ่าย</mark></td>
                         <td>บริษัท xxx จำกัด</td>
                         <td>9/12/2019</td>
-                        <td><div class="status">ประกาศใช้</div></td>
+                        <td>
+                          <div class="status">ประกาศใช้</div>
+                        </td>
                         <td>
                           <div class="dropdown-more">
-                            <button
-                              class="btn"
-                              type="button"
-                              data-toggle="dropdown"
-                              data-display="static"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
+                            <button class="btn" type="button" data-toggle="dropdown" data-display="static"
+                              aria-haspopup="true" aria-expanded="false">
                               <i class="icon-more-ver"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
@@ -787,57 +798,105 @@
   <!-- Custom js for this page-->
   <script>
     $(function () {
-      $('select[multiple]').multiselect({
-        columns: 1
-      });
+      function onSearch() {
+        $('#search').on('click', function () {
+          $('.search-result').fadeIn();
+        });
+      }
 
-      $('[data-provide="datepicker"]').datepicker();
+      function getCheckboxIsChecked(id) {
+        const checkboxes$ = $(id).find('.form-check-input');
+        let checked = 0;
+        checkboxes$.each(index => {
+          if (checkboxes$.is(':checked')) {
+            checked++;
+          }
+        });
+        return checked ? true : false;
+      }
 
-      $(document).on('click', '[type="reset"]', function() {
-        $('.multiple-select').html('');
-      });
+      function activeCheckboxParent() {
+        $('#byPosition').prop('checked', getCheckboxIsChecked('#tableByPosition'));
+        $('#byName').prop('checked', getCheckboxIsChecked('#tableByName'));
+      }
 
-      $(document).on('click', '.modal-footer > [data-close]', function() {
-        const checkboxes = $('.modal-body .form-check-input');
+      function activeCheckboxAll() {
+        $('#allByPosition, #allByName').on('click', function () {
+          const checkboxes$ = $(this).closest('table').find('tbody').find('.form-check-input');
+          checkboxes$.prop('checked', $(this)[0].checked);
+        });
+      }
 
-        if ($(this).data('close')) {
-          // callection checkbox is checked
-          const selected = [];
-          checkboxes.each(index => {
-            const checkbox$ = $(checkboxes[index]);
-            if (checkbox$.is(':checked')) {
-              const text = checkbox$.closest('td').next().text();
-              selected.push({
-                id: index,
-                name: text
-              });
-            }
-          });
-          // display items
-          let html = '';
-          selected.forEach(data => {
-            html = '<span class="ms-options-item" id="' + data.id + '">'+ data.name +'</span>' + html;
-          });
-          $('.input-with-item').html(html);
-        } else {
-          // uncheck
-          const selected = $('.input-with-item .ms-options-item');
-          if (selected.length) {
+      function initMutipleCheckbox() {
+        $('select[multiple]').multiselect({
+          columns: 1
+        });
+      }
+
+      function initDatePicker() {
+        $('[data-provide="datepicker"]').datepicker();
+      }
+
+      function onReset() {
+        $(document).on('click', '[type="reset"]', function () {
+          $('.multiple-select, .input-with-item').html('');
+        });
+      }
+
+      function onCheckboxChange() {
+        $(document).on('click', '.modal-footer > [data-close]', function () {
+          const checkboxes = $('.modal-body .form-check-input');
+
+          if ($(this).data('close')) {
+            // callection checkbox is checked
+            const selected = [];
             checkboxes.each(index => {
               const checkbox$ = $(checkboxes[index]);
-              const exit = $('#' + index + '.ms-options-item').length;
-              if (!exit) {
-                checkbox$.prop('checked', false);
+              if (checkbox$.is(':checked')) {
+                const text = checkbox$.closest('td').next().text();
+                if (text) {
+                  selected.push({
+                    id: index,
+                    name: text
+                  });
+                }
               }
             });
-          } else {
-            checkboxes.each(index => {
-              const checkbox$ = $(checkboxes[index]);
-              checkbox$.prop('checked', false);
+            // display items
+            let html = '';
+            selected.forEach(data => {
+              html = '<span class="ms-options-item" id="' + data.id + '">' + data.name + '</span>' + html;
             });
+            $('.input-with-item').html(html);
+          } else {
+            // uncheck
+            const selected = $('.input-with-item .ms-options-item');
+            if (selected.length) {
+              checkboxes.each(index => {
+                const checkbox$ = $(checkboxes[index]);
+                const exit = $('#' + index + '.ms-options-item').length;
+                if (!exit) {
+                  checkbox$.prop('checked', false);
+                }
+              });
+            } else {
+              checkboxes.each(index => {
+                const checkbox$ = $(checkboxes[index]);
+                checkbox$.prop('checked', false);
+              });
+            }
           }
-        }
-      });
+          activeCheckboxParent();
+        });
+      }
+
+      initMutipleCheckbox();
+      initDatePicker();
+      activeCheckboxAll();
+      onSearch();
+      onReset();
+      onCheckboxChange();
+
     });
   </script>
   <!-- End custom js for this page-->
