@@ -57,7 +57,7 @@
           -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
         }
-  
+
         &:after {
           @include transition(all);
           transition-duration: 0s;
@@ -225,11 +225,5 @@
         }
       }
     }
-  }
-}
-
-@media (min-width: 576px) {
-  .form-inline .form-check {
-
   }
 }

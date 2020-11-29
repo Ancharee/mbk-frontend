@@ -1,0 +1,85 @@
+.wizard {
+  .steps {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+
+      li {
+        padding: 0 63px;
+        width: 22px;
+        height: 22px;
+        line-height: 0;
+
+        &:not(:last-child) {
+          a {
+            &::after {
+              content: "";
+              position: absolute;
+              top: 7px;
+              left: 19px;
+              height: 2px;
+              width: 105px;
+              background-color: #ccc;
+            }
+          }
+
+          &.done {
+            a::after {
+              background-color: #4880FF;
+            }
+          }
+        }
+
+        &.current {
+          a {
+            &::after {
+              top: 4px;
+              left: 16px;
+            }
+          }
+        }
+      }
+
+      a {
+        position: relative;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border: 2px solid #ccc;
+        background-color: transparent;
+        border-radius: 50px;
+        font-size: 0;
+      }
+
+      .current {
+        a {
+          border: 7px solid #FFFFFF;
+          box-shadow: 0 3px 6px 0 rgba(198,198,198,0.50);
+          background-color: #4880FF;
+        }
+      }
+
+      .done {
+        a {
+          border-color: #4880FF;
+          background-color: #4880FF;
+          background-image: url(../../images/Icons/check-white.png);
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+
+  .content {
+    h3 {
+      display: none;
+    }
+  }
+
+  .actions {
+    display: none;
+  }
+}
