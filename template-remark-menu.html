@@ -269,8 +269,8 @@
             <div class="card">
               <div class="card-body">
                 <div class="page-title">
-                  <label class="form-check-label" for="1">
-                    <input type="checkbox" class="form-check-input" name="remark-title" id="1" />
+                  <label class="form-check-label" for="all">
+                    <input type="checkbox" class="form-check-input" name="remark-title" id="all" />
                     <span class="span-radio"></span>
                     หมายเหตุ
                   </label>
@@ -434,6 +434,25 @@
   <script src="js/template.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
+  <script>
+    function initCheckbox() {
+      const checkboxes$ = $('.form-check-input:not(#all)');
+      $('#all').on('click', function() {
+        checkboxes$.prop('checked', $(this)[0].checked);
+      });
+
+      checkboxes$.on('click', function() {
+        let checked = 0;
+        checkboxes$.each(index => {
+          if ($(checkboxes$[index]).is(':checked')) {
+            checked++;
+          }
+        });
+        $('#all').prop('checked', checked === checkboxes$.length);
+      });
+    }
+    initCheckbox();
+  </script>
   <!-- End custom js for this page-->
 </body>
 

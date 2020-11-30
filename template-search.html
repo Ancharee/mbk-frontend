@@ -820,6 +820,19 @@
         $('#byName').prop('checked', getCheckboxIsChecked('#tableByName'));
       }
 
+      function activeHeaderCheckbox() {
+        $('tbody .form-check-input').on('click', function() {
+          const checkboxes$ = $(this).closest('table').find('tbody').find('.form-check-input');
+          let checked = 0;
+          checkboxes$.each(index => {
+            if ($(checkboxes$[index]).is(':checked')) {
+              checked++;
+            }
+          });
+          $(this).closest('table').find('thead').find('.form-check-input').prop('checked', checked === checkboxes$.length);
+        });
+      }
+
       function activeCheckboxAll() {
         $('#allByPosition, #allByName').on('click', function () {
           const checkboxes$ = $(this).closest('table').find('tbody').find('.form-check-input');
@@ -893,6 +906,7 @@
       initMutipleCheckbox();
       initDatePicker();
       activeCheckboxAll();
+      activeHeaderCheckbox();
       onSearch();
       onReset();
       onCheckboxChange();

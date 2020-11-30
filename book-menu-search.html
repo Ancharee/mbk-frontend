@@ -827,6 +827,19 @@
         });
       }
 
+      function activeHeaderCheckbox() {
+        $('tbody .form-check-input').on('click', function() {
+          const checkboxes$ = $(this).closest('table').find('tbody').find('.form-check-input');
+          let checked = 0;
+          checkboxes$.each(index => {
+            if ($(checkboxes$[index]).is(':checked')) {
+              checked++;
+            }
+          });
+          $(this).closest('table').find('thead').find('.form-check-input').prop('checked', checked === checkboxes$.length);
+        });
+      }
+
       function initMutipleCheckbox() {
         $('select[multiple]').multiselect({
           columns: 1
@@ -893,10 +906,10 @@
       initMutipleCheckbox();
       initDatePicker();
       activeCheckboxAll();
+      activeHeaderCheckbox();
       onSearch();
       onReset();
       onCheckboxChange();
-
     });
   </script>
   <!-- End custom js for this page-->
