@@ -21751,7 +21751,9 @@ li ol > li:before {
   margin-bottom: 1.5rem;
 }
 
-.form-control, .dataTables_wrapper select {
+.form-control, .dataTables_wrapper select,
+.selectize-control,
+.selectize-input {
   padding: 9px 10px;
   height: 36px;
   font-weight: 400;
@@ -21763,8 +21765,22 @@ li ol > li:before {
   appearance: none;
 }
 
-.form-control:focus, .dataTables_wrapper select:focus {
+.form-control:focus, .dataTables_wrapper select:focus,
+.selectize-control:focus,
+.selectize-input:focus {
   border-color: #8DC63F;
+}
+
+.selectize-control {
+  margin-bottom: 20px;
+}
+
+.selectize-control.multi .selectize-input > div {
+  margin-top: -2px;
+  background: #8DC63F;
+  text-shadow: 0 1px 0 rgba(0, 51, 83, 0.3);
+  border-radius: 3px;
+  color: #ffffff;
 }
 
 input.form-control,
