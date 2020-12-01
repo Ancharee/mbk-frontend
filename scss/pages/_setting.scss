@@ -1,0 +1,43 @@
+.setting {
+  &__format {
+    color: #DF5F5F;
+    font-family: $font-family-DBHelvethaicaX-Reg;
+  }
+
+  &__helper {
+    padding: 18px 22px;
+    height: 100%;
+    background-color: rgba(#F1F1F1, $alpha: 0.4);
+    transition: background-color 0.25s ease;
+
+    &.active {
+      background-color: rgba(#8DC63F, $alpha: 0.1);
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  &__row {
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__col-6 {
+    width: 100%;
+    max-width: 60px;
+  }
+
+  &__col-300 {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__slash {
+    padding: 0 10px;
+  }
+}

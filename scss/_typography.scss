@@ -54,12 +54,12 @@ h4,
 
 h5,
 .h5 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 h6,
 .h6 {
-  font-size: .937rem;
+  font-size: 20px;
 }
 
 .display-1 {
@@ -173,4 +173,8 @@ $value in $social-colors {
 mark {
   padding: 0;
   background-color: #FFE135;
+}
+
+.green {
+  color: #8DC63F;
 }

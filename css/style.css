@@ -18509,11 +18509,11 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 h6, .h6 {
-  font-size: .937rem;
+  font-size: 20px;
 }
 
 .display-1 {
@@ -18722,6 +18722,10 @@ address p {
 mark {
   padding: 0;
   background-color: #FFE135;
+}
+
+.green {
+  color: #8DC63F;
 }
 
 /* Miscellanoeous */
@@ -21796,6 +21800,15 @@ input.form-control,
   color: #787E8C;
 }
 
+input.form-control:disabled,
+.input-with-item.form-control:disabled,
+.dataTables_wrapper select.input-with-item:disabled,
+.multiple-select.form-control:disabled,
+.dataTables_wrapper select.multiple-select:disabled {
+  background: rgba(241, 241, 241, 0.3);
+  border-color: rgba(241, 241, 241, 0.3);
+}
+
 input.form-control.file-upload-info:disabled {
   background-color: #E4E4E4;
   color: #000;
@@ -24472,6 +24485,48 @@ textarea {
 
 .template-copy-list__action img {
   width: 10px;
+}
+
+.setting__format {
+  color: #DF5F5F;
+  font-family: "DBHelvethaicaX-Reg", sans-serif;
+}
+
+.setting__helper {
+  padding: 18px 22px;
+  height: 100%;
+  background-color: rgba(241, 241, 241, 0.4);
+  transition: background-color 0.25s ease;
+}
+
+.setting__helper.active {
+  background-color: rgba(141, 198, 63, 0.1);
+}
+
+.setting__label {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 0;
+}
+
+.setting__row {
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.setting__col-6 {
+  width: 100%;
+  max-width: 60px;
+}
+
+.setting__col-300 {
+  width: 100%;
+  max-width: 300px;
+}
+
+.setting__slash {
+  padding: 0 10px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

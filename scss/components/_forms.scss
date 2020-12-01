@@ -26,7 +26,7 @@
   margin-bottom: 20px;
 }
 
-.selectize-control.multi .selectize-input > div {
+.selectize-control.multi .selectize-input>div {
   margin-top: -2px;
   background: #8DC63F;
   text-shadow: 0 1px 0 rgba(0, 51, 83, 0.3);
@@ -39,11 +39,16 @@ input,
 .multiple-select {
   &.form-control {
     background: #FFFFFF;
-    box-shadow: inset 0 0 2px 0 rgba(118,118,118,0.50);
+    box-shadow: inset 0 0 2px 0 rgba(118, 118, 118, 0.50);
     border-radius: 3px;
     font-family: DBHelvethaicaX-Reg;
     font-size: 20px;
     color: #787E8C;
+
+    &:disabled {
+      background: rgba(#F1F1F1, $alpha: 0.3);
+      border-color: rgba(#F1F1F1, $alpha: 0.3);
+    }
   }
 }
 
@@ -52,7 +57,7 @@ input {
     &:disabled {
       background-color: #E4E4E4;
 
-       color: $black;
+      color: $black;
 
       &::placeholder {
         color: $black;
@@ -171,7 +176,7 @@ textarea {
 .form-check-input {
   opacity: 0;
 
-  + span.span-radio {
+  +span.span-radio {
     position: absolute;
     top: 2px;
     left: 0;
@@ -191,7 +196,7 @@ textarea {
     }
   }
 
-  + span.span-checkbox {
+  +span.span-checkbox {
     position: absolute;
     top: 2px;
     left: 0;
@@ -207,19 +212,19 @@ textarea {
   }
 
   &:checked {
-    + span.span-radio {
+    +span.span-radio {
       background-image: url(../images/Icons/checked.svg);
     }
 
-     + span.span-checkbox {
-       border: none;
+    +span.span-checkbox {
+      border: none;
       background-image: url(../images/Icons/checked-checkbox.svg);
     }
   }
 
   .form-check-label--checkbox & {
     &:checked {
-      + span.span-radio {
+      +span.span-radio {
         background-image: url(../images/Icons/checkbox-enable-checked.svg);
       }
     }
