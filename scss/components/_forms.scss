@@ -20,6 +20,10 @@
   &:focus {
     border-color: #8DC63F;
   }
+
+  &--round {
+    border-radius: 20px !important;
+  }
 }
 
 .selectize-control {

@@ -21341,8 +21341,8 @@ li ol > li:before {
 }
 
 .modal .modal-content {
-  min-height: 330px;
-  max-height: 330px;
+  min-height: 100%;
+  max-height: 100%;
 }
 
 .modal .modal-body {
@@ -21355,6 +21355,7 @@ li ol > li:before {
 
 .modal .modal-footer {
   padding-top: 0;
+  padding-bottom: 40px;
 }
 
 .modal .modal-footer .btn {
@@ -21399,11 +21400,6 @@ li ol > li:before {
 
 .modal--form .modal-dialog {
   max-width: 560px;
-}
-
-.modal--form .modal-content {
-  min-height: 360px;
-  max-height: 360px;
 }
 
 .modal--form .modal-body {
@@ -21777,6 +21773,12 @@ li ol > li:before {
 .selectize-control:focus,
 .selectize-input:focus {
   border-color: #8DC63F;
+}
+
+.form-control--round,
+.selectize-control--round,
+.selectize-input--round {
+  border-radius: 20px !important;
 }
 
 .selectize-control {
