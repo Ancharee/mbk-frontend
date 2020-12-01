@@ -18,6 +18,10 @@
     font-size: 24px;
     font-family: $font-family-DBHelvethaicaX-65Med;
     color: #FF5660;
+
+    &--success {
+      color: #8DC63F;
+    }
   }
 
   .modal-dialog {

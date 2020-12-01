@@ -21332,6 +21332,10 @@ li ol > li:before {
   color: #FF5660;
 }
 
+.modal .modal-title--success {
+  color: #8DC63F;
+}
+
 .modal .modal-dialog {
   max-width: 370px;
 }

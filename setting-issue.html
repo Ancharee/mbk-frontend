@@ -612,7 +612,45 @@
               </div>
             </div>
             <div class="container-action">
-              <button class="btn btn-success">นำไปใช้</button>
+              <button
+                class="btn btn-success"
+                data-toggle="modal"
+                data-target="#confirmModal"
+              >นำไปใช้</button>
+            </div>
+          </div>
+
+          <div
+            class="modal fade modal--confirm-delete"
+            id="confirmModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="confirmModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered"
+              role="document"
+            >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5
+                    class="modal-title modal-title--success"
+                    id="confirmModalLabel"
+                  >สำเร็จ!</h5>
+                </div>
+                <div class="modal-body">
+                  <img src="images/Icons/test.svg" alt="test">
+                  <p class="mt-4">นำรูปแบบไปใช้งานแล้ว</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    data-dismiss="modal"
+                  >ตกลง</button>
+                </div>
+              </div>
             </div>
           </div>
 
