@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Add Remark</title>
+    <g id="Book-Menu-&gt;Create-New-Book" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.0-Create-Book-Step-2-(Light)" transform="translate(-1402.000000, -463.000000)">
+            <g id="Table" transform="translate(241.000000, 281.000000)">
+                <g id="Row-2" transform="translate(0.000000, 174.000000)">
+                    <g id="Add-Remark" transform="translate(1161.000000, 8.000000)">
+                        <circle id="Oval" fill="#8DC63F" cx="10" cy="10" r="10"></circle>
+                        <rect id="Rectangle" fill="#FFFFFF" x="5" y="9" width="10" height="2"></rect>
+                        <rect id="Rectangle-Copy-19" fill="#FFFFFF" transform="translate(10.000000, 10.000000) rotate(90.000000) translate(-10.000000, -10.000000) " x="5" y="9" width="10" height="2"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

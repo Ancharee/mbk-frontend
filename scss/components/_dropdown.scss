@@ -109,3 +109,26 @@
     }
   }
 }
+
+.dropdown-select {
+  position: relative;
+
+  .dropdown-menu {
+    padding: 10px 15px;
+    width: 198px;
+  }
+
+  .dropdown-item {
+    padding: 10px;
+    border-bottom: 1px solid #D8D8D8;
+    font-family: DBHelvethaicaX-Reg;
+    font-size: 16px;
+    color: #64666D;
+    word-wrap: break-word;
+    white-space: normal;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

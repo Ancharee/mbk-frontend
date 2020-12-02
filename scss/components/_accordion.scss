@@ -4,6 +4,7 @@
     border: 0;
     font-family: DBHelvethaicaX-Reg;
     font-size: 22px;
+    overflow: visible;
   }
 
   .card .card-header {
@@ -66,5 +67,22 @@
   .list,
   .list ul {
     list-style: none;
+  }
+}
+
+.accordion--material {
+  .card .btn-link {
+    border-color: #8BC34A;
+    background-color: $white;
+
+    &.active {
+      background-color: #8BC34A;
+      color: $white;
+
+      &::after {
+        background-image: url(../../images/Icons/less-white.svg);
+        transform: rotate(0deg);
+      }
+    }
   }
 }

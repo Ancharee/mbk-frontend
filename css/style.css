@@ -20635,6 +20635,29 @@ code {
   background-color: #FFFFFF;
 }
 
+.dropdown-select {
+  position: relative;
+}
+
+.dropdown-select .dropdown-menu {
+  padding: 10px 15px;
+  width: 198px;
+}
+
+.dropdown-select .dropdown-item {
+  padding: 10px;
+  border-bottom: 1px solid #D8D8D8;
+  font-family: DBHelvethaicaX-Reg;
+  font-size: 16px;
+  color: #64666D;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.dropdown-select .dropdown-item:hover {
+  background-color: transparent;
+}
+
 /* Icons */
 .icons-list {
   border-left: 1px solid #f3f3f3;
@@ -21094,6 +21117,7 @@ li ol > li:before {
 .table th,
 .table td {
   border: 1px solid #DDDDDD;
+  word-break: break-word;
 }
 
 .table thead th {
@@ -21149,6 +21173,46 @@ li ol > li:before {
   height: 8px;
   background-color: #0EDD4D;
   border-radius: 50%;
+}
+
+.table .child-1 td:first-child {
+  padding-left: calc(46px * 1);
+}
+
+.table .child-2 td:first-child {
+  padding-left: calc(46px * 2);
+}
+
+.table .child-3 td:first-child {
+  padding-left: calc(46px * 3);
+}
+
+.table .child-4 td:first-child {
+  padding-left: calc(46px * 4);
+}
+
+.table .child-5 td:first-child {
+  padding-left: calc(46px * 5);
+}
+
+.table .child-6 td:first-child {
+  padding-left: calc(46px * 6);
+}
+
+.table .child-7 td:first-child {
+  padding-left: calc(46px * 7);
+}
+
+.table .child-8 td:first-child {
+  padding-left: calc(46px * 8);
+}
+
+.table .child-9 td:first-child {
+  padding-left: calc(46px * 9);
+}
+
+.table .child-10 td:first-child {
+  padding-left: calc(46px * 10);
 }
 
 .table-item {
@@ -22175,6 +22239,7 @@ textarea {
   border: 0;
   font-family: DBHelvethaicaX-Reg;
   font-size: 22px;
+  overflow: visible;
 }
 
 .accordion .card .card-header {
@@ -22237,6 +22302,21 @@ textarea {
 .accordion .list,
 .accordion .list ul {
   list-style: none;
+}
+
+.accordion--material .card .btn-link {
+  border-color: #8BC34A;
+  background-color: #ffffff;
+}
+
+.accordion--material .card .btn-link.active {
+  background-color: #8BC34A;
+  color: #ffffff;
+}
+
+.accordion--material .card .btn-link.active::after {
+  background-image: url(../../images/Icons/less-white.svg);
+  transform: rotate(0deg);
 }
 
 /*-------------------------------------------------------------------*/
