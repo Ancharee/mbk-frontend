@@ -1395,6 +1395,7 @@
                                           </select>
                                         </td>
                                         <td class="text-left">
+                                          <div class="book-remark">รองฯ/ผชฯ สายการตลาด</div>
                                           <div class="dropdown-select">
                                             <button
                                               class="btn"
@@ -1418,7 +1419,47 @@
                                               </div>
                                               <div class="dropdown-item">ผส./ผอ.ฝ่ายที่เกี่ยวข้อง</div>
                                               <div class="dropdown-item">
-                                                <button class="btn btn-sm btn-outline-success">กำหนดเอง</button>
+                                                <button
+                                                  class="btn btn-sm btn-outline-success"
+                                                  data-toggle="modal"
+                                                  data-target="#addRemarkModal"
+                                                >กำหนดเอง</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div
+                                            class="modal fade modal--form"
+                                            id="addRemarkModal"
+                                            tabindex="-1"
+                                            role="dialog"
+                                            aria-labelledby="addRemarkModalLabel"
+                                            aria-hidden="true"
+                                          >
+                                            <div
+                                              class="modal-dialog modal-dialog-centered"
+                                              role="document"
+                                            >
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5
+                                                    class="modal-title"
+                                                    id="addRemarkModalLabel"
+                                                  >เพิ่มหมายเหตุ</h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <textarea
+                                                    class="form-control"
+                                                    rows="5"
+                                                    placeholder="พิมพ์หมายเหตุ...."
+                                                  ></textarea>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button
+                                                    type="button"
+                                                    class="btn btn-success"
+                                                    data-dismiss="modal"
+                                                  >เพิ่ม</button>
+                                                </div>
                                               </div>
                                             </div>
                                           </div>
