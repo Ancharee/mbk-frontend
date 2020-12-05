@@ -22285,7 +22285,7 @@ textarea {
 .wizard .steps ul .done a {
   border-color: #4880FF;
   background-color: #4880FF;
-  background-image: url(../../images/Icons/check-white.png);
+  background-image: url(../images/Icons/check-white.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -24591,13 +24591,13 @@ textarea {
 .book-short-view__more {
   width: 12px;
   height: 30px;
-  background-image: url(../../images/Icons/more-action.svg);
+  background-image: url(../images/Icons/more-action.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .show .book-short-view__more {
-  background-image: url(../../images/Icons/more-action-active.svg);
+  background-image: url(../images/Icons/more-action-active.svg);
 }
 
 .book-short-view__book {

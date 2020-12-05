@@ -64,12 +64,12 @@
   &__more {
     width: 12px;
     height: 30px;
-    background-image: url(../../images/Icons/more-action.svg);
+    background-image: url(../images/Icons/more-action.svg);
     background-size: contain;
     background-repeat: no-repeat;
 
     .show & {
-      background-image: url(../../images/Icons/more-action-active.svg);
+      background-image: url(../images/Icons/more-action-active.svg);
     }
   }
 
