@@ -91,6 +91,79 @@
   }
 }
 
+.table.table--light {
+  table-layout: fixed;
+  border-color: transparent;
+
+  thead {
+    tr th {
+      background-color: #fff;
+      border: none;
+      border-bottom: 1px solid #ddd;
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+  }
+
+  tbody {
+    tr:nth-child(2n) td,
+    tr td {
+      background-color: #fff;
+      border: none;
+      border-bottom: 1px solid #ddd;
+
+      &:first-child {
+        padding-left: 12px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.table.table--allow {
+  th:nth-child(2),
+  th:nth-child(3) {
+    width: 55px;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    padding-right: 0;
+  }
+
+  th:nth-child(3),
+  td:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .btn {
+    padding: 2px;
+  }
+
+  .form-check-label {
+    margin-top: 0;
+  }
+}
+
+.table.table--material {
+  thead th {
+    vertical-align: middle;
+  }
+
+  tr td {
+    &:not(:first-child):not(:last-child) {
+      width: 92px;
+    }
+  }
+
+  select.form-control {
+    background-position: calc(100% - 6px) center;
+    background-size: 12px;
+  }
+}
+
 .table-item {
   width: 100%;
   font-family: $font-family-DBHelvethaicaX-Reg;

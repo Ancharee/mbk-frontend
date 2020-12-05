@@ -1158,7 +1158,7 @@
                                 data-parent="#accordion1"
                               >
                                 <div class="card-body">
-                                  <table class="table">
+                                  <table class="table table--material">
                                     <thead>
                                       <tr>
                                         <th rowspan="2">หมวด 1) งบประมาณรายจ่าย</th>
@@ -1248,12 +1248,98 @@
                                                   >คกก.  อนุมัติ</h5>
                                                 </div>
                                                 <div class="modal-body">
-                                                  <table>
-                                                    <tr>
-                                                      <td>ทั้งหมด</td>
-                                                      <td>แสดง</td>
-                                                      <td>ซ่อน</td>
-                                                    </tr>
+                                                  <table class="table table--light table--allow">
+                                                    <thead>
+                                                      <tr>
+                                                        <th>
+                                                          <label class="form-check-label" for="checkboxModalAll">
+                                                            <input type="checkbox" class="form-check-input" id="checkboxModalAll">
+                                                            <span class="span-radio"></span>
+                                                            ทั้งหมด
+                                                          </label>
+                                                        </th>
+                                                        <th>แสดง</th>
+                                                        <th>ซ่อน</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>
+                                                          <label for="checkbox1" class="form-check-label">
+                                                            <input type="checkbox" class="form-check-input" id="checkbox1">
+                                                            <span class="span-radio"></span>
+                                                            คกก. คณะกรรมการบริหาร
+                                                          </label>
+                                                        </td>
+                                                        <td>
+                                                          <button class="btn">
+                                                            <img src="images/Icons/show-disabled.svg" alt="btn">
+                                                          </button>
+                                                        </td>
+                                                        <td>
+                                                          <button class="btn">
+                                                            <img src="images/Icons/hide-disabled.svg" alt="btn">
+                                                          </button>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>
+                                                          <label for="checkbox2" class="form-check-label">
+                                                            <input type="checkbox" class="form-check-input" id="checkbox2">
+                                                            <span class="span-radio"></span>
+                                                            คกก. คณะกรรมการบริษัท
+                                                          </label>
+                                                        </td>
+                                                        <td>
+                                                          <button class="btn">
+                                                            <img src="images/Icons/show.svg" alt="btn" width="32">
+                                                          </button>
+                                                        </td>
+                                                        <td>
+                                                          <button class="btn">
+                                                            <img src="images/Icons/hide-disabled.svg" alt="btn">
+                                                          </button>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>
+                                                          <label for="checkbox3" class="form-check-label">
+                                                            <input type="checkbox" class="form-check-input" id="checkbox3">
+                                                            <span class="span-radio"></span>
+                                                            คกก. คณะกรรมการตรวจสอบ
+                                                          </label>
+                                                        </td>
+                                                        <td>
+                                                          <button class="btn">
+                                                            <img src="images/Icons/show-disabled.svg" alt="btn">
+                                                          </button>
+                                                        </td>
+                                                        <td>
+                                                          <button class="btn">
+                                                            <img src="images/Icons/hide.svg" alt="btn" width="32">
+                                                          </button>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>
+                                                          <label for="checkbox4" class="form-check-label">
+                                                            <input type="checkbox" class="form-check-input" id="checkbox4">
+                                                            <span class="span-radio"></span>
+                                                            คกก. คณะกรรมการบริษัท
+                                                          </label>
+                                                        </td>
+                                                        <td>
+                                                          <button class="btn">
+                                                            <img src="images/Icons/show.svg" alt="btn" width="32">
+                                                          </button>
+                                                        </td>
+                                                        <td>
+                                                          <button class="btn">
+                                                            <img src="images/Icons/hide-disabled.svg" alt="btn">
+                                                          </button>
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
                                                   </table>
                                                 </div>
                                                 <div class="modal-footer">
@@ -1415,7 +1501,8 @@
                                               <div class="dropdown-item">ผส./ผอ.ฝ่ายที่เกี่ยวข้อง</div>
                                               <div class="dropdown-item">ผช.รองฯ สายที่เกี่ยวข้อง และ ผช.รองฯ งบ.1
                                                 อนุมัติร่วมกัน</div>
-                                              <div class="dropdown-item">ผ่าน รองฯ/ผชฯ สายที่เกี่ยวข้อง และผช.รองฯ งบ.1
+                                              <div class="dropdown-item">
+                                                ผ่าน รองฯ/ผชฯ สายที่เกี่ยวข้อง และผช.รองฯ งบ.1
                                               </div>
                                               <div class="dropdown-item">ผส./ผอ.ฝ่ายที่เกี่ยวข้อง</div>
                                               <div class="dropdown-item">
@@ -1503,7 +1590,7 @@
                                     class="btn btn-link collapsed"
                                     type="button"
                                   >
-                                    หมวด 3) การบัญชีและการเงิน
+                                    หมวด 3) การจัดหา (การสั่งซื้อ/ ว่าจ้าง/ เช่า/ ประกันภัย)
                                   </button>
                                 </h2>
                               </div>
@@ -1670,21 +1757,25 @@
       return false;
     });
 
-    $('#all').on('click', function () {
-      $('.template-copy-list').find('.form-check-input').prop('checked', $(this)[0].checked);
-    });
-
-    const allCheckboxes$ = $('.template-copy-list').find('.form-check-input').not('#all');
-    allCheckboxes$.on('click', function () {
-      let checked = 0;
-      allCheckboxes$.each(index => {
-        if (allCheckboxes$[index].checked) {
-          checked++;
-        }
+    function initCheckbox(all, container) {
+      $(all).on('click', function () {
+        $(container).find('.form-check-input').prop('checked', $(this)[0].checked);
       });
-      $('#all').prop('checked', checked === allCheckboxes$.length);
-    });
 
+      const allCheckboxes$ = $(container).find('.form-check-input').not(all);
+      allCheckboxes$.on('click', function () {
+        let checked = 0;
+        allCheckboxes$.each(index => {
+          if (allCheckboxes$[index].checked) {
+            checked++;
+          }
+        });
+        $(all).prop('checked', checked === allCheckboxes$.length);
+      });
+    }
+
+    initCheckbox('#all', '.template-copy-list');
+    initCheckbox('#checkboxModalAll', '.table--allow tbody');
   </script>
   <!-- End custom js for this page-->
 </body>
