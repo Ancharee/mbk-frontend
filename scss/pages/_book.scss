@@ -147,3 +147,12 @@
     }
   }
 }
+
+.accordion {
+  &--content {
+    li {
+        color: #64666D;
+        font-size: 20px;
+    }
+  }
+}
