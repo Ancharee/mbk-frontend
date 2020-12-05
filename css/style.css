@@ -22154,15 +22154,11 @@ textarea {
   background-image: url(../images/Icons/checkbox-enable-checked.svg);
 }
 
-.form-group label {
-  font-size: 18px;
-  line-height: 1.4rem;
-  vertical-align: top;
-  margin-bottom: .5rem;
-}
-
-.form-group.has-danger .form-control, .form-group.has-danger .dataTables_wrapper select, .dataTables_wrapper .form-group.has-danger select {
-  border-color: #ff4747;
+.form-group .form-control, .form-group .dataTables_wrapper select, .dataTables_wrapper .form-group select {
+  background-image: url(../images/Icons/folder.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) center;
+  cursor: pointer;
 }
 
 .form-group .file-upload-default {
@@ -22170,8 +22166,8 @@ textarea {
   position: absolute;
 }
 
-.form-group .file-upload-info {
-  background: transparent;
+.form-group.has-danger .form-control, .form-group.has-danger .dataTables_wrapper select, .dataTables_wrapper .form-group.has-danger select {
+  border-color: #ff4747;
 }
 
 .form-label {

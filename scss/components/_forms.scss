@@ -236,17 +236,11 @@ textarea {
 }
 
 .form-group {
-  label {
-    font-size: $default-font-size;
-    line-height: 1.4rem;
-    vertical-align: top;
-    margin-bottom: .5rem;
-  }
-
-  &.has-danger {
-    .form-control {
-      border-color: theme-color(danger);
-    }
+  .form-control {
+    background-image: url(../images/Icons/folder.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px) center;
+    cursor: pointer;
   }
 
   .file-upload-default {
@@ -254,8 +248,10 @@ textarea {
     position: absolute;
   }
 
-  .file-upload-info {
-    background: transparent;
+  &.has-danger {
+    .form-control {
+      border-color: theme-color(danger);
+    }
   }
 }
 
