@@ -24663,6 +24663,11 @@ textarea {
   text-align: left;
 }
 
+.accordion--content li {
+  color: #64666D;
+  font-size: 20px;
+}
+
 .setting__format {
   color: #DF5F5F;
   font-family: "DBHelvethaicaX-Reg", sans-serif;
