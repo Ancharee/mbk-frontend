@@ -24663,6 +24663,10 @@ textarea {
   text-align: center;
 }
 
+.table.table--book-authority td:first-child {
+  text-align: left;
+}
+
 .setting__format {
   color: #DF5F5F;
   font-family: "DBHelvethaicaX-Reg", sans-serif;
