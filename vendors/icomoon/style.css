@@ -41,17 +41,43 @@
   content: "\e900";
   color: #ff5757;
 }
+.icon-copy:before {
+  content: "\e915";
+  color: #ff75ba;
+}
+.icon-list:before {
+  content: "\e916";
+  color: #ff9600;
+}
+.icon-process:before {
+  content: "\e91b";
+  color: #ffc400;
+}
+.icon-user:before {
+  content: "\e91c";
+  color: #96c951;
+}
+.icon-checked:before {
+  content: "\e901";
+  color: #8bc34a;
+}
+.icon-delete:before {
+  content: "\e903";
+  color: #cc0c0c;
+}
+.icon-remove:before {
+  content: "\e905";
+  color: #f13434;
+}
+.icon-exchange:before {
+  content: "\e920";
+  color: #ffd842;
+}
 .icon-pen:before {
   content: "\e91e";
 }
 .icon-more-ver:before {
   content: "\e91f";
-}
-.icon-copy:before {
-  content: "\e915";
-}
-.icon-list:before {
-  content: "\e916";
 }
 .icon-more .path1:before {
   content: "\e917";
@@ -68,36 +94,14 @@
   content: "\e91a";
   margin-left: -2.5em;
 }
-.icon-process:before {
-  content: "\e91b";
-}
-.icon-user:before {
-  content: "\e91c";
-}
 .icon-eye:before {
   content: "\e91d";
-}
-.icon-checked:before {
-  content: "\e900";
-  color: #8bc34a;
-}
-.icon-delete:before {
-  content: "\e901";
-  color: #cc0c0c;
 }
 .icon-trash:before {
   content: "\e902";
 }
-.icon-remove:before {
-  content: "\e903";
-  color: #f13434;
-}
 .icon-edit-button:before {
   content: "\e904";
-}
-.icon-exchange:before {
-  content: "\e920";
-  color: #ffd842;
 }
 .icon-left-arrow:before {
   content: "\e906";

@@ -21518,6 +21518,10 @@ li ol > li:before {
 .modal--form .modal-header {
   padding-top: 7px;
   padding-bottom: 7px;
+  background-color: rgba(141, 198, 63, 0.35);
+}
+
+.modal--form .modal-header--default {
   background-color: #8DC63F;
 }
 
@@ -21570,6 +21574,10 @@ li ol > li:before {
   padding: 0;
   padding-bottom: 24px;
   width: 100%;
+}
+
+.modal--user .modal-dialog {
+  max-width: 1024px;
 }
 
 .container-list {

@@ -87,7 +87,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="user-menu.html">
               <i class="icon-group menu-icon"></i>
               <span class="menu-title">ผู้ใช้งาน</span>
             </a>
@@ -211,7 +211,7 @@
                   <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center mb-14">
                       <h4>กำหนดสิทธิ์ผู้ใช้งาน</h4>
-                      <button class="btn btn-primary">
+                      <button class="btn btn-primary" data-toggle="modal" data-target="#addModal">
                         + เพิ่มสิทธิ์ผู้ใช้งาน
                       </button>
                     </div>
@@ -232,8 +232,95 @@
                           <td>ผู้ช่วยผู้จัดการการตลาดดิจิตอล</td>
                           <td>แอดมิน</td>
                           <td>
-                            <button class="btn btn-sm btn-outline-secondary mr-1" data-toggle="modal" data-target="editModal">แก้ไข</button>
-                            <button class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="deleteModal">ลบ</button>
+                            <button class="btn btn-sm btn-outline-secondary mr-1" data-toggle="modal" data-target="#editModal">แก้ไข</button>
+                            <button class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#deleteModal">ลบ</button>
+
+                            <div
+                              class="modal fade modal--form"
+                              id="editModal"
+                              tabindex="-1"
+                              role="dialog"
+                              aria-labelledby="editModalLabel"
+                              aria-hidden="true"
+                            >
+                              <div
+                                class="modal-dialog modal-dialog-centered"
+                                role="document"
+                              >
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5
+                                      class="modal-title"
+                                      id="editModalLabel"
+                                    >แก้ไขสิทธิ์ผู้ใช้งาน</h5>
+                                  </div>
+                                  <div class="modal-body text-left">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <h4>กำหนดสิทธิ์ผู้ใช้งาน</h4>
+                                        <select
+                                          name=""
+                                          id=""
+                                          class="form-control"
+                                        >
+                                          <option value="">แอดมิน</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button
+                                      type="button"
+                                      class="btn btn-outline-success"
+                                      data-dismiss="modal"
+                                    >ยกเลิก</button>
+                                    <button
+                                      type="button"
+                                      class="btn btn-success"
+                                      data-dismiss="modal"
+                                    >ตกลง</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="modal fade modal--confirm-delete"
+                              id="deleteModal"
+                              tabindex="-1"
+                              role="dialog"
+                              aria-labelledby="deleteModalLabel"
+                              aria-hidden="true"
+                            >
+                              <div
+                                class="modal-dialog modal-dialog-centered"
+                                role="document"
+                              >
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5
+                                      class="modal-title"
+                                      id="deleteModalLabel"
+                                    >ลบผู้ใช้งาน!</h5>
+                                  </div>
+                                  <div class="modal-body">
+                                    <i class="icon-remove"></i>
+                                    <p>ต้องการลบผู้ใช้งาน หรือไม่ ?</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button
+                                      type="button"
+                                      class="btn btn-outline-success"
+                                      data-dismiss="modal"
+                                    >ไม่</button>
+                                    <button
+                                      type="button"
+                                      class="btn btn-success"
+                                      data-dismiss="modal"
+                                    >ใช่</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </td>
                         </tr>
                         <tr>
@@ -242,8 +329,8 @@
                           <td>เจ้าหน้าที่บริหารลูกค้าสัมพันธ์</td>
                           <td>แอดมิน</td>
                           <td>
-                            <button class="btn btn-sm btn-outline-secondary mr-1" data-toggle="modal" data-target="editModal">แก้ไข</button>
-                            <button class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="deleteModal">ลบ</button>
+                            <button class="btn btn-sm btn-outline-secondary mr-1" data-toggle="modal" data-target="#editModal">แก้ไข</button>
+                            <button class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#deleteModal">ลบ</button>
                           </td>
                         </tr>
                         <tr>
@@ -253,8 +340,8 @@
                           <td>เจ้าหน้าที่การตลาดดิจิตอล</td>
                           <td>แอดมิน</td>
                           <td>
-                            <button class="btn btn-sm btn-outline-secondary mr-1" data-toggle="modal" data-target="editModal">แก้ไข</button>
-                            <button class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="deleteModal">ลบ</button>
+                            <button class="btn btn-sm btn-outline-secondary mr-1" data-toggle="modal" data-target="#editModal">แก้ไข</button>
+                            <button class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#deleteModal">ลบ</button>
                           </td>
                         </tr>
                         <tr>
@@ -264,13 +351,152 @@
                           <td>เจ้าหน้าที่สื่อสารภายในองค์กร</td>
                           <td>แอดมิน</td>
                           <td>
-                            <button class="btn btn-sm btn-outline-secondary mr-1" data-toggle="modal" data-target="editModal">แก้ไข</button>
-                            <button class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="deleteModal">ลบ</button>
+                            <button class="btn btn-sm btn-outline-secondary mr-1" data-toggle="modal" data-target="#editModal">แก้ไข</button>
+                            <button class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#deleteModal">ลบ</button>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal fade modal--form modal--user"
+            id="addModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="addModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered"
+              role="document"
+            >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5
+                    class="modal-title"
+                    id="addModalLabel"
+                  >เพิ่มสิทธิ์ผู้ใช้งาน</h5>
+                </div>
+                <div class="modal-body text-left">
+                  <div class="row mb-14">
+                    <div class="col-12">
+                      <h4>เลือกบริษัท</h4>
+                      <select name="" id="" class="form-control">
+                        <option value="">บริษัท เอ็ม บี เค จำกัด (มหาชน)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mb-14">
+                    <div class="col-12">
+                      <h4>กำหนดสิทธิ์ผู้ใช้งาน</h4>
+                      <select name="" id="" class="form-control">
+                        <option value="">แอดมิน</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>
+                              <label for="all" class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="all">
+                                <span class="span-radio"></span>
+                              </label>
+                            </th>
+                            <th>ตัวย่อ</th>
+                            <th>ตำแหน่ง</th>
+                            <th>ชื่อ นามสกุล</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <label for="1" class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="1">
+                                <span class="span-radio"></span>
+                              </label>
+                            </td>
+                            <td>รองฯ-ปก.</td>
+                            <td>รองกรรมการผู้อำนวยการสายปฏิบัติการ</td>
+                            <td>ชื่อ นามสกุล</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label for="2" class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="2">
+                                <span class="span-radio"></span>
+                              </label>
+                            </td>
+                            <td>รองฯ งบ.</td>
+                            <td>รองกรรมการผู้อำนวยการสายการเงินและบริหาร</td>
+                            <td>ชื่อ นามสกุล</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label for="3" class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="3">
+                                <span class="span-radio"></span>
+                              </label>
+                            </td>
+                            <td>รองฯ กก.ผอ</td>
+                            <td>รองกรรมการผู้อำนวยการสำนักกรรมการผู้อำนวยการ</td>
+                            <td>ชื่อ นามสกุล</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label for="4" class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="4">
+                                <span class="span-radio"></span>
+                              </label>
+                            </td>
+                            <td>ผช.รองฯกผอ</td>
+                            <td>ผู้ช่วยรองกรรมการผู้อำนวยการ 1 สำนักกรรมการผู้อำนวยการ</td>
+                            <td>ชื่อ นามสกุล</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label for="5" class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="5">
+                                <span class="span-radio"></span>
+                              </label>
+                            </td>
+                            <td>ผชฯ สำนักก</td>
+                            <td>ผู้ช่วยกรรมการผู้อำนวยการสำนักกรรมการผู้อำนวยการ</td>
+                            <td>ชื่อ นามสกุล</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label for="6" class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="6">
+                                <span class="span-radio"></span>
+                              </label>
+                            </td>
+                            <td>ผอ.1กผอ.</td>
+                            <td>ผู้อำนวยการ 1 สำนักกรรมการผู้อำนวยการ</td>
+                            <td>ชื่อ นามสกุล</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-outline-success"
+                    data-dismiss="modal"
+                  >ยกเลิก</button>
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    data-dismiss="modal"
+                  >ตกลง</button>
                 </div>
               </div>
             </div>
@@ -335,6 +561,25 @@
   <script src="js/template.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
+  <script>
+    function initCheckbox(all, container) {
+      $(all).on('click', function () {
+        $(container).find('.form-check-input').prop('checked', this.checked);
+      });
+
+      const allCheckboxes$ = $(container).find('.form-check-input').not(all);
+      allCheckboxes$.on('click', function () {
+        let checked = 0;
+        allCheckboxes$.each(index => {
+          if (allCheckboxes$[index].checked) {
+            checked++;
+          }
+        });
+        $(all).prop('checked', checked === allCheckboxes$.length);
+      });
+    }
+    initCheckbox('#all', 'tbody');
+  </script>
   <!-- End custom js for this page-->
 </body>
 
