@@ -21832,20 +21832,16 @@ li ol > li:before {
   padding-left: 20px;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
 }
 
 .toolbar-right__item--sort img.icon-arrow-sort {
-  position: absolute;
-  width: 8px;
+  width: 23px;
+  height: 23px;
 }
 
-.toolbar-right__item--sort img.icon-arrow-sort--left {
-  left: 7px;
-  top: -8px;
-}
-
-.toolbar-right__item--sort img.icon-arrow-sort--right {
-  right: 0;
+.toolbar-right__item--sort img.icon-arrow-sort + img.icon-arrow-sort {
+  margin-left: 9px;
 }
 
 .container-content-area {
