@@ -165,19 +165,26 @@
       padding-left: 20px;
       cursor: pointer;
       position:relative;
+      text-decoration: none;
 
       img.icon-arrow-sort {
-        position: absolute;
-        width: 8px;
+        width: 23px;
+        height: 23px;
 
-        &--left {
-            left: 7px;
-          top: -8px;
+        +img.icon-arrow-sort {
+          margin-left: 9px;
         }
+        //position: absolute;
+        //width: 8px;
 
-        &--right {
-          right: 0;
-        }
+        //&--left {
+        //    left: 7px;
+        //  top: -8px;
+        //}
+        //
+        //&--right {
+        //  right: 0;
+        //}
       }
     }
   }
