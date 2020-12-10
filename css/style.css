@@ -21915,6 +21915,7 @@ li ol > li:before {
 
 .selectize-control {
   margin-bottom: 20px;
+  padding: 0;
 }
 
 .selectize-control.multi .selectize-input > div {
@@ -21923,6 +21924,21 @@ li ol > li:before {
   text-shadow: 0 1px 0 rgba(0, 51, 83, 0.3);
   border-radius: 3px;
   color: #ffffff;
+}
+
+.selectize-input > input {
+  height: 100%;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.selectize-dropdown [data-selectable].option {
+  font-size: 18px;
+  padding: 8px 12px;
+}
+
+.selectize-dropdown .active {
+  background-color: rgba(141, 198, 63, 0.1);
 }
 
 input.form-control,
@@ -22230,6 +22246,13 @@ textarea {
 .datepicker .prev i,
 .datepicker .next i {
   font-size: 12px;
+}
+
+[data-search] + .selectize-control .selectize-input {
+  padding-left: 34px !important;
+  background-image: url(../images/Icons/search.svg);
+  background-repeat: no-repeat;
+  background-position: 10px;
 }
 
 .wizard .steps ul {

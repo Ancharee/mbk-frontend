@@ -332,7 +332,13 @@
                     </div>
                   </div>
                   <div class="js-by-name">
-                    <input type="text" placeholder="โครงสร้างหัวตาราง แบบที่ XX" data-select>
+                    <select class="demo-default" placeholder="โครงสร้างหัวตาราง" data-select>
+                      <option value="">โครงสร้างหัวตาราง</option>
+                      <option value="4">โครงสร้างหัวตาราง แบบที่ XX</option>
+                      <option value="1">โครงสร้างหัวตาราง แบบที่ XX</option>
+                      <option value="3">โครงสร้างหัวตาราง แบบที่ XX</option>
+                      <option value="5">โครงสร้างหัวตาราง แบบที่ XX</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -411,7 +417,13 @@
                     </div>
                   </div>
                   <div class="js-by-name active">
-                    <input type="text" placeholder="โครงสร้างหัวตาราง แบบที่ XX" data-select>
+                    <select class="demo-default" placeholder="โครงสร้างหัวตาราง" data-select>
+                      <option value="">โครงสร้างหัวตาราง</option>
+                      <option value="4">โครงสร้างหัวตาราง แบบที่ XX</option>
+                      <option value="1">โครงสร้างหัวตาราง แบบที่ XX</option>
+                      <option value="3">โครงสร้างหัวตาราง แบบที่ XX</option>
+                      <option value="5">โครงสร้างหัวตาราง แบบที่ XX</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -573,7 +585,13 @@
               </div>
             </div>
             <div class="js-by-name">
-              <input type="text" placeholder="โครงสร้างหัวตาราง แบบที่ XX" data-select>
+              <select class="demo-default" placeholder="โครงสร้างหัวตาราง" data-select>
+                <option value="">โครงสร้างหัวตาราง</option>
+                <option value="4">โครงสร้างหัวตาราง แบบที่ XX</option>
+                <option value="1">โครงสร้างหัวตาราง แบบที่ XX</option>
+                <option value="3">โครงสร้างหัวตาราง แบบที่ XX</option>
+                <option value="5">โครงสร้างหัวตาราง แบบที่ XX</option>
+              </select>
             </div>
           </div>
         </div>
@@ -582,14 +600,11 @@
 
       function initSelect() {
         $('[data-select]').selectize({
-          delimiter: ',',
-          persist: false,
-          create: function (input) {
-            return {
-              value: input,
-              text: input
-            }
-          }
+          create: false,
+          sortField: {
+						field: 'text',
+						direction: 'asc'
+					},
         });
       }
 

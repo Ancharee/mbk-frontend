@@ -13,6 +13,7 @@
   <!-- endinject -->
   <link rel="stylesheet" href="vendors/jquery.multiselect.js/jquery.multiselect.css">
   <link rel="stylesheet" href="vendors/datepicker.js/datepicker.css">
+  <link rel="stylesheet" href="vendors/selectize.js/selectize.css">
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
@@ -216,10 +217,13 @@
               <div class="card-body">
                 <form action="#">
                   <div class="search-form">
-                    <div class="search-wrapper mb-14">
-                      <i class="icon-search"></i>
-                      <input class="form-control" type="text"
-                        placeholder="คำค้นหา เช่น “ค่าปรับ” / ตัวย่อ เช่น “กจธ.ธศค.”">
+                    <div class="mb-14">
+                      <input
+                        type="text"
+                        placeholder="คำค้นหา เช่น “ค่าปรับ” / ตัวย่อ เช่น “กจธ.ธศค.”"
+                        data-select
+                        data-search
+                      >
                     </div>
                     <div class="search-filter-wrapper d-flex justify-content-between">
                       <span>ตัวกรอง</span>
@@ -789,6 +793,7 @@
   <script src="vendors/datepicker.js/bootstrap-datepicker.js"></script>
   <script src="vendors/datepicker.js/bootstrap-datepicker-thai.js"></script>
   <script src="vendors/datepicker.js/bootstrap-datepicker.th.js"></script>
+  <script src="vendors/selectize.js/selectize.js"></script>
   <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="js/off-canvas.js"></script>
@@ -903,6 +908,19 @@
         });
       }
 
+      function initSelect() {
+        $('[data-select]').selectize({
+          delimiter: ',',
+          persist: false,
+          create: function (input) {
+            return {
+              value: input,
+              text: input
+            }
+          }
+        });
+      }
+
       initMutipleCheckbox();
       initDatePicker();
       activeCheckboxAll();
@@ -910,7 +928,7 @@
       onSearch();
       onReset();
       onCheckboxChange();
-
+      initSelect();
     });
   </script>
   <!-- End custom js for this page-->
