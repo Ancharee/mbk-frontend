@@ -281,8 +281,8 @@
                 </div>
                 <div class="template-copy-list js-by-position active">
                   <div class="template-copy-list__item">
-                    <label class="form-check-label title" for="0">
-                      <input type="checkbox" class="form-check-input" name="point-0" id="0" />
+                    <label class="form-check-label title" for="all">
+                      <input type="checkbox" class="form-check-input" name="point-0" id="all" />
                       <span class="span-radio"></span>
                       <span class="checkbox-text">
                         ตัวย่อ
@@ -426,6 +426,26 @@
         }
       });
     });
+  </script>
+  <script>
+    function checkAllByHeader(all, container) {
+      $(all).on('click', function () {
+        $(container).find('.form-check-input').prop('checked', $(this)[0].checked);
+      });
+
+      const allCheckboxes$ = $(container).find('.form-check-input').not(all);
+      allCheckboxes$.on('click', function () {
+        let checked = 0;
+        allCheckboxes$.each(index => {
+          if (allCheckboxes$[index].checked) {
+            checked++;
+          }
+        });
+        $(all).prop('checked', checked === allCheckboxes$.length);
+      });
+    }
+
+    checkAllByHeader('#all', '.template-copy-list')
   </script>
 </body>
 
