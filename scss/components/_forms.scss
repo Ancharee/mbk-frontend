@@ -84,6 +84,14 @@ input {
       }
     }
   }
+
+  &.form-control.form-control--search {
+    padding-left: 34px;
+    background-image: url(../images/Icons/search.svg);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    border-radius: 20px;
+  }
 }
 
 select {

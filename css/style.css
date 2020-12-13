@@ -19273,6 +19273,20 @@ code {
   color: #ffffff;
 }
 
+.btn-warning {
+  background: #FF9600;
+  color: #ffffff;
+}
+
+.btn-warning:hover {
+  color: #ffffff;
+}
+
+.btn-danger {
+  background: #CB0A08;
+  border-color: #CB0A08;
+}
+
 .btn-outline-secondary {
   background: #ffffff;
   border: 1px solid #E6E6E6;
@@ -19284,11 +19298,6 @@ code {
   background: #ffffff;
   border-color: #E6E6E6;
   color: #4A4A4A;
-}
-
-.btn-danger {
-  background: #CB0A08;
-  border-color: #CB0A08;
 }
 
 .btn-outline-success {
@@ -21970,6 +21979,14 @@ input.form-control.file-upload-info:disabled {
 
 input.form-control.file-upload-info:disabled::placeholder {
   color: #000;
+}
+
+input.form-control.form-control--search {
+  padding-left: 34px;
+  background-image: url(../images/Icons/search.svg);
+  background-repeat: no-repeat;
+  background-position: 10px;
+  border-radius: 20px;
 }
 
 select.form-control, .dataTables_wrapper select {

@@ -62,6 +62,20 @@
   color: $white;
 }
 
+.btn-warning {
+  background: #FF9600;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.btn-danger {
+  background: #CB0A08;
+  border-color: #CB0A08;
+}
+
 .btn-outline-secondary {
   background: $white;
   border: 1px solid #E6E6E6;
@@ -73,11 +87,6 @@
     border-color: #E6E6E6;
     color: #4A4A4A;
   }
-}
-
-.btn-danger {
-  background: #CB0A08;
-  border-color: #CB0A08;
 }
 
 .btn-outline-success {
