@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
   <link rel="stylesheet" href="vendors/icomoon/style.css">
   <!-- endinject -->
-
+  <link rel="stylesheet" href="vendors/selectize.js/selectize.css">
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
@@ -253,10 +253,13 @@
             <div class="card mb-14">
               <div class="card-body card-body--search-form">
                 <div class="template-search-result-form-group template-search-form">
-                  <div class="template-search-input-wrapper">
-                    <i class="icon-search"></i>
-                    <input class="form-control" type="text" placeholder="ค้นหา">
-                  </div>
+                  <input
+                    class="mr-2"
+                    type="text"
+                    placeholder="ค้นหา"
+                    data-select
+                    data-search
+                  >
                   <button class="btn btn-success">
                     ค้นหา
                   </button>
@@ -381,6 +384,7 @@
   <script src="vendors/base/vendor.bundle.base.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
+  <script src="vendors/selectize.js/selectize.js"></script>
   <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="js/off-canvas.js"></script>
@@ -406,7 +410,22 @@
       });
     }
 
-    checkAllByHeader('#all', '.table-item')
+    function initSelect() {
+      $('[data-select]').selectize({
+        delimiter: ',',
+        persist: false,
+        create: function (input) {
+          return {
+            value: input,
+            text: input
+          }
+        }
+      });
+    }
+
+    checkAllByHeader('#all', '.table-item');
+    initSelect();
+
   </script>
   <!-- End custom js for this page-->
 </body>

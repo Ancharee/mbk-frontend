@@ -21928,8 +21928,8 @@ li ol > li:before {
 }
 
 .selectize-control {
-  margin-bottom: 20px;
   padding: 0;
+  width: 100%;
 }
 
 .selectize-control.multi .selectize-input > div {
@@ -23939,7 +23939,6 @@ textarea {
 .template-search-result-form-group input {
   color: #323232;
   font-size: 20px;
-  height: 36px;
   padding-right: 10px;
   padding-left: 10px;
 }
