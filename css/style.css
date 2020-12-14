@@ -10299,7 +10299,7 @@ pre code {
   border: 0;
 }
 
-.form-control, .dataTables_wrapper select {
+.form-control {
   display: block;
   width: 100%;
   height: 2.875rem;
@@ -10316,17 +10316,17 @@ pre code {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .form-control, .dataTables_wrapper select {
+  .form-control {
     transition: none;
   }
 }
 
-.form-control::-ms-expand, .dataTables_wrapper select::-ms-expand {
+.form-control::-ms-expand {
   background-color: transparent;
   border: 0;
 }
 
-.form-control:focus, .dataTables_wrapper select:focus {
+.form-control:focus {
   color: #495057;
   background-color: #fff;
   border-color: #80bdff;
@@ -10334,17 +10334,17 @@ pre code {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.form-control::placeholder, .dataTables_wrapper select::placeholder {
+.form-control::placeholder {
   color: #c9c8c8;
   opacity: 1;
 }
 
-.form-control:disabled, .dataTables_wrapper select:disabled, .form-control[readonly], .dataTables_wrapper select[readonly] {
+.form-control:disabled, .form-control[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
 
-select.form-control:focus::-ms-value, .dataTables_wrapper select:focus::-ms-value {
+select.form-control:focus::-ms-value {
   color: #495057;
   background-color: #ffffff;
 }
@@ -10411,7 +10411,7 @@ select.form-control:focus::-ms-value, .dataTables_wrapper select:focus::-ms-valu
   border-radius: 0.3rem;
 }
 
-select.form-control[size], .dataTables_wrapper select[size], select.form-control[multiple], .dataTables_wrapper select[multiple] {
+select.form-control[size], select.form-control[multiple] {
   height: auto;
 }
 
@@ -10498,7 +10498,7 @@ textarea.form-control {
   border-radius: 0.25rem;
 }
 
-.was-validated .form-control:valid, .was-validated .dataTables_wrapper select:valid, .dataTables_wrapper .was-validated select:valid, .form-control.is-valid, .dataTables_wrapper select.is-valid {
+.was-validated .form-control:valid, .form-control.is-valid {
   border-color: #28a745;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
@@ -10507,17 +10507,14 @@ textarea.form-control {
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-.was-validated .form-control:valid:focus, .was-validated .dataTables_wrapper select:valid:focus, .dataTables_wrapper .was-validated select:valid:focus, .form-control.is-valid:focus, .dataTables_wrapper select.is-valid:focus {
+.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
   border-color: #28a745;
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
-.was-validated .form-control:valid ~ .valid-feedback, .was-validated .dataTables_wrapper select:valid ~ .valid-feedback, .dataTables_wrapper .was-validated select:valid ~ .valid-feedback,
-.was-validated .form-control:valid ~ .valid-tooltip,
-.was-validated .dataTables_wrapper select:valid ~ .valid-tooltip,
-.dataTables_wrapper .was-validated select:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .dataTables_wrapper select.is-valid ~ .valid-feedback,
-.form-control.is-valid ~ .valid-tooltip,
-.dataTables_wrapper select.is-valid ~ .valid-tooltip {
+.was-validated .form-control:valid ~ .valid-feedback,
+.was-validated .form-control:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback,
+.form-control.is-valid ~ .valid-tooltip {
   display: block;
 }
 
@@ -10624,7 +10621,7 @@ textarea.form-control {
   border-radius: 0.25rem;
 }
 
-.was-validated .form-control:invalid, .was-validated .dataTables_wrapper select:invalid, .dataTables_wrapper .was-validated select:invalid, .form-control.is-invalid, .dataTables_wrapper select.is-invalid {
+.was-validated .form-control:invalid, .form-control.is-invalid {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dc3545' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
@@ -10633,17 +10630,14 @@ textarea.form-control {
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-.was-validated .form-control:invalid:focus, .was-validated .dataTables_wrapper select:invalid:focus, .dataTables_wrapper .was-validated select:invalid:focus, .form-control.is-invalid:focus, .dataTables_wrapper select.is-invalid:focus {
+.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
-.was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .dataTables_wrapper select:invalid ~ .invalid-feedback, .dataTables_wrapper .was-validated select:invalid ~ .invalid-feedback,
-.was-validated .form-control:invalid ~ .invalid-tooltip,
-.was-validated .dataTables_wrapper select:invalid ~ .invalid-tooltip,
-.dataTables_wrapper .was-validated select:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .dataTables_wrapper select.is-invalid ~ .invalid-feedback,
-.form-control.is-invalid ~ .invalid-tooltip,
-.dataTables_wrapper select.is-invalid ~ .invalid-tooltip {
+.was-validated .form-control:invalid ~ .invalid-feedback,
+.was-validated .form-control:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback,
+.form-control.is-invalid ~ .invalid-tooltip {
   display: block;
 }
 
@@ -10751,7 +10745,7 @@ textarea.form-control {
     align-items: center;
     margin-bottom: 0;
   }
-  .form-inline .form-control, .form-inline .dataTables_wrapper select, .dataTables_wrapper .form-inline select {
+  .form-inline .form-control {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -11811,7 +11805,7 @@ input[type="button"].btn-block {
   width: 100%;
 }
 
-.input-group > .form-control, .dataTables_wrapper .input-group > select,
+.input-group > .form-control,
 .input-group > .form-control-plaintext,
 .input-group > .custom-select,
 .input-group > .custom-file {
@@ -11821,27 +11815,22 @@ input[type="button"].btn-block {
   margin-bottom: 0;
 }
 
-.input-group > .form-control + .form-control, .dataTables_wrapper .input-group > select + .form-control, .dataTables_wrapper .input-group > .form-control + select, .dataTables_wrapper .input-group > select + select,
+.input-group > .form-control + .form-control,
 .input-group > .form-control + .custom-select,
-.dataTables_wrapper .input-group > select + .custom-select,
 .input-group > .form-control + .custom-file,
-.dataTables_wrapper .input-group > select + .custom-file,
 .input-group > .form-control-plaintext + .form-control,
-.dataTables_wrapper .input-group > .form-control-plaintext + select,
 .input-group > .form-control-plaintext + .custom-select,
 .input-group > .form-control-plaintext + .custom-file,
 .input-group > .custom-select + .form-control,
-.dataTables_wrapper .input-group > .custom-select + select,
 .input-group > .custom-select + .custom-select,
 .input-group > .custom-select + .custom-file,
 .input-group > .custom-file + .form-control,
-.dataTables_wrapper .input-group > .custom-file + select,
 .input-group > .custom-file + .custom-select,
 .input-group > .custom-file + .custom-file {
   margin-left: -1px;
 }
 
-.input-group > .form-control:focus, .dataTables_wrapper .input-group > select:focus,
+.input-group > .form-control:focus,
 .input-group > .custom-select:focus,
 .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
   z-index: 3;
@@ -11851,13 +11840,13 @@ input[type="button"].btn-block {
   z-index: 4;
 }
 
-.input-group > .form-control:not(:last-child), .dataTables_wrapper .input-group > select:not(:last-child),
+.input-group > .form-control:not(:last-child),
 .input-group > .custom-select:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.input-group > .form-control:not(:first-child), .dataTables_wrapper .input-group > select:not(:first-child),
+.input-group > .form-control:not(:first-child),
 .input-group > .custom-select:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -11935,12 +11924,12 @@ input[type="button"].btn-block {
   margin-top: 0;
 }
 
-.input-group-lg > .form-control:not(textarea), .dataTables_wrapper .input-group-lg > select:not(textarea),
+.input-group-lg > .form-control:not(textarea),
 .input-group-lg > .custom-select {
   height: 3.5rem;
 }
 
-.input-group-lg > .form-control, .dataTables_wrapper .input-group-lg > select,
+.input-group-lg > .form-control,
 .input-group-lg > .custom-select,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
@@ -11952,12 +11941,12 @@ input[type="button"].btn-block {
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control:not(textarea), .dataTables_wrapper .input-group-sm > select:not(textarea),
+.input-group-sm > .form-control:not(textarea),
 .input-group-sm > .custom-select {
   height: 2.25rem;
 }
 
-.input-group-sm > .form-control, .dataTables_wrapper .input-group-sm > select,
+.input-group-sm > .form-control,
 .input-group-sm > .custom-select,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
@@ -18188,7 +18177,7 @@ body {
   overflow-x: hidden;
 }
 
-.form-control, .dataTables_wrapper select, .form-control:focus, .dataTables_wrapper select:focus {
+.form-control, .form-control:focus {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -18220,7 +18209,8 @@ select::-moz-focus-inner {
   outline: 0;
 }
 
-input, .form-control:focus, .dataTables_wrapper select:focus,
+input,
+.form-control:focus,
 input:focus,
 select:focus,
 textarea:focus,
@@ -21283,7 +21273,7 @@ li ol > li:before {
   width: 92px;
 }
 
-.table.table--material select.form-control, .table.table--material .dataTables_wrapper select, .dataTables_wrapper .table.table--material select {
+.table.table--material select.form-control {
   background-position: calc(100% - 6px) center;
   background-size: 12px;
 }
@@ -21347,6 +21337,21 @@ li ol > li:before {
 
 .table-item--table .table-item__cell:first-child {
   padding-left: 13px;
+}
+
+.dataTables_wrapper .row:first-child {
+  display: block;
+}
+
+.dataTables_wrapper .col-md-6 {
+  max-width: 100%;
+  width: 100%;
+}
+
+.dataTables_filter label {
+  display: block;
+  text-align: left;
+  font-size: 24px;
 }
 
 .breadcrumb {
@@ -21896,7 +21901,7 @@ li ol > li:before {
   margin-bottom: 1.5rem;
 }
 
-.form-control, .dataTables_wrapper select,
+.form-control,
 .selectize-control,
 .selectize-input {
   padding: 9px 10px;
@@ -21910,7 +21915,7 @@ li ol > li:before {
   appearance: none;
 }
 
-.form-control:focus, .dataTables_wrapper select:focus,
+.form-control:focus,
 .selectize-control:focus,
 .selectize-input:focus {
   border-color: #8DC63F;
@@ -21952,9 +21957,7 @@ li ol > li:before {
 
 input.form-control,
 .input-with-item.form-control,
-.dataTables_wrapper select.input-with-item,
-.multiple-select.form-control,
-.dataTables_wrapper select.multiple-select {
+.multiple-select.form-control {
   background: #FFFFFF;
   box-shadow: inset 0 0 2px 0 rgba(118, 118, 118, 0.5);
   border-radius: 3px;
@@ -21965,9 +21968,7 @@ input.form-control,
 
 input.form-control:disabled,
 .input-with-item.form-control:disabled,
-.dataTables_wrapper select.input-with-item:disabled,
-.multiple-select.form-control:disabled,
-.dataTables_wrapper select.multiple-select:disabled {
+.multiple-select.form-control:disabled {
   background: rgba(241, 241, 241, 0.3);
   border-color: rgba(241, 241, 241, 0.3);
 }
@@ -21989,7 +21990,7 @@ input.form-control.form-control--search {
   border-radius: 20px;
 }
 
-select.form-control, .dataTables_wrapper select {
+select.form-control {
   border: 0;
   color: #c9c8c8;
   box-shadow: 1px 1px 3px 0 rgba(156, 156, 156, 0.5);
@@ -21998,72 +21999,72 @@ select.form-control, .dataTables_wrapper select {
   background-position: calc(100% - 10px) center;
 }
 
-select.form-control:focus, .dataTables_wrapper select:focus {
+select.form-control:focus {
   box-shadow: 0 0 3px 0 rgba(156, 156, 156, 0.5);
   outline: none;
 }
 
-select.form-control.border-primary, .dataTables_wrapper select.border-primary {
+select.form-control.border-primary {
   outline: 1px solid #4d83ff;
 }
 
-select.form-control.border-primary:focus, .dataTables_wrapper select.border-primary:focus {
+select.form-control.border-primary:focus {
   outline: 1px solid #4d83ff;
 }
 
-select.form-control.border-secondary, .dataTables_wrapper select.border-secondary {
+select.form-control.border-secondary {
   outline: 1px solid #686868;
 }
 
-select.form-control.border-secondary:focus, .dataTables_wrapper select.border-secondary:focus {
+select.form-control.border-secondary:focus {
   outline: 1px solid #686868;
 }
 
-select.form-control.border-success, .dataTables_wrapper select.border-success {
+select.form-control.border-success {
   outline: 1px solid #8DC63F;
 }
 
-select.form-control.border-success:focus, .dataTables_wrapper select.border-success:focus {
+select.form-control.border-success:focus {
   outline: 1px solid #8DC63F;
 }
 
-select.form-control.border-info, .dataTables_wrapper select.border-info {
+select.form-control.border-info {
   outline: 1px solid #7859df;
 }
 
-select.form-control.border-info:focus, .dataTables_wrapper select.border-info:focus {
+select.form-control.border-info:focus {
   outline: 1px solid #7859df;
 }
 
-select.form-control.border-warning, .dataTables_wrapper select.border-warning {
+select.form-control.border-warning {
   outline: 1px solid #ffc100;
 }
 
-select.form-control.border-warning:focus, .dataTables_wrapper select.border-warning:focus {
+select.form-control.border-warning:focus {
   outline: 1px solid #ffc100;
 }
 
-select.form-control.border-danger, .dataTables_wrapper select.border-danger {
+select.form-control.border-danger {
   outline: 1px solid #ff4747;
 }
 
-select.form-control.border-danger:focus, .dataTables_wrapper select.border-danger:focus {
+select.form-control.border-danger:focus {
   outline: 1px solid #ff4747;
 }
 
-select.form-control.border-light, .dataTables_wrapper select.border-light {
+select.form-control.border-light {
   outline: 1px solid #f8f9fa;
 }
 
-select.form-control.border-light:focus, .dataTables_wrapper select.border-light:focus {
+select.form-control.border-light:focus {
   outline: 1px solid #f8f9fa;
 }
 
-select.form-control.border-dark, .dataTables_wrapper select.border-dark {
+select.form-control.border-dark {
   outline: 1px solid #282f3a;
 }
 
-select.form-control.border-dark:focus, .dataTables_wrapper select.border-dark:focus {
+select.form-control.border-dark:focus {
   outline: 1px solid #282f3a;
 }
 
@@ -22071,20 +22072,15 @@ textarea {
   font-family: "DBHelvethaicaX-Reg", sans-serif;
 }
 
-
 .input-with-item.form-control,
-.dataTables_wrapper select.input-with-item,
-.multiple-select.form-control,
-.dataTables_wrapper select.multiple-select {
+.multiple-select.form-control {
   padding: 3px 12px 0 3px;
   height: auto;
   min-height: 36px;
   line-height: 0;
 }
 
-
-.input-with-item.form-control,
-.dataTables_wrapper select.input-with-item {
+.input-with-item.form-control {
   padding-top: 5px;
 }
 
@@ -22191,7 +22187,7 @@ textarea {
   background-image: url(../images/Icons/checkbox-enable-checked.svg);
 }
 
-.form-group .form-control, .form-group .dataTables_wrapper select, .dataTables_wrapper .form-group select {
+.form-group .form-control {
   background-image: url(../images/Icons/folder.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 12px) center;
@@ -22203,7 +22199,7 @@ textarea {
   position: absolute;
 }
 
-.form-group.has-danger .form-control, .form-group.has-danger .dataTables_wrapper select, .dataTables_wrapper .form-group.has-danger select {
+.form-group.has-danger .form-control {
   border-color: #ff4747;
 }
 
@@ -22249,7 +22245,7 @@ textarea {
   margin-top: 28px;
 }
 
-[data-provide="datepicker"].form-control, .dataTables_wrapper select[data-provide="datepicker"] {
+[data-provide="datepicker"].form-control {
   background-image: url(../images/Icons/calendar.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 10px) center;
@@ -22425,102 +22421,6 @@ textarea {
 
 /*-------------------------------------------------------------------*/
 /* === Plugin overrides === */
-/* Data Tables */
-.dataTables_wrapper {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.dataTables_wrapper label {
-  font-size: .8125rem;
-}
-
-.dataTables_wrapper select {
-  padding: .4rem;
-  outline-offset: -2px;
-}
-
-.dataTables_wrapper .dataTables_length select {
-  margin-left: .25rem;
-  margin-right: .25rem;
-}
-
-.dataTables_wrapper .dataTable {
-  border-collapse: collapse !important;
-}
-
-.dataTables_wrapper .dataTable .btn {
-  padding: 0.1rem 1rem;
-  vertical-align: top;
-}
-
-.dataTables_wrapper .dataTable thead th {
-  border-bottom-width: 0;
-  border: 1px solid rgba(151, 151, 151, 0.18);
-  padding: 1.7rem 0.9375rem;
-  white-space: nowrap;
-}
-
-.dataTables_wrapper .dataTable thead .sorting:before, .dataTables_wrapper .dataTable thead .sorting:after,
-.dataTables_wrapper .dataTable thead .sorting_asc:before,
-.dataTables_wrapper .dataTable thead .sorting_asc:after,
-.dataTables_wrapper .dataTable thead .sorting_desc:before,
-.dataTables_wrapper .dataTable thead .sorting_desc:after,
-.dataTables_wrapper .dataTable thead .sorting_asc_disabled:before,
-.dataTables_wrapper .dataTable thead .sorting_asc_disabled:after,
-.dataTables_wrapper .dataTable thead .sorting_desc_disabled:before,
-.dataTables_wrapper .dataTable thead .sorting_desc_disabled:after {
-  line-height: 2.5;
-  font-family: Material Design Icons;
-  font-size: .65rem;
-}
-
-.dataTables_wrapper .dataTable thead .sorting:before,
-.dataTables_wrapper .dataTable thead .sorting_asc:before,
-.dataTables_wrapper .dataTable thead .sorting_desc:before,
-.dataTables_wrapper .dataTable thead .sorting_asc_disabled:before,
-.dataTables_wrapper .dataTable thead .sorting_desc_disabled:before {
-  content: "\F05D";
-  right: 2.4em;
-  bottom: 1.5rem;
-}
-
-.dataTables_wrapper .dataTable thead .sorting:after,
-.dataTables_wrapper .dataTable thead .sorting_asc:after,
-.dataTables_wrapper .dataTable thead .sorting_desc:after,
-.dataTables_wrapper .dataTable thead .sorting_asc_disabled:after,
-.dataTables_wrapper .dataTable thead .sorting_desc_disabled:after {
-  content: "\F045";
-  right: 2em;
-  bottom: 1.1rem;
-}
-
-.dataTables_wrapper .dataTable tbody tr td {
-  border: 1px solid rgba(151, 151, 151, 0.18);
-  color: #08113b;
-  white-space: nowrap;
-  font-weight: 300;
-  padding: 1.1rem 0.9375rem;
-}
-
-.dataTables_wrapper .dataTable tbody tr:nth-child(odd) {
-  background: rgba(238, 238, 238, 0.57);
-}
-
-.dataTables_wrapper .dataTables_paginate {
-  margin-top: 20px;
-}
-
-.dataTables_wrapper .dataTables_info {
-  font-size: 18px;
-}
-
-@media (max-width: 576px) {
-  .dataTables_wrapper .dataTables_info {
-    margin-bottom: 1rem;
-  }
-}
-
 /*-------------------------------------------------------------------*/
 /* === Landing screens === */
 /* Auth */
@@ -22553,7 +22453,7 @@ textarea {
   color: #c9c8c8;
 }
 
-.auth .auth-form-light .input-group .form-control:focus, .auth .auth-form-light .input-group .dataTables_wrapper select:focus, .dataTables_wrapper .auth .auth-form-light .input-group select:focus, .auth .auth-form-light .input-group .form-control:active, .auth .auth-form-light .input-group .dataTables_wrapper select:active, .dataTables_wrapper .auth .auth-form-light .input-group select:active {
+.auth .auth-form-light .input-group .form-control:focus, .auth .auth-form-light .input-group .form-control:active {
   border-color: #f3f3f3;
 }
 
@@ -22561,12 +22461,12 @@ textarea {
   background: transparent;
 }
 
-.auth .auth-form-transparent .form-control, .auth .auth-form-transparent .dataTables_wrapper select, .dataTables_wrapper .auth .auth-form-transparent select,
+.auth .auth-form-transparent .form-control,
 .auth .auth-form-transparent .input-group-text {
   border-color: #686868;
 }
 
-.auth .auth-form-transparent .form-control:focus, .auth .auth-form-transparent .dataTables_wrapper select:focus, .dataTables_wrapper .auth .auth-form-transparent select:focus, .auth .auth-form-transparent .form-control:active, .auth .auth-form-transparent .dataTables_wrapper select:active, .dataTables_wrapper .auth .auth-form-transparent select:active,
+.auth .auth-form-transparent .form-control:focus, .auth .auth-form-transparent .form-control:active,
 .auth .auth-form-transparent .input-group-text:focus,
 .auth .auth-form-transparent .input-group-text:active {
   border-color: #686868;
@@ -22603,7 +22503,7 @@ textarea {
   font-size: .8125rem;
 }
 
-.auth form .form-group .form-control, .auth form .form-group .dataTables_wrapper select, .dataTables_wrapper .auth form .form-group select {
+.auth form .form-group .form-control {
   background: transparent;
   border-radius: 0;
   font-size: .9375rem;
@@ -23074,7 +22974,7 @@ textarea {
   padding: 0 0.75rem;
 }
 
-.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .dataTables_wrapper select, .dataTables_wrapper .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group select,
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control,
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .input-group-text {
   background: transparent;
   border: 0;
@@ -23086,24 +22986,24 @@ textarea {
   color: #9b9b9b;
 }
 
-.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .dataTables_wrapper select, .dataTables_wrapper .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group select {
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control {
   margin-left: 0.5rem;
   height: 2.5rem;
 }
 
-.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control::-webkit-input-placeholder, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .dataTables_wrapper select::-webkit-input-placeholder, .dataTables_wrapper .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group select::-webkit-input-placeholder {
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control::-webkit-input-placeholder {
   color: #9b9b9b;
 }
 
-.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control:-moz-placeholder, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .dataTables_wrapper select:-moz-placeholder, .dataTables_wrapper .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group select:-moz-placeholder {
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control:-moz-placeholder {
   color: #9b9b9b;
 }
 
-.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control::-moz-placeholder, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .dataTables_wrapper select::-moz-placeholder, .dataTables_wrapper .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group select::-moz-placeholder {
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control::-moz-placeholder {
   color: #9b9b9b;
 }
 
-.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control:-ms-input-placeholder, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .dataTables_wrapper select:-ms-input-placeholder, .dataTables_wrapper .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group select:-ms-input-placeholder {
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group .form-control:-ms-input-placeholder {
   color: #9b9b9b;
 }
 
@@ -23923,7 +23823,7 @@ textarea {
   padding-left: calc(46px * 10);
 }
 
-.table-template select.form-control, .table-template .dataTables_wrapper select, .dataTables_wrapper .table-template select {
+.table-template select.form-control {
   color: #323232;
 }
 

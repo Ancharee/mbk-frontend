@@ -226,3 +226,24 @@
     }
   }
 }
+
+.dataTables_wrapper {
+  .row {
+    &:first-child {
+      display: block;
+    }
+  }
+
+  .col-md-6 {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.dataTables_filter {
+  label {
+    display: block;
+    text-align: left;
+    font-size: 24px;
+  }
+}

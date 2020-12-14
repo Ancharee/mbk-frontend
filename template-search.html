@@ -240,7 +240,12 @@
                           <option value="ธุรกิจการเงิน">ธุรกิจการเงิน</option>
                           <option value="ธุรกิจอสังหารริมทรัพย์">ธุรกิจอสังหารริมทรัพย์</option>
                           <option value="ธุรกิจอาหาร">ธุรกิจอาหาร</option>
-                          <option value="ธุรกิจอื่นๆ">ธุรกิจอื่นๆ</option>
+                          <option value="ธุรกิจอื่นๆ 1">ธุรกิจอื่นๆ 1</option>
+                          <option value="ธุรกิจอื่นๆ 2">ธุรกิจอื่นๆ 2</option>
+                          <option value="ธุรกิจอื่นๆ 3">ธุรกิจอื่นๆ 3</option>
+                          <option value="ธุรกิจอื่นๆ 4">ธุรกิจอื่นๆ 4</option>
+                          <option value="ธุรกิจอื่นๆ 5">ธุรกิจอื่นๆ 5</option>
+                          <option value="ธุรกิจอื่นๆ 6">ธุรกิจอื่นๆ 6</option>
                         </select>
                       </div>
                       <div class="col-6">
@@ -280,7 +285,7 @@
                             aria-labelledby="byPositionModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                               <div class="modal-content">
-                                <div class="modal-header">
+                                <div class="modal-header mb-14">
                                   <h4 class="mb-1">เลือกบริษัท</h4>
                                   <select class="form-control" name="" id="" value="">
                                     <option value="">บริษัท เอ็ม บี เค จำกัด (มหาชน)</option>
@@ -441,7 +446,7 @@
                             aria-labelledby="byNameModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                               <div class="modal-content">
-                                <div class="modal-header">
+                                <div class="modal-header mb-14">
                                   <h4 class="mb-1">ชื่อ</h4>
                                   <input class="form-control" type="text" placeholder="พิมพ์ชื่อ">
                                 </div>
@@ -794,6 +799,8 @@
   <script src="vendors/datepicker.js/bootstrap-datepicker-thai.js"></script>
   <script src="vendors/datepicker.js/bootstrap-datepicker.th.js"></script>
   <script src="vendors/selectize.js/selectize.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
   <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="js/off-canvas.js"></script>
@@ -921,6 +928,19 @@
         });
       }
 
+      function initDataTable() {
+        $('#tableByPosition, #tableByName').DataTable({
+          "paging":   false,
+          "ordering": false,
+          "info":     false,
+          "oLanguage": {
+            "sSearch": "ค้นหา",
+            "sZeroRecords": "ไม่พบข้อมูล"
+          },
+          "autoWidth": false
+        });
+      }
+
       initMutipleCheckbox();
       initDatePicker();
       activeCheckboxAll();
@@ -929,6 +949,7 @@
       onReset();
       onCheckboxChange();
       initSelect();
+      initDataTable();
     });
   </script>
   <!-- End custom js for this page-->
