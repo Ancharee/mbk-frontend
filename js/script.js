@@ -134,8 +134,8 @@ $(document).ready(function () {
                     <div class="toolbar-right__item toolbar-right__item--add">เพิ่มหัวข้อ</div>
                     <div class="toolbar-right__item toolbar-right__item--delete">ลบ</div>
                     <div class="toolbar-right__item toolbar-right__item--sort">
-                        <img class="icon-arrow-sort icon-arrow-sort--left up" src="images/arrow-up.svg"/>
-                        <img class="icon-arrow-sort icon-arrow-sort--right down" src="images/arrow-down.svg"/>
+                        <img class="icon-arrow-sort icon-arrow-sort--left up" src="images/arrow-up.png"/>
+                        <img class="icon-arrow-sort icon-arrow-sort--right down" src="images/arrow-down.png"/>
                     </div>
                   </div>
                 </div>
