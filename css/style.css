@@ -22116,6 +22116,12 @@ textarea {
   line-height: 24px;
 }
 
+.ms-options-item i {
+  position: relative;
+  top: 2px;
+  cursor: pointer;
+}
+
 .ms-options .form-check-label {
   width: 100%;
 }

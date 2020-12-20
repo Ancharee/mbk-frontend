@@ -177,6 +177,12 @@ textarea {
   font-size: 18px;
   color: #4880FF;
   line-height: 24px;
+
+  i {
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+  }
 }
 
 .ms-options {

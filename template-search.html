@@ -889,7 +889,9 @@
             // display items
             let html = '';
             selected.forEach(data => {
-              html = '<span class="ms-options-item" id="' + data.id + '">' + data.name + '</span>' + html;
+              html = '<span class="ms-options-item" id="' + data.id + '">' + data.name +
+                '<i class="icon-delete js-delete-options-item" data-id="' + data.id + '"></i>' +
+                '</span>' + html;
             });
             $('.input-with-item').html(html);
           } else {
@@ -910,6 +912,13 @@
               });
             }
           }
+          activeCheckboxParent();
+        });
+
+        $(document).on('click', '.js-delete-options-item', function() {
+          const id = $(this).data('id');
+          $(this).closest('.ms-options-item').remove();
+          $('.modal-body').find('.form-check-input#' + id).prop('checked', false);
           activeCheckboxParent();
         });
       }
