@@ -24579,17 +24579,17 @@ textarea {
 
 .template-copy-list__action {
   position: absolute;
-  top: 10px;
+  top: 6px;
   right: 10px;
   z-index: 2;
 }
 
 .template-copy-list__action .btn {
-  padding: 2px;
+  padding: 0;
 }
 
 .template-copy-list__action img {
-  width: 10px;
+  width: 26px;
 }
 
 .template-copy-list--header .form-check-input:not(:checked) + .span-radio + .checkbox-text i {
