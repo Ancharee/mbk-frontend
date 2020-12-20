@@ -13,6 +13,7 @@
   <!-- endinject -->
   <link rel="stylesheet" href="vendors/jquery.multiselect.js/jquery.multiselect.css">
   <link rel="stylesheet" href="vendors/datepicker.js/datepicker.css">
+  <link rel="stylesheet" href="vendors/selectize.js/selectize.css">
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
@@ -312,10 +313,13 @@
               <div class="card-body">
                 <form action="#">
                   <div class="search-form">
-                    <div class="search-wrapper mb-14">
-                      <i class="icon-search"></i>
-                      <input class="form-control" type="text"
-                        placeholder="คำค้นหา เช่น “ค่าปรับ” / ตัวย่อ เช่น “กจธ.ธศค.”">
+                    <div class="mb-14">
+                      <input
+                        type="text"
+                        placeholder="คำค้นหา เช่น “ค่าปรับ” / ตัวย่อ เช่น “กจธ.ธศค.”"
+                        data-select
+                        data-search
+                      >
                     </div>
                     <div class="search-filter-wrapper d-flex justify-content-between">
                       <span>ตัวกรอง</span>
@@ -372,7 +376,7 @@
                             aria-labelledby="byPositionModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                               <div class="modal-content">
-                                <div class="modal-header">
+                                <div class="modal-header mb-14">
                                   <h4 class="mb-1">เลือกบริษัท</h4>
                                   <select class="form-control" name="" id="" value="">
                                     <option value="">บริษัท เอ็ม บี เค จำกัด (มหาชน)</option>
@@ -533,7 +537,7 @@
                             aria-labelledby="byNameModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                               <div class="modal-content">
-                                <div class="modal-header">
+                                <div class="modal-header mb-14">
                                   <h4 class="mb-1">ชื่อ</h4>
                                   <input class="form-control" type="text" placeholder="พิมพ์ชื่อ">
                                 </div>
@@ -885,6 +889,9 @@
   <script src="vendors/datepicker.js/bootstrap-datepicker.js"></script>
   <script src="vendors/datepicker.js/bootstrap-datepicker-thai.js"></script>
   <script src="vendors/datepicker.js/bootstrap-datepicker.th.js"></script>
+  <script src="vendors/selectize.js/selectize.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
   <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="js/off-canvas.js"></script>
@@ -903,8 +910,8 @@
       function getCheckboxIsChecked(id) {
         const checkboxes$ = $(id).find('.form-check-input');
         let checked = 0;
-        checkboxes$.each(index => {
-          if (checkboxes$.is(':checked')) {
+        checkboxes$.each((index, e) => {
+          if ($(e).is(':checked')) {
             checked++;
           }
         });
@@ -916,13 +923,6 @@
         $('#byName').prop('checked', getCheckboxIsChecked('#tableByName'));
       }
 
-      function activeCheckboxAll() {
-        $('#allByPosition, #allByName').on('click', function () {
-          const checkboxes$ = $(this).closest('table').find('tbody').find('.form-check-input');
-          checkboxes$.prop('checked', $(this)[0].checked);
-        });
-      }
-
       function activeHeaderCheckbox() {
         $('tbody .form-check-input').on('click', function() {
           const checkboxes$ = $(this).closest('table').find('tbody').find('.form-check-input');
@@ -932,7 +932,14 @@
               checked++;
             }
           });
-          $(this).closest('table').find('thead').find('.form-check-input').prop('checked', checked === checkboxes$.length);
+          $(this).closest('.dataTables_scroll').find('thead').find('.form-check-input').prop('checked', checked === checkboxes$.length);
+        });
+      }
+
+      function activeCheckboxAll() {
+        $('#allByPosition, #allByName').on('click', function () {
+          const checkboxes$ = $(this).closest('.dataTables_scroll').find('tbody').find('.form-check-input');
+          checkboxes$.prop('checked', $(this)[0].checked);
         });
       }
 
@@ -965,7 +972,7 @@
                 const text = checkbox$.closest('td').next().text();
                 if (text) {
                   selected.push({
-                    id: index,
+                    id: index - 1,
                     name: text
                   });
                 }
@@ -974,7 +981,9 @@
             // display items
             let html = '';
             selected.forEach(data => {
-              html = '<span class="ms-options-item" id="' + data.id + '">' + data.name + '</span>' + html;
+              html = '<span class="ms-options-item" id="' + data.id + '">' + data.name +
+                '<i class="icon-delete js-delete-options-item" data-id="' + data.id + '"></i>' +
+                '</span>' + html;
             });
             $('.input-with-item').html(html);
           } else {
@@ -997,6 +1006,41 @@
           }
           activeCheckboxParent();
         });
+
+        $(document).on('click', '.js-delete-options-item', function() {
+          const id = $(this).data('id');
+          $(this).closest('.ms-options-item').remove();
+          $('.modal-body').find('.form-check-input#' + id).prop('checked', false);
+          activeCheckboxParent();
+        });
+      }
+
+      function initSelect() {
+        $('[data-select]').selectize({
+          delimiter: ',',
+          persist: false,
+          create: function (input) {
+            return {
+              value: input,
+              text: input
+            }
+          }
+        });
+      }
+
+      function initDataTable() {
+        const table = $('#tableByPosition, #tableByName').DataTable({
+          "paging":   false,
+          "ordering": false,
+          "info":     false,
+          "oLanguage": {
+            "sSearch": "ค้นหา",
+            "sZeroRecords": "ไม่พบข้อมูล"
+          },
+          "autoWidth": false,
+          "scrollY": "500px",
+          "scrollCollapse": true,
+        });
       }
 
       initMutipleCheckbox();
@@ -1006,6 +1050,8 @@
       onSearch();
       onReset();
       onCheckboxChange();
+      initSelect();
+      initDataTable();
     });
   </script>
   <!-- End custom js for this page-->

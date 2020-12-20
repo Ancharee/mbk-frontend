@@ -879,8 +879,8 @@
       function getCheckboxIsChecked(id) {
         const checkboxes$ = $(id).find('.form-check-input');
         let checked = 0;
-        checkboxes$.each(index => {
-          if (checkboxes$.is(':checked')) {
+        checkboxes$.each((index, e) => {
+          if ($(e).is(':checked')) {
             checked++;
           }
         });
@@ -901,13 +901,13 @@
               checked++;
             }
           });
-          $(this).closest('table').find('thead').find('.form-check-input').prop('checked', checked === checkboxes$.length);
+          $(this).closest('.dataTables_scroll').find('thead').find('.form-check-input').prop('checked', checked === checkboxes$.length);
         });
       }
 
       function activeCheckboxAll() {
         $('#allByPosition, #allByName').on('click', function () {
-          const checkboxes$ = $(this).closest('table').find('tbody').find('.form-check-input');
+          const checkboxes$ = $(this).closest('.dataTables_scroll').find('tbody').find('.form-check-input');
           checkboxes$.prop('checked', $(this)[0].checked);
         });
       }
@@ -941,7 +941,7 @@
                 const text = checkbox$.closest('td').next().text();
                 if (text) {
                   selected.push({
-                    id: index,
+                    id: index - 1,
                     name: text
                   });
                 }
