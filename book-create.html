@@ -1117,7 +1117,7 @@
                     <div class="row">
                       <div class="col-12">
                         <div class="col-12">
-                          <div class="accordion accordion--material">
+                          <div id="accordion3" class="accordion accordion--material">
                             <div class="card">
                               <div
                                 class="card-header"
@@ -1127,16 +1127,20 @@
                                   <button
                                     class="btn btn-link active"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse31"
+                                    aria-expanded="false"
+                                    aria-controls="collapse31"
                                   >
                                     หมวด 1) งบประมาณรายจ่าย
                                   </button>
                                 </h2>
                               </div>
                               <div
-                                id="collapse1"
+                                id="collapse31"
                                 class="collapse show"
                                 aria-labelledby="heading1"
-                                data-parent="#accordion1"
+                                data-parent="#accordion3"
                               >
                                 <div class="card-body">
                                   <table class="table table--material">
@@ -1462,7 +1466,15 @@
                                           </select>
                                         </td>
                                         <td class="text-left">
-                                          <div class="book-remark">รองฯ/ผชฯ สายการตลาด</div>
+                                          <div class="js-book-remark-list">
+                                            <div class="book-remark">
+                                              รองฯ/ผชฯ สายการตลาด
+                                              <img
+                                                class="js-remove-book-remark"
+                                                src="images/Icons/remove-green.svg" alt="remove"
+                                              >
+                                            </div>
+                                          </div>
                                           <div class="dropdown-select">
                                             <button
                                               class="btn"
@@ -1477,7 +1489,7 @@
                                                 alt="add"
                                               >
                                             </button>
-                                            <div class="dropdown-menu dropdown-menu-left">
+                                            <div class="dropdown-menu dropdown-menu-left dropdown-remark">
                                               <div class="dropdown-item">รายงาน คกก. เพื่อทราบ</div>
                                               <div class="dropdown-item">ผส./ผอ.ฝ่ายที่เกี่ยวข้อง</div>
                                               <div class="dropdown-item">ผช.รองฯ สายที่เกี่ยวข้อง และ ผช.รองฯ งบ.1
@@ -1485,6 +1497,13 @@
                                               <div class="dropdown-item">
                                                 ผ่าน รองฯ/ผชฯ สายที่เกี่ยวข้อง และผช.รองฯ งบ.1
                                               </div>
+                                              <div class="dropdown-item">ผส./ผอ.ฝ่ายที่เกี่ยวข้อง</div>
+                                              <div class="dropdown-item">ผส./ผอ.ฝ่ายที่เกี่ยวข้อง</div>
+                                              <div class="dropdown-item">ผส./ผอ.ฝ่ายที่เกี่ยวข้อง</div>
+                                              <div class="dropdown-item">ผส./ผอ.ฝ่ายที่เกี่ยวข้อง</div>
+                                              <div class="dropdown-item">ผส./ผอ.ฝ่ายที่เกี่ยวข้อง</div>
+                                              <div class="dropdown-item">ผส./ผอ.ฝ่ายที่เกี่ยวข้อง</div>
+                                              <div class="dropdown-item">ผส./ผอ.ฝ่ายที่เกี่ยวข้อง</div>
                                               <div class="dropdown-item">ผส./ผอ.ฝ่ายที่เกี่ยวข้อง</div>
                                               <div class="dropdown-item">
                                                 <button
@@ -1524,7 +1543,7 @@
                                                 <div class="modal-footer">
                                                   <button
                                                     type="button"
-                                                    class="btn btn-success"
+                                                    class="btn btn-success js-add-remark"
                                                     data-dismiss="modal"
                                                   >เพิ่ม</button>
                                                 </div>
@@ -1547,16 +1566,20 @@
                                   <button
                                     class="btn btn-link collapsed"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse32"
+                                    aria-expanded="false"
+                                    aria-controls="collapse32"
                                   >
                                     หมวด 2) รายรับ
                                   </button>
                                 </h2>
                               </div>
                               <div
-                                id="collapse2"
+                                id="collapse32"
                                 class="collapse"
                                 aria-labelledby="heading2"
-                                data-parent="#accordion1"
+                                data-parent="#accordion3"
                               >
                                 <div class="card-body"></div>
                               </div>
@@ -1570,16 +1593,20 @@
                                   <button
                                     class="btn btn-link collapsed"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse33"
+                                    aria-expanded="false"
+                                    aria-controls="collapse33"
                                   >
                                     หมวด 3) การจัดหา (การสั่งซื้อ/ ว่าจ้าง/ เช่า/ ประกันภัย)
                                   </button>
                                 </h2>
                               </div>
                               <div
-                                id="collapse3"
+                                id="collapse33"
                                 class="collapse"
                                 aria-labelledby="heading3"
-                                data-parent="#accordion1"
+                                data-parent="#accordion3"
                               >
                                 <div class="card-body"> </div>
                               </div>
@@ -2015,12 +2042,52 @@
     }
 
     function initDatePicker() {
-        $('[data-provide="datepicker"]').datepicker();
-      }
+      $('[data-provide="datepicker"]').datepicker();
+    }
+
+    function addRemarkToList(container, text) {
+      if (container.find('.book-remark:contains(' + text + ')').length) {
+          return;
+        }
+        container.append(`<div class="book-remark">
+          ${text}
+          <img
+            class="js-remove-book-remark"
+            src="images/Icons/remove-green.svg" alt="remove"
+          >
+        </div>`);
+    }
+
+    function onSelectedRemark() {
+      $(document).on('click', '.dropdown-remark .dropdown-item:not(:last-child)', function() {
+        const text = $(this).text();
+        const container = $(this).closest('.dropdown-select').prev('.js-book-remark-list');
+        addRemarkToList(container, text);
+      });
+    }
+
+    function onRemoveRemark() {
+      $(document).on('click', '.js-remove-book-remark', function() {
+        $(this).closest('.book-remark').remove();
+      });
+    }
+
+    function onAddRemarkByModal() {
+      $(document).on('click', '.js-add-remark', function() {
+        const textarea$ = $(this).closest('.modal-content').find('textarea');
+        const text = textarea$.val();
+        const container = $(this).closest('td').find('.js-book-remark-list');
+        addRemarkToList(container, text);
+        textarea$.val('');
+      });
+    }
 
     initCheckbox('#all', '.template-copy-list');
     initCheckbox('#checkboxModalAll', '.table--allow tbody');
     initDatePicker();
+    onSelectedRemark();
+    onAddRemarkByModal();
+    onRemoveRemark();
   </script>
   <!-- End custom js for this page-->
 </body>
