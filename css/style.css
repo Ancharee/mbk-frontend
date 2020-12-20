@@ -19945,6 +19945,34 @@ code {
   border-radius: 3px !important;
 }
 
+.btn-icon-show {
+  padding: 0;
+  background-image: url(../images/Icons/show-disabled.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 26px;
+  transition: all 0.25s ease-in;
+}
+
+.btn-icon-show.active {
+  background-image: url(../images/Icons/show.svg);
+}
+
+.btn-icon-hide {
+  padding: 0;
+  background-image: url(../images/Icons/hide-disabled.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 26px;
+  transition: all 0.25s ease-in;
+}
+
+.btn-icon-hide.active {
+  background-image: url(../images/Icons/hide.svg);
+}
+
 /* Badges */
 .badge {
   border-radius: 0;
@@ -21255,10 +21283,6 @@ li ol > li:before {
 .table.table--allow th:nth-child(3),
 .table.table--allow td:nth-child(3) {
   padding-left: 0;
-}
-
-.table.table--allow .btn {
-  padding: 2px;
 }
 
 .table.table--allow .form-check-label {

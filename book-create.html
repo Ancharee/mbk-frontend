@@ -1204,10 +1204,10 @@
                                           <select
                                             name="status"
                                             id=""
-                                            class="form-control"
+                                            class="form-control js-book-status"
                                           >
                                             <option value="">สถานะ</option>
-                                            <option value="" data-toggle="modal" data-target="#allowModal">อนุมัติ</option>
+                                            <option value="อนุมัติ">อนุมัติ</option>
                                             <option value="">ลงนาม</option>
                                             <option value="">ผ่าน</option>
                                             <option value="">(ว่าง)</option>
@@ -1257,13 +1257,13 @@
                                                           </label>
                                                         </td>
                                                         <td>
-                                                          <button class="btn">
-                                                            <img src="images/Icons/show-disabled.svg" alt="btn">
+                                                          <button class="btn btn-icon-show">
+                                                            <!-- <img src="images/Icons/show-disabled.svg" alt="btn"> -->
                                                           </button>
                                                         </td>
                                                         <td>
-                                                          <button class="btn">
-                                                            <img src="images/Icons/hide-disabled.svg" alt="btn">
+                                                          <button class="btn btn-icon-hide">
+                                                            <!-- <img src="images/Icons/hide-disabled.svg" alt="btn"> -->
                                                           </button>
                                                         </td>
                                                       </tr>
@@ -1276,13 +1276,13 @@
                                                           </label>
                                                         </td>
                                                         <td>
-                                                          <button class="btn">
-                                                            <img src="images/Icons/show.svg" alt="btn" width="32">
+                                                          <button class="btn btn-icon-show active">
+                                                            <!-- <img src="images/Icons/show.svg" alt="btn" width="32"> -->
                                                           </button>
                                                         </td>
                                                         <td>
-                                                          <button class="btn">
-                                                            <img src="images/Icons/hide-disabled.svg" alt="btn">
+                                                          <button class="btn btn-icon-hide">
+                                                            <!-- <img src="images/Icons/hide-disabled.svg" alt="btn"> -->
                                                           </button>
                                                         </td>
                                                       </tr>
@@ -1295,13 +1295,13 @@
                                                           </label>
                                                         </td>
                                                         <td>
-                                                          <button class="btn">
-                                                            <img src="images/Icons/show-disabled.svg" alt="btn">
+                                                          <button class="btn btn-icon-show">
+                                                            <!-- <img src="images/Icons/show-disabled.svg" alt="btn"> -->
                                                           </button>
                                                         </td>
                                                         <td>
-                                                          <button class="btn">
-                                                            <img src="images/Icons/hide.svg" alt="btn" width="32">
+                                                          <button class="btn btn-icon-hide active">
+                                                            <!-- <img src="images/Icons/hide.svg" alt="btn" width="32"> -->
                                                           </button>
                                                         </td>
                                                       </tr>
@@ -1314,13 +1314,13 @@
                                                           </label>
                                                         </td>
                                                         <td>
-                                                          <button class="btn">
-                                                            <img src="images/Icons/show.svg" alt="btn" width="32">
+                                                          <button class="btn btn-icon-show active">
+                                                            <!-- <img src="images/Icons/show.svg" alt="btn" width="32"> -->
                                                           </button>
                                                         </td>
                                                         <td>
-                                                          <button class="btn">
-                                                            <img src="images/Icons/hide-disabled.svg" alt="btn">
+                                                          <button class="btn btn-icon-hide">
+                                                            <!-- <img src="images/Icons/hide-disabled.svg" alt="btn"> -->
                                                           </button>
                                                         </td>
                                                       </tr>
@@ -2082,12 +2082,29 @@
       });
     }
 
+    function openModal() {
+      $('.js-book-status').on('change', function() {
+        if($(this).val() === 'อนุมัติ') {
+          $(this).next('.modal').modal('show');
+        }
+      });
+    }
+
+    function toggleShowHide() {
+      $(document).on('click', '.btn-icon-show, .btn-icon-hide', function() {
+        $(this).closest('tr').find('.btn').removeClass('active');
+        $(this).toggleClass('active');
+      });
+    }
+
     initCheckbox('#all', '.template-copy-list');
     initCheckbox('#checkboxModalAll', '.table--allow tbody');
     initDatePicker();
     onSelectedRemark();
     onAddRemarkByModal();
     onRemoveRemark();
+    openModal();
+    toggleShowHide();
   </script>
   <!-- End custom js for this page-->
 </body>
