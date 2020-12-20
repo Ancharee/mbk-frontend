@@ -437,8 +437,12 @@
                               >
                                 <h2 class="mb-0">
                                   <button
-                                    class="btn btn-link active"
+                                    class="btn btn-link"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse1"
+                                    aria-expanded="false"
+                                    aria-controls="collapse1"
                                   >
                                     1. วัตถุประสงค์
                                   </button>
@@ -469,6 +473,10 @@
                                   <button
                                     class="btn btn-link collapsed"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse2"
+                                    aria-expanded="false"
+                                    aria-controls="collapse2"
                                   >
                                     2. การใช้อำนาจดำเนินการ
                                   </button>
@@ -492,6 +500,10 @@
                                   <button
                                     class="btn btn-link collapsed"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse3"
+                                    aria-expanded="false"
+                                    aria-controls="collapse3"
                                   >
                                     3. ความหมายของอักษรย่อในช่อง “ผู้มีอำนาจอนุมัติ”
                                   </button>
@@ -515,6 +527,10 @@
                                   <button
                                     class="btn btn-link collapsed"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse4"
+                                    aria-expanded="false"
+                                    aria-controls="collapse4"
                                   >
                                     4. การอ่าน “ เลขรหัส ” แต่ละหมวดในคู่มืออำนาจดำเนินการ เป็นดังนี้
                                   </button>
@@ -538,6 +554,10 @@
                                   <button
                                     class="btn btn-link collapsed"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse5"
+                                    aria-expanded="false"
+                                    aria-controls="collapse5"
                                   >
                                     5. วงเงินที่กำหนดในคู่มืออำนาจเป็นวงเงินที่รวมภาษีมูลค่าเพิ่ม
                                   </button>
@@ -568,7 +588,7 @@
                     <div class="row">
                       <div class="col-12">
                         <div class="col-12">
-                          <div class="accordion">
+                          <div id="accordion2" class="accordion">
                             <div class="card">
                               <div
                                 class="card-header"
@@ -578,6 +598,10 @@
                                   <button
                                     class="btn btn-link active"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse21"
+                                    aria-expanded="false"
+                                    aria-controls="collapse21"
                                   >
                                     <label
                                       class="form-check-label"
@@ -598,10 +622,10 @@
                                 </h2>
                               </div>
                               <div
-                                id="collapse1"
+                                id="collapse21"
                                 class="collapse show"
                                 aria-labelledby="heading1"
-                                data-parent="#accordion1"
+                                data-parent="#accordion2"
                               >
                                 <div class="card-body">
                                   <ul class="list">
@@ -648,6 +672,10 @@
                                   <button
                                     class="btn btn-link collapsed active"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse22"
+                                    aria-expanded="false"
+                                    aria-controls="collapse22"
                                   >
                                     <label
                                       class="form-check-label"
@@ -668,10 +696,10 @@
                                 </h2>
                               </div>
                               <div
-                                id="collapse2"
+                                id="collapse22"
                                 class="collapse"
                                 aria-labelledby="heading2"
-                                data-parent="#accordion1"
+                                data-parent="#accordion2"
                               >
                                 <div class="card-body"></div>
                               </div>
@@ -685,6 +713,10 @@
                                   <button
                                     class="btn btn-link collapsed"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse23"
+                                    aria-expanded="false"
+                                    aria-controls="collapse23"
                                   >
                                     <label
                                       class="form-check-label"
@@ -704,10 +736,10 @@
                                 </h2>
                               </div>
                               <div
-                                id="collapse3"
+                                id="collapse23"
                                 class="collapse"
                                 aria-labelledby="heading3"
-                                data-parent="#accordion1"
+                                data-parent="#accordion2"
                               >
                                 <div class="card-body"> </div>
                               </div>
@@ -721,6 +753,10 @@
                                   <button
                                     class="btn btn-link collapsed active"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse24"
+                                    aria-expanded="false"
+                                    aria-controls="collapse24"
                                   >
                                     <label
                                       class="form-check-label"
@@ -741,10 +777,10 @@
                                 </h2>
                               </div>
                               <div
-                                id="collapse4"
+                                id="collapse24"
                                 class="collapse"
                                 aria-labelledby="heading4"
-                                data-parent="#accordion1"
+                                data-parent="#accordion2"
                               >
                                 <div class="card-body"> </div>
                               </div>
@@ -758,6 +794,10 @@
                                   <button
                                     class="btn btn-link collapsed"
                                     type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapse25"
+                                    aria-expanded="false"
+                                    aria-controls="collapse25"
                                   >
                                     <label
                                       class="form-check-label"
@@ -777,10 +817,10 @@
                                 </h2>
                               </div>
                               <div
-                                id="collapse5"
+                                id="collapse25"
                                 class="collapse"
                                 aria-labelledby="heading5"
-                                data-parent="#accordion1"
+                                data-parent="#accordion2"
                               >
                                 <div class="card-body"> </div>
                               </div>
@@ -1927,7 +1967,8 @@
     });
 
     $('.btn-link').on('click', function () {
-      $(this).toggleClass('active');
+      $('.btn-link').removeClass('active');
+      $(this).addClass('active');
     });
 
     $('.card-header .form-check-input').on('change', function () {

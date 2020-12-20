@@ -31,7 +31,7 @@
       right: 14px;
       width: 16px;
       height: 15px;
-      background-image: url(../../images/Icons/less.svg);
+      background-image: url(../images/Icons/less.svg);
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -60,9 +60,9 @@
     color: #64666D;
   }
 
-  .form-check-label {
-    width: 100%;
-  }
+  // .form-check-label {
+  //   width: 100%;
+  // }
 
   .list,
   .list ul {
@@ -80,7 +80,7 @@
       color: $white;
 
       &::after {
-        background-image: url(../../images/Icons/less-white.svg);
+        background-image: url(../images/Icons/less-white.svg);
         transform: rotate(0deg);
       }
     }
