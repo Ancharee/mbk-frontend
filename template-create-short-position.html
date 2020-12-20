@@ -375,7 +375,7 @@
                 </div>
                 <div class="modal-body">
                   <div class="js-by-position active">
-                    <table class="table" style="margin-top: 12px;">
+                    <table id="tableByPosition" class="table" style="margin-top: 12px;">
                       <thead>
                         <tr>
                           <th>
@@ -546,7 +546,7 @@
                     </table>
                   </div>
                   <div class="js-by-name">
-                    <table class="table" style="margin-top: 12px;">
+                    <table id="tableByName" class="table" style="margin-top: 12px;">
                       <thead>
                         <tr>
                           <th>
@@ -713,6 +713,8 @@
   <script src="vendors/base/vendor.bundle.base.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
   <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="js/off-canvas.js"></script>
@@ -767,6 +769,24 @@
         }
       });
     });
+
+    function initDataTable() {
+      const table = $('#tableByPosition, #tableByName').DataTable({
+        "paging":   false,
+        "ordering": false,
+        "info":     false,
+        "oLanguage": {
+          "sSearch": "ค้นหา",
+          "sZeroRecords": "ไม่พบข้อมูล"
+        },
+        "autoWidth": false,
+        "scrollY": "500px",
+        "scrollCollapse": true,
+      });
+    }
+
+    initDataTable();
+
   </script>
 </body>
 
