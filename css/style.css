@@ -24673,6 +24673,16 @@ textarea {
   font-size: 20px;
 }
 
+.js-director-in,
+.js-director-out {
+  display: none;
+}
+
+.js-director-in.active,
+.js-director-out.active {
+  display: inline;
+}
+
 .setting__format {
   color: #DF5F5F;
   font-family: "DBHelvethaicaX-Reg", sans-serif;

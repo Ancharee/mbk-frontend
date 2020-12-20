@@ -178,3 +178,12 @@
     }
   }
 }
+
+.js-director-in,
+.js-director-out {
+  display: none;
+
+  &.active {
+    display: inline;
+  }
+}
