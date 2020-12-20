@@ -21354,6 +21354,20 @@ li ol > li:before {
   font-size: 24px;
 }
 
+.dataTables_scroll .dataTable {
+  margin-top: 0 !important;
+  table-layout: fixed;
+  width: 100% !important;
+}
+
+.dataTables_scrollBody .dataTable {
+  border: 0 !important;
+}
+
+.dataTables_scrollHeadInner {
+  width: 100% !important;
+}
+
 .breadcrumb {
   padding: 0;
   margin: 0;

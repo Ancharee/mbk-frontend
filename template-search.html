@@ -937,7 +937,7 @@
       }
 
       function initDataTable() {
-        $('#tableByPosition, #tableByName').DataTable({
+        const table = $('#tableByPosition, #tableByName').DataTable({
           "paging":   false,
           "ordering": false,
           "info":     false,
@@ -945,7 +945,9 @@
             "sSearch": "ค้นหา",
             "sZeroRecords": "ไม่พบข้อมูล"
           },
-          "autoWidth": false
+          "autoWidth": false,
+          "scrollY": "500px",
+          "scrollCollapse": true,
         });
       }
 
