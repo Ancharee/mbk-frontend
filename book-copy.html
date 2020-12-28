@@ -972,11 +972,53 @@
             </div>
             <div class="container-action">
               <a class="btn btn-outline-success" href="book-menu.html">ยกเลิก</a>
-              <a class="btn btn-success" href="book-menu.html">คัดลอก</a>
+              <button
+                class="btn btn-success"
+                data-toggle="modal"
+                data-target="#successModal"
+              >คัดลอก</button>
             </div>
           </div>
         </div>
         <!-- content-wrapper ends -->
+        <div
+          class="modal fade"
+          id="successModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="successModalLabel"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-centered"
+            role="document"
+          >
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-title modal-title--success">
+                  สำเร็จ!
+                </div>
+              </div>
+              <div class="modal-body">
+                <img
+                  src="images/Icons/test.svg"
+                  alt="test"
+                  class="mb-14"
+                >
+                <p>คัดลอก คู่มืออำนาจดำเนินการ
+                  บริษัท เอ็ม บี เค จำกัด (มหาชน)
+                  เรียบร้อยแล้ว</p>
+              </div>
+              <div class="modal-footer">
+                <a
+                  type="button"
+                  class="btn btn-success"
+                  href="book-menu.html"
+                >ตกลง</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- main-panel ends -->
 
