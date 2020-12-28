@@ -1314,11 +1314,14 @@
                                         <td class="text-left">1-011 ประจำปี</td>
                                         <td>
                                           <select
-                                            name=""
+                                            name="level"
                                             id=""
-                                            class="form-control"
+                                            class="form-control js-book-level"
+                                            data-value="10"
                                           >
-                                            <option value="">เลเวล 10</option>
+                                            <option value="10">เลเวล 10</option>
+                                            <option value="9">เลเวล 9</option>
+                                            <option value="8">เลเวล 8</option>
                                           </select>
                                         </td>
                                         <td>
@@ -2078,6 +2081,41 @@
         </div>
       </div>
 
+      <div
+        class="modal fade modal--confirm-delete"
+        id="wraningModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="wraningModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+              <img src="images/Icons/wraning.svg" alt="wraning">
+              <p class="mt-4">มีการกำหนด Level ที่ต่ำกว่ากำหนด</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-success js-wraning-no"
+                data-dismiss="modal"
+              >ยกเลิก</button>
+              <button
+                type="button"
+                class="btn btn-success js-wraning-yes"
+                data-dismiss="modal"
+              >ยอมรับ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- partial:partials/_sidebar-list.html -->
       <div class="sidebar-list sidebar-list-offcanvas">
         <div
@@ -2447,17 +2485,40 @@
       });
     }
 
-    let directorCurrectToRemove$;
+    let directorCurrentToRemove$;
     function removeDirector() {
       $(document).on('click', '.js-remove-director', function() {
-        directorCurrectToRemove$ = $(this).closest('.js-director-item');
+        directorCurrentToRemove$ = $(this).closest('.js-director-item');
         $('#deleteModal').modal('show');
       });
     }
 
     function confirmRemoveDirector() {
       $('#deleteModal .js-modal-yes').on('click', function() {
-        directorCurrectToRemove$.remove();
+        directorCurrentToRemove$.remove();
+      });
+    }
+
+    function confirmWraning() {
+      let bookLevetCurrent$;
+
+      $('.js-book-level').on('change', function () {
+        const preValue = $(this).attr('data-value');
+        const nextValue = $(this).val();
+        if (Number(preValue) > Number(nextValue)) {
+          $('#wraningModal').modal('show');
+          bookLevetCurrent$ = $(this);
+        } else {
+          $(this).attr('data-value', nextValue);
+        }
+      });
+
+      $('#wraningModal .js-wraning-no').on('click', function() {
+        bookLevetCurrent$.val(bookLevetCurrent$.attr('data-value'));
+      });
+
+      $('#wraningModal .js-wraning-yes').on('click', function() {
+        bookLevetCurrent$.attr('data-value', bookLevetCurrent$.val());
       });
     }
 
@@ -2474,6 +2535,7 @@
     addDirector();
     removeDirector();
     confirmRemoveDirector();
+    confirmWraning();
   </script>
   <!-- End custom js for this page-->
 </body>
