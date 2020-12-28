@@ -1822,7 +1822,7 @@
                     <div class="row mb-14">
                       <div class="col-12 d-flex justify-content-between">
                         <h4>กรรมการผู้ลงนาม (สูงสุด 4 ท่าน)</h4>
-                        <button class="btn btn-sm btn-outline-success">
+                        <button class="btn btn-sm btn-outline-success js-add-director">
                           <img
                             src="images/Icons/add.svg"
                             alt="add"
@@ -1887,7 +1887,7 @@
                         </div>
                         <div class="col-1">
                           <button
-                            class="btn"
+                            class="btn js-remove-director"
                             style="color: #EE4949;"
                           >
                             <img
@@ -1899,55 +1899,6 @@
                           </button>
                         </div>
                       </div>
-                      <!-- <div class="row mb-14 align-items-center">
-                        <div class="col-1">
-                          <label
-                            for="in2"
-                            class="form-check-label"
-                          >
-                            <input
-                              type="radio"
-                              class="form-check-input"
-                              id="in2"
-                              name="radio2"
-                            >
-                            <span class="span-radio"></span>
-                            ในบริษัท
-                          </label>
-                        </div>
-                        <div class="col-1">
-                          <label
-                            for="out2"
-                            class="form-check-label"
-                          >
-                            <input
-                              type="radio"
-                              class="form-check-input"
-                              id="out2"
-                              name="radio2"
-                            >
-                            <span class="span-radio"></span>
-                            นอกบริษัท
-                          </label>
-                        </div>
-                        <div class="col-9">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="ตำแหน่ง ชื่อ นามสกุล"
-                          >
-                        </div>
-                        <div class="col-1">
-                          <button class="btn" style="color: #EE4949;">
-                            <img
-                              src="images/Icons/remove.svg"
-                              alt="remove"
-                              class="mr-1"
-                            >
-                            ลบ
-                          </button>
-                        </div>
-                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -2087,6 +2038,45 @@
         <!-- content-wrapper ends -->
       </div>
       <!-- main-panel ends -->
+
+      <div
+        class="modal fade modal--confirm-delete"
+        id="deleteModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="deleteModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5
+                class="modal-title"
+                id="deleteModalLabel"
+              >ลบกรรมการ</h5>
+            </div>
+            <div class="modal-body">
+              <i class="icon-remove"></i>
+              <p>ต้องการลบ “กรรมการ” หรือไม่ ?</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-success"
+                data-dismiss="modal"
+              >ไม่</button>
+              <button
+                type="button"
+                class="btn btn-success js-modal-yes"
+                data-dismiss="modal"
+              >ใช่</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- partial:partials/_sidebar-list.html -->
       <div class="sidebar-list sidebar-list-offcanvas">
@@ -2361,7 +2351,7 @@
     }
 
     function toggleInOut() {
-      $('.js-director-item .form-check-input').on('change', function() {
+      $(document).on('change', '.js-director-item .form-check-input', function() {
         const parent = $(this).closest('.js-director-item');
 
         parent.find('.js-director-in').removeClass('active');
@@ -2375,8 +2365,100 @@
       });
     }
 
-    function RemoveDirector() {
+    function getDirectorHtml() {
+      const index = $('.director-container').find('.js-director-item').length;
+      return `
+      <div class="row mb-14 align-items-center js-director-item">
+          <div class="col-1">
+            <label
+              for="in${index + 1}"
+              class="form-check-label"
+            >
+              <input
+                type="radio"
+                class="form-check-input"
+                id="in${index + 1}"
+                name="radio${index + 1}"
+                checked
+                value="in"
+              >
+              <span class="span-radio"></span>
+              ในบริษัท
+            </label>
+          </div>
+          <div class="col-1">
+            <label
+              for="out${index + 1}"
+              class="form-check-label"
+            >
+              <input
+                type="radio"
+                class="form-check-input"
+                id="out${index + 1}"
+                name="radio${index + 1}"
+                value="out"
+              >
+              <span class="span-radio"></span>
+              นอกบริษัท
+            </label>
+          </div>
+          <div class="col-9">
+            <select
+            class="demo-default js-director-in active"
+            placeholder="ตำแหน่ง ชื่อ นามสกุล"
+            data-select
+            name="select${index + 1}"
+          >
+            <option value="1">ตำแหน่ง ชื่อ นามสกุล</option>
+            <option value="2">ตำแหน่ง ชื่อ นามสกุล</option>
+            <option value="3">ตำแหน่ง ชื่อ นามสกุล</option>
+            <option value="4">ตำแหน่ง ชื่อ นามสกุล</option>
+            <option value="5">ตำแหน่ง ชื่อ นามสกุล</option>
+          </select>
+          <input
+            type="text"
+            class="form-control js-director-out"
+            placeholder="ตำแหน่ง ชื่อ นามสกุล"
+            name="text${index + 1}"
+          >
+        </div>
+        <div class="col-1">
+          <button
+            class="btn js-remove-director"
+            style="color: #EE4949;"
+          >
+            <img
+              src="images/Icons/remove.svg"
+              alt="remove"
+              class="mr-1"
+            >
+            ลบ
+          </button>
+        </div>
+      </div>
+      `;
+    }
 
+    function addDirector() {
+      $('.js-add-director').on('click', function() {
+        const container$ = $('.director-container');
+        container$.append(getDirectorHtml());
+        initSelect();
+      });
+    }
+
+    let directorCurrectToRemove$;
+    function removeDirector() {
+      $(document).on('click', '.js-remove-director', function() {
+        directorCurrectToRemove$ = $(this).closest('.js-director-item');
+        $('#deleteModal').modal('show');
+      });
+    }
+
+    function confirmRemoveDirector() {
+      $('#deleteModal .js-modal-yes').on('click', function() {
+        directorCurrectToRemove$.remove();
+      });
     }
 
     initCheckbox('#all', '.template-copy-list');
@@ -2389,6 +2471,9 @@
     toggleShowHide();
     initSelect();
     toggleInOut();
+    addDirector();
+    removeDirector();
+    confirmRemoveDirector();
   </script>
   <!-- End custom js for this page-->
 </body>
