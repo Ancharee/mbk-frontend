@@ -442,6 +442,9 @@
                           class="form-control"
                           type="text"
                           placeholder="คู่มืออำนาจดำเนินการ"
+                          required
+                          data-message-th="กรุณากรอก ชื่อเล่ม"
+                          data-message-en="Book name"
                         >
                       </div>
                     </div>
@@ -456,8 +459,12 @@
                           name=""
                           id=""
                           value=""
+                          required
+                          data-message-th="กรุณา เลือกบริษัท"
+                          data-message-en="Company"
                         >
                           <option value="">บริษัท เอ็ม บี เค จำกัด (มหาชน)</option>
+                          <option value="2">บริษัท เอ็ม บี เค จำกัด (มหาชน)</option>
                         </select>
                       </div>
                     </div>
@@ -1222,7 +1229,7 @@
                     class="btn btn-success"
                     href="book-menu.html"
                   >ดราฟ</a>
-                  <button class="btn btn-outline-success next">ต่อไป</button>
+                  <button type="submit" class="btn btn-outline-success next">ต่อไป</button>
                 </div>
               </div>
             </section>
@@ -1991,9 +1998,7 @@
               <div class="container-action">
                 <button class="btn btn-outline-success prev">ย้อนกลับ</button>
                 <button
-                  class="btn btn-success"
-                  data-toggle="modal"
-                  data-target="#successModal"
+                  class="btn btn-success js-create-book"
                 >สร้างเล่ม</button>
               </div>
             </section>
@@ -2111,6 +2116,36 @@
                 class="btn btn-success js-wraning-yes"
                 data-dismiss="modal"
               >ยอมรับ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade modal--confirm-delete"
+        id="errorModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="errorModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+              <img src="images/Icons/wraning.svg" alt="wraning">
+              <div class="js-error-messages"></div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-success js-wraning-no"
+                data-dismiss="modal"
+              >ตกลง</button>
             </div>
           </div>
         </div>
@@ -2522,20 +2557,61 @@
       });
     }
 
-    initCheckbox('#all', '.template-copy-list');
-    initCheckbox('#checkboxModalAll', '.table--allow tbody');
-    initDatePicker();
-    onSelectedRemark();
-    onAddRemarkByModal();
-    onRemoveRemark();
-    openModal();
-    toggleShowHide();
-    initSelect();
-    toggleInOut();
-    addDirector();
-    removeDirector();
-    confirmRemoveDirector();
-    confirmWraning();
+    function getErrorMessages() {
+      const errors = [];
+      const elements = $('[required]');
+      elements.each((index, element) => {
+        if (!$(element).val()) {
+          errors.push(
+            $(element).attr('data-message-th')
+          );
+        }
+      });
+      return errors;
+    }
+
+    function openModalErrorMessage() {
+      const errorMessages = getErrorMessages();
+        if (errorMessages.length) {
+          $('.js-error-messages').find('p').remove();
+          for (let index = 0; index < errorMessages.length; index++) {
+            const message = errorMessages[index];
+            $('.js-error-messages').append(
+              `<p class="mt-2">${message}</p>`
+            )
+          }
+          $('#errorModal').modal('show');
+        } else {
+          $('#successModal').modal('show');
+        }
+    }
+
+    function validationForm() {
+      $('.js-create-book').on('click', function(e) {
+        e.preventDefault();
+        openModalErrorMessage();
+      });
+    }
+
+    function init() {
+      initCheckbox('#all', '.template-copy-list');
+      initCheckbox('#checkboxModalAll', '.table--allow tbody');
+      initDatePicker();
+      onSelectedRemark();
+      onAddRemarkByModal();
+      onRemoveRemark();
+      openModal();
+      toggleShowHide();
+      initSelect();
+      toggleInOut();
+      addDirector();
+      removeDirector();
+      confirmRemoveDirector();
+      confirmWraning();
+      validationForm();
+    }
+
+    init();
   </script>
   <!-- End custom js for this page-->
 </body>
