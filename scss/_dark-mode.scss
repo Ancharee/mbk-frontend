@@ -1,7 +1,3 @@
-.dark-mode {
-  display: none;
-}
-
 .is-dark-mode {
   body {
     color: $white;
@@ -27,20 +23,16 @@
     border-color: $dark-mode-card;
   }
 
-  .dark-mode {
-    display: block;
-  }
-
-  .light-mode {
-    display: none;
-  }
-
   .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-lang .nav-link,
   .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-lang .dropdown-item,
   .dropdown-menu {
     background-color: #647480;
     border-color: #647480;
     color: #fff;
+  }
+
+  .navbar .navbar-brand-wrapper .navbar-brand-inner-wrapper .navbar-brand {
+    background-image: url(../images/MBK-logo-white.svg);
   }
 
   .dropdown .dropdown-menu .dropdown-item {

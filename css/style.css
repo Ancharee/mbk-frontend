@@ -22934,6 +22934,11 @@ textarea {
   font-size: 1.5rem;
   margin-right: 0;
   padding: 0.25rem 0;
+  background-image: url(../images/MBK-logo.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 60px;
+  height: 34px;
 }
 
 .navbar .navbar-brand-wrapper .navbar-brand-inner-wrapper .navbar-brand.brand-logo-mini {
@@ -24758,10 +24763,6 @@ textarea {
   padding: 0 10px;
 }
 
-.dark-mode {
-  display: none;
-}
-
 .is-dark-mode body {
   color: #ffffff;
 }
@@ -24786,20 +24787,16 @@ textarea {
   border-color: #374148;
 }
 
-.is-dark-mode .dark-mode {
-  display: block;
-}
-
-.is-dark-mode .light-mode {
-  display: none;
-}
-
 .is-dark-mode .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-lang .nav-link,
 .is-dark-mode .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-lang .dropdown-item,
 .is-dark-mode .dropdown-menu {
   background-color: #647480;
   border-color: #647480;
   color: #fff;
+}
+
+.is-dark-mode .navbar .navbar-brand-wrapper .navbar-brand-inner-wrapper .navbar-brand {
+  background-image: url(../images/MBK-logo-white.svg);
 }
 
 .is-dark-mode .dropdown .dropdown-menu .dropdown-item {

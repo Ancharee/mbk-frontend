@@ -49,6 +49,11 @@
         font-size: 1.5rem;
         margin-right: 0;
         padding: 0.25rem 0;
+        background-image: url(../images/MBK-logo.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 60px;
+        height: 34px;
 
         &.brand-logo-mini {
           display: none;
