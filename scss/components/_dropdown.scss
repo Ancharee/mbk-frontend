@@ -132,3 +132,22 @@
     }
   }
 }
+
+
+.is-dark-mode {
+  .dropdown {
+    .dropdown-toggle {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.show {
+      .dropdown-toggle {
+        &:after {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+}

@@ -204,3 +204,17 @@ $value in $theme-colors {
     background-image: url(../images/Icons/hide.svg);
   }
 }
+
+.btn-nav-mode {
+  padding: 0;
+  background-image: url(../images/dark-mode.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 19px;
+  transition: all 0.25s ease-in;
+
+  .is-dark-mode & {
+    background-image: url(../images/light-mode.svg);
+  }
+}

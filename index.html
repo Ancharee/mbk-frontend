@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="is-dark-mode">
 
 <head>
   <!-- Required meta tags -->
@@ -30,13 +30,16 @@
       </div>
       <div class="navbar-brand-wrapper d-flex justify-content-center justify-content-lg-start">
         <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center">
-          <a class="navbar-brand brand-logo" href="index.html"><img src="images/MBK-logo.svg" alt="logo" /></a>
+          <a class="navbar-brand brand-logo" href="index.html">
+            <img src="images/MBK-logo.svg" alt="logo" class="light-mode" />
+            <img src="images/mbk-group-logo-white.svg" alt="logo" class="dark-mode">
+          </a>
         </div>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-mode">
-            <img src="images/dark-mode.svg" alt="mode">
+            <button class="btn btn-nav-mode"></button>
           </li>
           <li class="nav-item nav-lang dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="langDropdown">
@@ -61,7 +64,7 @@
               style="background-image: url(images/faces/face5.jpg);"></a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">
-                <img src="images/exit.svg" alt="flag" /> <span class="exit">ลงชื่อออก</span>
+                <i class="icon-exit"></i><span class="exit">ลงชื่อออก</span>
               </a>
             </div>
           </li>
@@ -249,7 +252,7 @@
           <div class="breadcrumb-wrapper">
             <div class="breadcrumb d-flex align-items-center">
               <h3>
-                <a class="title" href="#">แดชบอร์ด</a>
+                <a class="title title--one" href="#">แดชบอร์ด</a>
               </h3>
             </div>
           </div>
@@ -259,7 +262,7 @@
                 <a class="link-more" href="search-report.html"></a>
                 <div class="card-body">
                   <div>
-                    <h5 style="color: #717073;">จำนวนการค้นหา</h5>
+                    <h5 class="dashboard__count-total">จำนวนการค้นหา</h5>
                     <select class="form-control" name="search" id="search">
                       <option value="2563">2563</option>
                       <option value="2562">2562</option>
