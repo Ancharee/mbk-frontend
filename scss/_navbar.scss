@@ -3,14 +3,10 @@
 .navbar {
   justify-content: flex-start;
   font-weight: 400;
-  transition: background $action-transition-duration
-    $action-transition-timing-function;
-  -webkit-transition: background $action-transition-duration
-    $action-transition-timing-function;
-  -moz-transition: background $action-transition-duration
-    $action-transition-timing-function;
-  -ms-transition: background $action-transition-duration
-    $action-transition-timing-function;
+  transition: background $action-transition-duration $action-transition-timing-function;
+  -webkit-transition: background $action-transition-duration $action-transition-timing-function;
+  -moz-transition: background $action-transition-duration $action-transition-timing-function;
+  -ms-transition: background $action-transition-duration $action-transition-timing-function;
   background-color: $white;
 
   &.background-color-gray {
@@ -21,17 +17,13 @@
     flex: 1;
     background: $white;
     // border-bottom: 1px solid #e3e3e3;
-    transition: width $action-transition-duration
-        $action-transition-timing-function,
+    transition: width $action-transition-duration $action-transition-timing-function,
       background $action-transition-duration $action-transition-timing-function;
-    -webkit-transition: width $action-transition-duration
-        $action-transition-timing-function,
+    -webkit-transition: width $action-transition-duration $action-transition-timing-function,
       background $action-transition-duration $action-transition-timing-function;
-    -moz-transition: width $action-transition-duration
-        $action-transition-timing-function,
+    -moz-transition: width $action-transition-duration $action-transition-timing-function,
       background $action-transition-duration $action-transition-timing-function;
-    -ms-transition: width $action-transition-duration
-        $action-transition-timing-function,
+    -ms-transition: width $action-transition-duration $action-transition-timing-function,
       background $action-transition-duration $action-transition-timing-function;
     width: $sidebar-width-lg;
     height: $navbar-height;
@@ -107,14 +99,10 @@
 
   .navbar-menu-wrapper {
     background: $navbar-default-bg;
-    transition: width $action-transition-duration
-      $action-transition-timing-function;
-    -webkit-transition: width $action-transition-duration
-      $action-transition-timing-function;
-    -moz-transition: width $action-transition-duration
-      $action-transition-timing-function;
-    -ms-transition: width $action-transition-duration
-      $action-transition-timing-function;
+    transition: width $action-transition-duration $action-transition-timing-function;
+    -webkit-transition: width $action-transition-duration $action-transition-timing-function;
+    -moz-transition: width $action-transition-duration $action-transition-timing-function;
+    -ms-transition: width $action-transition-duration $action-transition-timing-function;
     color: $navbar-menu-color;
     // width: calc(100% - #{$sidebar-width-lg});
     height: $navbar-height;
@@ -463,12 +451,14 @@
 
 // with out login
 .template-page {
-  &--with-out-login {
+  &--with-login {
     .navbar-nav {
-      flex-direction: row;
       width: 100%;
-      justify-content: flex-end;
+      height: 64px;
       padding-right: 15px;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
 
       .dropdown-menu-right {
         position: absolute;
@@ -478,17 +468,9 @@
     .nav-item {
       &.nav-mode {
         min-width: 25px;
-        img {
-          background-color: #ffffff;
-          border: 6px solid #ffffff;
-          border-radius: 26px;
-          margin-top: 11px;
-          cursor: pointer;
-          width: 32px;
-        }
       }
 
-      + .nav-item {
+      +.nav-item {
         margin-left: 10px;
       }
 
@@ -496,7 +478,7 @@
         &.dropdown a {
           background-color: white;
           padding: 0;
-          margin-top: 10px;
+          // margin-top: 10px;
           border-radius: 25px;
           padding: 5px 9px;
           line-height: 24px;
@@ -518,36 +500,42 @@
 
     .nav-lang {
       .dropdown-menu {
-      background-color: transparent;
-      border: 0;
-      box-shadow: none;
-      margin-top: -9px;
-      min-width: 75px;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        margin-top: -9px;
+        min-width: 75px;
 
-      a.dropdown-item {
-        background-color: white;
-        box-shadow: 0px 1px 15px 1px rgba(230, 234, 236, 0.35);
-        margin: 10px 0;
-        line-height: 0;
-        padding: 10px;
-        text-align: center;
-        border-radius: 5px;
-        cursor: pointer;
-         border-radius: 6px;
+        a.dropdown-item {
+          background-color: white;
+          box-shadow: 0px 1px 15px 1px rgba(230, 234, 236, 0.35);
+          margin: 10px 0;
+          line-height: 0;
+          padding: 10px;
+          text-align: center;
+          border-radius: 5px;
+          cursor: pointer;
+          border-radius: 6px;
           padding: 5px 9px;
           line-height: 28px;
 
-        a {
-
-        }
-
-        &:hover {
-          background-color: white;
+          &:hover {
+            background-color: white;
+          }
         }
       }
     }
-    }
+  }
+}
 
+.is-dark-mode {
+  .template-page--with-login .nav-item.nav-lang.dropdown a {
+    background-color: #647480;
+    border-color: #647480;
+    color: #fff;
+  }
 
+  .template-page--with-login .nav-lang a span.nav-lang-name {
+    color: #fff;
   }
 }
