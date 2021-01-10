@@ -87,6 +87,13 @@
     border-color: #E6E6E6;
     color: #4A4A4A;
   }
+
+  .is-dark-mode & {
+    background: #647480;
+    border-color:  #647480;
+    box-shadow: none;
+    color: #FFFFFF;
+  }
 }
 
 .btn-outline-success {
@@ -120,6 +127,13 @@
     border: 1px solid #F2F2F2;
     border-radius: 50%;
     font-size: 12px;
+  }
+
+  .is-dark-mode & {
+    i {
+      background: #4F5B63;
+      border-color: #4F5B63;
+    }
   }
 }
 

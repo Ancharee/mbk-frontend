@@ -53,7 +53,9 @@
   }
 
   .breadcrumb .title,
-  .breadcrumb__item.active .breadcrumb__link {
+  .breadcrumb__item.active .breadcrumb__link,
+  .breadcrumb__title a:not(.title--one),
+  .breadcrumb__item i.icon-chevrons-right {
     color: #A6B9C8;
   }
 

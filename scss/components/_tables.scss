@@ -265,3 +265,17 @@
 .dataTables_scrollHeadInner {
   width: 100% !important;
 }
+
+.is-dark-mode {
+  .table-item--table {
+    .table-item__row--header {
+      color: $white;
+    }
+  }
+
+  .table-item__row:not(.table-item__row--header) {
+    background: #374148;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.20);
+    color: $white;
+  }
+}

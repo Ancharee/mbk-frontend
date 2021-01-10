@@ -19290,6 +19290,13 @@ code {
   color: #4A4A4A;
 }
 
+.is-dark-mode .btn-outline-secondary {
+  background: #647480;
+  border-color: #647480;
+  box-shadow: none;
+  color: #FFFFFF;
+}
+
 .btn-outline-success {
   border-width: 2px;
 }
@@ -19321,6 +19328,11 @@ code {
   border: 1px solid #F2F2F2;
   border-radius: 50%;
   font-size: 12px;
+}
+
+.is-dark-mode .btn-create i {
+  background: #4F5B63;
+  border-color: #4F5B63;
 }
 
 .btn-group .btn + .btn {
@@ -21412,6 +21424,16 @@ li ol > li:before {
 
 .dataTables_scrollHeadInner {
   width: 100% !important;
+}
+
+.is-dark-mode .table-item--table .table-item__row--header {
+  color: #ffffff;
+}
+
+.is-dark-mode .table-item__row:not(.table-item__row--header) {
+  background: #374148;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  color: #ffffff;
 }
 
 .breadcrumb {
@@ -24757,6 +24779,38 @@ textarea {
   display: inline;
 }
 
+.is-dark-mode .book-menu-switch .btn.active:not(.disabled) {
+  background: #647480;
+  border-color: #647480;
+  color: #ffffff;
+}
+
+.is-dark-mode .book-menu-switch .btn:not(.active) {
+  background: #374148;
+  border-color: #374148;
+}
+
+.is-dark-mode .book-short-view__book {
+  background: #374148;
+  border: 1px solid #263138;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.is-dark-mode .book-short-view__more {
+  background-image: url(../images/Icons/more-action-dark.svg);
+}
+
+.is-dark-mode .show .book-short-view__more {
+  background-image: url(../images/Icons/more-action-active-dark.svg);
+}
+
+.is-dark-mode .dropdown-more--book .dropdown-item {
+  background: #647480;
+  border: 1px solid #647480;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+}
+
 .setting__format {
   color: #DF5F5F;
   font-family: "DBHelvethaicaX-Reg", sans-serif;
@@ -24853,7 +24907,9 @@ textarea {
 }
 
 .is-dark-mode .breadcrumb .title,
-.is-dark-mode .breadcrumb__item.active .breadcrumb__link {
+.is-dark-mode .breadcrumb__item.active .breadcrumb__link,
+.is-dark-mode .breadcrumb__title a:not(.title--one),
+.is-dark-mode .breadcrumb__item i.icon-chevrons-right {
   color: #A6B9C8;
 }
 

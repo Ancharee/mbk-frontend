@@ -187,3 +187,39 @@
     display: inline;
   }
 }
+
+.is-dark-mode {
+  .book-menu-switch .btn {
+    &.active:not(.disabled) {
+      background: #647480;
+      border-color: #647480;
+      color: $white;
+    }
+
+    &:not(.active) {
+      background: #374148;
+      border-color: #374148;
+    }
+  }
+
+  .book-short-view__book {
+    background: #374148;
+    border: 1px solid #263138;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.50);
+  }
+
+  .book-short-view__more {
+    background-image: url(../images/Icons/more-action-dark.svg);
+  }
+
+  .show .book-short-view__more {
+    background-image: url(../images/Icons/more-action-active-dark.svg);
+  }
+
+  .dropdown-more--book .dropdown-item {
+    background: #647480;
+    border: 1px solid #647480;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.50);
+    color: #FFFFFF;
+  }
+}
