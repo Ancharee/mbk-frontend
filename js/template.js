@@ -58,10 +58,15 @@
       body.toggleClass('sidebar-icon-only');
     });
 
-    //checkbox and radios
-    $(".form-check label,.form-radio label").append('<i class="input-helper"></i>');
+    //Switch mode
 
-    // drop down
+    function onSwitchMode() {
+      $('.js-switch-mode').on('click', function () {
+        $('html').toggleClass('is-dark-mode');
+      });
+    }
+
+    onSwitchMode();
 
   });
 })(jQuery);
