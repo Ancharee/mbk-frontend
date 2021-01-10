@@ -10,7 +10,7 @@
   }
 
   .modal-header {
-    padding-top: 53px;
+    // padding-top: 53px;
     padding-bottom: 17px;
   }
 
@@ -34,7 +34,7 @@
   }
 
   .modal-body {
-    padding-top: 0;
+    padding-top: 10px;
     padding-bottom: 27px;
     font-size: 20px;
     flex: none;
@@ -155,5 +155,22 @@
 .modal--user {
   .modal-dialog {
     max-width: 1024px;
+  }
+}
+
+.is-dark-mode {
+  .modal {
+    .modal-header,
+    .modal-content {
+      background-color: #647480;
+    }
+
+    .modal-header--default {
+      background-color: #8DC63F;
+    }
+  }
+
+  .modal--form .modal-title {
+    color: $white;
   }
 }

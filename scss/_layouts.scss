@@ -232,5 +232,9 @@
 
   .btn-outline-success {
     background-color: $white;
+
+    .is-dark-mode & {
+      background: #374148;
+    }
   }
 }

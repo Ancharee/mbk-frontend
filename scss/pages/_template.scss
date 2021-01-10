@@ -358,3 +358,25 @@
     }
   }
 }
+
+.is-dark-mode {
+  .template-copy-list {
+    background: #374148;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.20);
+    border-color: #374148;
+  }
+
+  .template-copy-list__item:not(:last-child) {
+    border-color: #EFF5FC;
+  }
+
+  .template-copy-list .form-check-label.title .checkbox-text,
+  .template-copy-list .form-check-label .checkbox-text {
+    background-color: #374148;
+    color: $white;
+  }
+
+  .template-copy-list .form-check-label:not(.title) .form-check-input:checked + .span-radio + .checkbox-text {
+    background-color: #5C666E;
+  }
+}

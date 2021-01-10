@@ -267,6 +267,31 @@
 }
 
 .is-dark-mode {
+  .table thead th {
+    background-color: #374148;
+    color: $white;
+    border-bottom-color: #263138;
+  }
+
+  .table th,
+  .table td {
+    border-color: #263138;
+  }
+
+  .table tbody tr {
+    background-color: #5C666E;
+
+    &:nth-child(even) {
+      td {
+        background-color: #374148;
+      }
+    }
+  }
+
+  .table tbody td {
+    color: $white;
+  }
+
   .table-item--table {
     .table-item__row--header {
       color: $white;
@@ -277,5 +302,21 @@
     background: #374148;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.20);
     color: $white;
+  }
+
+  .table.table--light {
+    border-color: #647480;
+  }
+
+  .table.table--allow thead tr th,
+  .table.table--allow tbody tr td,
+  .table.table--allow tbody tr:nth-child(even) td {
+    background-color: #647480;
+    color: $white;
+  }
+
+  .table.table--allow thead tr th,
+  .table.table--allow tbody tr td {
+    border-bottom-color: #374148;
   }
 }
