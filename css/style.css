@@ -22430,6 +22430,7 @@ textarea {
   background-image: url(../images/Icons/arrow-down-dark.svg);
   border-color: #647480;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  color: #ffffff;
 }
 
 .is-dark-mode .form-check-label,
@@ -23776,6 +23777,14 @@ textarea {
   background: #374148;
 }
 
+.container--book-compare {
+  background-color: #E1E1E1;
+}
+
+.is-dark-mode .container--book-compare {
+  background-color: #16191C;
+}
+
 .sidebar-list {
   display: none;
   width: 100%;
@@ -24355,6 +24364,10 @@ textarea {
 .template-copy-list--column .title .checkbox-text__col::after {
   top: -14px;
   height: 50px;
+}
+
+.template-copy-list--merge .checkbox-text__col::after {
+  content: none;
 }
 
 .is-dark-mode .template-copy-list {

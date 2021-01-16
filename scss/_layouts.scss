@@ -238,3 +238,11 @@
     }
   }
 }
+
+.container--book-compare {
+  background-color: #E1E1E1;
+
+  .is-dark-mode & {
+    background-color: #16191C;
+  }
+}

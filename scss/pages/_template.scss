@@ -359,6 +359,16 @@
   }
 }
 
+.template-copy-list--merge {
+  .checkbox-text {
+    &__col {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
 .is-dark-mode {
   .template-copy-list {
     background: #374148;
