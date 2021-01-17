@@ -2,6 +2,7 @@
   background-image: linear-gradient(225deg, #C1E573 0%, #8DC63F 100%);
   box-shadow: -1px 1px 8px 0 rgba(141,198,63,0.58);
   border-radius: 4px;
+  color: $white;
 }
 
 /* Sidebar */
@@ -255,5 +256,21 @@
     &.active {
       left: 0;
     }
+  }
+}
+
+.is-dark-mode {
+  .sidebar .nav .nav-item.active-parent > .nav-link {
+    background-color: #374148;
+  }
+
+  .sidebar .nav .nav-item.active-parent > .nav-link > .menu-title,
+  .sidebar .nav .nav-item.active-parent > .nav-link > i {
+    color: #A6B9C8;
+  }
+
+  .sidebar .nav .nav-item .nav-link.active .menu-title,
+  .sidebar .nav .nav-item .nav-link.active i {
+    color: $white !important;
   }
 }

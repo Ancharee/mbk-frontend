@@ -227,3 +227,20 @@
     margin-top: 5px;
   }
 }
+
+.is-dark-mode {
+  .editor {
+    background-color: #374148;
+  }
+
+  .editor .toolbar button.alpha-editor:not(.active) {
+    color: $white;
+  }
+
+  .editor .content-area .visuell-view {
+    background-color: #22292E;
+    border-color: #22292E;
+    box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.35);
+    color: #787E8C;
+  }
+}

@@ -61,8 +61,17 @@
     //Switch mode
 
     function onSwitchMode() {
+      if (localStorage.getItem('mode')) {
+        $('html').addClass('is-dark-mode');
+      }
+
       $('.js-switch-mode').on('click', function () {
         $('html').toggleClass('is-dark-mode');
+        if ($('html').hasClass('is-dark-mode')) {
+          localStorage.setItem('mode', 'is-dark-mode');
+        } else {
+          localStorage.removeItem('mode');
+        }
       });
     }
 

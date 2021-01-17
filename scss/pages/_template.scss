@@ -3,9 +3,15 @@
 
   thead {
     th {
-      background: #F5F5F5;
+      background-color: #F5F5F5;
       font-weight: normal;
       color: #323232;
+
+      .is-dark-mode & {
+        background-color: #374148;
+        color: $white;
+        border-color: #263138;
+      }
 
       &:last-child {
         text-align: center;
@@ -16,6 +22,10 @@
   tbody {
     tr:nth-child(even) {
       background: #F5F5F5;
+
+      .is-dark-mode & {
+        background: #5C666E;
+      }
     }
 
     td {
@@ -27,6 +37,10 @@
   td {
     padding: 12px;
     border: 1px solid #DDDDDD;
+
+    .is-dark-mode & {
+      border-color: #263138;
+    }
   }
 
   @for $i from 1 through 10 {
