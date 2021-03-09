@@ -154,7 +154,7 @@ $(document).ready(function () {
                   </div>
                   <div class="container-content-area">
                     <input class="visuell-view width-small" name="text" value="-" />
-                    <div class="visuell-view width-large" contenteditable></div>
+                    <textarea class="visuell-view width-large" contenteditable></textarea>
                     <div class="width-50">
                       <label class="form-check-label" for="check-add-${count + 11}">
                           <input type="checkbox" class="form-check-input checkbox--item" name="type-add-${count + 1}" id="check-add-${count + 1}" value="picture"/>

@@ -60,6 +60,15 @@
     color: #64666D;
   }
 
+  .card-body ul {
+    padding: 0;
+    list-style-position: outside;
+
+    li {
+      list-style: none;
+    }
+  }
+
   // .form-check-label {
   //   width: 100%;
   // }

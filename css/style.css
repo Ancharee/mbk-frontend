@@ -22610,6 +22610,15 @@ textarea {
   color: #64666D;
 }
 
+.accordion .card-body ul {
+  padding: 0;
+  list-style-position: outside;
+}
+
+.accordion .card-body ul li {
+  list-style: none;
+}
+
 .accordion .list,
 .accordion .list ul {
   list-style: none;
