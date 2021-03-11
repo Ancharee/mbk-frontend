@@ -153,6 +153,10 @@
   }
 }
 
+.btn-tpr {
+  background-color: transparent !important;
+}
+
 /*social buttons*/
 @each $color,
 $value in $social-colors {

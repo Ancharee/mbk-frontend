@@ -19343,6 +19343,10 @@ code {
   border-left: 0;
 }
 
+.btn-tpr {
+  background-color: transparent !important;
+}
+
 /*social buttons*/
 .btn-twitter {
   background: #2caae1;
@@ -22481,6 +22485,17 @@ textarea {
 
 .is-dark-mode .form-label a {
   color: #ffffff;
+}
+
+.form-warning {
+  padding-top: 9px;
+  display: inline-block;
+  font-family: DB Helvethaica X;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #D51313;
 }
 
 .wizard .steps ul {
