@@ -1991,9 +1991,9 @@
               </div>
               <div class="container-action">
                 <button class="btn btn-outline-success prev">ย้อนกลับ</button>
-                <button
-                  class="btn btn-success js-create-book"
-                >สร้างเล่ม</button>
+                <button class="btn btn-success js-create-book">สร้างเล่ม</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#sendModal">ส่งอนุมัติ</button>
+                <button class="btn btn-danger" data-toggle="modal" data-target="#bookDeleteModal">ลบ</button>
               </div>
             </section>
           </div>
@@ -2140,6 +2140,50 @@
                 class="btn btn-outline-success js-wraning-no"
                 data-dismiss="modal"
               >ตกลง</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade modal--form" id="bookDeleteModal" tabindex="-1" role="dialog"
+        aria-labelledby="bookDeleteModallLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="images/Icons/wraning.svg" alt="wraning">
+              <div class="messages mt-2">
+                <p>ต้องการลบเล่มนี้ ใช่ หรือ ไม่?</p>
+                <p>หากทำการลบแล้ว จะไม่สามารถนำกลับมาได้</p>
+              </div>
+              <div class="row">
+                <div class="col-12 text-left">
+                  <span class="form-warning mb-2 pt-0">*กรุณาระบุเหตุผลในการลบ</span>
+                  <textarea class="form-control" rows="5" placeholder="พิมพ์หมายเหตุ...."></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" data-dismiss="modal">ยกเลิก</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">ยืนยัน</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade modal--confirm-delete" id="sendModal" tabindex="-1" role="dialog"
+        aria-labelledby="sendModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+              <img src="images/Icons/wraning-yellow.svg" alt="wraning">
+              <div class="js-error-messages"></div>
+              <p class="mt-2">ต้องการทำการส่งอนุมัติ</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" data-dismiss="modal">ยกเลิก</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">ยืนยัน</button>
             </div>
           </div>
         </div>
