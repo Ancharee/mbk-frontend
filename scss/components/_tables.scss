@@ -24,7 +24,7 @@
   }
 
   tbody {
-    tr{
+    tr {
       &:nth-child(even) {
         td {
           background-color: #F5F5F5;
@@ -57,6 +57,7 @@
     }
 
     tbody {
+
       td:first-child,
       td:last-child {
         text-align: left;
@@ -108,6 +109,7 @@
   }
 
   tbody {
+
     tr:nth-child(2n) td,
     tr td {
       background-color: #fff;
@@ -123,6 +125,7 @@
 }
 
 .table.table--allow {
+
   th:nth-child(2),
   th:nth-child(3) {
     width: 55px;
@@ -175,7 +178,7 @@
       align-items: center;
       padding: 6px 10px;
       background: #FFFFFF;
-      box-shadow: 0 0 5px 0 rgba(200,200,200,0.58);
+      box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.58);
       border-radius: 2px;
     }
   }
@@ -187,7 +190,7 @@
   .btn {
     min-width: 62px;
 
-    + .btn {
+    +.btn {
       margin-left: 7px;
     }
   }
@@ -300,7 +303,7 @@
 
   .table-item__row:not(.table-item__row--header) {
     background: #374148;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.20);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.20);
     color: $white;
   }
 
@@ -318,5 +321,86 @@
   .table.table--allow thead tr th,
   .table.table--allow tbody tr td {
     border-bottom-color: #374148;
+  }
+}
+
+.table-scroll {
+  position: relative;
+  margin: auto;
+  max-width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  table-layout: fixed;
+  overflow-y: auto;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow: auto;
+}
+
+.table--scroll {
+  width: 100%;
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  // thead th {
+  //   position: sticky;
+  //   top: 0;
+  //   z-index: 1;
+  // }
+
+  // table tbody th {
+  //   position: relative;
+  // }
+
+  // table thead th:first-child {
+  //   position: sticky;
+  //   left: 0;
+  //   z-index: 2;
+  // }
+
+  // table tbody th {
+  //   position: sticky;
+  //   left: 0;
+  //   background: white;
+  //   z-index: 1;
+  // }
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+
+  td {
+    background: #fff;
+  }
+}
+
+.table--clone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: transparent;
+
+  tbody th {
+    visibility: visible;
+  }
+
+  thead {
+    background: transparent;
+  }
+
+  th,
+  td {
+    visibility: hidden;
+    border-color: transparent;
+  }
+
+  .fixed-side {
+    visibility: visible;
+    border-bottom: 1px solid #DDDDDD;
   }
 }
