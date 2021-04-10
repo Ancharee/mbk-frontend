@@ -41,6 +41,11 @@
 .status-wrapper {
   display: flex;
   align-items: center;
+  font-size: 15px;
+
+  @include tablet {
+    font-size: 20px;
+  }
 
   &.red {
     color: #FF5757;

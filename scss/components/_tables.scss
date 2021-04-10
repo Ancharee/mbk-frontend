@@ -202,8 +202,12 @@
 
 .table-item--table {
   display: table;
-  width: 100%;
+  width: calc(100vh * 1.1);
   border-spacing: 8px;
+
+  @include desktop {
+    width: 100%;
+  }
 
   .table-item__row {
     display: table-row;
