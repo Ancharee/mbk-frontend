@@ -37,6 +37,10 @@
   }
 
   &--large {
-    padding-right: 20px;
+    padding-right: 32px;
+
+    @include tablet {
+      padding-right: 20px;
+    }
   }
 }

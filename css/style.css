@@ -22556,6 +22556,10 @@ textarea {
   color: #D51313;
 }
 
+.form-group input.form-control {
+  background-image: none;
+}
+
 .wizard .steps ul {
   display: flex;
   justify-content: center;
@@ -22918,7 +22922,13 @@ textarea {
 }
 
 .content-wrapper--large {
-  padding-right: 20px;
+  padding-right: 32px;
+}
+
+@media (min-width: 768px) {
+  .content-wrapper--large {
+    padding-right: 20px;
+  }
 }
 
 /* Sidebar */
@@ -24546,14 +24556,14 @@ textarea {
 }
 
 .logo-login {
-  width: 155px;
-  height: 78px;
+  width: 145px;
+  height: 72px;
   background-image: url(../images/MBK-logo.svg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .logo-login {
     width: 222px;
     height: 122px;
@@ -24569,14 +24579,17 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 90%;
-  margin-top: 45px;
+  min-width: 100%;
+  margin-top: 48px;
   border-radius: 3px;
+  padding: 28px 22px 26px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .container--form {
     margin-top: 90px;
+    min-width: 90%;
+    padding: 41px 36px 37px;
   }
 }
 
@@ -24584,20 +24597,26 @@ textarea {
   margin-bottom: 15px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .container--form {
     min-width: 510px;
   }
 }
 
 .container--form span.title {
+  margin-bottom: 19px;
   font-family: DBHelvethaicaX-65Med;
   font-size: 26px;
+  line-height: 31px;
   color: #323232;
   letter-spacing: 2.17px;
   text-align: left;
-  margin-top: 41px;
-  margin-bottom: 31px;
+}
+
+@media (min-width: 768px) {
+  .container--form span.title {
+    margin-bottom: 31px;
+  }
 }
 
 .container--form input {
@@ -24633,6 +24652,41 @@ textarea {
   text-decoration: underline;
   color: #8dc63f;
   display: block;
+}
+
+.container--form .form-check-label {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@media (min-width: 768px) {
+  .container--form .form-check-label {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.container--form .form-group--checkbox {
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .container--form .form-group--checkbox {
+    margin-bottom: 30px;
+  }
+}
+
+.login-link a {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  .login-link a {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 13px;
+  }
 }
 
 .is-dark-mode .container--form {

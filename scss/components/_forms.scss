@@ -415,3 +415,9 @@ textarea {
   line-height: 19px;
   color: #D51313;
 }
+
+.form-group {
+  input.form-control {
+    background-image: none;
+  }
+}

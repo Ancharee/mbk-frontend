@@ -8,13 +8,13 @@
 }
 
 .logo-login {
-  width: 155px;
-  height: 78px;
+  width: 145px;
+  height: 72px;
   background-image: url(../images/MBK-logo.svg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
 
-  @media (min-width: 767px) {
+ @include tablet {
     width: 222px;
     height: 122px;
   }
@@ -29,30 +29,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 90%;
-  margin-top: 45px;
+  min-width: 100%;
+  margin-top: 48px;
   border-radius: 3px;
+  padding: 28px 22px 26px;
 
-  @media (min-width: 767px) {
+  @include tablet {
     margin-top: 90px;
+    min-width: 90%;
+    padding: 41px 36px 37px;
   }
 
   .form-group {
     margin-bottom: 15px;
   }
 
-  @media (min-width: 767px) {
+  @include tablet {
     min-width: 510px;
   }
 
   span.title {
+    margin-bottom: 19px;
     font-family: DBHelvethaicaX-65Med;
     font-size: 26px;
+    line-height: 31px;
     color: #323232;
     letter-spacing: 2.17px;
     text-align: left;
-    margin-top: 41px;
-    margin-bottom: 31px;
+
+    @include tablet {
+      margin-bottom: 31px;
+    }
   }
 
   input {
@@ -89,6 +96,37 @@
       text-decoration: underline;
       color: #8dc63f;
       display: block;
+    }
+  }
+
+  .form-check-label {
+    font-size: 18px;
+    line-height: 22px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  .form-group--checkbox {
+    margin-bottom: 25px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.login-link {
+  a {
+    font-size: 22px;
+    line-height: 26px;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 25px;
+      margin-top: 13px;
     }
   }
 }
