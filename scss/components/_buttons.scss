@@ -236,3 +236,9 @@ $value in $theme-colors {
     background-image: url(../images/light-mode.svg);
   }
 }
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-outline-secondary.dropdown-toggle:focus {
+  box-shadow: none;
+}

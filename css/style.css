@@ -20007,6 +20007,11 @@ code {
   background-image: url(../images/light-mode.svg);
 }
 
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-secondary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
 /* Badges */
 .badge {
   border-radius: 0;
@@ -22442,6 +22447,13 @@ textarea {
   position: absolute;
 }
 
+.form-group .file-upload-default-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
 .form-group.has-danger .form-control {
   border-color: #ff4747;
 }
@@ -22564,6 +22576,19 @@ textarea {
 
 .form-group input.form-control {
   background-image: none;
+}
+
+label.file-upload-info {
+  background-color: #E4E4E4;
+  color: #000;
+}
+
+.form-group label.form-control {
+  background-image: none;
+}
+
+.form-group--upload {
+  position: relative;
 }
 
 .wizard .steps ul {
@@ -23886,6 +23911,14 @@ textarea {
 }
 
 @media (min-width: 768px) {
+  .container-content--sm {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 987px;
+  }
+}
+
+@media (min-width: 768px) {
   .container-content--narrow {
     padding-left: 73px;
   }
@@ -25137,6 +25170,10 @@ textarea {
   border-radius: 6px;
 }
 
+.book-short-view__view:focus, .book-short-view__download:focus, .book-short-view__comment:focus {
+  box-shadow: 0px 3px 8px rgba(185, 185, 185, 0.5);
+}
+
 .is-dark-mode .book-short-view__view, .is-dark-mode .book-short-view__download, .is-dark-mode .book-short-view__comment {
   background-color: #647480;
   border: 1px solid #647480;
@@ -25309,11 +25346,30 @@ textarea {
 
 .book-program-view {
   overflow: scroll;
+  padding: 0 10px;
 }
 
 @media (min-width: 1440px) {
   .book-program-view {
     overflow: inherit;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .js-upload-list {
+    margin: 0 -20px;
+    max-width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .js-upload-list .form-group {
+    flex-basis: calc(50% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
