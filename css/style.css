@@ -23864,19 +23864,19 @@ textarea {
   flex-wrap: wrap;
 }
 
-.breadcrumb-wrapper .breadcrumb {
-  margin-bottom: 10px;
-}
-
-@media (min-width: 768px) {
-  .breadcrumb-wrapper .breadcrumb {
-    margin-bottom: 0;
-  }
+.breadcrumb-wrapper .breadcrumb h3 {
+  margin-bottom: 0;
 }
 
 .container-content {
   width: 100%;
-  padding-top: 30px;
+  padding-top: 3px;
+}
+
+@media (min-width: 768px) {
+  .container-content {
+    padding-top: 30px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -24753,11 +24753,7 @@ textarea {
 }
 
 .dashboard__item {
-  flex-basis: 100%;
-}
-
-.dashboard__item:not(:last-child) {
-  margin-bottom: 20px;
+  flex-basis: 50%;
 }
 
 @media (min-width: 768px) {
@@ -24765,6 +24761,14 @@ textarea {
     margin-bottom: 0;
     flex-basis: calc(33.33% - 20px);
   }
+}
+
+.dashboard__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.dashboard__list--two .dashboard__item {
+  flex-basis: 100%;
 }
 
 @media (min-width: 768px) {
@@ -24824,7 +24828,13 @@ textarea {
 }
 
 .dashboard__group .card .card-body {
-  padding-top: 20px;
+  padding: 20px 26px 26px;
+}
+
+@media (min-width: 768px) {
+  .dashboard__group .card .card-body {
+    padding: 45px 35px 17px;
+  }
 }
 
 .dashboard__group-col {
@@ -24911,19 +24921,31 @@ textarea {
 }
 
 .dashboard .chart-legend {
-  margin-top: 34px;
+  margin: 34px -50px 0;
   padding: 0 50px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
   font-family: "DBHelvethaicaX-Reg", sans-serif;
 }
 
+@media (min-width: 768px) {
+  .dashboard .chart-legend {
+    margin: 34px 0 0;
+    justify-content: space-between;
+  }
+}
+
 .dashboard .chart-legend__item {
-  margin-bottom: 13px;
-  flex-basis: calc(50% - 36px);
+  margin: 0 40px 14px;
+  flex-basis: calc(50% - 80px);
   color: #4A4A4A;
+}
+
+@media (min-width: 768px) {
+  .dashboard .chart-legend__item {
+    flex-basis: calc(50% - 36px);
+  }
 }
 
 .dashboard .chart-legend__item .total {
@@ -24958,6 +24980,16 @@ textarea {
 
 .dashboard__count-total {
   color: #717073;
+}
+
+.dashboard__list--book .dashboard__item {
+  flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  .dashboard__list--book .dashboard__item {
+    flex-basis: calc(33.33% - 20px);
+  }
 }
 
 .book-menu-switch {
